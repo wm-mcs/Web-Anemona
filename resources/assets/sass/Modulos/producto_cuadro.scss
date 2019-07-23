@@ -1,0 +1,118 @@
+.contendor-productos-cuadros-pagina{
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(flex-start); 
+  @include flex-wrap(wrap); 
+  @include justify-content(flex-start);
+
+}
+
+
+
+
+
+.producto-cuadro-contenedor{
+  
+  width: 100px;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: white;
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+
+}
+
+
+  .producto-cuadro-contiene-img{
+    width: 100%;
+    height: 88px;
+    @include flexbox;       
+    @include flex-direction(column);
+    @include align-items(center); 
+    @include justify-content(space-around); 
+    margin-bottom: 10px;
+
+
+  }
+
+      .producto-cuadro-img{
+        width: auto;
+        height: 100%;
+
+      }
+
+
+
+
+
+  .producto-cuadro-contiene-name{
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+
+  }
+
+
+  .producto-cuadro-contiene-precio{
+    margin-bottom: 10px;
+    color:$color-black;
+    font-size: 24px;
+
+  }
+
+
+  .producto-cuadro-contiene-aclaracion{
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Primario){
+
+  .producto-cuadro-contenedor{  
+    width: 150px;
+  }
+
+   .producto-cuadro-contiene-img{   
+    height: 138px;
+  }
+
+       
+
+}
+
+@media (min-width: $BrackPoint-Secundario){
+  .producto-cuadro-contenedor{  
+    width: 200px;
+  }
+
+  .producto-cuadro-contiene-img{   
+    height: 188px;
+  }
+
+   .producto-cuadro-contiene-name{
+    
+    font-size: 14px;
+
+  }
+
+  
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+   .producto-cuadro-contenedor{  
+    width: 250px;
+  }
+
+  
+}

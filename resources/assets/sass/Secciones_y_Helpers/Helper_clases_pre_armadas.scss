@@ -1,0 +1,215 @@
+.flex-row-center{
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center); 
+}
+
+.flex-row-column{
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
+}
+
+.flex-justifice-space-around{
+  @include justify-content(space-around);
+}
+
+.flex-wrap{
+  @include flex-wrap(wrap); 
+}
+
+
+
+/* CLASES DE TAMAÑO */
+.get_width_100{
+  width:100%;
+}
+
+.get_height_100{
+  height:100%;
+}
+
+
+
+/* CLASES DE COLOR DE FONDO */
+.BackgroundPrimary{
+  background-color: $color-3; 
+}
+.BackgroundGris{
+  background-color: $color-gris-background; 
+}
+
+
+/* CLASES B O T O N E S */
+.boton-simple{
+  background-color: $color-3; 
+  color:white;
+  padding: 20px 35px;
+  border-radius: 4px;
+  font-size:20px; 
+  cursor: pointer;
+  font-weight:bold;
+}
+.boton-simple:hover{
+  background-color: $color-3-primary_hover; 
+}
+
+
+.boton-simple-blanco-whatsapp{
+  color:white;
+  padding: 20px 35px;
+  border-radius: 4px;
+  font-size:20px; 
+  cursor: pointer;
+  font-weight:bold;
+  border:solid 1px white;
+
+}
+
+.boton-simple-blanco-whatsapp:hover{
+ background-color: #25d366 ;
+}
+
+.boton-simple-blanco{
+  color:white;
+  padding: 20px 35px;
+  border-radius: 4px;
+  font-size:20px; 
+  cursor: pointer;
+  font-weight:bold;
+  border:solid 1px white;
+
+}
+
+.boton-simple-blanco:hover{
+ background-color: $color-3-primary_hover ;
+}
+
+.boton-simple-chico{
+  background-color: $color-3; 
+  color:white;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size:1rem; 
+  cursor: pointer;
+  font-weight:bold;
+}
+.boton-simple-chico:hover{
+  background-color: $color-3-primary_hover; 
+}
+
+
+
+
+
+
+
+/* CLASES DE TEXTO */
+
+
+.text-center{
+  text-align: center;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+.text-color-primary{
+  color: $color-3;
+}
+
+.text-color-black{
+  color: $color-negro-para-textos;
+}
+
+
+
+.helper-aumenta-texto{
+  font-size:1.2em;
+}
+
+.helper-reduce-texto{
+  font-size:0.7em;
+}
+
+.espacio-letras{
+  letter-spacing: 2px;
+  font-family: arial;
+  margin-bottom: 8px;
+}
+
+.espacio-letras-chico{
+  letter-spacing: 1px;
+  font-family: arial;
+  margin-bottom: 8px;
+}
+
+/* colores personalizados */
+.color-text-gris{
+  color: $color-gris-text;
+}
+
+/* colores personalizados */
+.color-text-white{
+  color: white;
+}
+
+/*color-texto-verde-success*/
+.color-text-success{
+  color:$color-verde-texto-success;
+}
+
+.font-primary{
+  font-family:$font-primary;
+}
+
+.font-secondary{
+  font-family:$font-secondary;
+}
+
+
+.font-size-h1{
+
+}
+
+.font-size-h2{
+
+}
+
+
+
+
+
+
+
+/* clases para mostrar o no */
+.no-mostrar{
+  display:none;
+}
+
+
+/*simula un link*/
+.simula_link{
+  cursor:pointer;
+  color:  $color-3;
+}
+
+.simula_link:hover{
+  color:$color-3-primary_hover;
+}
+
+.helper_cursor_pointer{
+  cursor:pointer;
+}
+
+
+
+
+
+
+
+/*CLASES de MARGIN y PADING*/
+.margin-right-10{
+  margin-right: 10px;
+}
+
