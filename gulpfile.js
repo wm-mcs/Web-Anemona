@@ -18,6 +18,8 @@ elixir(function(mix) {
      mix.sass('creative_template_mixer.scss','public/css'); 
      mix.sass('admin.scss','public/css'); 
 
+     mix.sass('ecomerce_minimal_scss/style.scss','public/css/ecomerce_minimal.css');
+
      
     mix.scripts([
         
@@ -49,17 +51,27 @@ elixir(function(mix) {
 
        ],'public/js/admin.js');
 
-     mix.scripts([
+    
+
+
+      mix.scripts([
         
-        'Vue/main-vue.js',
+        'ecomerce_minimal/jquery-3.3.1.min.js',
+        'ecomerce_minimal/jquery-ui.js',
+        'ecomerce_minimal/popper.min.js',
+        'ecomerce_minimal/bootstrap.min.js',
+        'ecomerce_minimal/owl.carousel.min.js',
+        'ecomerce_minimal/jquery.magnific-popup.min.js',
+        'ecomerce_minimal/aos.js',
+        'ecomerce_minimal/main.js'
        
 
-       ],'public/js/vue.js');
+       ],'public/js/ecomerceApp.js');
 
 
     elixir(function(mix) {
-            mix.version(['css/mixer.css','css/creative_template_mixer.css','css/admin.css' ,'js/all.js','js/admin.js','js/vue.js']); 
+            mix.version(['css/mixer.css','css/creative_template_mixer.css','css/admin.css','css/ecomerce_minimal.css' ,'js/all.js','js/admin.js','js/ecomerceApp.js']); 
     });
 
-    mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');
+    
 });

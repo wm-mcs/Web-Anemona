@@ -1,6 +1,6 @@
-@extends('layouts.creative.layout_creative')
+@extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') {{$Empresa->name}} @stop
+{{-- @section('titulo') {{$Empresa->name}} @stop
 
 @section('descripcion') {{$Empresa->descripcion_empresa}} @stop
 
@@ -20,7 +20,7 @@
       <img data-src="{{url()}}/imagenes/Slider/foto-slider-corazon.jpg" class="get_width_100">  
       @include('paginas.home.home_piedras_cuidados')   
 @stop      
-
+ --}}
 
 
 
