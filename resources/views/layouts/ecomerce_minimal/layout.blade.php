@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Dealers &mdash; Colorlib e-Commerce Template</title>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
+    
+    <title>@yield('titulo')</title>
+    <meta name="Description" content="@yield('descripcion')">      
+    <meta name="robots" content="@yield('robot')">
+    <meta name="keywords" content="@yield('palabras_claves')">
+
+    @yield('og-propiedades')
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/ecomerce_minimal.css') }}">    
     
   </head>
@@ -27,72 +34,16 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="logo">
-            <div class="site-logo">
-              <a href="index.html" class="js-logo-clone">Dealers</a>
-            </div>
-          </div>
-          <div class="main-nav d-none d-lg-block">
-            <nav class="site-navigation text-right text-md-center" role="navigation">
-              <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="has-children active">
-                  <a href="index.html">Collection</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Children</a></li>
-                    <li class="has-children">
-                      <a href="#">Sub Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Children</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Catalogs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="icons">
-            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
-            <a href="cart.html" class="icons-btn d-inline-block bag">
-              <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
-            </a>
-            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
-          </div>
-        </div>
-      </div>
+      @yield('header-menu-iconos')
+
+     
     </div>
 
-    <div class="site-blocks-cover" data-aos="fade">
-      <div class="container">
 
-        <div class="row align-items-center">
-          <div class="col-lg-5 text-center">
-            <div class="featured-hero-product w-100">
-              <h1 class="mb-2">Madewell</h1>
-              <h4>Summer Collection</h4>
-              <div class="price mt-3 mb-5"><strong>1,499</strong> <del>$1,999</del></div>
-              <p><a href="#" class="btn btn-outline-primary rounded-0">Shop Now</a> <a href="#" class="btn btn-primary rounded-0">Shop Now</a></p>
-            </div>  
-          </div>
-          <div class="col-lg-7 align-self-end text-center text-lg-right">
-            <img src="images/new/person_transparent.png" alt="Image" class="img-fluid img-1">
-          </div>
-          
-        </div>
-      </div>
-      
-    </div>
+
+    @yield('imagen-grande-cabecera')
+
+    
 
   
     <div class="products-wrap border-top-0">
