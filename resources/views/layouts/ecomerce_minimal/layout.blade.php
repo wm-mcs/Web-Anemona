@@ -264,9 +264,7 @@
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
                   <li><a href="#">Sell online</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Shopping cart</a></li>
-                  <li><a href="#">Store builder</a></li>
+                 
                 </ul>
               </div>
               <div class="col-md-6 col-lg-4">
@@ -292,7 +290,7 @@
               <ul class="list-unstyled">
                 <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
                 <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li v-if="valor_se_puede_mostrar(Empresa.email)" class="email">@{{Empresa.email}}</li>
               </ul>
             </div>
 
@@ -330,7 +328,7 @@
 
   <script type="text/javascript">
     @yield('vue')  
-    
+
   </script>
    
     

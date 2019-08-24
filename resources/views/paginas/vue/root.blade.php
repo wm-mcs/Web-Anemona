@@ -17,6 +17,18 @@ var app = new Vue({
 
     methods:{
 
+      valor_se_puede_mostrar:function(valor)
+      {
+        if(valor != 0 || valor != '' || valor != null)
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+
     
    }
 
