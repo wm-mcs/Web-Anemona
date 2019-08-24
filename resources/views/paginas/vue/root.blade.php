@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',    
     data:{
 
-      Empresa:{{$Empresa}},
+      Empresa:{{$Empresa->toJson()}},
       
 
       
