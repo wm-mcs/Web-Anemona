@@ -116,9 +116,13 @@
 
 
 
+@section('vue')
+
+
+   @include('paginas.vue.root')
 
 
 
-
+@stop
 
 

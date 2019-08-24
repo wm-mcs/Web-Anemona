@@ -30,13 +30,11 @@ class Home_Public_Controller extends Controller
     public function get_home(Request $Request)
     {
         
-        $Route                = 'post_contacto_form';       
+           
         $Empresa              = $this->EmpresaRepo->getEmpresaDatos(); 
-        $ProductosNuevos      = Cache::remember('ProductosNuevosHome', 30, function() use ($Request) {
-                                   return $this->ProductoRepo->getUltimasEntidadesRegistradasRandomActive($Request,4) ; 
-                                });
+        
 
-        return view('paginas.home.home', compact('Route','Empresa','ProductosNuevos'));
+        return view('paginas.home.home', compact('Empresa'));
     }
 
 
