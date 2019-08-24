@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',    
     data:{
 
-      Empresa:{{json_encode($Empresa)}},
+      Empresa: {!! json_encode($Empresa) !!},
       
 
       
