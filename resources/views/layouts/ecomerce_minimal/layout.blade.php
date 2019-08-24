@@ -327,7 +327,12 @@
   <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> 
   {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-select/2.6.2/vue-select.js"></script> --}}
   <script  src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
-  @yield('vue')   
+
+  <script type="text/javascript">
+    @yield('vue')  
+    
+  </script>
+   
     
   </body>
 </html>
