@@ -242,11 +242,11 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
             
-            <div class="block-7">
-              <h3 class="footer-heading mb-4">About Us</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates sed dolorum excepturi iure eaque, aut unde.</p>
+            <div class="block-7" v-if="valor_se_puede_mostrar(Empresa.mision)">
+              <h3 class="footer-heading mb-4">Sobre nosotros</h3>
+              <p>@{{Empresa.mision}}</p>
             </div>
-            <div class="block-7">
+            <div class="block-7" >
               <form action="#" method="post">
                 <label for="email_subscribe" class="footer-heading">Subscribe</label>
                 <div class="form-group">
@@ -286,10 +286,10 @@
           
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <h3 class="footer-heading mb-4">Información de contacto</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
-                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                <li v-if="valor_se_puede_mostrar(Empresa.direccion)" class="address">@{{Empresa.direccion}}</li>
+                <li v-if="valor_se_puede_mostrar(Empresa.celular)" class="phone"><a :href="Empresa.link_whatsapp_send">@{{Empresa.celular}}</a></li>
                 <li v-if="valor_se_puede_mostrar(Empresa.email)" class="email">@{{Empresa.email}}</li>
               </ul>
             </div>
