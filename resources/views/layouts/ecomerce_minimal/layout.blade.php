@@ -49,70 +49,12 @@
     <div class="products-wrap border-top-0">
       <div class="container-fluid">
         <div class="row no-gutters products">
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="#" class="item">
-              <img src="images/product_1.jpg" alt="Image" class="img-fluid">
-              <div class="item-info">
-                <h3>The Shoe</h3>
-                <span class="collection d-block">Summer Collection</span>
-                <strong class="price">$9.50</strong>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="#" class="item">
-              <span class="tag">Sale</span>
-              <img src="images/product_2.jpg" alt="Image" class="img-fluid">
-              <div class="item-info">
-                <h3>Marc Jacobs Bag</h3>
-                <span class="collection d-block">Summer Collection</span>
-                <strong class="price">$9.50 <del>$30.00</del></strong>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="#" class="item">
-              <img src="images/product_3.jpg" alt="Image" class="img-fluid">
-              <div class="item-info">
-                <h3>The  Belt</h3>
-                <span class="collection d-block">Summer Collection</span>
-                <strong class="price">$9.50</strong>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="#" class="item">
-              <img src="images/product_1.jpg" alt="Image" class="img-fluid">
-              <div class="item-info">
-                <h3>The Shoe</h3>
-                <span class="collection d-block">Summer Collection</span>
-                <strong class="price">$9.50</strong>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="#" class="item">
-              <span class="tag">Sale</span>
-              <img src="images/product_2.jpg" alt="Image" class="img-fluid">
-              <div class="item-info">
-                <h3>Marc Jacobs Bag</h3>
-                <span class="collection d-block">Summer Collection</span>
-                <strong class="price">$9.50 <del>$30.00</del></strong>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-4">
-            <a href="#" class="item">
-              <img src="images/product_3.jpg" alt="Image" class="img-fluid">
-              <div class="item-info">
-                <h3>The  Belt</h3>
-                <span class="collection d-block">Summer Collection</span>
-                <strong class="price">$9.50</strong>
-              </div>
-            </a>
-          </div>
-
+          <producto-lista :Empresa="Empresa"></producto-lista>
+          <producto-lista :Empresa="Empresa"></producto-lista>
+          <producto-lista :Empresa="Empresa"></producto-lista>
+          <producto-lista :Empresa="Empresa"></producto-lista>
+          <producto-lista :Empresa="Empresa"></producto-lista>
+          <producto-lista :Empresa="Empresa"></producto-lista>
         </div>
       </div>
     </div>
@@ -259,28 +201,16 @@
           <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
             <div class="row">
               <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Quick Links</h3>
+                <h3 class="footer-heading mb-4">Accesos rápidos</h3>
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="#">Sell online</a></li>
+                  <li><a href="#">Pasta dental sin aluminio</a></li>
                  
                 </ul>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#">Mobile commerce</a></li>
-                  <li><a href="#">Dropshipping</a></li>
-                  <li><a href="#">Website development</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                  <li><a href="#">Point of sale</a></li>
-                  <li><a href="#">Hardware</a></li>
-                  <li><a href="#">Software</a></li>
-                </ul>
-              </div>
+             
+              
             </div>
           </div>
           

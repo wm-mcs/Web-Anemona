@@ -113,7 +113,7 @@
 
 @section('vue')
 
-
+   @include('paginas.vue.producto_lista_component')
    @include('paginas.vue.root')
 
 
