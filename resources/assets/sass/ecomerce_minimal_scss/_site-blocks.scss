@@ -116,7 +116,9 @@ $bg-gray: #f9f9f9;
 	}
 	.item {
 		text-align: center;
-		display: block;
+		 @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(center); 
 		position: relative;
 		border-bottom: 1px solid #eee;
 		.tag {
