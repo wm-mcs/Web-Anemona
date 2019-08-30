@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Cache;
 
 
 
-class Categoria extends Model
+class SubCategoria extends Model
 {
 
-    protected $table ='categorias_productos';
+    protected $table ='sub_categorias_productos';
 
     /**
      * The attributes that are mass assignable.
@@ -25,13 +25,13 @@ class Categoria extends Model
 
     public function productos()
     {
-      return $this->hasMany(Producto::class,'categoria_id','id')->where('estado','si')->orderBy('name', 'asc');
+      return $this->hasMany(Producto::class,'sub_categoria_id','id')->where('estado','si')->orderBy('name', 'asc');
     }
 
 
     public function getProductosCategoriaAttribute()
     {
-        return Cache::remember('productos_categoria'.$this->id, 15, function() {
+        return Cache::remember('productos_sub_categoria'.$this->id, 15, function() {
                               return $this->productos; 
         }); 
     }
