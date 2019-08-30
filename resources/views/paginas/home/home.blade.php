@@ -55,9 +55,15 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
-                  <li><a href="#">Men</a></li>
-                  <li><a href="#">Women</a></li>
-                  <li><a href="#">Children</a></li>
+
+                  @if(Auth::guest())  
+                  <li><a href="{{route('auth_login_get')}}">Iniciar</a></li>
+
+                  @else
+                   <li><a href="#">Mi cuenta</a></li>
+                   <li><a href="{{route('logout')}}">Salir</a></li>
+                  @endif
+                  
                 
                  </ul>
                 </li>
