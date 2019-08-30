@@ -60,7 +60,16 @@
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
 
-            <a href="#" class="icons-btn d-inline-block"><span class="icon-user"></span></a>
+            <a href="#" class="icons-btn d-inline-block has-children active">
+              <span class="icon-user"></span>
+              <ul class="dropdown">
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Children</a></li>
+                
+              </ul>
+
+            </a>
 
             <a href="cart.html" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
