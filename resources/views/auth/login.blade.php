@@ -24,12 +24,10 @@
   <img data-src="{{$Empresa->img_logo_cuadrado}}" class="auth-logo">
 
    <h1>Inicio de Sesión</h1>
-   <div class="container-fluid section-wrapper auth-contenedor-form">
-     <div class="row">    
-      <div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 wow fadeInUp">
+   <div class="auth-contenedor-form">      
+      <div class="fadeInUp">
        @include('formularios.auth.login_form')
-      </div>
-    </div>
+      </div>    
   </div>
      
 
