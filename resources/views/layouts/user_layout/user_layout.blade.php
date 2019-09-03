@@ -45,7 +45,7 @@
 
     <!-- Scripts -->
     <script src="{{url()}}{{ elixir('js/all.js')}} " ></script>  
-    @include('paginas.home.home_vue_script')
+    
 
   </body>
 </html>   
