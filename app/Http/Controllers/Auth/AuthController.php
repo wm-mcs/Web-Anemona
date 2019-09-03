@@ -11,6 +11,7 @@ use App\Managers\Users\user_registro;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Repositorios\Emails\EmailsRepo;
+use App\Repositorios\EmpresaRepo;
 
 class AuthController extends Controller
 {
@@ -29,18 +30,21 @@ class AuthController extends Controller
 
     protected $UserRepo;
     protected $EmailsRepo;
+    protected $EmpresaRepo;
 
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
-    public function __construct(UserRepo  $UserRepo,
-                               EmailsRepo $EmailsRepo )
+    public function __construct(UserRepo   $UserRepo,
+                               EmailsRepo  $EmailsRepo, 
+                               EmpresaRepo $EmpresaRepo )
     {
-        $this->UserRepo   = $UserRepo;
+        $this->UserRepo    = $UserRepo;
         $this->middleware('guest', ['except' => 'getLogout']);
-        $this->EmailsRepo = $EmailsRepo;
+        $this->EmailsRepo  = $EmailsRepo;
+        $this->EmpresaRepo = $EmpresaRepo;
     }
 
     /**
@@ -107,9 +111,9 @@ class AuthController extends Controller
             return view('auth.authenticate');
         }
 
-        $Route = 'auth_login_post';
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        return view('auth.login', compact('Route'));
+        return view('auth.login', compact('Empresa'));
     }
 
     
