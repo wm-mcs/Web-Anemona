@@ -48,7 +48,7 @@ class Home_Public_Controller extends Controller
 
 
         return  ['Validacion'  => true,
-                 'categorias'  => $categorias;
+                 'categorias'  => $categorias];
       }
 
 
