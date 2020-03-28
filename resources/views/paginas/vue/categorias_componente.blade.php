@@ -75,9 +75,8 @@ template:'
 
      
     <ul v-if="categorias.length" class="dropdown">
-      <li><a href="#">Men</a></li>
-      <li><a href="#">Women</a></li>
-      <li><a href="#">Children</a></li>
+      <li v-for="categoria in categorias"><a href="#">@{{categoria.name_arreglado}}</a></li>
+      
       <li class="has-children">
         <a href="#">Sub Menu</a>
         <ul class="dropdown">

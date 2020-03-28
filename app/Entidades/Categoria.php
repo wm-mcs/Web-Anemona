@@ -21,7 +21,7 @@ class Categoria extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends  = ['route'];
+    protected $appends  = ['route','name_arreglado'];
 
 
     public function productos()
@@ -35,6 +35,11 @@ class Categoria extends Model
         return Cache::remember('productos_categoria'.$this->id, 100000, function() {
                               return $this->productos; 
         }); 
+    }
+
+    public function getNameArregladoAttribute()
+    {
+        return ucfirst(strtolower($this->name));
     }
 
 
