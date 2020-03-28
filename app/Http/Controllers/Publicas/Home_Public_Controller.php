@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
 use Illuminate\Support\Facades\Cache;
 use App\Repositorios\CategoriaRepo;
-use Illuminate\Support\Facades\Cache;
 
 
 
@@ -42,7 +41,7 @@ class Home_Public_Controller extends Controller
       public function getCategoriasActivas()
       {
 
-        try
+        
         $categorias = Cache::remember('CategoriasActivas', 300000, function() {
                         return $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
                       }); 
