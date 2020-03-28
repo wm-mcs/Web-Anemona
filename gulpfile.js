@@ -63,7 +63,8 @@ elixir(function(mix) {
         'ecomerce_minimal/owl.carousel.min.js',
         'ecomerce_minimal/jquery.magnific-popup.min.js',
         'ecomerce_minimal/aos.js',
-        'ecomerce_minimal/main.js'
+        'ecomerce_minimal/main.js',
+        'Plugins/Plug-Notify.js'
        
 
        ],'public/js/ecomerceApp.js');

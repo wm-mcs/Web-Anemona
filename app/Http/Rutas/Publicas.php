@@ -16,6 +16,16 @@ Route::get('/' , [
   'as'   => 'get_home']
 );
 
+	Route::get('getCategoriasActivas' , [                    
+	  'uses' => 'Publicas\Home_Public_Controller@getCategoriasActivas',
+	  'as'   => 'getCategoriasActivas']
+	);
+
+
+
+
+
+
 
 //Contacto
 Route::get('/Contacto' , [                    

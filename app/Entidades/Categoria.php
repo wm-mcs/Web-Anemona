@@ -21,6 +21,7 @@ class Categoria extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
+    protected $appends  = ['route'];
 
 
     public function productos()
@@ -31,7 +32,7 @@ class Categoria extends Model
 
     public function getProductosCategoriaAttribute()
     {
-        return Cache::remember('productos_categoria'.$this->id, 15, function() {
+        return Cache::remember('productos_categoria'.$this->id, 100000, function() {
                               return $this->productos; 
         }); 
     }
