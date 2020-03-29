@@ -56,6 +56,7 @@
   <ul class="site-nav-wrap">
       <li class="has-children active">
        <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
+       <a href="contact.html">Categorias</span></a> 
        <ul class="collapse" id="collapseItem1">
          <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
        </ul>
