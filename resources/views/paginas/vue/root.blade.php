@@ -3,6 +3,12 @@ var app = new Vue({
     data:{
 
       Empresa: {!! json_encode($Empresa) !!},
+
+      windowWidth: window.innerWidth,
+      resolucion_celular: 320,
+      resolucion_tablet: 640,
+      resolucion_pc: 990,
+      scrolled:0,
       
 
       
@@ -10,7 +16,11 @@ var app = new Vue({
     },
     mounted: function mounted () {        
 
-     
+      this.$nextTick(() => {
+        window.addEventListener('resize', () => {
+          this.windowWidth = window.innerWidth
+        });
+      });
 
 
     },
@@ -27,10 +37,36 @@ var app = new Vue({
         {
           return false;
         }
+      },
+      mostrar_para_grande:function(){
+        if(this.windowWidth > this.resolucion_pc)
+        {
+          return true;
+        }  
+        else
+        {
+         return false;
+        }
+      },
+      mostrar_para_celuar:function(){
+       if(this.windowWidth <= this.resolucion_pc)
+        {
+          return true;
+        }  
+        else
+        {
+         return false;
+        }
       }
 
-    
-   }
+},
+watch: {
+    windowWidth(newHeight, oldHeight) {
+     window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    });
+    }
+}
 
      
 
