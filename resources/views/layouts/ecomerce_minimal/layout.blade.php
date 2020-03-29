@@ -23,21 +23,12 @@
   <div id="app" class="site-wrap">
     
 
-    <div class="site-navbar bg-white py-2">
-
-      <div class="search-wrap">
-        <div class="container">
-          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
-          <form action="#" method="post">
-            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
-          </form>  
-        </div>
-      </div>
+   
 
       @yield('header-menu-iconos')
 
      
-    </div>
+   
 
 
 

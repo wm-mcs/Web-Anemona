@@ -36,7 +36,16 @@
 
 
 @section('header-menu-iconos')  
+ <div class="site-navbar bg-white py-2">
 
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>  
+        </div>
+      </div>
  <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
@@ -84,6 +93,7 @@
           </div>
         </div>
       </div>
+</div>
 
 @stop
 
