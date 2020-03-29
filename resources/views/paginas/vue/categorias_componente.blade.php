@@ -1,12 +1,12 @@
 Vue.component('categorias' ,
 {
 
-props:['Empresa']
+props:['Empresa','categorias']
 ,  
 
 data:function(){
     return {
-         categorias:[]
+         
      
 
 
@@ -33,8 +33,8 @@ getCategoriasActivas:function(){
             if(data.Validacion == true)
             {
                
-               vue.categorias = data.categorias;   
-               siteMenuClone();           
+               app.categorias = data.categorias;   
+
                
             }
             else

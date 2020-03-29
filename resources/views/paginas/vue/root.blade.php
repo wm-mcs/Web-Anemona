@@ -3,6 +3,7 @@ var app = new Vue({
     data:{
 
       Empresa: {!! json_encode($Empresa) !!},
+      categorias:[],
 
       windowWidth: window.innerWidth,
       resolucion_celular: 320,

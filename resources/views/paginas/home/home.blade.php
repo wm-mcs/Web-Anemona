@@ -36,6 +36,47 @@
 
 
 @section('header-menu-iconos')  
+
+
+
+
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-logo">
+       <a href="index.html" class="js-logo-clone">
+        <img alt="A &amp; N" src="http://web-anemona.worldmaster.com.uy/imagenes/Empresa/logo_cuadrado.png" style="height: 35px;">
+       </a>
+    </div>
+    <div class="site-mobile-menu-close ">
+       <span class="ion-ios-close js-menu-toggle"></span>
+    </div>
+  </div>
+
+  <div class="site-mobile-menu-body">
+  <ul class="site-nav-wrap">
+      <li class="has-children active">
+       <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
+       <ul class="collapse" id="collapseItem1">
+         <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
+       </ul>
+      
+
+      </li> 
+      <li><a href="shop.html">Shop</a></li> 
+      <li><a href="#">Catalogs</a></li> 
+      <li><a href="contact.html">Contact</a></li> 
+       <li class="has-children">
+        <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
+        <a href="contact.html"><span class="icon-user"></span></a> 
+
+        <ul class="collapse" id="collapseItem1">
+         <li><a href="#">Mi cuenta</a></li> 
+         <li><a href="http://web-anemona.worldmaster.com.uy/salir">Salir</a></li>
+        </ul>
+      </li>
+  </ul>
+  </div>
+</div>
  <div class="site-navbar bg-white py-2">
 
       <div class="search-wrap">
@@ -57,7 +98,7 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                <categorias :Empresa="Empresa"></categorias>
+                <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
                 
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="#">Catalogs</a></li>

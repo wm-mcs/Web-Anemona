@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 
 	var siteMenuClone = function() {
 
-		$('<div class="site-mobile-menu"></div>').prependTo('.site-wrap');
+		/*$('<div class="site-mobile-menu"></div>').prependTo('.site-wrap');
 
 		$('<div class="site-mobile-menu-header"></div>').prependTo('.site-mobile-menu');
 		$('<div class="site-mobile-menu-close "></div>').prependTo('.site-mobile-menu-header');
@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 		$('.js-clone-nav').each(function() {
 			var $this = $(this);
 			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
-		});
+		});*/
 
 
 		setTimeout(function() {
