@@ -59,13 +59,14 @@ getCategoriasActivas:function(){
 },
 created: function () {
     this.getCategoriasActivas();
+    siteMenuClone
 },
 
 
 template:'
 
   <li class="has-children active">
-      <a href="shop.html" v-show="categorias.length">Collection</a> 
+      <a href="shop.html" v-if="categorias.length">Collection</a> 
     
       <span v-else class="contiene-el-spiner">
          <div class="cssload-container">
@@ -74,7 +75,7 @@ template:'
       </span>
 
      
-    <ul v-show="categorias.length" class="dropdown">
+    <ul v-if="categorias.length" class="dropdown">
       <li v-for="categoria in categorias"><a href="#">@{{categoria.name_arreglado}}</a></li>
       
       <li class="has-children">

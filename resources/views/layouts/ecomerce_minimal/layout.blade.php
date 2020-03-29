@@ -241,7 +241,7 @@
     </footer>
   </div>
 
- 
+  <script src="{{url()}}{{ elixir('js/ecomerceApp.js')}} " ></script> 
 
   @if(Auth::guest())
              <script  src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script> 
@@ -261,7 +261,7 @@
 
   </script>
 
-  <script src="{{url()}}{{ elixir('js/ecomerceApp.js')}} " ></script> 
+  
    
     
   </body>
