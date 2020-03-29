@@ -15,8 +15,7 @@
     @yield('og-propiedades')
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/ecomerce_minimal.css') }}">   
-    <script src="{{url()}}{{ elixir('js/ecomerceApp.js')}} " ></script>  
+    <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/ecomerce_minimal.css') }}">    
     
   </head>
   <body>
@@ -242,7 +241,7 @@
     </footer>
   </div>
 
-  
+  <script src="{{url()}}{{ elixir('js/ecomerceApp.js')}} " ></script> 
 
   @if(Auth::guest())
              <script  src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script> 
@@ -261,8 +260,6 @@
     @yield('vue')  
 
   </script>
-
-
    
     
   </body>
