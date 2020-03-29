@@ -33,7 +33,8 @@ getCategoriasActivas:function(){
             if(data.Validacion == true)
             {
                
-               vue.categorias = data.categorias;              
+               vue.categorias = data.categorias;   
+               siteMenuClone();           
                
             }
             else
