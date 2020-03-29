@@ -57,9 +57,9 @@ getCategoriasActivas:function(){
          
 
 },
-created: function () {
+mounted: function () {
     this.getCategoriasActivas();
-    siteMenuClone
+    siteMenuClone();
 },
 
 
