@@ -65,7 +65,7 @@ mounted: function () {
 template:'
 
   <li class="has-children active">
-      <span v-if="categorias.length">Collection</span> 
+      <a href="shop.html" v-if="categorias.length">Collection</a> 
     
       <span v-else class="contiene-el-spiner">
          <div class="cssload-container">
