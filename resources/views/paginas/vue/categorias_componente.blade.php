@@ -57,7 +57,7 @@ getCategoriasActivas:function(){
          
 
 },
-mounted: function () {
+created: function () {
     this.getCategoriasActivas();
 },
 
