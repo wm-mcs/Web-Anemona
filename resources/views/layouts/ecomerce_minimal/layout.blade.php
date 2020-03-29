@@ -260,6 +260,8 @@
     @yield('vue')  
 
   </script>
+
+  <script src="{{url()}}{{ elixir('js/ecomerceApp.js')}} " ></script> 
    
     
   </body>
