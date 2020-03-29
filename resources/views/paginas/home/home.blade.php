@@ -54,15 +54,8 @@
 
   <div class="site-mobile-menu-body">
   <ul class="site-nav-wrap">
-      <li class="has-children active">
-       <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-       <a href="contact.html">Categorias</span></a> 
-       <ul class="collapse" id="collapseItem1">
-         <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
-       </ul>
       
-
-      </li> 
+      <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
       <li><a href="shop.html">Shop</a></li> 
       <li><a href="#">Catalogs</a></li> 
       <li><a href="contact.html">Contact</a></li> 
