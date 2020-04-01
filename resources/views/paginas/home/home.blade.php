@@ -44,7 +44,7 @@
   <div class="site-mobile-menu-header">
     <div class="site-mobile-menu-logo">
        <a href="index.html" class="js-logo-clone">
-        <img alt="A &amp; N" src="http://web-anemona.worldmaster.com.uy/imagenes/Empresa/logo_cuadrado.png" style="height: 35px;">
+        <img alt="A &amp; N" :src="Empresa.img_logo_horizontal" style="height: 35px;">
        </a>
     </div>
     <div class="site-mobile-menu-close ">
@@ -85,7 +85,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.html" class="js-logo-clone"><img style="height:35px; " alt="{{$Empresa->name}}" src="{{$Empresa->img_logo_cuadrado}}"></a>
+              <a href="index.html" class="js-logo-clone"><img style="height:35px; " alt="{{$Empresa->name}}" :src="Empresa.img_logo_horizontal"></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
