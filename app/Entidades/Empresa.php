@@ -18,7 +18,8 @@ class Empresa extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-
+    protected $appends  = ['img_logo_horizontal','img_logo_horizontal_blanco'];
+ 
     /**
      * para verificar si no es null o no es cadena vacia
      */
@@ -45,7 +46,13 @@ class Empresa extends Model
     public function getImgLogoHorizontalAttribute()
     {
         
-        return url().'/imagenes/'.$this->logo_horizontal;
+        return url().'/imagenes/Empresa/logo-rectangular.png';
+    }
+
+     public function getImgLogoHorizontalBlancoAttribute()
+    {
+        
+        return url().'/imagenes/Empresa/logo-rectangular-blanco.png';
     }
 
     public function getImgLogoVerticalAttribute()
