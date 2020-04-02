@@ -148,7 +148,7 @@
               </div>  
             </div>
             <div class="col-lg-7 align-self-end text-center text-lg-right">
-              <img src="images/new/person_transparent.png" alt="Image" class="img-fluid img-1">
+              <img src="imagenes/Portada/maquina.png" alt="Image" class="img-fluid img-1">
             </div>
             
           </div>
