@@ -47,6 +47,7 @@ class Admin_Marcas_Controllers extends Controller
 
       //traigo la entidad
       $marca = $this->MarcaRepo->getEntidad();
+      $marca->borrado = 'no';
 
       //grabo todo las propiedades
       $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);     

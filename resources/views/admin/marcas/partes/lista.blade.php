@@ -6,7 +6,7 @@
 
 
    
-   <img class="admin-marca-img" src="{{url()}}/imagenes/{{$marca->img}}">
+   <img class="admin-marca-img" src="{{$marca->url_img}}">
   
    <div class="admin-marca-contnedor-datos">
      <div>
