@@ -61,7 +61,10 @@ class Admin_Marcas_Controllers extends Controller
       $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);     
 
       //para la imagen
-      $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png'); 
+      $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/',$this->MarcaRepo->helper_convertir_cadena_para_url($marca->name) ,'.png'); 
+
+      //para dar nombre a la imagen
+      $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
 
      return redirect()->route('get_admin_marcas')->with('alert', 'Marca creada correctamente');
     
@@ -78,6 +81,13 @@ class Admin_Marcas_Controllers extends Controller
   //set edit admin marca
   public function set_admin_marcas_editar($id,Request $Request)
   {
+    $manager = new marca_manager(null,$Request->all());
+
+    if(!$manager->isValid())
+    {
+      return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
+    }
+
     $marca = $this->MarcaRepo->find($id);    
 
     //propiedades para crear
@@ -87,6 +97,12 @@ class Admin_Marcas_Controllers extends Controller
     $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
 
     $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png');
+
+    //si tiene imagen cambio el nombre de la misma
+    if($Request->hasFile())
+    {
+      $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
+    }
 
     return redirect()->route('get_admin_marcas')->with('alert', 'Marca Editado Correctamente');  
   }

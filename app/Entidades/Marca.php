@@ -59,7 +59,7 @@ class Marca extends Model
 
     public function getUrlImgAttribute()
     {
-        return url().'/imagenes/'.$this->img;
+        return url().'/imagenes/Marcas'. $this->helper_convertir_cadena_para_url($this->name_img) . '.png';
 
     }
 
@@ -67,6 +67,24 @@ class Marca extends Model
     {
         return route('get_pagina_marca_individual',[$this->name, $this->id]);
 
+    }
+
+    public function helper_convertir_cadena_para_url($cadena)
+    {
+        $cadena = strtolower(trim($cadena));
+        //quito caracteres - 
+        $cadena = str_replace('-' ,' ', $cadena);
+        $cadena = str_replace('_' ,' ', $cadena);
+        $cadena = str_replace('/' ,' ', $cadena);
+        $cadena = str_replace('|' ,' ', $cadena);
+        $cadena = str_replace('"' ,' ', $cadena);
+        $cadena = str_replace('  ' ,' ', $cadena);
+        $cadena = str_replace('   ' ,' ', $cadena);
+        $cadena = str_replace(' ' ,'-', $cadena);
+        $cadena = str_replace('?' ,'', $cadena);
+        $cadena = str_replace('¿' ,'', $cadena);
+
+        return $cadena;
     }
     
     
