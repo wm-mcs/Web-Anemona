@@ -96,8 +96,7 @@ class Admin_Marcas_Controllers extends Controller
     //grabo todo las propiedades
     $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
 
-    $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png');
-
+    $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/',$this->MarcaRepo->helper_convertir_cadena_para_url($marca->name) ,'.png'); 
     //si tiene imagen cambio el nombre de la misma
     if($Request->hasFile('img'))
     {
