@@ -50,7 +50,7 @@ class Marca extends Model
     public function scopeActive($query)
     {
                                
-           $query->where('estado', "si")
+           $query->where('estado', "si");
            $query->where('borrado', "no"); 
                 
     }
