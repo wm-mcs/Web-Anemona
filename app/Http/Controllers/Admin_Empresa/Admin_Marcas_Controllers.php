@@ -99,7 +99,7 @@ class Admin_Marcas_Controllers extends Controller
     $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png');
 
     //si tiene imagen cambio el nombre de la misma
-    if($Request->hasFile())
+    if($Request->hasFile('img'))
     {
       $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
     }
