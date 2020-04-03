@@ -59,7 +59,7 @@ class Marca extends Model
 
     public function getUrlImgAttribute()
     {
-        return url().'/imagenes/Marcas'. $this->helper_convertir_cadena_para_url($this->name_img) . '.png';
+        return url().'/imagenes/Marcas/'. $this->helper_convertir_cadena_para_url($this->name_img) . '.png';
 
     }
 
