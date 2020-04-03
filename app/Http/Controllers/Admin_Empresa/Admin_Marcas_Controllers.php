@@ -8,7 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use App\Repositorios\MarcaRepo;
 use Illuminate\Http\Request;
-use App\Managers\Users\user_admin_crear;
+use App\Managers\marca_manager;
 
 
 
@@ -42,6 +42,14 @@ class Admin_Marcas_Controllers extends Controller
   public function set_admin_marcas_crear(Request $Request)
   {     
 
+
+      $manager = new marca_manager(null,$Request->all());
+
+      if(!$manager->isValid())
+      {
+        return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
+      }
+
       //propiedades para crear
       $Propiedades = ['name','description','estado','rank'];
 
@@ -55,7 +63,7 @@ class Admin_Marcas_Controllers extends Controller
       //para la imagen
       $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png'); 
 
-     return redirect()->route('get_admin_marcas')->with('alert', 'Marca Creado Correctamente');
+     return redirect()->route('get_admin_marcas')->with('alert', 'Marca creada correctamente');
     
   }
 
