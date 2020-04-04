@@ -13,7 +13,7 @@ use App\Managers\Producto\crear_producto_admin_manager;
 use App\Repositorios\MarcaRepo;
 use DB;
 use App\Repositorios\CategoriaRepo;
-use App\Repositorios\MarcaRepo;
+
 
 
 
