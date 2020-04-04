@@ -65,7 +65,7 @@ class Admin_Producto_Controllers extends Controller
     $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
     $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
     
-    return view('admin.productos.productos_crear',compact('Categorias'));
+    return view('admin.productos.productos_crear',compact('Categorias','Marcas'));
   }
 
 
@@ -140,7 +140,7 @@ class Admin_Producto_Controllers extends Controller
     $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
     $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
 
-    return view('admin.productos.productos_editar',compact('Entidad','Categorias'));
+    return view('admin.productos.productos_editar',compact('Entidad','Categorias','Marcas'));
   }
 
   //set edit admin 
