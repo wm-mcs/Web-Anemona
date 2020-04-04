@@ -5,15 +5,15 @@
 @endif
 
 
+   <div class="admin-marca-contiene-imagen">
+     <img class="admin-marca-img" src="{{$marca->url_img}}">
+   </div>
    
-   <img class="admin-marca-img" src="{{$marca->url_img}}">
   
    <div class="admin-marca-contnedor-datos">
-     <div>
-        {{-- quito la fecha --}}
-        {{-- <div class="admin-marca-fecha">{{$marca->created_at->format('d-m-Y')}}</div>  --}}    
-        <div class="admin-marca-titulo"> {{$marca->name}}      </div>
-     </div>
+     
+     <div class="admin-marca-titulo"> {{$marca->name}}      </div>
+     
      <div class="admin-user-lista-contenedor-acciones">
         <a href="{{route('get_admin_marcas_editar', $marca->id)}}">
           <span class="boton-acciones-editar">

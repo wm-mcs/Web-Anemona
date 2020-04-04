@@ -8,6 +8,7 @@
   width: 300px;
   margin-top: 10px;
   background-color: $color-grey0;
+
 }
 
 
@@ -15,13 +16,24 @@
   border-color: $Color-Gris-Claro-Para-Bordes;
 }
 
+.admin-marca-contiene-imagen{
+  width:200px;
+  height:200px;
+  overflow: hidden;
+  @include flexbox; 
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-between);
+  margin-right: 5px;
+}
+
 .admin-marca-lista-contenedor-desactivado{
   color: $color-grey1;
   
 }
   .admin-marca-img{
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height:auto;
     margin-right: 4px;
   }
 
@@ -40,8 +52,8 @@
 
   .admin-marca-contnedor-datos{
     @include flexbox; 
-    @include flex-direction(row);
-    @include align-items(center);
-    @include justify-content(space-between);
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    
     width: 100%;
   }
