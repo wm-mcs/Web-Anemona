@@ -92,21 +92,15 @@ class Admin_Producto_Controllers extends Controller
         //valido la data
         if ($manager->isValid())
         {
-
-
            $Entidad = $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
            $this->EntidadDelControladorRepo->setAtributoEspecifico($Entidad,'description',nl2br($Request->get('description')));
 
- //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            
-
+           
             
             //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
             if($files[0] != null )
-            {        
-
-
+            {   
               foreach($files as $file) 
               { 
                 $Img              = $this->ImgEntidadRepo->getEntidad();
@@ -115,15 +109,13 @@ class Admin_Producto_Controllers extends Controller
                 $Img->estado      = 'si';
                 $Img->save();
 
-                $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id         ,'.jpg' , false,$file);
+                $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id         ,'.jpg' , 1000,$file);
                 $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg' , 250  ,$file);
               }
               
             }
             
            
-
- //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
            if($Request->get('tipo_de_boton') == 'guardar')
            {
              return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Entidad creado correctamente');  
@@ -155,26 +147,15 @@ class Admin_Producto_Controllers extends Controller
   public function set_admin_productos_editar($id,Request $Request)
   {
       $Entidad         = $this->EntidadDelControladorRepo->find($id);
-
-      $Propiedades     = $this->getPropiedades(); 
-
-    
-      
+      $Propiedades     = $this->getPropiedades();
       $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
       $this->EntidadDelControladorRepo->setAtributoEspecifico($Entidad,'description',nl2br($Request->get('description')));  
 
       //imagenes
       $files = $Request->file('img');
-
-
-
-      
       //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
       if($files[0] != null )
-      {     
-
-
-
+      {  
         foreach($files as $file) 
         { 
           $Img              = $this->ImgEntidadRepo->getEntidad();
@@ -183,22 +164,20 @@ class Admin_Producto_Controllers extends Controller
           $Img->estado      = 'si';
           $Img->save();
 
-          
-
-          $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id         ,'.jpg' , false,$file);
+          $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id         ,'.jpg' , 1000,$file);
           $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg' , 250  ,$file);
-
-          
         }
         
       }
+
+     
       
   
      
      
      if($Request->get('tipo_de_boton') == 'guardar')
      {
-       return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Entidad editado correctamente');  
+       return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Producto editado correctamente');  
      }
      else
      {

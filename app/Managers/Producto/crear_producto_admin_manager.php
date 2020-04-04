@@ -14,9 +14,13 @@ class crear_producto_admin_manager extends ManagerBase
   public function getRules()
   {
     $rules = [
-      'img'               => 'required',
+      
       'name'              => 'required',
-      'description'       => 'required'
+      'description'       => 'required',
+      'img'               => 'mimes:png',
+      'categoria_id'      => 'required',
+      'marca_id'          => 'required',
+
           
              ];
 

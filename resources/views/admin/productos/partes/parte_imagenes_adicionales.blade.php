@@ -1,3 +1,5 @@
+
+@if(isset($Entidad))
 <div class="admin-entidad-contenedor-imagenes-y-form">
    @foreach($Entidad->imagenes as $img)
     <div class="admin-entidad-proyecto-img-adicionales-contenedor 
@@ -22,4 +24,5 @@
 
    
 </div>
+@endif
 

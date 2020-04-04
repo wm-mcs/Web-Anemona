@@ -1,5 +1,8 @@
 
 <div class="formulario-label-fiel">
+<div class="formulario-label-aclaracion">
+	Las imágenes deben ser en formato <strong>jpg</strong> y en <strong>formato cuadrado</strong>.  Al menos de <strong>1000px x 1000px</strong> .
+</div>
 {!! Form::label('img', 'Imagen', array('class' => 'control-label')) !!}
 {!! Form::file('img[]',['class'            => 'file',
                        'id'                => 'imagenes-field',
