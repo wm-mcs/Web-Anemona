@@ -13,7 +13,7 @@
 
  {{-- titulo --}}
  <div class="contenedor-admin-entidad-titulo-form-busqueda">
-    <div class="admin-entidad-titulo">Productos 
+    <div class="admin-entidad-titulo"> 
      <a href="{{route('get_admin_productos_crear')}}">
       <span class="admin-user-boton-Crear">Crear 
        <span class="icon-add_circle_outline"></span> 

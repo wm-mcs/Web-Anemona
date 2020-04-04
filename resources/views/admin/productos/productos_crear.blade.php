@@ -8,7 +8,7 @@
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Crear Evento</span>
+  <span>Crear</span>
 @stop
 
 @section('content')

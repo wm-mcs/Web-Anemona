@@ -21,6 +21,28 @@
 </div>
 
 <div class="formulario-label-fiel">
+  
+{!! Form::label('marca_id', 'Marca', ['class' => 'control-label']) !!}
+
+<select style="margin: 15px 0;" value="{{ Input::old('marca_id') }}" name="marca_id">
+                   
+       <OPTION 
+                      VALUE="0"
+                      >
+       Selecciona
+        </OPTION>
+      @foreach($Marcas as $Marca)
+        <OPTION @if(isset($Entidad)) @if($Entidad->marca_id == $Marca->id ) selected @endif @endif
+                      VALUE="{{$Marca->id}}"
+                      >
+        {{$Marca->name}} 
+        </OPTION>
+      @endforeach 
+</select>
+
+</div>
+
+<div class="formulario-label-fiel">
   {!! Form::label('name', 'Nombre', array('class' => 'formulario-label ')) !!}
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
 </div>

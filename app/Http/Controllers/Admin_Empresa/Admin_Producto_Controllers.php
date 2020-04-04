@@ -13,7 +13,7 @@ use App\Managers\Producto\crear_producto_admin_manager;
 use App\Repositorios\MarcaRepo;
 use DB;
 use App\Repositorios\CategoriaRepo;
-
+use App\Repositorios\MarcaRepo;
 
 
 
@@ -25,6 +25,7 @@ class Admin_Producto_Controllers extends Controller
   protected $ImgEntidadRepo;
   protected $MarcaRepo;
   protected $CategoriaRepo;
+
 
 
   public function __construct(ProductoRepo            $ProductoRepo, 
@@ -44,7 +45,7 @@ class Admin_Producto_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return  ['name','description','categoria_id','moneda','precio','stock','estado'];
+    return  ['name','categoria_id','marca_id','moneda','precio','stock','estado'];
   }
 
   public function get_admin_productos(Request $Request)
@@ -61,7 +62,8 @@ class Admin_Producto_Controllers extends Controller
   public function get_admin_productos_crear()
   { 
 
-    $Categorias = $this->CategoriaRepo->getEntidadActivas();
+    $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
     
     return view('admin.productos.productos_crear',compact('Categorias'));
   }
@@ -94,14 +96,7 @@ class Admin_Producto_Controllers extends Controller
 
            $Entidad = $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
-           /*//utilzo la funciona creada en el controlador para subir la imagen
-           $this->set_admin_eventos_img($Evento->id, $Request);  
-
-           //creo las marcas asociadas a este evento
-           foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
-           { 
-             $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
-           }*/
+           $this->EntidadDelControladorRepo->setAtributoEspecifico($Entidad,'description',nl2br($Request->get('description')));
 
  //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
             
@@ -150,8 +145,8 @@ class Admin_Producto_Controllers extends Controller
   public function get_admin_productos_editar($id)
   {
     $Entidad     = $this->EntidadDelControladorRepo->find($id);
-    $Categorias  = $this->CategoriaRepo->getEntidadActivas();
-
+    $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
 
     return view('admin.productos.productos_editar',compact('Entidad','Categorias'));
   }
@@ -165,7 +160,8 @@ class Admin_Producto_Controllers extends Controller
 
     
       
-      $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);     
+      $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
+      $this->EntidadDelControladorRepo->setAtributoEspecifico($Entidad,'description',nl2br($Request->get('description')));  
 
       //imagenes
       $files = $Request->file('img');

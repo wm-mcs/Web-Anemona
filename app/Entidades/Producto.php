@@ -4,6 +4,7 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Entidades\ImgHome;
+use App\Entidades\Categoria;
 use App\Entidades\ProductoImg;
 use Illuminate\Support\Facades\Cache;
 
@@ -22,7 +23,11 @@ class Producto extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends  = ['route'];
+    protected $appends  = ['route',
+                           'categoria_producto',
+                           'url_img',
+                           'precio_producto'
+                          ];
 
 
 
@@ -31,13 +36,25 @@ class Producto extends Model
       return $this->hasMany(ProductoImg::class,'producto_id','id')->where('estado','si');
     }
 
+        public function getImagenesProductoAttribute()
+        {
+            return Cache::remember('ImagenesProducto'.$this->id, 60, function() {
+                                  return $this->imagenes; 
+                              }); 
+        }
 
-    public function getImagenesProductoAttribute()
+
+    public function categoria()
     {
-        return Cache::remember('ImagenesProducto'.$this->id, 15, function() {
-                              return $this->imagenes; 
-                          }); 
+      return $this->belongsTo(Categoria::class,'categoria_id','id');
     }
+        public function getCategoriaProductoAttribute()
+        {
+            return Cache::remember('categoriaProducto'.$this->id, 60, function() {
+                                  return $this->categoria; 
+                              }); 
+        }
+
 
   
 
@@ -62,6 +79,7 @@ class Producto extends Model
     {
                                
            $query->where('estado', "si"); 
+           $query->where('borrado', "no"); 
                 
     }
 
@@ -119,9 +137,10 @@ class Producto extends Model
 
     public function getDescriptionParrafoAttribute()
     {
+
+        return preg_replace('/\<br(\s*)?\/?\>/i', "\n", $this->description);
          
-         $text =  htmlentities($this->description);
-         return   $text;  
+         
     }
 
     public function getFechaDeRealizacionAttribute()
@@ -143,16 +162,18 @@ class Producto extends Model
     //funciones personalizadas para reciclar
     public function helper_convertir_cadena_para_url($cadena)
     {
-        $cadena = trim($cadena);
+        $cadena = strtolower(trim($cadena));
         //quito caracteres - 
         $cadena = str_replace('-' ,' ', $cadena);
         $cadena = str_replace('_' ,' ', $cadena);
         $cadena = str_replace('/' ,' ', $cadena);
+        $cadena = str_replace('|' ,' ', $cadena);
         $cadena = str_replace('"' ,' ', $cadena);
+        $cadena = str_replace('  ' ,' ', $cadena);
+        $cadena = str_replace('   ' ,' ', $cadena);
         $cadena = str_replace(' ' ,'-', $cadena);
         $cadena = str_replace('?' ,'', $cadena);
         $cadena = str_replace('¿' ,'', $cadena);
-
         return $cadena;
     }
 
