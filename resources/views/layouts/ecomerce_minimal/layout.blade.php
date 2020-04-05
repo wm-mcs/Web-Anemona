@@ -40,12 +40,12 @@
     <div class="products-wrap border-top-0">
       <div class="container-fluid">
         <div class="row no-gutters products">
-          <producto-lista :Empresa="Empresa"></producto-lista>
-          <producto-lista :Empresa="Empresa"></producto-lista>
-          <producto-lista :Empresa="Empresa"></producto-lista>
-          <producto-lista :Empresa="Empresa"></producto-lista>
-          <producto-lista :Empresa="Empresa"></producto-lista>
-          <producto-lista :Empresa="Empresa"></producto-lista>
+          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
+          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
+          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
+          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
+          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
+          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
         </div>
       </div>
     </div>
@@ -78,27 +78,17 @@
           <div class="col-md-12 block-3 products-wrap">
             <div class="nonloop-block-3 owl-carousel">
               
-              <producto-lista :Empresa="Empresa"></producto-lista>
+              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
 
-              <producto-lista :Empresa="Empresa"></producto-lista>
+              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
 
-              <producto-lista :Empresa="Empresa"></producto-lista>
+              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
 
-              <producto-lista :Empresa="Empresa"></producto-lista>
+              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
 
-              <div class="product">
-                <a href="#" class="item">
-                  <span class="tag">Sale</span>
-                  <img src="images/product_2.jpg" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>Marc Jacobs Bag</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50 <del>$30.00</del></strong>
-                  </div>
-                </a>
-              </div>
+             
 
-              <producto-lista :Empresa="Empresa"></producto-lista>
+              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
 
             </div>
           </div>

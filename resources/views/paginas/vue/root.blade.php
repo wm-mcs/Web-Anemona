@@ -10,6 +10,10 @@ var app = new Vue({
       resolucion_tablet: 640,
       resolucion_pc: 990,
       scrolled:0,
+
+
+      producto_vista_bloque:'bloque',
+      producto_vista_bloque_en_slide:'bloque_slide'
       
 
       
