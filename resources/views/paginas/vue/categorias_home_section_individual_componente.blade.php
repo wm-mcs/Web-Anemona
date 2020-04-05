@@ -74,7 +74,11 @@ mounted: function () {
 
 template:' 
 
-      <div v-if="productos_para_mostrar.length" class="container">
+
+     <div v-if="productos_para_mostrar.length" class="class="site-section"">
+       
+     
+      <div  class="container">
         <div class="row">
           <div class="title-section text-center col-12">
             <h2 class="text-uppercase">@{{Categoria.name}}</h2>
@@ -92,6 +96,7 @@ template:'
             </div>
           </div>
         </div>
+      </div>
       </div>
       <div v-else class="contiene-spiner-box-grande">
          <div class="cssload-container">

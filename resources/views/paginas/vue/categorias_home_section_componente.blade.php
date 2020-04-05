@@ -36,11 +36,11 @@ mounted: function () {
 
 template:' 
 
-    <div v-if="Categorias_para_mostrar.length" v-for="Categoria in Categorias_para_mostrar" class="site-section">
+    <span v-if="Categorias_para_mostrar.length" >
 
-      <categoria-home-section-individual :Categoria="Categoria"></categoria-home-section-individual>
+      <categoria-home-section-individual :Categoria="Categoria" v-for="Categoria in Categorias_para_mostrar" ></categoria-home-section-individual>
       
-    </div>
+    </span>
     <div v-else class="contiene-spiner-box-grande">
          <div class="cssload-container">
            <div class="cssload-tube-tunnel"></div>
