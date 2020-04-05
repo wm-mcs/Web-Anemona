@@ -45,7 +45,7 @@ class Admin_Producto_Controllers extends Controller
 
   public function getPropiedades()
   {
-    return  ['name','categoria_id','marca_id','moneda','precio','stock','estado','nuevo_usado','codigo_fabricante'];
+    return  ['name','categoria_id','marca_id','moneda','precio','stock','estado','nuevo_usado','codigo_fabricante','description'];
   }
 
   public function get_admin_productos(Request $Request)
@@ -94,7 +94,7 @@ class Admin_Producto_Controllers extends Controller
         {
            $Entidad = $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
-           $this->EntidadDelControladorRepo->setAtributoEspecifico($Entidad,'description',nl2br($Request->get('description')));
+           
 
            
             
@@ -149,7 +149,7 @@ class Admin_Producto_Controllers extends Controller
       $Entidad         = $this->EntidadDelControladorRepo->find($id);
       $Propiedades     = $this->getPropiedades();
       $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
-      $this->EntidadDelControladorRepo->setAtributoEspecifico($Entidad,'description',nl2br($Request->get('description')));  
+      
 
       //imagenes
       $files = $Request->file('img');

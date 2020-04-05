@@ -12,9 +12,7 @@
 
 
 
-@section('contenido')
-     
-@stop     
+    
 
 
 @section('og-propiedades') 
@@ -156,6 +154,14 @@
         
   </div>
 @stop
+
+
+
+@section('contenido')
+     
+@stop 
+
+
 
 
 
