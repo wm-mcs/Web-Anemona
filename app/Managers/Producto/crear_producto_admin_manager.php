@@ -17,7 +17,6 @@ class crear_producto_admin_manager extends ManagerBase
       
       'name'              => 'required',
       'description'       => 'required',
-      'img'               => 'mimes:jpeg',
       'categoria_id'      => 'required',
       'marca_id'          => 'required',
       'precio'            => 'required',
