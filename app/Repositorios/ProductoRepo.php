@@ -41,12 +41,12 @@ class ProductoRepo extends BaseRepo
   {
     $Cantidad_a_traer = 6 ;
 
-    $Cantidad = $this->getEntidad()
+    $Productos = $this->getEntidad()
                 ->where('borrado','no')
                 ->where('estado', 'si')
                 ->get();
 
-    if($Cantidad >= $Cantidad_a_traer)   
+    if($Productos->count() >= $Cantidad_a_traer)   
     {
       return $this->getEntidad()
                   ->where('borrado','no')
@@ -60,7 +60,6 @@ class ProductoRepo extends BaseRepo
                   ->where('borrado','no')
                   ->where('estado', 'si')
                   ->orderBy('created_at','desc')
-                  ->take($Cantidad)
                   ->get();
   }
 
