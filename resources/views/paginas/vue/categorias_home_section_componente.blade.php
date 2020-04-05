@@ -14,16 +14,13 @@ data:function(){
 }, 
 computed:{
 categorias_con_varios_productos:function(){
-   let categorias = this.Categorias_para_mostrar.find( categoria => categoria.cantidad_de_productos_activos >= 1 ); 
+   let categorias = this.Categorias_para_mostrar.filter( categoria => categoria.cantidad_de_productos_activos >= 1 ); 
 
    return categorias;
   }
 
   
 },
-
-
-
 methods:{
 
 

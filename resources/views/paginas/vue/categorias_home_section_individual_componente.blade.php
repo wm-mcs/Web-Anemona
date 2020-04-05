@@ -30,9 +30,9 @@ getProductosDeEstaCategoriaParaHome:function(){
        
       var vue = this;  
       this.cargando = true;   
-      data = {categoria_id:this.Categoria.id}      
+      var data = {categoria_id:this.Categoria.id}  ;    
 
-     axios.post(url).then(function (response){  
+     axios.post(url,data).then(function (response){  
             var data = response.data;  
             
 

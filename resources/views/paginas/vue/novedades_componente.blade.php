@@ -7,7 +7,7 @@ props:['Empresa']
 data:function(){
     return {
          
-     productos_novedades: [];
+     productos_novedades: []
 
 
     }
