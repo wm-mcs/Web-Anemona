@@ -179,7 +179,7 @@
       </div>
     </div>
 
-   <categoria-home-section></categoria-home-section>
+   <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
      
 @stop 
 
