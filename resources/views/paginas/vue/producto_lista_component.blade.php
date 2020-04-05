@@ -42,7 +42,7 @@ template:'
       </div>
     </a>
   </div>
-   <div v-else-if="formato_bloque" class="product">
+   <div v-else-if="formato_bloque_slide" class="product">
                 <a href="#" class="item">
                   <span class="tag">Sale</span>
                   <img src="images/product_2.jpg" alt="Image" class="img-fluid">
