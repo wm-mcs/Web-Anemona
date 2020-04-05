@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\File;
 use App\Repositorios\Emails\EmailsRepo;
 use Input;
 use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Cache;
 
 /**
 * Contiene metodos comunes para todo los repositorios
@@ -385,6 +386,27 @@ abstract class BaseRepo
         $cadena = str_replace('¿' ,'', $cadena);
 
         return $cadena;
+    }
+
+
+    public function actualizarCache($nombreDelCache, $nuevoValorDelCache = null, $tiempo_expiracion = null)
+    {
+
+      if(Cache::has($nombreDelCache))
+      {
+        //borro el cache
+        Cache::forget($nombreDelCache);
+      }
+
+      if($nuevoValorDelCache != null)
+      {
+         Cache::remember($nombreDelCache, $tiempo_expiracion, function() use ($nuevoValorDelCache){
+          return  $nuevoValorDelCache ;
+         }); 
+      }
+      
+
+     
     }
     
 

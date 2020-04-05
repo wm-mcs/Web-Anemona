@@ -21,6 +21,13 @@ Route::get('/' , [
 	  'as'   => 'getCategoriasActivas']
 	);
 
+  Route::get('getProductosNovedades' , [                    
+    'uses' => 'Publicas\Home_Public_Controller@getProductosNovedades',
+    'as'   => 'getProductosNovedades']
+  );
+
+  
+
 
 
 

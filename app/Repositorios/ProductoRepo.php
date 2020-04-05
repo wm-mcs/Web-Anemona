@@ -36,6 +36,34 @@ class ProductoRepo extends BaseRepo
       return $this->getEntidad()->active()->orderBy('fecha', 'desc')->take(2)->get()->last();
   }
 
+
+  public function getProductosNovedadesParaHome()
+  {
+    $Cantidad_a_traer = 6 ;
+
+    $Cantidad = $this->getEntidad()
+                ->where('borrado','no')
+                ->where('estado', 'si')
+                ->get();
+
+    if($Cantidad >= $Cantidad_a_traer)   
+    {
+      return $this->getEntidad()
+                  ->where('borrado','no')
+                  ->where('estado', 'si')
+                  ->orderBy('created_at','desc')
+                  ->take($Cantidad_a_traer)
+                  ->get();
+    }         
+
+      return $this->getEntidad()
+                  ->where('borrado','no')
+                  ->where('estado', 'si')
+                  ->orderBy('created_at','desc')
+                  ->take($Cantidad)
+                  ->get();
+  }
+
   
   
 }

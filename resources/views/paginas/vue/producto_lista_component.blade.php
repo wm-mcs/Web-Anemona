@@ -1,7 +1,7 @@
 Vue.component('producto-lista' ,
 {
 
-props:['Empresa','Tipo']
+props:['Empresa','Tipo','Producto']
 ,  
 
 
@@ -34,22 +34,22 @@ template:'
 
   <div v-if="formato_bloque" class="col-6 col-md-6 col-lg-4">
     <a href="#" class="item">
-      <img src="images/product_1.jpg" alt="Image" class="img-fluid">
+      <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
       <div class="item-info">
-        <h3>The Shoe</h3>
-        <span class="collection d-block">Summer Collection</span>
-        <strong class="price">$9.50</strong>
+        <h3>@{{Producto.name}}</h3>
+        <span class="collection d-block">@{{Producto.categoria_producto.name}}</span>
+        <strong class="price">@{{Producto.moneda}} @{{Producto.precio}} </strong>
       </div>
     </a>
   </div>
    <div v-else-if="formato_bloque_slide" class="product">
                 <a href="#" class="item">
                   <span class="tag">Sale</span>
-                  <img src="images/product_2.jpg" alt="Image" class="img-fluid">
+                  <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
                   <div class="item-info">
-                    <h3>Marc Jacobs Bag</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50 <del>$30.00</del></strong>
+                    <h3>@{{Producto.name}}</h3>
+                    <span class="collection d-block">@{{Producto.categoria_producto.name}}</span>
+                    <strong class="price">@{{Producto.moneda}} @{{Producto.precio}} <del>$30.00</del></strong>
                   </div>
                 </a>
     </div>

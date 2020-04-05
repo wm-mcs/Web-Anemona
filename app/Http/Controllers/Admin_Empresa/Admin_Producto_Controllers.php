@@ -84,19 +84,14 @@ class Admin_Producto_Controllers extends Controller
 
       //imagenes
       $files = $Request->file('img');
-
-     
-
-      
         
         //valido la data
         if ($manager->isValid())
         {
            $Entidad = $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);
 
-           
-
-           
+           //actualizo_cache_novedades_home 
+           $this->EntidadDelControladorRepo->actualizarCache('getProductosNovedadesParaHome');
             
             //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
             if($files[0] != null )
@@ -137,8 +132,8 @@ class Admin_Producto_Controllers extends Controller
   public function get_admin_productos_editar($id)
   {
     $Entidad     = $this->EntidadDelControladorRepo->find($id);
-    $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
-    $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Categorias  = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Marcas      = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
 
     return view('admin.productos.productos_editar',compact('Entidad','Categorias','Marcas'));
   }

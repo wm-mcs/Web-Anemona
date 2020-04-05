@@ -52,6 +52,17 @@ class Home_Public_Controller extends Controller
       }
 
 
+      public function getProductosNovedades()
+      {
+        $Productos = Cache::remember('getProductosNovedadesParaHome', 3000, function() {
+                     return $this->ProductoRepo->getProductosNovedadesParaHome();
+        }); 
+
+         return  ['Validacion'  => true,
+                  'Productos'   => $Productos];
+      } 
+
+
 
 
 

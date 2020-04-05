@@ -37,64 +37,7 @@
     
 
   
-    <div class="products-wrap border-top-0">
-      <div class="container-fluid">
-        <div class="row no-gutters products">
-          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
-          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
-          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
-          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
-          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
-          <producto-lista :Tipo="producto_vista_bloque" :Empresa="Empresa"></producto-lista>
-        </div>
-      </div>
-    </div>
-    
-    <div class="site-blocks-cover inner-page py-5"  data-aos="fade">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-4 ml-auto order-lg-2 align-self-start">
-            <div class="site-block-cover-content">
-            <h2 class="sub-title">#New Summer Collection 2019</h2>
-            <h1>Jacket</h1>
-            <p><a href="#" class="btn btn-black rounded-0">Shop Now</a></p>
-            </div>
-          </div>
-          <div class="col-lg-8 order-1 align-self-end">
-            <img src="images/model_woman_1.png" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">Collections</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 block-3 products-wrap">
-            <div class="nonloop-block-3 owl-carousel">
-              
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-             
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
 
     <div class="site-blocks-cover inner-page py-5"  data-aos="fade">
