@@ -78,16 +78,13 @@
           <div class="col-md-12 block-3 products-wrap">
             <div class="nonloop-block-3 owl-carousel">
               
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="images/product_1.jpg" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The Shoe</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
+              <producto-lista :Empresa="Empresa"></producto-lista>
+
+              <producto-lista :Empresa="Empresa"></producto-lista>
+
+              <producto-lista :Empresa="Empresa"></producto-lista>
+
+              <producto-lista :Empresa="Empresa"></producto-lista>
 
               <div class="product">
                 <a href="#" class="item">
@@ -101,50 +98,7 @@
                 </a>
               </div>
 
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="images/product_3.jpg" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The  Belt</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="images/product_1.jpg" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The Shoe</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <span class="tag">Sale</span>
-                  <img src="images/product_2.jpg" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>Marc Jacobs Bag</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50 <del>$30.00</del></strong>
-                  </div>
-                </a>
-              </div>
-
-              <div class="product">
-                <a href="#" class="item">
-                  <img src="images/product_3.jpg" alt="Image" class="img-fluid">
-                  <div class="item-info">
-                    <h3>The  Belt</h3>
-                    <span class="collection d-block">Summer Collection</span>
-                    <strong class="price">$9.50</strong>
-                  </div>
-                </a>
-              </div>
+              <producto-lista :Empresa="Empresa"></producto-lista>
 
             </div>
           </div>
