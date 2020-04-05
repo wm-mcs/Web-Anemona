@@ -99,11 +99,7 @@ template:'
         </div>
       </div>
       </div>
-      <div v-else class="contiene-spiner-box-grande">
-         <div class="cssload-container">
-           <div class="cssload-tube-tunnel"></div>
-         </div>
-      </div>
+      
 
 '
 
