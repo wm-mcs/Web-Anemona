@@ -69,7 +69,11 @@ template:'
    <div v-if="productos_novedades.length" class="products-wrap border-top-0">
       <div class="container-fluid">
         <div class="row no-gutters products">
-          <producto-lista v-for="Producto in productos_novedades" :Producto="Producto" :Tipo="producto_vista_bloque" :Empresa="Empresa" :key="Producto.id"></producto-lista>
+          <producto-lista v-for="Producto in productos_novedades" 
+                           :Producto="Producto" 
+                           :Tipo="$root.producto_vista_bloque" 
+                           :Empresa="Empresa" 
+                           :key="Producto.id"></producto-lista>
           
         </div>
       </div>
