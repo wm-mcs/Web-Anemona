@@ -55,7 +55,10 @@ class Admin_Categoria_Controllers extends Controller
       $Categoria = $this->CategoriaRepo->getEntidad();
 
       //grabo todo las propiedades
-      $this->CategoriaRepo->setEntidadDato($Categoria,$Request,$Propiedades);     
+      $this->CategoriaRepo->setEntidadDato($Categoria,$Request,$Propiedades);   
+
+      //actualizo Cache
+      $this->CategoriaRepo->actualizarCache('CategoriasActivas');  
 
       //para la imagen
       $this->CategoriaRepo->setImagen($Categoria,$Request,'img','Categoria/', $Categoria->name,'.png'); 

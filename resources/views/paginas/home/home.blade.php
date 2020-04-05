@@ -179,34 +179,7 @@
       </div>
     </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">Collections</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 block-3 products-wrap">
-            <div class="nonloop-block-3 owl-carousel">
-              
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-             
-
-              <producto-lista :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   <categoria-home-section></categoria-home-section>
      
 @stop 
 
@@ -215,14 +188,13 @@
 
 
 @section('vue')
-   
+
+   @include('paginas.vue.categorias_home_section_individual_componente')
+   @include('paginas.vue.categorias_home_section_componente')
    @include('paginas.vue.novedades_componente')
    @include('paginas.vue.categorias_componente')
    @include('paginas.vue.producto_lista_component')
    @include('paginas.vue.root')
-
-
-
 @stop
 
 

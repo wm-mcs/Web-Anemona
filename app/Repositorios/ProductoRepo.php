@@ -64,6 +64,40 @@ class ProductoRepo extends BaseRepo
                   ->get();
   }
 
+
+  public function getProductosDeEstaCategoria($Categoria_id,$Order_by,$Asc_desc)
+  {
+    return $this->getEntidad()
+                ->where('borrado','no')
+                ->where('estado', 'si')
+                ->where('categoria_id',$Categoria_id)
+                ->orderBy($Order_by,$Asc_desc)
+                ->get();
+  }
+
+  public function getProductosDeEstaCategoriaParaHome($Categoria_id)
+  {
+
+    $Cantidad_máxima_a_consultar = 6 ;
+    $Productos = $this->getEntidad()
+                ->where('borrado','no')
+                ->where('estado', 'si')
+                ->where('categoria_id',$Categoria_id)
+                ->orderBy('name','asc')
+                ->get();
+
+    if($Productos->count() >= $Cantidad_máxima_a_consultar) 
+    {
+      $Productos->take(6);
+    }
+    else
+    {
+      return $Productos
+    }
+
+
+  }
+
   
   
 }

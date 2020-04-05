@@ -26,6 +26,13 @@ Route::get('/' , [
     'as'   => 'getProductosNovedades']
   );
 
+ Route::post('getProductosDeEstaCategoriaParaHome' , [                    
+    'uses' => 'Publicas\Home_Public_Controller@getProductosDeEstaCategoriaParaHome',
+    'as'   => 'getProductosDeEstaCategoriaParaHome']
+  );
+
+  
+
   
 
 

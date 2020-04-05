@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
 use Illuminate\Support\Facades\Cache;
 use App\Repositorios\CategoriaRepo;
+use App\Servicios\ArregloDeEntidades;
 
 
 
@@ -17,17 +18,20 @@ class Home_Public_Controller extends Controller
     protected $EmpresaRepo;
     protected $ProductoRepo;
     protected $CategoriaRepo;
+    protected $ArregloDeEntidades;
   
 
-    public function __construct(ImgHomeRepo   $ImgHomeRepo,
-                                EmpresaRepo   $EmpresaRepo,
-                                ProductoRepo  $ProductoRepo,
-                                CategoriaRepo $CategoriaRepo  )
+    public function __construct(ImgHomeRepo        $ImgHomeRepo,
+                                EmpresaRepo        $EmpresaRepo,
+                                ProductoRepo       $ProductoRepo,
+                                CategoriaRepo      $CategoriaRepo, 
+                                ArregloDeEntidades $ArregloDeEntidades  )
     {
-        $this->ImgHomeRepo   = $ImgHomeRepo;
-        $this->EmpresaRepo   = $EmpresaRepo;
-        $this->ProductoRepo  = $ProductoRepo;
-        $this->CategoriaRepo = $CategoriaRepo;
+        $this->ImgHomeRepo         = $ImgHomeRepo;
+        $this->EmpresaRepo         = $EmpresaRepo;
+        $this->ProductoRepo        = $ProductoRepo;
+        $this->CategoriaRepo       = $CategoriaRepo;
+        $this->ArregloDeEntidades  = $ArregloDeEntidades;
         
     }
 
@@ -35,6 +39,11 @@ class Home_Public_Controller extends Controller
     {
            
         $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
+
+        //se ajustan los productos de las categorias
+        $this->ArregloDeEntidades->AjustoCantidadDeProductosActivosDeCategorias();
+
+
         return view('paginas.home.home', compact('Empresa'));
     }
 
@@ -49,6 +58,20 @@ class Home_Public_Controller extends Controller
 
         return  ['Validacion'  => true,
                  'categorias'  => $categorias];
+      }
+
+
+      public function getProductosDeEstaCategoriaParaHome(Request $Request)
+      {
+        return  ['Validacion'  => true,
+                 'Productos'   => $this->ProductoRepo->getProductosDeEstaCategoriaParaHome($Request->get('categoria_id'))];
+      }
+
+
+      public function getCategoriaQueTengaProductosYNoEsteInvocada(Request $Request)
+      {
+
+
       }
 
 

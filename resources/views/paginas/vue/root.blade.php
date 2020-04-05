@@ -13,7 +13,8 @@ var app = new Vue({
 
 
       producto_vista_bloque:'bloque',
-      producto_vista_bloque_en_slide:'bloque_slide'
+      producto_vista_bloque_en_slide:'bloque_slide',
+      categorias_que_se_muestran_en_home:[]
       
 
       
