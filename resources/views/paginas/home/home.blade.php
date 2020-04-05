@@ -159,7 +159,8 @@
 
 @section('contenido')
 
-   <novededades :Empresa="Empresa"></novededades>
+    <novededades :Empresa="Empresa"></novededades>
+  
     
     <div class="site-blocks-cover inner-page py-5"  data-aos="fade">
       <div class="container">
@@ -188,19 +189,12 @@
 
 @section('vue')
 
-
-  @include('paginas.vue.root')
-  @include('paginas.vue.producto_lista_component')
-  @include('paginas.vue.categorias_componente')
-  @include('paginas.vue.novedades_componente')
-  @include('paginas.vue.categorias_home_section_componente')
-  @include('paginas.vue.categorias_home_section_individual_componente')
-
-
- 
-   
- 
-   
+   @include('paginas.vue.categorias_home_section_individual_componente')
+   @include('paginas.vue.categorias_home_section_componente')
+   @include('paginas.vue.novedades_componente')
+   @include('paginas.vue.categorias_componente')
+   @include('paginas.vue.producto_lista_component')
+   @include('paginas.vue.root')
 @stop
 
 
