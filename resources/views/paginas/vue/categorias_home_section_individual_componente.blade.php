@@ -7,7 +7,7 @@ props:['Categoria']
 data:function(){
     return {
          
-     productos_para_mostrar: [];
+     productos_para_mostrar: []
 
 
     }
