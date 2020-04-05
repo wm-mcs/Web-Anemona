@@ -33,7 +33,7 @@ getProductosNovedades:function(){
             if(data.Validacion == true)
             {
                
-               app.productos_novedades = data.Productos;   
+               vue.productos_novedades = data.Productos;   
 
                
             }
