@@ -38,7 +38,7 @@ template:'
 
     <span v-if="Categorias_para_mostrar.length" >
 
-      <categoria-home-section-individual :Categoria="Categoria" v-for="Categoria in Categorias_para_mostrar" ></categoria-home-section-individual>
+      <categoria-home-section-individual :Categoria="Categoria" v-for="Categoria in Categorias_para_mostrar" :key="Categoria.id"></categoria-home-section-individual>
       
     </span>
     <div v-else class="contiene-spiner-box-grande">
