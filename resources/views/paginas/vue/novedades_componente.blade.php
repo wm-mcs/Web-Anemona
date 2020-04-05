@@ -68,6 +68,9 @@ template:'
 
    <div v-if="productos_novedades.length" class="products-wrap border-top-0">
       <div class="container-fluid">
+       <div class="Titulos-de-secciones">Novedades</div>
+      </div>
+      <div class="container-fluid">
         <div class="row no-gutters products">
           <producto-lista v-for="Producto in productos_novedades" 
                            :Producto="Producto" 
