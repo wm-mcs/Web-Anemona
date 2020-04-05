@@ -83,7 +83,11 @@ template:'
         <div class="row">
           <div class="col-md-12 block-3 products-wrap">
             <div class="nonloop-block-3 owl-carousel">
-              <producto-lista v-for="Producto in productos_para_mostrar" :Producto="Producto" :Tipo="producto_vista_bloque_en_slide" :Empresa="Empresa"></producto-lista>
+              <producto-lista 
+                 v-for="Producto in productos_para_mostrar" 
+                        :Producto="Producto" 
+                        :Tipo="producto_vista_bloque_en_slide" 
+                        :Empresa="Empresa"></producto-lista>
               
             </div>
           </div>
