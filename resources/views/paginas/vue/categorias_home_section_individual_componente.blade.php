@@ -89,9 +89,10 @@ template:'
             <div class="nonloop-block-3 owl-carousel">
               <producto-lista 
                  v-for="Producto in productos_para_mostrar" 
-                        :Producto="Producto" 
-                        :Tipo="producto_vista_bloque_en_slide" 
-                        :Empresa="Empresa"></producto-lista>
+                           :Producto="Producto" 
+                           :Tipo="$root.producto_vista_bloque_en_slide" 
+                           :Empresa="$root.Empresa" 
+                           :key="Producto.id"></producto-lista>
               
             </div>
           </div>
