@@ -34,6 +34,9 @@
 
     @yield('imagen-grande-cabecera')
 
+
+    @yield('contenido')
+
     
 
   
