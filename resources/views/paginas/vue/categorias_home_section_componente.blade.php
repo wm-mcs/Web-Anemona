@@ -7,7 +7,7 @@ props:['Empresa','Categorias']
 data:function(){
     return {
          
-     Categorias_para_mostrar: [];
+     Categorias_para_mostrar: []
 
 
     }
