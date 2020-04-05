@@ -24,6 +24,7 @@ computed:{
     {
     return true;
     }
+   } 
    
 
 },
