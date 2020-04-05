@@ -42,6 +42,16 @@
 
 </div>
 
+
+<div class="formulario-label-fiel">
+  <div class="formulario-label-aclaracion">
+   Este es el modelo del producto o código según el fabricante (Marca).
+  </div>
+  {!! Form::label('codigo_fabricante', 'Modelo / Código fabricante', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('codigo_fabricante', null ,['class' => 'formulario-field']) !!}
+</div>
+
+
 <div class="formulario-label-fiel">
   {!! Form::label('name', 'Nombre', array('class' => 'formulario-label ')) !!}
   {!! Form::text('name', null ,['class' => 'formulario-field']) !!}
@@ -75,7 +85,11 @@
 
 
 
-
+ <div class="formulario-label-fiel">
+            {!! Form::label('nuevo_usado', '¿Nuevo o usado?', array('class' => 'formulario-label ')) !!}
+            {!! Form::select('nuevo_usado',['nuevo' => 'Nuevo',
+                                            'usado' => 'Usado'] , null )          !!}
+ </div>
 
  <div class="formulario-label-fiel">
             {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
