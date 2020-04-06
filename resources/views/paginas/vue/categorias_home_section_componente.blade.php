@@ -36,7 +36,7 @@ mounted: function () {
 
 template:' 
 
-    <span v-show="categorias_con_varios_productos.length" >
+    <span  >
 
       <categoria-home-section-individual :Categoria="Categoria" v-for="Categoria in categorias_con_varios_productos" :key="Categoria.id"></categoria-home-section-individual>
       

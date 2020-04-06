@@ -75,7 +75,7 @@ mounted: function () {
 template:' 
 
 
-     <div v-show="productos_para_mostrar.length" class="site-section">
+     <div  class="site-section">
        
      
       <div  class="container">
