@@ -90,7 +90,7 @@ template:'
               <producto-lista 
                  v-for="Producto in productos_para_mostrar" 
                            :Producto="Producto" 
-                           :Tipo="$root.producto_vista_bloque_en_slide" 
+                           :Tipo="$root.producto_vista_bloque" 
                            :Empresa="$root.Empresa" 
                            :key="Producto.id"></producto-lista>
               
