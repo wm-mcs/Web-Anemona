@@ -75,7 +75,7 @@ mounted: function () {
 template:' 
 
 
-     <div v-if="productos_novedades.length" class="products-wrap border-top-0">
+     <div v-if="productos_para_mostrar.length" class="products-wrap border-top-0">
       <div class="container-fluid">
        <div class="row">
           <div class="title-section text-center col-12">
