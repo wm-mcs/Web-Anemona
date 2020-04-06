@@ -66,9 +66,9 @@ mounted: function () {
 
 template:' 
 
-   <div v-if="productos_novedades.length" class="products-wrap border-top-0">
+   <div v-if="productos_novedades.length" class="Padding-de-secciones products-wrap border-top-0">
       <div class="container-fluid">
-       <div class="Titulos-de-secciones">Novedades</div>
+       <h2 class="Titulos-de-secciones">Novedades en equipamiento para gimnasios</h2>
       </div>
       <div class="container-fluid">
         <div class="row no-gutters products">

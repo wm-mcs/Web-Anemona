@@ -75,22 +75,18 @@ mounted: function () {
 template:' 
 
 
-     <div v-if="productos_para_mostrar.length" class="products-wrap border-top-0">
+
+
+     <div v-if="productos_para_mostrar.length" class="Padding-de-secciones products-wrap border-top-0">
       <div class="container-fluid">
-       <div class="row">
-          <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">@{{Categoria.name}}</h2>
-          </div>
-        </div>
-       
+       <h2 class="Titulos-de-secciones">@{{Categoria.name}}</h2>
       </div>
       <div class="container-fluid">
         <div class="row no-gutters products">
-          <producto-lista 
-                 v-for="Producto in productos_para_mostrar" 
+          <producto-lista v-for="Producto in productos_para_mostrar" 
                            :Producto="Producto" 
                            :Tipo="$root.producto_vista_bloque" 
-                           :Empresa="$root.Empresa" 
+                           :Empresa="Empresa" 
                            :key="Producto.id"></producto-lista>
           
         </div>
@@ -100,7 +96,7 @@ template:'
          <div class="cssload-container">
            <div class="cssload-tube-tunnel"></div>
          </div>
-    </div>  
+    </div>
 
 '
 

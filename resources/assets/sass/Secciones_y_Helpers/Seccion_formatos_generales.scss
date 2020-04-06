@@ -1,3 +1,7 @@
+.Padding-de-secciones{
+      padding: 10px;
+}
+
 .Titulos-de-secciones{
 	color:$color-black;
 	font-family:$font-secondary;
@@ -5,4 +9,32 @@
 	font-size: 18px;
 	margin-bottom: 6px;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+    .Padding-de-secciones{
+      padding: 40px;
+     }
+
+  
+}
+
+@media (min-width: $BrackPoint-Tercer){
+
+
+
+  
 }
