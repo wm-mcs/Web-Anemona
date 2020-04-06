@@ -75,31 +75,32 @@ mounted: function () {
 template:' 
 
 
-     <div  class="site-section">
-       
-     
-      <div  class="container">
-        <div class="row">
+     <div v-if="productos_novedades.length" class="products-wrap border-top-0">
+      <div class="container-fluid">
+       <div class="row">
           <div class="title-section text-center col-12">
             <h2 class="text-uppercase">@{{Categoria.name}}</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 block-3 products-wrap">
-            <div class="nonloop-block-3 owl-carousel">
-              <producto-lista 
+       
+      </div>
+      <div class="container-fluid">
+        <div class="row no-gutters products">
+          <producto-lista 
                  v-for="Producto in productos_para_mostrar" 
                            :Producto="Producto" 
                            :Tipo="$root.producto_vista_bloque" 
                            :Empresa="$root.Empresa" 
                            :key="Producto.id"></producto-lista>
-              
-            </div>
-          </div>
+          
         </div>
       </div>
-      </div>
-      
+    </div>
+    <div v-else class="contiene-spiner-box-grande">
+         <div class="cssload-container">
+           <div class="cssload-tube-tunnel"></div>
+         </div>
+    </div>  
 
 '
 
