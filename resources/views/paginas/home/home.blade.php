@@ -139,10 +139,10 @@
           <div class="row align-items-center">
             <div class="col-lg-5 text-center">
               <div class="featured-hero-product w-100">
-                <h1 class="mb-2">Madewell</h1>
-                <h4>Summer Collection</h4>
-                <div class="price mt-3 mb-5"><strong>1,499</strong> <del>$1,999</del></div>
-                <p><a href="#" class="btn btn-outline-primary rounded-0">Shop Now</a> <a href="#" class="btn btn-primary rounded-0">Shop Now</a></p>
+                <h1 class="mb-2">Soluciones para tu gimnasio</h1>
+                <h4>Venta de equipamientos y planes de servicio de mantenimiento para tu centro de fitness </h4>
+                
+                <p><a href="#" class="btn btn-outline-primary rounded-0">Porductos</a> <a href="#" class="btn btn-primary rounded-0">Servicios</a></p>
               </div>  
             </div>
             <div class="col-lg-7 align-self-end text-center text-lg-right">
