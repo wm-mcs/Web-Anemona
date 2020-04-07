@@ -140,7 +140,26 @@
             <div class="portada-home-contiene-textos">
               <div class="">
                 <h1 class="mb-2">Soluciones para tu gimnasio</h1>
-                <h4>Venta de equipamientos y planes de servicio de mantenimiento para tu centro de fitness </h4>
+                <h4>Lideres en Uruguay desde "1988"</h4>
+                <div class="contiene-listado-de-opciones-portada">
+                  <div class="contiene-item">
+                    <span class="contiene-item-icono">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <div class="contiene-item-texto">
+                      Venta de caminadores, maquinas de fuerza, biciletas y más
+                    </div>
+                  </div>
+                  <div class="contiene-item">
+                    <span class="contiene-item-icono">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <div class="contiene-item-texto">
+                      Planes de servicio de mantenimiento en todo Uruguay
+                    </div>
+                  </div>
+                  
+                </div>
                 
                 <p><a href="#" class="btn btn-outline-primary rounded-0">Porductos</a> <a href="#" class="btn btn-primary rounded-0">Servicios</a></p>
               </div>  
