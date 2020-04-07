@@ -30,6 +30,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position:relative;
   @include flexbox;       
   @include flex-direction(row);
@@ -37,12 +38,20 @@
   @include justify-content(space-around);
 }
 
-.logo-float-easy-socio-portada{
+.logo-float-easy-socio-portada-right{
   position: absolute;  
   display: block;
   height: 35px;
   bottom: 10%;
   right: 4%;
+}
+
+.logo-float-easy-socio-portada-left{
+  position: absolute;  
+  display: block;
+  height: 35px;
+  bottom: 10%;
+  left: 4%;
 }
 
 

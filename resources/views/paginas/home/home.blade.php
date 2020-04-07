@@ -195,7 +195,7 @@
 
     <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
        
-         <img class="logo-float-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
+         <img class="logo-float-easy-socio-portada-left" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
        
     </div> 
   
