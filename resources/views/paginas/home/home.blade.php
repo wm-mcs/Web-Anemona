@@ -122,6 +122,7 @@
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a> --}}
+            <img src="{{url()}}/imagenes/Pais/bandera-de-uruguay.jpg" class="icono-de-uruguay">
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
         </div>
