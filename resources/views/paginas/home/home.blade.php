@@ -69,7 +69,7 @@
   </ul>
   </div>
 </div>
- <div class="site-navbar bg-white py-2">
+ <div class="site-navbar py-2">
 
       <div class="search-wrap">
         <div class="container">
