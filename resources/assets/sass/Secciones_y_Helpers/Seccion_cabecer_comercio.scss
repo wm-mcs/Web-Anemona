@@ -1,3 +1,7 @@
+.Genera-margin-para-para-ajustar-contenido-con-elementos-fixed-en{
+  margin-top: 56px;
+}
+
 .Padding-de-secciones{
       padding: 30px 10px;
 }
@@ -25,7 +29,9 @@
 
 @media (min-width: $BrackPoint-Secundario){
 
-    
+    .Genera-margin-para-para-ajustar-contenido-con-elementos-fixed-en{
+  margin-top: 80.8px;
+}
 
   
 }

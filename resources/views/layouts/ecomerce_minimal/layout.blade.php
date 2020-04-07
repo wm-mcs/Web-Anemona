@@ -26,13 +26,13 @@
 
    
 
-      @yield('header-menu-iconos')
+    @yield('header-menu-iconos')
 
      
    
 
 
-
+    <div class="Genera-margin-para-para-ajustar-contenido-con-elementos-fixed-en"></div>
     @yield('imagen-grande-cabecera')
 
 
