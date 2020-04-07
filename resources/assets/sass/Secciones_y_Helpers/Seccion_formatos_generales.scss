@@ -32,7 +32,6 @@
  font-weight: 900;
  font-family:$font-primary;
  letter-spacing:-3px;
-
 }
 
 
@@ -50,6 +49,8 @@
   @include align-items(center);
   @include justify-content(space-around);
 }
+
+
 
 
 .contenedor-logo-absolut{

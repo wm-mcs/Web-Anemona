@@ -10,6 +10,22 @@
   @include align-items(center); 
 }
 
+.flex-align-item-center{
+  @include align-items(center); 
+}
+
+.flex-align-item-start{
+  @include align-items(flex-start); 
+}
+
+.flex-align-item-end{
+  @include align-items(flex-end); 
+}
+
+.flex-align-item-center{
+  @include align-items(center); 
+}
+
 .flex-row-column-start{
   @include flexbox;       
   @include flex-direction(column);
