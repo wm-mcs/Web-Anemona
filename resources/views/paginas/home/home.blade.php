@@ -197,8 +197,28 @@
 
 
 
-         <div class="Secciones-contenedor-texto">
+         <div class="Secciones-contenedor-texto align-self-md-start">
            <h2 class="secciones-personalizada-h2 color-text-white">Servicio de mantenimiento</h2>
+           <div class="contiene-listado-de-opciones-portada">
+                  <div class="contiene-item">
+                    <span class="contiene-item-icono color-text-white">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <div class="contiene-item-texto color-text-white">
+                      Asesoria
+                    </div>
+                  </div>
+                  <div class="contiene-item">
+                    <span class="contiene-item-icono color-text-white">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <div class="contiene-item-texto color-text-white">
+                      Mantenimiento predictivo
+                    </div>
+                  </div>
+                  
+                  
+                </div>
          </div>
        
 
