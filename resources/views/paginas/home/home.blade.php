@@ -134,18 +134,18 @@
 
 @section('imagen-grande-cabecera')
   <div class="site-blocks-cover" data-aos="fade">
-        <div class="container">
+        <div class="container flex-row-center flex-justifice-space-around">
 
-          <div class="row align-items-center">
-            <div class="col-lg-5 text-center">
-              <div class="featured-hero-product w-100">
+          <div class="row align-items-center get_width_100">
+            <div class="col-lg-6">
+              <div class="">
                 <h1 class="mb-2">Soluciones para tu gimnasio</h1>
                 <h4>Venta de equipamientos y planes de servicio de mantenimiento para tu centro de fitness </h4>
                 
                 <p><a href="#" class="btn btn-outline-primary rounded-0">Porductos</a> <a href="#" class="btn btn-primary rounded-0">Servicios</a></p>
               </div>  
             </div>
-            <div class="col-lg-7 align-self-end text-center text-lg-right">
+            <div class="col-lg-6 flex-row-center flex-justifice-space-around">
               <img src="imagenes/Portada/maquina.png" alt="Image" class="img-fluid img-1">
             </div>
             
