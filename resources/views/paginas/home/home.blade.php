@@ -195,16 +195,15 @@
 
     <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
 
-
-
-         <div class="Secciones-contenedor-texto align-self-md-start">
+        <div class="container flex-row-column flex-justifice-space-around">
+          <div class="Secciones-contenedor-texto align-self-md-start">
            <h2 class="secciones-personalizada-h2 color-text-white">Servicio de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                    <span class="contiene-item-icono color-text-white">
+                    <span class="color-text-white contiene-item-icono ">
                       <i class="fas fa-circle"></i>
                     </span>
-                    <div class="contiene-item-texto color-text-white">
+                    <div class="color-text-white contiene-item-texto">
                       Asesoria
                     </div>
                   </div>
@@ -221,6 +220,9 @@
                 </div>
          </div>
        
+        </div>
+
+         
 
          <div class="contenedor-logo-absolut ">
            <div class="container flex-row-column-end">
