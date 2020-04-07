@@ -147,7 +147,16 @@
                       <i class="fas fa-circle"></i>
                     </span>
                     <div class="contiene-item-texto">
-                      Venta de caminadores, maquinas de fuerza, biciletas y más
+                      Asesoria
+                    </div>
+                  </div>
+                   <div class="contiene-item">
+                    <span class="contiene-item-icono">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <div class="contiene-item-texto">
+                      
+                      Venta de equipamientos
                     </div>
                   </div>
                   <div class="contiene-item">
@@ -155,7 +164,7 @@
                       <i class="fas fa-circle"></i>
                     </span>
                     <div class="contiene-item-texto">
-                      Planes de servicio de mantenimiento en todo Uruguay
+                      Servicio de mantenimiento
                     </div>
                   </div>
                   
