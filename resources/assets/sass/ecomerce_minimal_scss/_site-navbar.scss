@@ -40,10 +40,9 @@
 	
 	margin-bottom: 0px;
 	z-index: 1999;
-	position: absolute;
 	top: 0;
 	width: 100%;
-	background: transparent!important;
+	background: $color-gris-background;
 	&.position-relative {
 		position: relative;
 		background: #f9f9f9!important;
