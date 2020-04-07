@@ -2,19 +2,15 @@
   margin-top: 56px;
 }
 
-.Padding-de-secciones{
-      padding: 30px 10px;
+.portada-home-contiene-textos{
+  width: 100%;
+  padding:10px;
 }
 
-.Titulos-de-secciones{
-  color:$color-black;
-  font-family:$font-secondary;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 15px;
+.portada-home-contiene-imagen{
+  display: none;
 
 }
-
 
 
 
@@ -29,10 +25,19 @@
 
 @media (min-width: $BrackPoint-Secundario){
 
-    .Genera-margin-para-para-ajustar-contenido-con-elementos-fixed-en{
-  margin-top: 80.8px;
+
+.portada-home-contiene-textos{
+  width: 49%;
+  padding:10px;
 }
 
+.portada-home-contiene-imagen{
+    @include flexbox;       
+    @include flex-direction(row);
+    @include align-items(center); 
+    @include justify-content(space-around); 
+
+}
   
 }
 
