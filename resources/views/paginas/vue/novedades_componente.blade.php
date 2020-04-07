@@ -67,10 +67,10 @@ mounted: function () {
 template:' 
 
    <div v-if="productos_novedades.length" class="Padding-de-secciones container products-wrap border-top-0">
-      <div class="container-fluid">
+      
        <h2 class="Titulos-de-secciones">Novedades en equipamiento para gimnasios</h2>
-      </div>
-      <div class="container-fluid">
+      
+      
         <div class="row no-gutters products">
           <producto-lista v-for="Producto in productos_novedades" 
                            :Producto="Producto" 
@@ -79,7 +79,7 @@ template:'
                            :key="Producto.id"></producto-lista>
           
         </div>
-      </div>
+      
     </div>
     <div v-else class="contiene-spiner-box-grande">
          <div class="cssload-container">

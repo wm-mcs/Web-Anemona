@@ -77,11 +77,11 @@ template:'
 
 
 
-     <div v-if="productos_para_mostrar.length" class="Padding-de-secciones products-wrap border-top-0">
-      <div class="container-fluid">
+     <div v-if="productos_para_mostrar.length" class="Padding-de-secciones container products-wrap border-top-0">
+      
        <h2 class="Titulos-de-secciones">@{{Categoria.name}}</h2>
-      </div>
-      <div class="container-fluid">
+      
+      
         <div class="row no-gutters products">
           <producto-lista v-for="Producto in productos_para_mostrar" 
                            :Producto="Producto" 
@@ -90,7 +90,7 @@ template:'
                            :key="Producto.id"></producto-lista>
           
         </div>
-      </div>
+      
     </div>
     <div v-else class="contiene-spiner-box-grande">
          <div class="cssload-container">
