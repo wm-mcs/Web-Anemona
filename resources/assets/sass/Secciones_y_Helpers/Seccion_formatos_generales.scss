@@ -13,6 +13,16 @@
 
 
 
+/* B o t o n e s */
+.Boton-general-diseño{
+  border:3px solid $color-2;
+  width: 120px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+
+
 
 
 
@@ -33,7 +43,12 @@
 }
 
 @media (min-width: $BrackPoint-Tercer){
-
+.Boton-general-diseño{
+  border:3px solid $color-2;
+  width: 200px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
 
 
   

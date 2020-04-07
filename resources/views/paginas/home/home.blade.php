@@ -170,7 +170,10 @@
                   
                 </div>
                 
-                <p><a href="#" class="btn btn-outline-primary rounded-0">Porductos</a> <a href="#" class="btn btn-primary rounded-0">Servicios</a></p>
+                <p>
+                  <a href="#" class="btn btn-outline-primary rounded-0 Boton-general-diseño">Porductos</a> 
+                   <a href="#" class="btn btn-primary rounded-0 Boton-general-diseño">Servicios</a>
+                 </p>
               </div>  
             </div>
             <div class="portada-home-contiene-imagen">
