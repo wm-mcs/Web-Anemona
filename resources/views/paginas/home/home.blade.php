@@ -173,7 +173,7 @@
                 
                 <p>
                   <a href="#" class="btn btn-outline-primary rounded-0 Boton-general-diseño">Porductos</a> 
-                   <a href="#" class="btn btn-primary rounded-0 Boton-general-diseño">Servicios</a>
+                   <a href="#Servicios" class="btn btn-primary rounded-0 Boton-general-diseño">Servicios</a>
                  </p>
               </div>  
             </div>
@@ -192,6 +192,12 @@
 @section('contenido')
 
     <novededades :Empresa="Empresa"></novededades>
+
+    <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
+       
+         <img class="logo-float-easy-socio-portada" :src="empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
+       
+    </div> 
   
     
     <div class="site-blocks-cover inner-page py-5"  data-aos="fade">

@@ -20,6 +20,31 @@
 
 }
 
+/* S e c c i o n e s */
+
+
+.seccion-servicios-home{
+  background-image: url("../../imagenes/Backgrounds/be-fitness-uruguay-servicios-a-gimnasios.jpg");
+  height: 100vh;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+  @include flexbox;       
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-around);
+}
+
+.logo-float-easy-socio-portada{
+  position: absolute;  
+  display: block;
+  height: 35px;
+  bottom: 10%;
+  right: 4%;
+}
+
 
 
 /* B o t o n e s */
