@@ -22,6 +22,19 @@
 
 /* S e c c i o n e s */
 
+.Secciones-contenedor-texto{
+ width:98%;
+ padding:20px 10px;
+}
+
+.secciones-personalizada-h2{
+ font-size:   50px;
+ font-weight: 900;
+ font-family:$font-primary;
+ letter-spacing:-3px;
+
+}
+
 
 .seccion-servicios-home{
   background-image: url("../../imagenes/Backgrounds/be-fitness-uruguay-servicios-a-gimnasios.jpg");
@@ -33,7 +46,7 @@
   background-attachment: fixed;
   position:relative;
   @include flexbox;       
-  @include flex-direction(row);
+  @include flex-direction(column);
   @include align-items(center);
   @include justify-content(space-around);
 }
@@ -95,6 +108,18 @@
 
     .Padding-de-secciones{
       padding: 40px;
+     }
+
+
+     .Secciones-contenedor-texto{
+      width:50%;
+      padding:20px 10px;
+      }
+
+     .secciones-personalizada-h2{
+       font-size: 70px;
+       
+
      }
 
   
