@@ -133,7 +133,7 @@
 
 
 @section('imagen-grande-cabecera')
-  <div class="site-blocks-cover" data-aos="fade">
+  <div class="site-blocks-cover portada-contiene-portada-general" data-aos="fade">
         <div class="container flex-row-center flex-justifice-space-around">
 
           <div class="row align-items-center get_width_100">
@@ -174,7 +174,7 @@
               </div>  
             </div>
             <div class="portada-home-contiene-imagen">
-              <img src="imagenes/Portada/maquina.png" alt="Image" class="img-fluid img-1">
+              <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
             </div>
             
           </div>
