@@ -179,16 +179,18 @@
            <h2 class="secciones-personalizada-h2 color-text-white">Servicio de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                      Asesoria
-                  </div>
-                   <div class="contiene-item">
-                     Venta de equipamientos
+                     <strong>Mantenimiento predictivo</strong>: se establecen visitas periódicas con una frecuencia programada 
                   </div>
                   <div class="contiene-item">
-                      Servicio de mantenimiento
+                      <strong>Mantenimiento correctivo</strong>: se establecen una cantidad de visitas mensuales las cuales podrás usar según tu necesidad
                   </div>
-                  
+                   <div class="contiene-item">
+                     <strong>Atención a urgencias</strong>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
+                  </div>
             </div>
+            <p>
+              <a href="#" class="btn btn-primary rounded-0 Boton-general-diseño">Mas información</a>
+            </p>
          </div>
        
         </div>
