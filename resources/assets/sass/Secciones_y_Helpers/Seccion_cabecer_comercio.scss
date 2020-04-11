@@ -38,10 +38,10 @@
 .contiene-item{
     width: 100%;
     margin-top: 4px;
-    font-size: 12px;   
-    @include flexbox;       
-    @include flex-direction(row);
-    @include align-items(center);  
+    color:$color-gris-text;
+    font-size: 14px;
+    letter-spacing: 1.4px;  
+      
 }
 
 .contiene-item::before{
@@ -54,26 +54,6 @@
 }
 
 
-
-  .contiene-item{
-    width: 100%;
-    margin-top: 4px;
-    font-size: 12px;   
-    @include flexbox;       
-    @include flex-direction(row);
-    @include align-items(center);  
-  }
-
-   .contiene-item-icono{
-    color:$color-3;
-    margin-right: 15px;
-    font-size: 10px;
-   }
-   .contiene-item-texto{
-    color:$color-gris-text;
-    font-size: 14px;
-    letter-spacing: 1.4px;
-   }
 
 
 

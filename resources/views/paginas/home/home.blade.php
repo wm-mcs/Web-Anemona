@@ -139,29 +139,13 @@
                 <h4>Lideres en Uruguay desde "1988"</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                    <span class="contiene-item-icono">
-                      <i class="fas fa-circle"></i>
-                    </span>
-                    <div class="contiene-item-texto">
                       Asesoria
-                    </div>
                   </div>
                    <div class="contiene-item">
-                    <span class="contiene-item-icono">
-                      <i class="fas fa-circle"></i>
-                    </span>
-                    <div class="contiene-item-texto">
-                      
-                      Venta de equipamientos
-                    </div>
+                     Venta de equipamientos
                   </div>
                   <div class="contiene-item">
-                    <span class="contiene-item-icono">
-                      <i class="fas fa-circle"></i>
-                    </span>
-                    <div class="contiene-item-texto">
                       Servicio de mantenimiento
-                    </div>
                   </div>
                   
                 </div>
@@ -193,28 +177,18 @@
         <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-start">
            <h2 class="secciones-personalizada-h2 color-text-white">Servicio de mantenimiento</h2>
-           <ul class="contiene-listado-de-opciones-portada">
-
-                  <li>Mantenimiento predictivo</li>
+           <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                    <span class="color-text-white contiene-item-icono ">
-                      <i class="fas fa-circle"></i>
-                    </span>
-                    <div class="color-text-white contiene-item-texto">
-                      Mantenimiento predictivo
-                    </div>
+                      Asesoria
+                  </div>
+                   <div class="contiene-item">
+                     Venta de equipamientos
                   </div>
                   <div class="contiene-item">
-                    <span class="contiene-item-icono color-text-white">
-                      <i class="fas fa-circle"></i>
-                    </span>
-                    <div class="contiene-item-texto color-text-white">
-                      Mantenimiento correctivo
-                    </div>
+                      Servicio de mantenimiento
                   </div>
                   
-                  
-            </ul>
+            </div>
          </div>
        
         </div>
