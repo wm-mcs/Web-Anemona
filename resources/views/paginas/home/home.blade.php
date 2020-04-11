@@ -53,9 +53,7 @@
   <div class="site-mobile-menu-body">
   <ul class="site-nav-wrap">
       
-      <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
-      <li><a href="shop.html">Shop</a></li> 
-      <li><a href="#">Catalogs</a></li> 
+      <categorias :Empresa="Empresa" :categorias="categorias"></categorias>       
       <li><a href="contact.html">Contact</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
@@ -91,9 +89,6 @@
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
                 <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
-                
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Catalogs</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
@@ -198,13 +193,15 @@
         <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-start">
            <h2 class="secciones-personalizada-h2 color-text-white">Servicio de mantenimiento</h2>
-           <div class="contiene-listado-de-opciones-portada">
+           <ul class="contiene-listado-de-opciones-portada">
+
+                  <li>Mantenimiento predictivo</li>
                   <div class="contiene-item">
                     <span class="color-text-white contiene-item-icono ">
                       <i class="fas fa-circle"></i>
                     </span>
                     <div class="color-text-white contiene-item-texto">
-                      Asesoria
+                      Mantenimiento predictivo
                     </div>
                   </div>
                   <div class="contiene-item">
@@ -212,12 +209,12 @@
                       <i class="fas fa-circle"></i>
                     </span>
                     <div class="contiene-item-texto color-text-white">
-                      Mantenimiento predictivo
+                      Mantenimiento correctivo
                     </div>
                   </div>
                   
                   
-                </div>
+            </ul>
          </div>
        
         </div>
