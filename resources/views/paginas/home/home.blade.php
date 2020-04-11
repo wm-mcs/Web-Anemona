@@ -188,9 +188,9 @@
                      <span class="text-bold">Atención a urgencias</span>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
                   </div>
             </div>
-            <p>
-              <a href="#" class="btn btn-primary rounded-0 Boton-general-diseño">Mas información</a>
-            </p>
+            <div class="mt-3">
+              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Mas información</a>
+            </div>
          </div>
        
         </div>
