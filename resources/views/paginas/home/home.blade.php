@@ -176,16 +176,16 @@
 
         <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-start">
-           <h2 class="secciones-personalizada-h2 color-text-white">Servicio de mantenimiento</h2>
+           <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Servicios de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                     <strong>Mantenimiento predictivo</strong>: se establecen visitas periódicas con una frecuencia programada 
+                     <span class="text-bold">Mantenimiento predictivo</span>: se establecen visitas periódicas con una frecuencia programada 
                   </div>
                   <div class="contiene-item">
-                      <strong>Mantenimiento correctivo</strong>: se establecen una cantidad de visitas mensuales las cuales podrás usar según tu necesidad
+                      <span class="text-bold">Mantenimiento correctivo</span>: se establecen una cantidad de visitas mensuales las cuales podrás usar según tu necesidad
                   </div>
                    <div class="contiene-item">
-                     <strong>Atención a urgencias</strong>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
+                     <span class="text-bold">Atención a urgencias</span>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
                   </div>
             </div>
             <p>
