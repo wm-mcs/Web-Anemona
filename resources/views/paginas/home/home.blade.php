@@ -136,7 +136,7 @@
             <div class="portada-home-contiene-textos">
               <div class="">
                 <h1 class="mb-2">Soluciones para tu gimnasio</h1>
-                <h4>Lideres en Uruguay desde "1988"</h4>
+                <h4>Líderes en Uruguay desde "1988"</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                       Asesoria
@@ -218,10 +218,10 @@
            <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Somos lideres</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                     <span class="text-bold">Servicio oficial de</span>: Cybex y Movement, Súper Hábil, Los equipos de Cardio y Musculación de Embreex ( Alsi ltda ), Los equipos de la marca BH representante ( Deceleste )
+                     <span class="text-bold">Servicio oficial de</span>: Cybex y Movement, Súper Hábil, Los equipos de Cardio y Musculación de Embreex (Alsi ltda), Los equipos de la marca BH representante (Deceleste)
                   </div>
                   <div class="contiene-item">
-                      <span class="text-bold">El 70% del mercado Uruguayo trabaja con nosotros</span>
+                      <span class="text-bold">El 70% del mercado uruguayo trabaja con nosotros</span>
                   </div>
                    <div class="contiene-item">
                      <span class="text-bold">Contamos con los mejores proveedores</span>: podremos conseguir cualquier respuesto para el service de tu equipamiento sea la marca que sea
