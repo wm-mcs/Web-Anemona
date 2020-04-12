@@ -172,7 +172,7 @@
 
     <novededades :Empresa="Empresa"></novededades>
 
-    <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
+    <div class="seccion-servicios-home servicios-background Padding-de-secciones" id="Servicios">
 
         <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-end">
@@ -211,24 +211,24 @@
 
    <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
 
-     <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
+     <div class="seccion-servicios-home somos-background Padding-de-secciones" id="Servicios">
 
         <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-start">
-           <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Servicios de mantenimiento</h2>
+           <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Somos lideres</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                     <span class="text-bold">Mantenimiento predictivo</span>: se establecen visitas periódicas con una frecuencia programada 
+                     <span class="text-bold">Servicio oficial de</span>: Cybex y Movement, Súper Hábil, Los equipos de Cardio y Musculación de Embreex ( Alsi ltda ), Los equipos de la marca BH representante ( Deceleste )
                   </div>
                   <div class="contiene-item">
-                      <span class="text-bold">Mantenimiento correctivo</span>: se establecen una cantidad de visitas mensuales las cuales podrás usar según tu necesidad
+                      <span class="text-bold">El 70% del mercado Uruguayo trabaja con nosotros</span>
                   </div>
                    <div class="contiene-item">
-                     <span class="text-bold">Atención a urgencias</span>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
+                     <span class="text-bold">Contamos con los mejores proveedores</span>: podremos conseguir cualquier respuesto para el service de tu equipamiento sea la marca que sea.
                   </div>
             </div>
             <div class="mt-3">
-              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Mas información</a>
+              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Coordinar una visita</a>
             </div>
          </div>
        
