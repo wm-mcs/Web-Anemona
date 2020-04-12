@@ -39,7 +39,7 @@ class ProductoRepo extends BaseRepo
 
   public function getProductosNovedadesParaHome()
   {
-    $Cantidad_a_traer = 6 ;
+    $Cantidad_a_traer = 4 ;
 
     $Productos = $this->getEntidad()
                 ->where('borrado','no')
@@ -77,7 +77,7 @@ class ProductoRepo extends BaseRepo
   public function getProductosDeEstaCategoriaParaHome($Categoria_id)
   {
 
-    $Cantidad_máxima_a_consultar = 6 ;
+    $Cantidad_máxima_a_consultar = 4 ;
     $Productos = $this->getEntidad()
                 ->where('borrado','no')
                 ->where('estado', 'si')
@@ -87,7 +87,7 @@ class ProductoRepo extends BaseRepo
 
     if($Productos->count() >= $Cantidad_máxima_a_consultar) 
     {
-      $Productos->take(6);
+      $Productos->take($Cantidad_máxima_a_consultar);
     }
     else
     {

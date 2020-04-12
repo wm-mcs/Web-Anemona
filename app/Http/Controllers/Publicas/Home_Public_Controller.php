@@ -83,7 +83,7 @@ class Home_Public_Controller extends Controller
 
          return  ['Validacion'  => true,
                   'Productos'   => $Productos];
-      } 
+      }  
 
 
 
