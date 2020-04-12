@@ -59,7 +59,14 @@ getCategoriasActivas:function(){
 
 },
 mounted: function () {
-    this.getCategoriasActivas();
+
+    if(this.categorias.length)
+    {
+      this.getCategoriasActivas();
+    }
+    
+
+    
     
 },
 
@@ -68,7 +75,7 @@ template:'
 
   <li class="has-children active">
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-      <a href="shop.html" v-if="categorias.length">Collection</a> 
+      <a href="shop.html" v-if="categorias.length">Categorías</a> 
     
       <span v-else class="contiene-el-spiner">
          <div class="cssload-container">
@@ -83,9 +90,8 @@ template:'
       <li class="has-children">
         <a href="#">Sub Menu</a>
         <ul class="dropdown">
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Children</a></li>
+          <li><a href="#">Sub categría</a></li>
+          
         </ul>
       </li>
     </ul>

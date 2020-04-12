@@ -54,7 +54,7 @@
   <ul class="site-nav-wrap">
       
       <categorias :Empresa="Empresa" :categorias="categorias"></categorias>       
-      <li><a href="contact.html">Contact</a></li> 
+      <li><a href="contact.html">Contacto</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
         <a href="contact.html"><span class="icon-user"></span></a> 
@@ -89,7 +89,7 @@
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
                 <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
 

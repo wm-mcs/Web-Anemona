@@ -71,7 +71,7 @@
               <h3 class="footer-heading mb-4">Sobre nosotros</h3>
               <p>@{{Empresa.mision}}</p>
             </div>
-            <div class="block-7" >
+            {{-- <div class="block-7" >
               <form action="#" method="post">
                 <label for="email_subscribe" class="footer-heading">Subscribe</label>
                 <div class="form-group">
@@ -79,7 +79,7 @@
                   <input type="submit" class="btn btn-sm btn-primary" value="Send">
                 </div>
               </form>
-            </div>
+            </div> --}}
           </div>
           <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
             <div class="row">
@@ -88,7 +88,7 @@
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="#">Pasta dental sin aluminio</a></li>
+                  <li><a href="#">Servicios</a></li>
                  
                 </ul>
               </div>
