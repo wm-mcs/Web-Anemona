@@ -45,7 +45,7 @@
    
 
 
-    <div class="site-blocks-cover inner-page py-5"  data-aos="fade">
+   {{--  <div class="site-blocks-cover inner-page py-5"  data-aos="fade">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 ml-auto order-lg-2 align-self-start">
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
     <footer class="site-footer custom-border-top">
       <div class="container">

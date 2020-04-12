@@ -175,6 +175,45 @@
     <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
 
         <div class="container flex-row-column flex-justifice-space-around">
+          <div class="Secciones-contenedor-texto align-self-md-end">
+           <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Servicios de mantenimiento</h2>
+           <div class="contiene-listado-de-opciones-portada">
+                  <div class="contiene-item">
+                     <span class="text-bold">Mantenimiento predictivo</span>: se establecen visitas periódicas con una frecuencia programada 
+                  </div>
+                  <div class="contiene-item">
+                      <span class="text-bold">Mantenimiento correctivo</span>: se establecen una cantidad de visitas mensuales las cuales podrás usar según tu necesidad
+                  </div>
+                   <div class="contiene-item">
+                     <span class="text-bold">Atención a urgencias</span>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
+                  </div>
+            </div>
+            <div class="mt-3">
+              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Mas información</a>
+            </div>
+         </div>
+       
+        </div>
+
+         
+
+         <div class="contenedor-logo-absolut ">
+           <div class="container flex-row-column-start">
+              <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
+           </div>
+         </div>
+         
+       
+    </div> 
+  
+    
+
+
+   <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
+
+     <div class="seccion-servicios-home Padding-de-secciones" id="Servicios">
+
+        <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-start">
            <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Servicios de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
@@ -205,11 +244,6 @@
          
        
     </div> 
-  
-    
-
-
-   <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
      
 @stop 
 
