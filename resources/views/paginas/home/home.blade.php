@@ -189,7 +189,7 @@
                   </div>
             </div>
             <div class="mt-3">
-              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Mas información</a>
+              <a href="#" class="btn-outline-primary Boton-general-diseño">Mas información</a>
             </div>
          </div>
        
