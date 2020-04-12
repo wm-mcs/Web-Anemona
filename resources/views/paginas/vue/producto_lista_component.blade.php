@@ -32,7 +32,7 @@ computed:{
 
 template:'
 
-  <div v-if="formato_bloque" class="col-6 col-md-6 col-lg-4">
+  <div v-if="formato_bloque" class="col-4 col-md-4 col-lg-4">
     <a href="#" class="item">
       <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
       <div class="item-info">

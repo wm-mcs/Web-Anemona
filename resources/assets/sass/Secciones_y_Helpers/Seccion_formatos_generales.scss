@@ -12,10 +12,10 @@
 }
 
 .Titulos-de-secciones{
-	color:$color-black;
+	color:$color-2;
 	font-family:$font-secondary;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 20px;
 	margin-bottom: 15px;
 
 }
@@ -130,8 +130,11 @@
 
      .secciones-personalizada-h2{
        font-size: 70px;
-       
+     }
 
+
+     .Titulos-de-secciones{
+      font-size:28px;
      }
 
   
