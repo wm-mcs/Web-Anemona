@@ -139,7 +139,7 @@
                 <h4>Líderes en Uruguay desde "1988"</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                      Asesoria
+                      Asesoría
                   </div>
                    <div class="contiene-item">
                      Venta de equipamientos
