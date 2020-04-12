@@ -62,8 +62,13 @@ mounted: function () {
 
     if(this.categorias.length)
     {
-      this.getCategoriasActivas();
+
     }
+    else
+    {
+     this.getCategoriasActivas();
+    }
+
     
 
     
