@@ -197,11 +197,11 @@
 
          
 
-         <div class="contenedor-logo-absolut ">
+         {{-- <div class="contenedor-logo-absolut ">
            <div class="container flex-row-column-start">
               <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
            </div>
-         </div>
+         </div> --}}
          
        
     </div> 
@@ -224,7 +224,7 @@
                       <span class="text-bold">El 70% del mercado Uruguayo trabaja con nosotros</span>
                   </div>
                    <div class="contiene-item">
-                     <span class="text-bold">Contamos con los mejores proveedores</span>: podremos conseguir cualquier respuesto para el service de tu equipamiento sea la marca que sea.
+                     <span class="text-bold">Contamos con los mejores proveedores</span>: podremos conseguir cualquier respuesto para el service de tu equipamiento sea la marca que sea
                   </div>
             </div>
             <div class="mt-3">
@@ -236,11 +236,11 @@
 
          
 
-         <div class="contenedor-logo-absolut ">
+        {{--  <div class="contenedor-logo-absolut ">
            <div class="container flex-row-column-end">
               <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
            </div>
-         </div>
+         </div> --}}
          
        
     </div> 
