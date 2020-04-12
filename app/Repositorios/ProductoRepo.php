@@ -94,6 +94,8 @@ class ProductoRepo extends BaseRepo
       return $Productos;
     }
 
+    return $Productos;
+
 
   }
 
