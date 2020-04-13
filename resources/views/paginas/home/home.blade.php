@@ -135,7 +135,7 @@
           <div class="row align-items-center get_width_100">
             <div class="portada-home-contiene-textos">
               <div class="">
-                <h1 class="mb-2">Soluciones para tu gimnasio</h1>
+                <h1 class="mb-2 secciones-personalizada-h1">Soluciones para tu gimnasio</h1>
                 <h4>Líderes en Uruguay desde "1988"</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
