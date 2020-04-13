@@ -171,6 +171,7 @@
 @section('contenido')
 
     <novededades :Empresa="Empresa"></novededades>
+     <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
 
     <div class="seccion-servicios-home servicios-background Padding-de-secciones" id="Servicios">
 
@@ -209,7 +210,7 @@
     
 
 
-   <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
+  
 
      <div class="seccion-servicios-home somos-background Padding-de-secciones" id="Servicios">
 
