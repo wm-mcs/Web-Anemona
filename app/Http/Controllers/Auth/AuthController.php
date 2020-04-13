@@ -138,7 +138,7 @@ class AuthController extends Controller
      */
     public function redirectPath()
     {
-       return route('get_admin_home'); 
+       return route('get_admin_productos'); 
     }
 
      /**
