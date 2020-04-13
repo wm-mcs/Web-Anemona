@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
@@ -44,26 +44,6 @@
 
     
 
-  
-   
-
-
-   {{--  <div class="site-blocks-cover inner-page py-5"  data-aos="fade">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 ml-auto order-lg-2 align-self-start">
-            <div class="site-block-cover-content">
-            <h2 class="sub-title">#New Summer Collection 2019</h2>
-            <h1>New Denim Coat</h1>
-            <p><a href="#" class="btn btn-black rounded-0">Shop Now</a></p>
-            </div>
-          </div>
-          <div class="col-lg-6 order-1 align-self-end">
-            <img src="images/model_5.png" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div> --}}
 
     <footer class="site-footer custom-border-top">
       <div class="container">
@@ -74,15 +54,7 @@
               <h3 class="footer-heading mb-4">Sobre nosotros</h3>
               <p>@{{Empresa.mision}}</p>
             </div>
-            {{-- <div class="block-7" >
-              <form action="#" method="post">
-                <label for="email_subscribe" class="footer-heading">Subscribe</label>
-                <div class="form-group">
-                  <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
-                  <input type="submit" class="btn btn-sm btn-primary" value="Send">
-                </div>
-              </form>
-            </div> --}}
+            
           </div>
           <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
             <div class="row">
