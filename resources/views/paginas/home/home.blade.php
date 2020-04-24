@@ -136,7 +136,7 @@
             <div class="portada-home-contiene-textos">
               <div class="">
                 <h1 class="mb-2 secciones-personalizada-h1">Soluciones para tu gimnasio</h1>
-                <h4>Líderes en Uruguay desde "1988"</h4>
+                <h4>Líderes en Uruguay desde "2007"</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                       Asesoría
@@ -173,10 +173,29 @@
     <novededades :Empresa="Empresa"></novededades>
      <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
 
-    <div class="seccion-servicios-home servicios-background Padding-de-secciones" id="Servicios">
+  {{--   <div class="seccion-servicios-home servicios-background Padding-de-secciones" id="Servicios">
 
-        <div class="container flex-row-column flex-justifice-space-around">
-          <div class="Secciones-contenedor-texto align-self-md-end">
+        
+
+         
+
+         <div class="contenedor-logo-absolut ">
+           <div class="container flex-row-column-start">
+              <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
+           </div>
+         </div>
+         
+       
+    </div>  --}}
+  
+    
+
+
+  
+
+     <div class="seccion-servicios-home somos-background Padding-de-secciones" id="Servicios">
+      <div class="container flex-row-column flex-justifice-space-around">
+          <div class="Secciones-contenedor-texto align-self-md-start">
            <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Servicios de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
@@ -193,26 +212,7 @@
               <a href="#" class="btn btn-outline-primary Boton-general-diseño">Mas información</a>
             </div>
          </div>
-       
         </div>
-
-         
-
-         {{-- <div class="contenedor-logo-absolut ">
-           <div class="container flex-row-column-start">
-              <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
-           </div>
-         </div> --}}
-         
-       
-    </div> 
-  
-    
-
-
-  
-
-     <div class="seccion-servicios-home somos-background Padding-de-secciones" id="Servicios">
 
         <div class="container flex-row-column flex-justifice-space-around">
           <div class="Secciones-contenedor-texto align-self-md-start">
