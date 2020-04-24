@@ -8,7 +8,21 @@
   {!! Form::textarea('description', null ,['class' => 'formulario-field']) !!}
 </div>
 
+
+
 <div class="formulario-label-fiel">
+<div class="formulario-label-aclaracion">
+  Si se indica la opción <strong>Distribuidor</strong>  implicaría que: venden los productos y que además hacen el service. Si se indica la opción <strong>Service</strong> implicaría que: son service autorizado por la marca. 
+</div>
+  {!! Form::label('tipo_de_representacion', 'Tipo de representación', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('tipo_de_representacion',  ['distribuidor' => 'Distribuidor',
+                                               'service'      => 'Service'] , null )          !!}
+</div>
+
+<div class="formulario-label-fiel">
+  <div class="formulario-label-aclaracion">
+  Aquí se indica que tanto queremos destacar a esta marca. 
+</div>
   {!! Form::label('rank', 'Calidad / Prestigio', array('class' => 'formulario-label ')) !!}
   {!! Form::select('rank',  [1 => '1 - Normal',
                              2 => '2 - Alta ',

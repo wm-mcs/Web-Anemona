@@ -22,6 +22,11 @@ class Admin_Marcas_Controllers extends Controller
     $this->MarcaRepo = $MarcaRepo;
   }
 
+  public function getPropiedades()
+  {
+    return ['name','description','estado','rank','tipo_de_representacion'];
+  }
+
   //home admin User
   public function get_admin_marcas(Request $Request)
   { 
@@ -51,7 +56,7 @@ class Admin_Marcas_Controllers extends Controller
       }
 
       //propiedades para crear
-      $Propiedades = ['name','description','estado','rank'];
+      $Propiedades = $this->getPropiedades() ;
 
       //traigo la entidad
       $marca = $this->MarcaRepo->getEntidad();
@@ -91,7 +96,7 @@ class Admin_Marcas_Controllers extends Controller
     $marca = $this->MarcaRepo->find($id);    
 
     //propiedades para crear
-    $Propiedades = ['name','description','estado','rank'];    
+    $Propiedades =  $this->getPropiedades();    
 
     //grabo todo las propiedades
     $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
