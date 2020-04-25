@@ -14,7 +14,11 @@ var app = new Vue({
 
       producto_vista_bloque:'bloque',
       producto_vista_bloque_en_slide:'bloque_slide',
-      categorias_que_se_muestran_en_home:[]
+      categorias_que_se_muestran_en_home:[],
+      Nombres_secciones_marcas:{
+                                  titulo_marcas_distribuimos:'Marcas distribuimos. Venta y servicio técnico',
+                                  titulo_marcas_service: 'Servicio técnico '
+                               }
       
 
       

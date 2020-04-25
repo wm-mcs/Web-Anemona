@@ -3,8 +3,6 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Entidades\Marca_de_evento;
-
 
 
 
@@ -19,16 +17,17 @@ class Marca extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
+    protected $appends  = ['route',                           
+                           'url_img',
+                           'tipo_de_representacion_marca'
+                          ];
 
 
 
 
 
 
-    public function eventos_de_marca()
-    {
-      return $this->hasMany(Marca_de_evento::class,'id','evento_id');
-    }
+  
 
 
     /**
@@ -63,9 +62,16 @@ class Marca extends Model
 
     }
 
+    public function getTipoDeRepresentacionMarcaAttribute()
+    {
+        return  ucfirst( strtolower($this->tipo_de_representacion) );  
+    }
+
     public function getRouteAttribute()
     {
-        return route('get_pagina_marca_individual',[$this->name, $this->id]);
+        return url(); 
+
+        /*route('get_pagina_marca_individual',[$this->name, $this->id]);*/
 
     }
 

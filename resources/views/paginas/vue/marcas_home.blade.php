@@ -28,24 +28,18 @@ getMarcas:function(){
      var url = '/getMarcas';
 
        
-      var vue = this;  
-      this.cargando = true;   
-      var data = {categoria_id:this.Categoria.id}  ;    
+     var vue = this; 
 
-     axios.post(url,data).then(function (response){  
+     axios.get(url).then(function (response){  
             var data = response.data;  
             
 
             if(data.Validacion == true)
             {
-               
-               vue.productos_para_mostrar = data.Productos;   
-
-               
+               app.marcas = data.Marcas; 
             }
             else
             {
-               
               $.notify(response.data.Validacion_mensaje, "error");
             }
            
@@ -66,7 +60,18 @@ getMarcas:function(){
 
 },
 mounted: function () {
+
+    if(this.Marcas.length)
+    {
+
+    }
+    else
+    {
+     this.getMarcas();
+    }
+
     
+
     
     
 },
@@ -83,11 +88,9 @@ template:'
       
       
         <div class="row no-gutters products">
-          <producto-lista v-for="Producto in productos_para_mostrar" 
-                           :Producto="Producto" 
-                           :Tipo="$root.producto_vista_bloque" 
-                           :Empresa="$root.Empresa" 
-                           :key="Producto.id"></producto-lista>
+          <marca-lista v-for="Marca in Marcas" 
+                           :Marca="Marca" 
+                           :key="Marca.id"></marca-lista>
           
         </div>
       

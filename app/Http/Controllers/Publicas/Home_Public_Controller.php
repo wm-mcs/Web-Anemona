@@ -9,6 +9,7 @@ use App\Repositorios\ProductoRepo;
 use Illuminate\Support\Facades\Cache;
 use App\Repositorios\CategoriaRepo;
 use App\Servicios\ArregloDeEntidades;
+use App\Repositorios\MarcaRepo;
 
 
 
@@ -19,19 +20,22 @@ class Home_Public_Controller extends Controller
     protected $ProductoRepo;
     protected $CategoriaRepo;
     protected $ArregloDeEntidades;
+    protected $MarcaRepo;
   
 
     public function __construct(ImgHomeRepo        $ImgHomeRepo,
                                 EmpresaRepo        $EmpresaRepo,
                                 ProductoRepo       $ProductoRepo,
                                 CategoriaRepo      $CategoriaRepo, 
-                                ArregloDeEntidades $ArregloDeEntidades  )
+                                ArregloDeEntidades $ArregloDeEntidades.
+                                MarcaRepo          $MarcaRepo   )
     {
         $this->ImgHomeRepo         = $ImgHomeRepo;
         $this->EmpresaRepo         = $EmpresaRepo;
         $this->ProductoRepo        = $ProductoRepo;
         $this->CategoriaRepo       = $CategoriaRepo;
         $this->ArregloDeEntidades  = $ArregloDeEntidades;
+        $this->MarcaRepo           = $MarcaRepo;
         
     }
 
@@ -84,6 +88,19 @@ class Home_Public_Controller extends Controller
          return  ['Validacion'  => true,
                   'Productos'   => $Productos];
       }  
+
+
+      public function getMarcas()
+      {
+
+        $Marcas = Cache::remember('getMarcas', 3000, function() {
+                     return $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
+        }); 
+
+
+        return  ['Validacion'  => true,
+                  'Marcas'     => $Marcas]  ;
+      }
 
 
 

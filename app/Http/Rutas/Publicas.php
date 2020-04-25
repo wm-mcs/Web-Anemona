@@ -30,6 +30,11 @@ Route::get('/' , [
     'uses' => 'Publicas\Home_Public_Controller@getProductosDeEstaCategoriaParaHome',
     'as'   => 'getProductosDeEstaCategoriaParaHome']
   );
+ Route::get('getMarcas' , [                    
+    'uses' => 'Publicas\Home_Public_Controller@getMarcas',
+    'as'   => 'getMarcas']
+  );
+ 
 
   
 

@@ -170,8 +170,13 @@
 
 @section('contenido')
 
-    <novededades :Empresa="Empresa"></novededades>
+     <novededades :Empresa="Empresa"></novededades>
      <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
+     <marcas-home :Empresa="Empresa" 
+                  :Titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
+                  :Marcas="marcas">
+       
+     </marcas-home>
 
   {{--   <div class="seccion-servicios-home servicios-background Padding-de-secciones" id="Servicios">
 
@@ -254,6 +259,10 @@
 
 @section('vue')
 
+
+
+   @include('paginas.vue.marca-lista')
+   @include('paginas.vue.marcas_home')
    @include('paginas.vue.categorias_home_section_individual_componente')
    @include('paginas.vue.categorias_home_section_componente')
    @include('paginas.vue.novedades_componente')
