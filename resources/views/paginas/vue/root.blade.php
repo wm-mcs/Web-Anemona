@@ -4,7 +4,7 @@ var app = new Vue({
 
       Empresa: {!! json_encode($Empresa) !!},
       categorias:[],
-
+      marcas:[],
       windowWidth: window.innerWidth,
       resolucion_celular: 320,
       resolucion_tablet: 640,
