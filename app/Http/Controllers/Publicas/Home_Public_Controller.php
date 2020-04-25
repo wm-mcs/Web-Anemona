@@ -27,7 +27,7 @@ class Home_Public_Controller extends Controller
                                 EmpresaRepo        $EmpresaRepo,
                                 ProductoRepo       $ProductoRepo,
                                 CategoriaRepo      $CategoriaRepo, 
-                                ArregloDeEntidades $ArregloDeEntidades.
+                                ArregloDeEntidades $ArregloDeEntidades,
                                 MarcaRepo          $MarcaRepo   )
     {
         $this->ImgHomeRepo         = $ImgHomeRepo;
