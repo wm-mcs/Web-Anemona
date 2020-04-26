@@ -40,7 +40,7 @@ class ArregloDeEntidades
      */
     public function GetAjustoLasCategoriasDeEstaMarca($marca_id)
     {
-      return  Cache::remember('CategoriasDeEstaMarca_'.$marca_id, 4000, function() {
+      return  Cache::remember('CategoriasDeEstaMarca_'.$marca_id, 4000, function() use($marca_id) {
 
            $ProductoRepo  = new ProductoRepo();
            $MarcaRepo     = new MarcaRepo();
