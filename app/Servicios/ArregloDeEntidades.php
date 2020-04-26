@@ -48,10 +48,7 @@ class ArregloDeEntidades
            $Productos     = $ProductoRepo->getProductosDeEstaMarca($marca_id); 
            $Marca         = $MarcaRepo->find($marca_id);
 
-           $collection_categorias = []; 
-
-
-           
+           $collection_categorias = collect([]); 
 
            foreach($Productos as $Producto)
            {
@@ -63,12 +60,7 @@ class ArregloDeEntidades
              $collection_categorias->push($Categoria);
            }
 
-
-
-          return $collection_categorias->unique('id');
-
-            
-
+           return $collection_categorias->unique('id');
            
         });
         
