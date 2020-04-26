@@ -136,7 +136,7 @@
             <div class="portada-home-contiene-textos">
               <div class="">
                 <h1 class="mb-2 secciones-personalizada-h1">Soluciones para tu gimnasio</h1>
-                <h4>Líderes en Uruguay desde "2007"</h4>
+                <h4>Líderes en Uruguay desde 2007</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                       Asesoría
@@ -151,7 +151,7 @@
                 </div>
                 
                 <p>
-                  <a href="#" class="btn btn-outline-primary rounded-0 Boton-general-diseño">Porductos</a> 
+                  <a href="#" class="btn btn-outline-primary rounded-0 Boton-general-diseño">Productos</a> 
                    <a href="#Servicios" class="btn btn-primary rounded-0 Boton-general-diseño">Servicios</a>
                  </p>
               </div>  

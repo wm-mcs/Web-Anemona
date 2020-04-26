@@ -9,11 +9,6 @@ use App\Repositorios\MarcaRepo;
 
 class ArregloDeEntidades
 {
-    
-   
-
-
-
 
     public function AjustoCantidadDeProductosActivosDeCategorias()
     {
