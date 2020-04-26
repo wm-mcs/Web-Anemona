@@ -82,8 +82,8 @@ template:'
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
       <a href="shop.html" v-if="categorias.length">
 
-        <div class="spinner-grow text-success" role="status">
-  <span class="sr-only">Loading...</span>
+        <div class="cssload-container">
+<div class="cssload-speeding-wheel"></div>
 </div>
 
       Categorías
