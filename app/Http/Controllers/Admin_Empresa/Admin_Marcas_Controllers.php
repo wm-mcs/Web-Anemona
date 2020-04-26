@@ -71,6 +71,9 @@ class Admin_Marcas_Controllers extends Controller
       //para dar nombre a la imagen
       $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
 
+      //actualizo cache de marcas
+      $this->MarcaRepo->actualizarCache('getMarcas');
+
      return redirect()->route('get_admin_marcas')->with('alert', 'Marca creada correctamente');
     
   }
@@ -107,6 +110,9 @@ class Admin_Marcas_Controllers extends Controller
     {
       $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
     }
+
+    //actualizo cache de marcas
+    $this->MarcaRepo->actualizarCache('getMarcas');
 
     return redirect()->route('get_admin_marcas')->with('alert', 'Marca Editado Correctamente');  
   }

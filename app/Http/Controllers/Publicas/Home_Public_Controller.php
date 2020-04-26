@@ -103,6 +103,12 @@ class Home_Public_Controller extends Controller
       }
 
 
+      public function getProductosDeEstaCategoriaYEstaMarca($marca_name,$categoria_name,$marca_id,$categoria_id)
+      {
+        dd($marca_name,$categoria_name,$marca_id,$categoria_id);
+      }
+
+
 
 
 

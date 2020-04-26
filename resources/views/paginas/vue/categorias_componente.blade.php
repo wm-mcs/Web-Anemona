@@ -80,7 +80,18 @@ template:'
 
   <li class="has-children active">
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-      <a href="shop.html" v-if="categorias.length">Categorías</a> 
+      <a href="shop.html" v-if="categorias.length">
+
+ <div  class="contiene-el-spiner">
+         <div class="cssload-container">
+               <div class="cssload-tube-tunnel"></div>
+         </div>
+      </div>
+
+      Categorías
+
+      </a> 
+
     
       <span v-else class="contiene-el-spiner">
          <div class="cssload-container">

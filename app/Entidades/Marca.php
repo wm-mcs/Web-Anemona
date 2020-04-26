@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Servicios\ArregloDeEntidades;
 
 
 
@@ -19,7 +20,8 @@ class Marca extends Model
     protected $fillable = ['name', 'description'];
     protected $appends  = ['route',                           
                            'url_img',
-                           'tipo_de_representacion_marca'
+                           'tipo_de_representacion_marca',
+                           'categorias_de_marca'
                           ];
 
 
@@ -60,6 +62,13 @@ class Marca extends Model
     {
         return url().'/imagenes/Marcas/'. $this->helper_convertir_cadena_para_url($this->name_img) . '.png';
 
+    }
+
+    public function getCategoriasDeMarcaAttribute()
+    {
+        $Servicio = new ArregloDeEntidades();
+
+        return $Servicio->GetAjustoLasCategoriasDeEstaMarca($this->id);
     }
 
     public function getTipoDeRepresentacionMarcaAttribute()
