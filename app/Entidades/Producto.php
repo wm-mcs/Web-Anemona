@@ -26,7 +26,8 @@ class Producto extends Model
     protected $appends  = ['route',
                            'categoria_producto',
                            'url_img',
-                           'precio_producto'
+                           'precio_producto',
+                           'name_arreglado'
                           ];
 
 
@@ -132,7 +133,9 @@ class Producto extends Model
     public function getRouteAttribute()
     {
         
-        return route('get_pagina_producto_individual', [$this->helper_convertir_cadena_para_url($this->name), $this->id]);
+        return url();
+
+        /*route('get_pagina_producto_individual', [$this->helper_convertir_cadena_para_url($this->name), $this->id]);*/
     }
 
     public function getDescriptionParrafoAttribute()
@@ -152,6 +155,12 @@ class Producto extends Model
     {
         return route('get_admin_productos_editar',$this->id);
     }
+
+    public function getNameArregladoAttribute()
+    {
+        return  ucfirst( strtolower($this->name) );
+    }
+
 
 
     public function getNameSlugAttribute()

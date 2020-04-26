@@ -25,7 +25,7 @@ template:'
     <a :href="Marca.route" class="item">
       <img :src="Marca.url_img" :alt="Marca.name" class="img-fluid">
       <div class="item-info">
-        <h3>@{{Marca.name}}</h3>
+        <h3>@{{Marca.name_arreglado}}</h3>
         <span class="collection d-block">@{{Marca.tipo_de_representacion_marca}}</span>
         
       </div>

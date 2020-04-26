@@ -21,7 +21,8 @@ class Marca extends Model
     protected $appends  = ['route',                           
                            'url_img',
                            'tipo_de_representacion_marca',
-                           'categorias_de_marca'
+                           'categorias_de_marca',
+                           'name_arreglado'
                           ];
 
 
@@ -75,6 +76,12 @@ class Marca extends Model
     {
         return  ucfirst( strtolower($this->tipo_de_representacion) );  
     }
+
+    public function getNameArregladoAttribute()
+    {
+        return  ucfirst( strtolower($this->name) );
+    }
+
 
     public function getRouteAttribute()
     {

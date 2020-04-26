@@ -33,17 +33,17 @@ computed:{
 template:'
 
   <div v-if="formato_bloque" class="col-6 col-md-6 col-lg-3">
-    <a href="#" class="item">
+    <a :href="Producto.route" class="item">
       <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
       <div class="item-info">
-        <h3>@{{Producto.name}}</h3>
+        <h3>@{{Producto.name_arreglado}}</h3>
         <span class="collection d-block">@{{Producto.categoria_producto.name}}</span>
         <strong class="price">@{{Producto.moneda}} @{{Producto.precio}} </strong>
       </div>
     </a>
   </div>
    <div v-else-if="formato_bloque_slide" class="product">
-                <a href="#" class="item">
+                <a :href="Producto.route" class="item">
                   <span class="tag">Sale</span>
                   <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
                   <div class="item-info">

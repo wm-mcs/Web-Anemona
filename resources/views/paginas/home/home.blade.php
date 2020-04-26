@@ -53,7 +53,7 @@
   <div class="site-mobile-menu-body">
   <ul class="site-nav-wrap">
       
-      <categorias :Empresa="Empresa" :categorias="categorias"></categorias>       
+      <categorias :Empresa="Empresa" :categorias="categorias" :marcas="marcas"></categorias>       
       <li><a href="contact.html">Contacto</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
@@ -81,14 +81,14 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.html" class="js-logo-clone"><img style="height:35px; " alt="{{$Empresa->name}}" :src="Empresa.img_logo_horizontal"></a>
+              <a href="{{route('get_home')}}" class="js-logo-clone"><img style="height:35px; " alt="{{$Empresa->name}}" :src="Empresa.img_logo_horizontal"></a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                <categorias :Empresa="Empresa" :categorias="categorias"></categorias>
+                <categorias :Empresa="Empresa" :categorias="categorias" :marcas="marcas"></categorias>
                 <li><a href="contact.html">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
