@@ -82,11 +82,9 @@ template:'
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
       <a href="shop.html" v-if="categorias.length">
 
- <div  class="contiene-el-spiner">
-         <div class="cssload-container">
-               <div class="cssload-tube-tunnel"></div>
-         </div>
-      </div>
+ <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
 
       Categorías
 
