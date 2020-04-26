@@ -262,7 +262,7 @@
 @section('vue')
 
 
-   @include('paginas.vue.marca_nav')
+   @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')
    @include('paginas.vue.marcas_home')
    @include('paginas.vue.categorias_home_section_individual_componente')
