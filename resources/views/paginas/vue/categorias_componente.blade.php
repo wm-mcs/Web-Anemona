@@ -77,7 +77,7 @@ mounted: function () {
 
 
 template:'
-
+<span>
   <li class="has-children active">
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
       <a href="shop.html" v-if="categorias.length">
@@ -134,7 +134,7 @@ template:'
     </div>
   </span>
 
-
+</span>
 '
 
 
