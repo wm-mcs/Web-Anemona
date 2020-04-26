@@ -60,7 +60,6 @@ class ArregloDeEntidades
 
            $collection_categorias = []; 
 
-           $marca_name,$categoria_name,$marca_id,$categoria_id
 
            
 
