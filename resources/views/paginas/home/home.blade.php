@@ -53,7 +53,8 @@
   <div class="site-mobile-menu-body">
   <ul class="site-nav-wrap">
       
-      <categorias :Empresa="Empresa" :categorias="categorias" :marcas="marcas"></categorias>       
+      <categorias :Empresa="Empresa" :categorias="categorias" ></categorias>   
+      <marcas-nav :marcas="marcas"></marcas-nav>    
       <li><a href="contact.html">Contacto</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
@@ -88,7 +89,8 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                <categorias :Empresa="Empresa" :categorias="categorias" :marcas="marcas"></categorias>
+                <categorias :Empresa="Empresa" :categorias="categorias" ></categorias>
+                <marcas-nav :marcas="marcas"></marcas-nav> 
                 <li><a href="contact.html">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
@@ -260,7 +262,7 @@
 @section('vue')
 
 
-
+   @include('paginas.vue.marca_nav')
    @include('paginas.vue.marca-lista')
    @include('paginas.vue.marcas_home')
    @include('paginas.vue.categorias_home_section_individual_componente')
