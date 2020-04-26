@@ -90,7 +90,8 @@
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
                 <categorias :Empresa="Empresa" :categorias="categorias" ></categorias>
-                <marcas-nav :marcas="marcas"></marcas-nav> 
+                <marcas-nav v-if="marcas.length" v-for="marca in marcas" :marca="marca"></marcas-nav>    
+
                 <li><a href="contact.html">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
