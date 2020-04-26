@@ -10,22 +10,7 @@ use App\Repositorios\MarcaRepo;
 class ArregloDeEntidades
 {
     
-    protected $ProductoRepo;
-    protected $CategoriaRepo;
-    protected $MarcaRepo;
-  
-
-    public function __construct(
-                                ProductoRepo  $ProductoRepo,
-                                CategoriaRepo $CategoriaRepo,
-                                MarcaRepo     $MarcaRepo   )
-    {
-        
-        $this->ProductoRepo  = $ProductoRepo;
-        $this->CategoriaRepo = $CategoriaRepo;
-        $this->MarcaRepo     = $MarcaRepo;
-        
-    }
+   
 
 
 
@@ -34,13 +19,15 @@ class ArregloDeEntidades
     {
     	 Cache::remember('AjustoCantidadDeProductosActivosDeCategorias', 1200, function() {
            
-    	 	$CategoriasActivas = $this->CategoriaRepo->getEntidadActivas();
+    	 	$CategoriaRepo = new CategoriaRepo();
+            $ProductoRepo  = new ProductoRepo();
+            $CategoriasActivas = $CategoriaRepo->getEntidadActivas();
 
     	 	foreach($CategoriasActivas as $Categoria)
     	 	{
-    	 		$Productos = $this->ProductoRepo->getProductosDeEstaCategoria($Categoria->id,'name','asc');
+    	 		$Productos = $ProductoRepo->getProductosDeEstaCategoria($Categoria->id,'name','asc');
 
-    	 		$this->CategoriaRepo->setAtributoEspecifico($Categoria,'cantidad_de_productos_activos',$Productos->count());
+    	 		$CategoriaRepo->setAtributoEspecifico($Categoria,'cantidad_de_productos_activos',$Productos->count());
     	 	}
 
            
@@ -54,9 +41,12 @@ class ArregloDeEntidades
     public function GetAjustoLasCategoriasDeEstaMarca($marca_id)
     {
       return  Cache::remember('CategoriasDeEstaMarca_'.$marca_id, 4000, function() {
+
+           $ProductoRepo  = new ProductoRepo();
+           $MarcaRepo     = new MarcaRepo();
            
-           $Productos = $this->ProductoRepo->getProductosDeEstaMarca($marca_id); 
-           $Marca     = $this->MarcaRepo->find($marca_id);
+           $Productos     = $ProductoRepo->getProductosDeEstaMarca($marca_id); 
+           $Marca         = $MarcaRepo->find($marca_id);
 
            $collection_categorias = []; 
 
