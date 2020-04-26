@@ -16,7 +16,7 @@ data:function(){
 
 
 methods:{
-}
+
 
          
 
