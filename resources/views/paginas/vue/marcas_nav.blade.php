@@ -37,7 +37,7 @@ template:'
  
   <li v-if="marcas.length" class="has-children active" v-for="marca in marcas">
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-      <a href="shop.html" v-if="categorias.length">
+      <a href="shop.html" v-if="marcas.length">
 
 
 
@@ -49,7 +49,7 @@ template:'
      
 
      
-    <ul v-if="categorias.length" class="dropdown">
+    <ul v-if="marca.categorias_de_marca" class="dropdown">
       <li v-for="categoria in marca.categorias_de_marca"><a :href="categoria.route_marca_producto">@{{categoria.name_arreglado}}</a></li>
       
       
