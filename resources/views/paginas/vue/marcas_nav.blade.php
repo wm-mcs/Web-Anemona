@@ -1,7 +1,7 @@
 Vue.component('marcas-nav' ,
 {
 
-props:['marcas']
+props:['marca']
 ,  
 
 data:function(){
@@ -35,9 +35,9 @@ mounted: function () {
 template:'
 
  
-  <li v-if="marcas.length" class="has-children active" v-for="marca in marcas">
+  <li  class="has-children active" >
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-      <a href="shop.html" v-if="marcas.length">
+      <a :href="marca.route" >
 
 
 
@@ -55,12 +55,6 @@ template:'
       
     </ul>
   </li>
-  <span v-else class="contiene-el-spiner">
-    <div class="cssload-container">
-      <div class="cssload-speeding-wheel"></div>
-    </div>
-  </span>
-
 
 '
 

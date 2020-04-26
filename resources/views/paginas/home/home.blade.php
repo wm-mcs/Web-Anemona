@@ -54,7 +54,7 @@
   <ul class="site-nav-wrap">
       
       <categorias :Empresa="Empresa" :categorias="categorias" ></categorias>   
-      <marcas-nav :marcas="marcas"></marcas-nav>    
+      <marcas-nav v-if="marcas.length" v-for="marca in marcas" :marca="marca"></marcas-nav>    
       <li><a href="contact.html">Contacto</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
