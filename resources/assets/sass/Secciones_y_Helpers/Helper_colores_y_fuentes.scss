@@ -1,7 +1,7 @@
 
 $color-3:#ff7000; /* institucional PRINCIPAL */
-$color-3-primary_hover:#ff9a4d;
-$color-2:#e66300; /* institucional OSCURO -  */
+$color-3-primary_hover: lighten( $color-3, 5% );
+$color-2:darken( $color-3, 10% );
 
 
 $color-2semilight:#eb6367;
@@ -17,21 +17,22 @@ $color-3hyperlight:$color-3-primary_hover;
 
 
 
-$color-gris-text:#b4b4b4 ;
-$color-gris-background: #f9f9f9;
 
-$color-gris-lineas: #ffefef;
 
 /* COLORES GENERALES */
-
-$color-grey0:#ffefef; /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
-$color-grey1:#b3b3b3; /*gris más claro (para párrafos y otras cosas)*/
-$color-grey2:#858585; /*gris medio (para títulos por ejemplo)*/
-$color-grey3:#2a2a2a; /*gris más oscuro (para backgrounds por ejemplo)*/
-
 $color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 $color-black:black; /*misma razón, pero para el negro */
 
+$color-grey0:darken($color-white, 10% ); /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
+$color-grey1:darken($color-white, 25% ); /*gris más claro (para párrafos y otras cosas)*/
+$color-grey2:darken($color-white, 50% ); /*gris medio (para títulos por ejemplo)*/
+$color-grey3:darken($color-white, 75% ); /*gris más oscuro (para backgrounds por ejemplo)*/
+
+
+$color-gris-text:$color-grey2 ;
+$color-gris-background: $color-grey0;
+
+$color-gris-lineas: $color-grey1;
 
 
 $Color-texto-gris-Mercadolibre: $color-gris-text;

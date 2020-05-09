@@ -140,12 +140,11 @@ a {
 		}
 	}
 	.footer-heading {
-		font-size: 1.2rem;
-		color: $black;
-		margin-bottom: 1rem;
-		// font-size: 14px;
-		// color: $gray-1;
-		// letter-spacing: .2em;
-		// text-transform: uppercase;
+		
+		color: $color-black;
+		margin-bottom: 1.5rem;
+		font-size: 20px;		
+		letter-spacing: .2em;
+		text-transform: uppercase;
 	}
 }

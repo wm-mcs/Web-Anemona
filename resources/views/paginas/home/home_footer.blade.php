@@ -1,107 +1,52 @@
- @include('paginas.home.home_contacto')
-
-
- <section class="padding-xl" style="background-color:#30302f;">
-       
-          <div class="get_width_100 flex-row-center flex-justifice-space-around flex-wrap">
-             <div class=" text-center contenedor-columna-footer Helper-OrdenarHijos-Row">
-              <div class="get_width_100 flex-row-center flex-justifice-space-around">
-                <img src="{{$Empresa->img_logo_cuadrado}}" class="logo-footer">
+ <footer class="site-footer custom-border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+            
+            <div class="block-7" v-if="valor_se_puede_mostrar(Empresa.mision)">
+              <h3 class="footer-heading mb-4">Sobre nosotros</h3>
+              <p>@{{Empresa.mision}}</p>
+            </div>
+            
+          </div>
+          <div class="col-lg-5 ml-auto mb-5 mb-lg-0">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Accesos rápidos</h3>
               </div>
+              <div class="col-md-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><a href="#">Servicios</a></li>
+                 
+                </ul>
+              </div>
+             
               
             </div>
-
-             {{-- parte de politicas --}}  
-             <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
-             
-
-
-              <div class="get_width_100 flex-row-center flex-justifice-space-around flex-wrap">
-
-                 @if($Empresa->facebook_empresa != 'no')
-                  <a class="footer-icono-social" href="{{$Empresa->facebook_empresa}}"> 
-                    <i class="fab fa-facebook-square"></i>
-                  </a>
-                 @endif 
-
-                 @if($Empresa->instagram_empresa != 'no')
-                  <a class="footer-icono-social" href="{{$Empresa->instagram_empresa}}"> 
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                 @endif 
-
-                 @if($Empresa->twitter_empresa != 'no')
-                  <a class="footer-icono-social" href="{{$Empresa->twitter_empresa}}"> 
-                    <i class="fab fa-twitter-square"></i>
-                  </a>
-                 @endif 
-
-                  @if($Empresa->linkedin_empresa != 'no')
-                  <a class="footer-icono-social" href="{{$Empresa->linkedin_empresa}}"> 
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                 @endif
-
-                  @if($Empresa->youtube_empresa != 'no')
-                  <a class="footer-icono-social" href="{{$Empresa->youtube_empresa}}"> 
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                 @endif
-
-                  @if($Empresa->whatsapp_empresa != 'no')
-                  <a class="footer-icono-social" href="{{$Empresa->link_whatsapp_send}}"> 
-                    <i class="fab fa-whatsapp"></i>
-                  </a>
-                 @endif
-
-                
-                  <a class="footer-icono-social js-scroll-trigger" href="#contact"> 
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                 
-
-              </div>  
-            </div> 
-
-
-            <div class="text-center contenedor-columna-footer  Helper-OrdenarHijos-Row">
-              <div class="get_width_100 flex-row-column">
-
-               @if($Empresa->telefono_empresa != 'no')
-                 <p class="color-text-gris  get_width_100 espacio-letras-chico small">  
-                  <span class="helper-aumenta-texto"><i class="fas fa-phone"></i></span> {{$Empresa->telefono_empresa}}
-                 </p> 
-               @endif
-
-               @if($Empresa->celular_empresa != 'no')
-                 <p class="color-text-gris  get_width_100 espacio-letras-chico small">  
-                  <span class="helper-aumenta-texto"><i class="fas fa-mobile"></i></span> {{$Empresa->celular_empresa}}
-                 </p> 
-               @endif
-
-               @if($Empresa->direccion_empresa != 'no')
-                 <p class="color-text-gris  get_width_100 espacio-letras-chico small">  
-                  <span class="helper-aumenta-texto"><i class="fas fa-map-marker-alt"></i></span> {{$Empresa->direccion_empresa}}
-                 </p> 
-               @endif
-
-               @if($Empresa->horarios_empresa != 'no')
-                 <p class="color-text-gris get_width_100  espacio-letras-chico  small">  
-                  <span class="helper-aumenta-texto"><i class="fas fa-clock"></i></span> {{$Empresa->horarios_empresa}}
-                 </p> 
-               @endif
-
-              
-               
-              </div>
-            </div> 
-                
-          
           </div>
-        
-         
-</section>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Información de contacto</h3>
+              <ul class="list-unstyled">
+                <li v-if="valor_se_puede_mostrar(Empresa.direccion)" class="address">@{{Empresa.direccion}}</li>
+                <li v-if="valor_se_puede_mostrar(Empresa.celular)" class="phone"><a :href="Empresa.link_whatsapp_send">@{{Empresa.celular}}</a></li>
+                <li v-if="valor_se_puede_mostrar(Empresa.email)" class="email">@{{Empresa.email}}</li>
+              </ul>
+            </div>
 
-
-@include('paginas.home.home_modal_contacto')
-@include('paginas.politicas.mantenimiento_garantia_modals')
+            
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            {{-- <p>
+            
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+            
+            </p> --}}
+          </div>
+          
+        </div>
+      </div>
+    </footer>
