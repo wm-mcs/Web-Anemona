@@ -43,16 +43,14 @@
   <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" data-aos="fade">
         <div class="container">
 
-          <div class="row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
-            <div class="col-12 col-lg-6">
+          <div class="row d-flex flex-row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
+            <div class="col-12 col-lg-6 order-2">
               <div class="">
                 <h1 class="mb-2 titulos-class text-uppercase text-color-black">Lo mejor de {{ $Marca->name_arreglado}} </h1>
                 <h4 class="color-text-gris">
                  Somos distribuidores oficiales en Uruguay
                 </h4>
-                <div class="col-lg-6 my-3">
-                <img src="{{ $Marca->url_img}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="portada-home-imagen">
-                </div>
+                
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                      Venta de equipamientos 
@@ -71,6 +69,9 @@
                  </div>                 
               </div> 
               
+            </div>
+            <div class="col-lg-6 my-3 order-1">
+                <img src="{{ $Marca->url_img}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="portada-home-imagen">
             </div>
              
             
