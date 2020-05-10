@@ -1,7 +1,7 @@
 Vue.component('marcas-nav' ,
 {
 
-props:['Marca']
+props:['marca']
 ,  
 
 data:function(){
@@ -73,7 +73,7 @@ template:'
  
   <li  class="has-children active" >
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-      <a :href="Marca.route" >
+      <a :href="marca.route" >
 
 
 
@@ -85,8 +85,8 @@ template:'
      
 
      
-    <ul v-if="Marca.categorias_de_marca" class="dropdown">
-      <li v-for="Categoria in Marca.categorias_de_marca">
+    <ul v-if="marca.categorias_de_marca" class="dropdown">
+      <li v-for="Categoria in marca.categorias_de_marca">
       <a :href="Categoria.route_marca_producto">@{{Categoria.name_arreglado}}</a>
       </li>
       
