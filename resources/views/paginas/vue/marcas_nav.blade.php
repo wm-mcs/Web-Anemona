@@ -17,7 +17,38 @@ data:function(){
 
 methods:{
 
+getMarcas:function(){
+   
 
+     var url = '/getMarcas';
+
+       
+     var vue = this; 
+
+     axios.get(url).then(function (response){  
+            var data = response.data;  
+            
+
+            if(data.Validacion == true)
+            {
+               app.marcas = data.Marcas; 
+            }
+            else
+            {
+              $.notify(response.data.Validacion_mensaje, "error");
+            }
+           
+           }).catch(function (error){
+
+             if(error.status != 200)
+             {
+                $.notify(error.status, "error");
+             }
+
+                     
+            
+           });
+}
          
 
 },
@@ -25,7 +56,15 @@ mounted: function () {
 
    
 
-    
+    if(app.marcas.length || )
+    {
+
+    }
+    else
+    {
+     this.getMarcas();
+    }
+
 
     
     
