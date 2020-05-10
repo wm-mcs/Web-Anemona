@@ -38,7 +38,7 @@ template:'
       <div class="item-info">
         <h3>@{{Producto.name_arreglado}}</h3>
         <span class="collection d-block text-bold">@{{Producto.categoria_producto.name}}</span>
-        <strong class="price text-bold">@{{Producto.moneda}} @{{Producto.precio}} </strong>
+        <strong class="price text-bold"> @{{Producto.moneda}} @{{Producto.precio}} </strong>
       </div>
     </a>
   </div>
