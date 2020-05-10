@@ -57,8 +57,7 @@
                   </div>
                   <div class="contiene-item">
                       Servicio de mantenimiento
-                  </div>
-                  
+                  </div>                  
                 </div>
                 
                  <div class="row">
@@ -68,16 +67,13 @@
                     <div class="col-lg-6 p-1 ">
                        <a href="#Servicios" class="Boton-Primario-Relleno Boton-Fuente-Chica">Servicios</a>
                     </div>                    
-                 </div>
-                  
-                  
-                 
-                 
+                 </div>                 
               </div> 
-              <div class="col-10 col-lg-6">
-                <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
-              </div> 
+              
             </div>
+            <div class="col-10 col-lg-6">
+                <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
+            </div> 
             
             
           </div>
