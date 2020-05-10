@@ -43,11 +43,11 @@
   <div class="site-blocks-cover portada-contiene-portada-general" data-aos="fade">
         <div class="container flex-row-center flex-justifice-space-around">
 
-          <div class="row align-items-center get_width_100">
-            <div class="portada-home-contiene-textos">
+          <div class="row align-items-center">
+            <div class="col-11 col-lg-8">
               <div class="">
-                <h1 class="mb-2 secciones-personalizada-h1">Soluciones para tu gimnasio</h1>
-                <h4>Líderes en Uruguay desde 2007</h4>
+                <h1 class="mb-2 titulos-class text-uppercase color-text-white">Soluciones para tu gimnasio</h1>
+                <h4 class="color-text-white">Líderes en Uruguay desde 2007</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                       Asesoría
@@ -61,10 +61,18 @@
                   
                 </div>
                 
-                <p>
-                  <a href="#" class="btn btn-outline-primary rounded-0 Boton-general-diseño">Productos</a> 
-                   <a href="#Servicios" class="btn btn-primary rounded-0 Boton-general-diseño">Servicios</a>
-                 </p>
+                 <div class="row">
+                    <div class="col-lg-6 p-3">
+                      <a href="#" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Productos</a> 
+                    </div>
+                    <div class="col-lg-6 p-3 mt-3 mt-lg-0">
+                       <a href="#Servicios" class="Boton-Primario-Relleno Boton-Fuente-Chica">Servicios</a>
+                    </div>                    
+                 </div>
+                  
+                  
+                 
+                 </div>
               </div>  
             </div>
             <div class="portada-home-contiene-imagen">
@@ -124,8 +132,8 @@
                      <span class="text-bold">Atención a urgencias</span>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
                   </div>
             </div>
-            <div class="mt-3">
-              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Mas información</a>
+            <div class="mt-3 col-10 col-lg-6">
+              <a href="#" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Mas información</a>
             </div>
          </div>
         </div>
@@ -144,8 +152,8 @@
                      <span class="text-bold">Contamos con los mejores proveedores</span>: podremos conseguir cualquier respuesto para el service de tu equipamiento sea la marca que sea
                   </div>
             </div>
-            <div class="mt-3">
-              <a href="#" class="btn btn-outline-primary Boton-general-diseño">Coordinar una visita</a>
+            <div class="mt-3 col-10 col-lg-6">
+              <a href="#" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Coordinar una visita</a>
             </div>
          </div>
        

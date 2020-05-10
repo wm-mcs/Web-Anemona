@@ -94,22 +94,7 @@
 
 
 
-/* B o t o n e s */
-.Boton-general-diseño{
-  border:2px solid $color-2;
-  min-width: 200px;
-  margin-top: 5px;
-  text-align: center;
-  letter-spacing: 1.5px;
-  font-size:14px;
-  font-family:$font-secondary;
-  border-radius:0;
-  position:relative;
-  z-index:4;
-  padding: 12px 30px;
 
-
-}
 
 
 
@@ -151,12 +136,7 @@
 }
 
 @media (min-width: $BrackPoint-Tercer){
-.Boton-general-diseño{
-  
-  
-  margin-top: 0px;
-  margin-right: 10px;
-}
+
 
 
   
