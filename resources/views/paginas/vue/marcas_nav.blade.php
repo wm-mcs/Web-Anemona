@@ -77,7 +77,7 @@ template:'
 
 
 
-      @{{Marca.name_arreglado}}
+      @{{marca.name_arreglado}}
 
       </a> 
 
