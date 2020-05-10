@@ -70,8 +70,8 @@
               </div> 
               
             </div>
-            <div class="col-lg-6 my-1 order-1 order-lg-2 ">
-                <img src="{{ $Marca->url_img}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="portada-home-imagen">
+            <div class="col-lg-6 my-1 order-1 order-lg-2 d-flex flex-row align-items-center justify-content-center">
+                <img src="{{ $Marca->url_img}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="">
             </div>
              
             
