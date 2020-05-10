@@ -14,13 +14,13 @@ methods:{
 computed:{
   
   formato_bloque:function(){
-    if(this.Tipo == 'bloque')
+    if(this.tipo == 'bloque')
     {
     return true;
     }
   },
   formato_bloque_slide:function(){
-    if(this.Tipo == 'bloque_slide')
+    if(this.tipo == 'bloque_slide')
     {
     return true;
     }
