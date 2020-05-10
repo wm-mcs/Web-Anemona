@@ -44,7 +44,7 @@
         <div class="container">
 
           <div class="row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
-            <div class="col-11 col-lg-6">
+            <div class="col-12 col-lg-6">
               <div class="">
                 <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones para tu gimnasio</h1>
                 <h4 class="color-text-gris">Líderes en Uruguay desde 2007</h4>
