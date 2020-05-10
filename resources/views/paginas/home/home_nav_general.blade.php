@@ -13,7 +13,7 @@
   <div class="site-mobile-menu-body">
   <ul class="site-nav-wrap">
       
-      <categorias Empresa="Empresa" Categorias="Categorias" ></categorias>   
+      <categorias :Empresa="Empresa" :Categorias="Categorias" ></categorias>   
 
       <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :Marca="Marca" :key="Marca.id"></marcas-nav>    
       <li><a href="contact.html">Contacto</a></li> 
@@ -54,8 +54,8 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                <categorias Empresa="Empresa" Categorias="Categorias" ></categorias>
-                <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" Marca="Marca" :key="Marca.id"></marcas-nav>    
+                <categorias :Empresa="Empresa" :Categorias="Categorias" ></categorias>
+                <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :Marca="Marca" :key="Marca.id"></marcas-nav>    
 
                 <li><a href="contact.html">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
