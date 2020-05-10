@@ -8,7 +8,7 @@
 }
 
 .text-color-black{
-  color: $color-negro-para-textos;
+  color: $color-negro-para-textos !important;
 }
 
 .helper-aumenta-texto{
@@ -33,12 +33,12 @@
 
 /* colores personalizados */
 .color-text-gris{
-  color: $color-gris-text;
+  color: $color-gris-text !important;
 }
 
 /* colores personalizados */
 .color-text-white{
-  color: white;
+  color:$color-white !important;
 }
 
 /*color-texto-verde-success*/

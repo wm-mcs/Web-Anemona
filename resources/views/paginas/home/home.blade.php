@@ -40,14 +40,14 @@
 
 
 @section('imagen-grande-cabecera')
-  <div class="site-blocks-cover portada-contiene-portada-general" data-aos="fade">
-        <div class="container flex-row-center flex-justifice-space-around">
+  <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" data-aos="fade">
+        <div class="container ">
 
           <div class="row align-items-center">
             <div class="col-11 col-lg-8">
               <div class="">
-                <h1 class="mb-2 titulos-class text-uppercase color-text-white">Soluciones para tu gimnasio</h1>
-                <h4 class="color-text-white">Líderes en Uruguay desde 2007</h4>
+                <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones para tu gimnasio</h1>
+                <h4 class="color-text-gris">Líderes en Uruguay desde 2007</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                       Asesoría
@@ -62,10 +62,10 @@
                 </div>
                 
                  <div class="row">
-                    <div class="col-lg-6 p-3">
+                    <div class="col-lg-6 p-1">
                       <a href="#" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Productos</a> 
                     </div>
-                    <div class="col-lg-6 p-3 mt-3 mt-lg-0">
+                    <div class="col-lg-6 p-1 ">
                        <a href="#Servicios" class="Boton-Primario-Relleno Boton-Fuente-Chica">Servicios</a>
                     </div>                    
                  </div>
