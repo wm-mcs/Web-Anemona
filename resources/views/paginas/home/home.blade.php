@@ -43,7 +43,7 @@
   <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" data-aos="fade">
         <div class="container">
 
-          <div class="row align-items-center">
+          <div class="row align-items-center p-5 p-lg-0">
             <div class="col-11 col-lg-6">
               <div class="">
                 <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones para tu gimnasio</h1>
@@ -71,7 +71,7 @@
               </div> 
               
             </div>
-            <div class="col-10 col-lg-6">
+            <div class="d-none d-lg-block  col-lg-6 ">
                 <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
             </div> 
             
@@ -115,8 +115,8 @@
    
 
      <div class="background_img background_img_fixed somos-background Padding-de-secciones" id="Servicios">
-      <div class="container">
-          <div class="col-lg-10 mb-4">
+      <div class="container  mb-4">
+          <div class="col-lg-10">
            <h2 class="titulos-class color-text-white text-uppercase">Servicios de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
