@@ -43,7 +43,7 @@
   <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" data-aos="fade">
         <div class="container">
 
-          <div class="row align-items-center p-5 p-lg-0">
+          <div class="row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
             <div class="col-11 col-lg-6">
               <div class="">
                 <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones para tu gimnasio</h1>
