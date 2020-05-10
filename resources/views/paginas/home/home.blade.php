@@ -90,7 +90,7 @@
      <categoria-home-section :Empresa="Empresa" :Categorias="Categorias"></categoria-home-section>
      <marcas-home 
                   :Titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
-                  :Marcas="marcas">
+                  :Marcas="Marcas">
        
      </marcas-home>
 
