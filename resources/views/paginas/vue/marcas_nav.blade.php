@@ -86,7 +86,9 @@ template:'
 
      
     <ul v-if="Marca.categorias_de_marca" class="dropdown">
-      <li v-for="Categoria in Marca.categorias_de_marca"><a :href="Categoria.route_marca_producto">@{{Categoria.name_arreglado}}</a></li>
+      <li v-for="Categoria in Marca.categorias_de_marca">
+      <a :href="Categoria.route_marca_producto">@{{Categoria.name_arreglado}}</a>
+      </li>
       
       
     </ul>

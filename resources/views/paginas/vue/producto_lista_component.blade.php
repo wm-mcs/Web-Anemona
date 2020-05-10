@@ -42,20 +42,6 @@ template:'
       </div>
     </a>
   </div>
-   <div v-else-if="formato_bloque_slide" class="product">
-                <a :href="Producto.route" class="item">
-                  <span class="tag">Sale</span>
-                  <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
-                  <div class="item-info">
-                    <h3>@{{Producto.name}}</h3>
-                    <span class="collection d-block">@{{Producto.categoria_producto.name}}</span>
-                    <strong class="price">@{{Producto.moneda}} @{{Producto.precio}} <del>$30.00</del></strong>
-                  </div>
-                </a>
-    </div>
-
-
-
 '
 
 
