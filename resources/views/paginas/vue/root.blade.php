@@ -69,7 +69,7 @@ var app = new Vue({
         }
       },
       handleScroll:function() {
-        
+          console.log(window.scrollY);
           this.scrolled = window.scrollY > 0;
 
       },
