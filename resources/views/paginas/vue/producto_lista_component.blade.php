@@ -37,8 +37,8 @@ template:'
       <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
       <div class="item-info">
         <h3>@{{Producto.name_arreglado}}</h3>
-        <span class="collection d-block">@{{Producto.categoria_producto.name}}</span>
-        <strong class="price">@{{Producto.moneda}} @{{Producto.precio}} </strong>
+        <span class="collection d-block text-bold">@{{Producto.categoria_producto.name}}</span>
+        <strong class="price text-bold">@{{Producto.moneda}} @{{Producto.precio}} </strong>
       </div>
     </a>
   </div>
