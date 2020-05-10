@@ -1,7 +1,7 @@
  Vue.component('marcas-home' ,
 {
 
-props:['Marcas','Mostrar','Cantidad_maxima','Titulo']
+props:['Marcas','Titulo']
 ,  
 
 data:function(){
