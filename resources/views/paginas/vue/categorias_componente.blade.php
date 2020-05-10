@@ -74,8 +74,6 @@ mounted: function () {
     
     
 },
-
-
 template:'
 
   <li class="has-children active">
