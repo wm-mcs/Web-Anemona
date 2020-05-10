@@ -3,8 +3,8 @@ var app = new Vue({
     data:{
 
       Empresa: {!! json_encode($Empresa) !!},
-      categorias:[],
-      marcas:[],
+      Categorias:[],
+      Marcas:[],
       windowWidth: window.innerWidth,
       resolucion_celular: 320,
       resolucion_tablet: 640,
@@ -68,7 +68,7 @@ var app = new Vue({
          return false;
         }
       },
-      handleScroll: function() {
+      handleScroll:function() {
         
           this.scrolled = window.scrollY > 0;
 

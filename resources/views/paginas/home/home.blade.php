@@ -87,7 +87,7 @@
 @section('contenido')
 
      <novededades :Empresa="Empresa"></novededades>
-     <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
+     <categoria-home-section :Empresa="Empresa" :Categorias="Categorias"></categoria-home-section>
      <marcas-home 
                   :Titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
                   :Marcas="marcas">

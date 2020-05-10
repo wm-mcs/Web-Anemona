@@ -36,7 +36,7 @@ getMarcas:function(){
 
             if(data.Validacion == true)
             {
-               app.marcas = data.Marcas; 
+               app.Marcas = data.Marcas; 
             }
             else
             {

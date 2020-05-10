@@ -1,7 +1,7 @@
 Vue.component('categorias' ,
 {
 
-props:['Empresa','categorias']
+props:['Empresa','Categorias']
 ,  
 
 data:function(){
@@ -33,7 +33,7 @@ getCategoriasActivas:function(){
             if(data.Validacion == true)
             {
                
-               app.categorias = data.categorias;   
+               app.Categorias = data.categorias;   
 
                
             }
@@ -60,7 +60,7 @@ getCategoriasActivas:function(){
 },
 mounted: function () {
 
-    if(this.categorias.length)
+    if(this.Categorias.length)
     {
 
     }
@@ -80,7 +80,7 @@ template:'
 
   <li class="has-children active">
       <span v-if="$root.mostrar_para_celuar" class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem0"></span>
-      <a href="shop.html" v-if="categorias.length">
+      <a href="shop.html" v-if="Categorias.length">
 
 
 
@@ -96,8 +96,8 @@ template:'
       </span>
 
      
-    <ul v-if="categorias.length" class="dropdown">
-      <li v-for="categoria in categorias"><a :href="categoria.route">@{{categoria.name_arreglado}}</a></li>
+    <ul v-if="Categorias.length" class="dropdown">
+      <li v-for="categoria in Categorias"><a :href="categoria.route">@{{categoria.name_arreglado}}</a></li>
       
       <li class="has-children">
         <a href="#">Sub Menu</a>

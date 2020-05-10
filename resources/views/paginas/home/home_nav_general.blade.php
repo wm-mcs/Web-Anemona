@@ -13,9 +13,9 @@
   <div class="site-mobile-menu-body">
   <ul class="site-nav-wrap">
       
-      <categorias :Empresa="Empresa" :categorias="categorias" ></categorias>   
+      <categorias :Empresa="Empresa" :Categorias="Categorias" ></categorias>   
 
-      <marcas-nav v-if="marcas.length" v-for="marca in marcas" :marca="marca" :key="marca.id"></marcas-nav>    
+      <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :Marca="Marca" :key="Marca.id"></marcas-nav>    
       <li><a href="contact.html">Contacto</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
@@ -54,8 +54,8 @@
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
-                <categorias :Empresa="Empresa" :categorias="categorias" ></categorias>
-                <marcas-nav v-if="marcas.length" v-for="marca in marcas" :marca="marca" :key="marca.id"></marcas-nav>    
+                <categorias :Empresa="Empresa" :Categorias="Categorias" ></categorias>
+                <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :Marca="Marca" :key="Marca.id"></marcas-nav>    
 
                 <li><a href="contact.html">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
