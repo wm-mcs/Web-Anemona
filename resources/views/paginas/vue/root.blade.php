@@ -67,7 +67,12 @@ var app = new Vue({
         {
          return false;
         }
-      }
+      },
+      handleScroll: function() {
+        
+          this.scrolled = window.scrollY > 0;
+
+      },
 
 },
 watch: {
@@ -76,6 +81,12 @@ watch: {
       this.windowWidth = window.innerWidth
     });
     }
+},
+created () {
+  window.addEventListener('scroll', this.handleScroll);
+},
+destroyed () {
+ window.removeEventListener('scroll', this.handleScroll);
 }
 
      
