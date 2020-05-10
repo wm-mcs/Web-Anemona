@@ -1,7 +1,7 @@
  Vue.component('novededades' ,
 {
 
-props:['Empresa']
+props:['empresa']
 ,  
 
 data:function(){
@@ -24,7 +24,7 @@ getProductosNovedades:function(){
 
        
       var vue = this;  
-      this.cargando = true;         
+              
 
      axios.get(url).then(function (response){  
             var data = response.data;  
@@ -75,7 +75,7 @@ template:'
           <producto-lista v-for="Producto in productos_novedades" 
                            :producto="Producto" 
                            :tipo="$root.producto_vista_bloque" 
-                           :empresa="Empresa" 
+                           :empresa="empresa" 
                            :key="Producto.id"></producto-lista>
           
         </div>

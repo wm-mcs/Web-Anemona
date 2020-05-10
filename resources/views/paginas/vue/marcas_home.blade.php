@@ -89,7 +89,7 @@ template:'
       
         <div class="row no-gutters products">
           <marca-lista v-for="Marca in marcas" 
-                           :marca="marca" 
+                           :marca="Marca" 
                            :key="Marca.id"></marca-lista>
           
         </div>
