@@ -25,12 +25,12 @@ methods:{
 getProductosDeEstaCategoriaParaHome:function(){
    
 
-     var url = '/getProductosDeEstaCategoriaParaHome';
+     var url   = '/getProductosDeEstaCategoriaParaHome';
 
        
-      var vue = this;  
-      this.cargando = true;   
-      var data = {categoria_id:this.Categoria.id}  ;    
+      var vue  = this;  
+        
+      var data = {categoria_id:this.categoria.id}  ;    
 
      axios.post(url,data).then(function (response){  
             var data = response.data;  
