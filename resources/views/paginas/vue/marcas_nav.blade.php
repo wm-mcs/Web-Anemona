@@ -56,7 +56,7 @@ mounted: function () {
 
    
 
-    if(app.scrolled &&  app.marcas.length)
+    if(app.scrolled &&  app.Marcas.length)
     {
       this.getMarcas();
     }
