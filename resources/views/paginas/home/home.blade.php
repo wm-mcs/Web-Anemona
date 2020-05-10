@@ -41,10 +41,10 @@
 
 @section('imagen-grande-cabecera')
   <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" data-aos="fade">
-        <div class="container ">
+        <div class="container">
 
           <div class="row align-items-center">
-            <div class="col-11 col-lg-8">
+            <div class="col-11 col-lg-6">
               <div class="">
                 <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones para tu gimnasio</h1>
                 <h4 class="color-text-gris">Líderes en Uruguay desde 2007</h4>
@@ -73,11 +73,12 @@
                   
                  
                  </div>
-              </div>  
+              </div> 
+              <div class="col-10 col-lg-6">
+                <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
+              </div> 
             </div>
-            <div class="portada-home-contiene-imagen">
-              <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
-            </div>
+            
             
           </div>
         </div>
