@@ -1,7 +1,7 @@
  Vue.component('marcas-home' ,
 {
 
-props:['Marcas','Titulo']
+props:['marcas','titulo']
 ,  
 
 data:function(){
@@ -61,7 +61,7 @@ getMarcas:function(){
 },
 mounted: function () {
 
-    if(this.Marcas.length)
+    if(this.marcas.length)
     {
 
     }
@@ -82,14 +82,14 @@ template:'
 
 
 
-     <div v-if="Marcas.length" class="Padding-de-secciones container products-wrap border-top-0">
+     <div v-if="marcas.length" class="Padding-de-secciones container products-wrap border-top-0">
       
-       <h2 class="Titulos-de-secciones">@{{Titulo}}</h2>
+       <h2 class="Titulos-de-secciones">@{{titulo}}</h2>
       
       
         <div class="row no-gutters products">
-          <marca-lista v-for="Marca in Marcas" 
-                           :Marca="Marca" 
+          <marca-lista v-for="Marca in marcas" 
+                           :marca="marca" 
                            :key="Marca.id"></marca-lista>
           
         </div>

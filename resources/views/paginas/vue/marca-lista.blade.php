@@ -1,7 +1,7 @@
 Vue.component('marca-lista' ,
 {
 
-props:['Marca']
+props:['marca']
 ,  
 
 
@@ -22,11 +22,11 @@ computed:{
 template:'
 
   <div  class="col-6 col-md-6 col-lg-3">
-    <a :href="Marca.route" class="item">
-      <img :src="Marca.url_img" :alt="Marca.name" class="img-fluid">
+    <a :href="marca.route" class="item">
+      <img :src="marca.url_img" :alt="marca.name" class="img-fluid">
       <div class="item-info">
-        <h3>@{{Marca.name_arreglado}}</h3>
-        <span class="collection d-block">@{{Marca.tipo_de_representacion_marca}}</span>
+        <h3>@{{marca.name_arreglado}}</h3>
+        <span class="collection d-block">@{{marca.tipo_de_representacion_marca}}</span>
         
       </div>
     </a>
