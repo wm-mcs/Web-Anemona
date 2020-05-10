@@ -9,7 +9,7 @@ var app = new Vue({
       resolucion_celular: 320,
       resolucion_tablet: 640,
       resolucion_pc: 990,
-      scrolled:0,
+      scrolled:false,
 
 
       producto_vista_bloque:'bloque',
