@@ -22,8 +22,12 @@
         <a href="contact.html"><span class="icon-user"></span></a> 
 
         <ul class="collapse" id="collapseItem1">
-         <li><a href="#">Mi cuenta</a></li> 
-         <li><a href="http://web-anemona.worldmaster.com.uy/salir">Salir</a></li>
+                  @if(Auth::guest())  
+                   <li><a href="{{route('auth_login_get')}}">Iniciar</a></li>
+                  @else
+                   <li><a href="#">Mi cuenta</a></li>
+                   <li><a href="{{route('logout')}}">Salir</a></li>
+                  @endif
         </ul>
       </li>
   </ul>

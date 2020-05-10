@@ -112,12 +112,12 @@
     
 
 
-  
+   
 
-     <div class="seccion-servicios-home somos-background Padding-de-secciones" id="Servicios">
-      <div class="container flex-row-column flex-justifice-space-around">
-          <div class="Secciones-contenedor-texto align-self-md-start">
-           <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Servicios de mantenimiento</h2>
+     <div class="background_img background_img_fixed somos-background Padding-de-secciones" id="Servicios">
+      <div class="container">
+          <div class="col-lg-10 mb-4">
+           <h2 class="titulos-class color-text-white text-uppercase">Servicios de mantenimiento</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                      <span class="text-bold">Mantenimiento predictivo</span>: se establecen visitas periódicas con una frecuencia programada 
@@ -135,9 +135,9 @@
          </div>
         </div>
 
-        <div class="container flex-row-column flex-justifice-space-around">
-          <div class="Secciones-contenedor-texto align-self-md-start">
-           <h2 class="secciones-personalizada-h2 color-text-white text-uppercase">Somos lideres</h2>
+        <div class="container ">
+          <div class="col-lg-10">
+           <h2 class="titulos-class color-text-white text-uppercase">Somos lideres</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                      <span class="text-bold">Servicio oficial de</span>: Cybex y Movement, Súper Hábil, Los equipos de Cardio y Musculación de Embreex (Alsi ltda), Los equipos de la marca BH representante (Deceleste)
