@@ -78,14 +78,23 @@ var app = new Vue({
           else
           {
            this.scrolled = false;
-          }
-
-          console.log(window.scrollY,window.scrollY > 0,this.scrolled);
-
-          
+          }          
 
       },
 
+},
+computed:{
+  scroll_distinto_de_cero:function()
+  {
+    if(this.scrolled)
+    {
+      return true;
+    } 
+    else
+    {
+     return false;
+    }
+  }
 },
 watch: {
     windowWidth(newHeight, oldHeight) {
