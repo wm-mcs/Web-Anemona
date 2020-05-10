@@ -1,54 +1,21 @@
-.formulario-contacto-wraper{
-  padding:4px 10px;
-}
+/*  I M É G E N   D E   A T E N C I Ó N  */
 
-.contiene_contacto_img{
-  
-  @include flexbox;       
-  @include flex-direction(column);
-  @include align-items(center); 
-  margin-bottom: 20px;
-  padding: 10px;
-}
-
-.contacto_img{
-  width: 200px;
-  height: auto;
-  border-radius:100%;
-  margin-bottom: 20px;
-}
-
-.contacto_name{
-  font-size: 28px;
-  margin-bottom: 9px;
-  padding:8px;
-  border-radius:4px;
-  
-  border-bottom:solid 4px $color-3;
-}
-
-.contacto_aclaracion{
-  font-size: 14px;
-  margin-bottom: 5px;
-
+.imagen-contacto-chiac-al-lado-de-te-responderemos{
+  height:65px;
+  width:65px;
 }
 
 
 
 
 
- @media (min-width: $BrackPoint-Secundario){
+@media (min-width: $BrackPoint-Secundario){
 
 
-.formulario-contacto-wraper{
-  padding:4px 4px;
+.imagen-contacto-chiac-al-lado-de-te-responderemos{
+  height:80px;
+  width:80px;
 }
-  .contiene_contacto_img{
-  
-  }
 
-  .contacto_img{
-  width: 300px;
-}
-  
+
 }
