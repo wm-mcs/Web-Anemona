@@ -73,9 +73,9 @@ template:'
       
         <div class="row no-gutters products">
           <producto-lista v-for="Producto in productos_novedades" 
-                           :Producto="Producto" 
-                           :Tipo="$root.producto_vista_bloque" 
-                           :Empresa="Empresa" 
+                           :producto="Producto" 
+                           :tipo="$root.producto_vista_bloque" 
+                           :empresa="Empresa" 
                            :key="Producto.id"></producto-lista>
           
         </div>

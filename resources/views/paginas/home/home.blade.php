@@ -86,11 +86,11 @@
 
 @section('contenido')
 
-     <novededades :Empresa="Empresa"></novededades>
-     <categoria-home-section :Empresa="Empresa" :Categorias="Categorias"></categoria-home-section>
+     <novededades :empresa="Empresa"></novededades>
+     <categoria-home-section :empresa="Empresa" :categorias="Categorias"></categoria-home-section>
      <marcas-home 
-                  :Titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
-                  :Marcas="Marcas">
+                  :titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
+                  :marcas="Marcas">
        
      </marcas-home>
 

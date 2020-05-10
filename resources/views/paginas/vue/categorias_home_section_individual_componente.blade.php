@@ -1,7 +1,7 @@
  Vue.component('categoria-home-section-individual' ,
 {
 
-props:['Categoria']
+props:['categoria']
 ,  
 
 data:function(){
@@ -79,14 +79,14 @@ template:'
 
      <div v-if="productos_para_mostrar.length" class="Padding-de-secciones container products-wrap border-top-0">
       
-       <h2 class="Titulos-de-secciones">@{{Categoria.name}}</h2>
+       <h2 class="Titulos-de-secciones">@{{categoria.name}}</h2>
       
       
         <div class="row no-gutters products">
           <producto-lista v-for="Producto in productos_para_mostrar" 
-                           :Producto="Producto" 
-                           :Tipo="$root.producto_vista_bloque" 
-                           :Empresa="$root.Empresa" 
+                           :producto="Producto" 
+                           :tipo="$root.producto_vista_bloque" 
+                           :empresa="$root.Empresa" 
                            :key="Producto.id"></producto-lista>
           
         </div>

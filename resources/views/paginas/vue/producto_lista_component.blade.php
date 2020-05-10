@@ -1,7 +1,7 @@
 Vue.component('producto-lista' ,
 {
 
-props:['Empresa','Tipo','Producto']
+props:['empresa','tipo','producto']
 ,  
 
 
@@ -33,12 +33,12 @@ computed:{
 template:'
 
   <div v-if="formato_bloque" class="col-6 col-md-6 col-lg-3">
-    <a :href="Producto.route" class="item">
-      <img :src="Producto.url_img" :alt="Producto.name" class="img-fluid">
+    <a :href="producto.route" class="item">
+      <img :src="producto.url_img" :alt="producto.name" class="img-fluid">
       <div class="item-info">
-        <h3>@{{Producto.name_arreglado}}</h3>
-        <span class="collection d-block text-bold">@{{Producto.categoria_producto.name}}</span>
-        <strong class="price text-bold"> @{{Producto.moneda}} @{{Producto.precio}} </strong>
+        <h3>@{{producto.name_arreglado}}</h3>
+        <span class="collection d-block text-bold">@{{producto.categoria_producto.name}}</span>
+        <strong class="price text-bold"> @{{producto.moneda}} @{{producto.precio}} </strong>
       </div>
     </a>
   </div>
