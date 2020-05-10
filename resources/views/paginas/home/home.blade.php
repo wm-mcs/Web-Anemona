@@ -72,7 +72,7 @@
                   
                   
                  
-                 </div>
+                 
               </div> 
               <div class="col-10 col-lg-6">
                 <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
