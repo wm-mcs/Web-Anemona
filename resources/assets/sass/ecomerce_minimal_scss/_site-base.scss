@@ -19,6 +19,8 @@ a {
 	}
 }
 
+
+
 .text-black {
 	color: $black;
 }
@@ -132,7 +134,7 @@ a {
 		li {
 			margin-bottom: 10px;
 			a {
-				color: $gray-2;
+				color: $color-gris-text;
 				&:hover {
 					color: $primary;
 				}

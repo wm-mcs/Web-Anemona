@@ -5,7 +5,7 @@
             
             <div class="block-7" v-if="valor_se_puede_mostrar(Empresa.mision)">
               <h3 class="footer-heading mb-4">Sobre nosotros</h3>
-              <p>@{{Empresa.mision}}</p>
+              <p class="color-text-gris">@{{Empresa.mision}}</p>
             </div>
             
           </div>
@@ -29,9 +29,9 @@
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Información de contacto</h3>
               <ul class="list-unstyled">
-                <li v-if="valor_se_puede_mostrar(Empresa.direccion)" class="address">@{{Empresa.direccion}}</li>
-                <li v-if="valor_se_puede_mostrar(Empresa.celular)" class="phone"><a :href="Empresa.link_whatsapp_send">@{{Empresa.celular}}</a></li>
-                <li v-if="valor_se_puede_mostrar(Empresa.email)" class="email">@{{Empresa.email}}</li>
+                <li v-if="valor_se_puede_mostrar(Empresa.direccion)" class="address color-text-gris">@{{Empresa.direccion}}</li>
+                <li v-if="valor_se_puede_mostrar(Empresa.celular)" class="phone color-text-gris"><a :href="Empresa.link_whatsapp_send">@{{Empresa.celular}}</a></li>
+                <li v-if="valor_se_puede_mostrar(Empresa.email)" class="email color-text-gris">@{{Empresa.email}}</li>
               </ul>
             </div>
 
