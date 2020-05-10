@@ -88,7 +88,7 @@
 
      <novededades :Empresa="Empresa"></novededades>
      <categoria-home-section :Empresa="Empresa" :Categorias="categorias"></categoria-home-section>
-     <marcas-home :Empresa="Empresa" 
+     <marcas-home 
                   :Titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
                   :Marcas="marcas">
        
