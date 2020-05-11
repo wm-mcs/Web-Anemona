@@ -51,7 +51,7 @@ var app = new Vue({
 
               if(data.Validacion == true)
               {
-                 app.Marcas = data.Marcas; 
+                 vue.Marcas = data.Marcas; 
               }
               else
               {

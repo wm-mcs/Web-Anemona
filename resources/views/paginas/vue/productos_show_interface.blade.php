@@ -44,7 +44,7 @@ computed:{
 },
 mounted:function (){
   
-  if(app.marcas.length)
+  if(app.Marcas.length)
     {
 
     }
