@@ -46,7 +46,7 @@ computed:{
 
 template:'
 
-  <div  v-if="productos_para_mostrar.length" class="Padding-de-secciones container products-wrap border-top-0">
+  <div id="catalogo" v-if="productos_para_mostrar.length" class="Padding-de-secciones container products-wrap border-top-0">
       
        <h2 class="Titulos-de-secciones">@{{titulo_de_la_seccion}}</h2>
       
