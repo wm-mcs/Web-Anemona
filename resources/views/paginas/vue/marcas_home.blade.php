@@ -35,6 +35,7 @@ mounted: function () {
     }
     else
     {
+      console.log(app);
      $root.getMarcas();
     }
 
