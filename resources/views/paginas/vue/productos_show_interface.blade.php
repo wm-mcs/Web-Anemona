@@ -42,6 +42,17 @@ computed:{
    }
 
 },
+mounted:function (){
+  
+  if(app.marcas.length)
+    {
+
+    }
+    else
+    {
+     app.getMarcas();
+    }
+},
 
 
 template:'

@@ -22,38 +22,6 @@ computed:{
 
 methods:{
 
-getMarcas:function(){
-   
-
-     var url = '/getMarcas';
-
-       
-     var vue = this; 
-
-     axios.get(url).then(function (response){  
-            var data = response.data;  
-            
-
-            if(data.Validacion == true)
-            {
-               app.Marcas = data.Marcas; 
-            }
-            else
-            {
-              $.notify(response.data.Validacion_mensaje, "error");
-            }
-           
-           }).catch(function (error){
-
-             if(error.status != 200)
-             {
-                $.notify(error.status, "error");
-             }
-
-                     
-            
-           });
-}
 
          
          
@@ -67,7 +35,7 @@ mounted: function () {
     }
     else
     {
-     this.getMarcas();
+     app.getMarcas();
     }
 
     
