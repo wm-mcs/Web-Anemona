@@ -25,9 +25,13 @@ mounted: function () {
 
    
 
-    if(this.$root.Marcas.length)
+    if(!this.$root.Marcas.length && this.$root.scrolled)
     {
-      this.$root.getMarcas();
+
+    }
+    else
+    {
+     this.$root.getMarcas();
     }
     
 

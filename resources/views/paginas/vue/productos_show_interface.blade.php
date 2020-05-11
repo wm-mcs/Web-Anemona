@@ -44,13 +44,13 @@ computed:{
 },
 mounted:function (){
   
-  if($root.Marcas.length)
+    if(!this.$root.Marcas.length && this.$root.scrolled)
     {
 
     }
     else
     {
-     $root.getMarcas();
+     this.$root.getMarcas();
     }
 },
 
