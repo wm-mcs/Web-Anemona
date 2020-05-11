@@ -51,7 +51,7 @@ class ArregloDeEntidades
              $Categoria->route_marca_producto =  route('getProductosDeEstaCategoriaYEstaMarca',[$Marca->name,
                                                                                                 $Categoria->name,
                                                                                                 $Marca->id,
-                                                                                                $Marca->id]);
+                                                                                                $Categoria->id]);
              $collection_categorias->push($Categoria);
            }
 
