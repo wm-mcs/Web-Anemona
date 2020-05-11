@@ -131,7 +131,7 @@ class ProductoRepo extends BaseRepo
                       ->get();
 
 
-    if(($Productos->count() >= $Cantidad ) && ($Cantidad != null)) 
+    if(($Cantidad != null) && ($Productos->count() >= $Cantidad )) 
     {
       $Productos->take($Cantidad);
     }
