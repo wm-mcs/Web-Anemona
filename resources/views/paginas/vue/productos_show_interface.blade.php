@@ -1,7 +1,7 @@
 Vue.component('producto-show-interface' ,
 {
 
-props:[]
+props:['empresa']
 ,  
 
 data:function(){
