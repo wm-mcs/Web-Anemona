@@ -25,9 +25,9 @@ mounted: function () {
 
    
 
-    if(app.Marcas.length)
+    if(this.$root.Marcas.length)
     {
-      this.getMarcas();
+      this.$root.getMarcas();
     }
     
 
