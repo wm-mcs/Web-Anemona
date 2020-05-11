@@ -44,13 +44,13 @@ computed:{
 },
 mounted:function (){
   
-  if(app.Marcas.length)
+  if($root.Marcas.length)
     {
 
     }
     else
     {
-     app.getMarcas();
+     $root.getMarcas();
     }
 },
 
