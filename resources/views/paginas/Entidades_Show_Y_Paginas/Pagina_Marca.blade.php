@@ -89,7 +89,7 @@
     
 
  
-  <producto-show-interface></producto-show-interface>
+  <producto-show-interface :empresa="Empresa"></producto-show-interface>
     
 
 
