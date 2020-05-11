@@ -120,6 +120,29 @@ class ProductoRepo extends BaseRepo
     return $Productos;
   }
 
+  public function getProductosDeCategoriaYMarca($marca_id,$categoria_id, $Order_by = 'name', $Asc_des = 'asc', $Cantidad = null)
+  {
+     $Productos = $this->getEntidad()
+                      ->where('borrado','no')
+                      ->where('estado', 'si')
+                      ->where('marca_id',$marca_id)
+                      ->where('categoria_id',$categoria_id)
+                      ->orderBy($Order_by,$Asc_des)
+                      ->get();
+
+
+    if(($Productos->count() >= $Cantidad ) && ($Cantidad != null)) 
+    {
+      $Productos->take($Cantidad);
+    }
+    else
+    {
+      $Productos;
+    }
+
+    return $Productos;
+  }
+
   
   
 }

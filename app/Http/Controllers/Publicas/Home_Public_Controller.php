@@ -109,7 +109,9 @@ class Home_Public_Controller extends Controller
         $Marca     = $this->MarcaRepo->find($marca_id);
         $Categoria = $this->CategoriaRepo->find($categoria_id);
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Marca','Categoria'));    
+        $Productos = $this->ProductoRepo->getProductosDeCategoriaYMarca($marca_id,$categoria_id);
+
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Marca','Categoria','Productos'));    
               
         dd($marca_name,$categoria_name,$marca_id,$categoria_id);
       }

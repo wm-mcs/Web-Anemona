@@ -10,6 +10,7 @@ var app = new Vue({
       resolucion_tablet: 640,
       resolucion_pc: 990,
       scrolled:false,
+      scrollY:0,
 
 
       producto_vista_bloque:'bloque',
@@ -74,11 +75,14 @@ var app = new Vue({
           if(window.scrollY > 0)
           {
            this.scrolled = true;
+
           }
           else
           {
            this.scrolled = false;
-          }          
+          }  
+
+          this.scrollY = window.scrollY;        
 
       },
 
