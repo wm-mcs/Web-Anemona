@@ -111,7 +111,7 @@ class Home_Public_Controller extends Controller
 
         $Productos = $this->ProductoRepo->getProductosDeCategoriaYMarca($marca_id,$categoria_id);
 
-        dd($Productos);
+        
 
         return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Marca','Categoria','Productos'));    
               
