@@ -1,7 +1,7 @@
 Vue.component('producto-show-interface' ,
 {
 
-props:['empresa']
+props:['empresa','titulo']
 ,  
 
 data:function(){
@@ -9,7 +9,9 @@ data:function(){
          
      productos: {!! json_encode($Productos) !!},
      filtros_activos:[],
-     filtros_lista:[]
+     filtros_lista:[],
+     titulo_que_cambia_segun_filtro:''
+
 
 
     }
@@ -23,8 +25,18 @@ methods:{
 
 },
 computed:{
-  
-  
+   titulo_de_la_seccion:function(){
+
+      if(this.titulo_que_cambia_segun_filtro != '')
+      {
+        return this.titulo_que_cambia_segun_filtro;
+      }
+      else
+      {
+        return this.titulo;
+      } 
+    },
+    
    productos_para_mostrar:function(){
     return this.productos;
    }
@@ -34,9 +46,9 @@ computed:{
 
 template:'
 
-  <div v-if="productos_para_mostrar.length" class="Padding-de-secciones container products-wrap border-top-0">
+  <div  v-if="productos_para_mostrar.length" class="Padding-de-secciones container products-wrap border-top-0">
       
-       <h2 class="Titulos-de-secciones">Titulo</h2>
+       <h2 class="Titulos-de-secciones">@{{titulo_de_la_seccion}}</h2>
       
       
         <div class="row no-gutters products">

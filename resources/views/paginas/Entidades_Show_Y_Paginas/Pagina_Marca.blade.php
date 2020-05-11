@@ -89,7 +89,7 @@
     
 
  
-  <producto-show-interface :empresa="Empresa"></producto-show-interface>
+  <producto-show-interface :empresa="Empresa" titulo="Productos de {{ $Marca->name_arreglado}} de la categoría {{ $Categoria->name_arreglado}}"></producto-show-interface>
     
 
 
