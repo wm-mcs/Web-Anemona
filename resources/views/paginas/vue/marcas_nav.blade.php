@@ -25,10 +25,7 @@ mounted: function () {
 
    
 
-    if(this.$root.Marcas.length == 0 && this.$root.scrolled)
-    {
-     this.$root.getMarcas();
-    }
+    
     
     
 

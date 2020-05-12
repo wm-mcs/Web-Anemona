@@ -33,6 +33,8 @@ var app = new Vue({
         });
       });
 
+      this.getMarcas();
+
 
     },
 

@@ -19,6 +19,10 @@ methods:{
 
 getCategoriasActivas:function(){
    
+     if(this.categorias.length)
+     {
+       return '';
+     }
 
      var url = '/getCategoriasActivas';
 
