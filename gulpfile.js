@@ -64,7 +64,8 @@ elixir(function(mix) {
         'ecomerce_minimal/jquery.magnific-popup.min.js',
         'ecomerce_minimal/aos.js',
         'ecomerce_minimal/main.js',
-        'Plugins/Plug-Notify.js'
+        'Plugins/Plug-Notify.js',
+        'Plugins/Plug-lazyLoadXT.js',
        
 
        ],'public/js/ecomerceApp.js');
