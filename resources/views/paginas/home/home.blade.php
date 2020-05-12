@@ -72,7 +72,7 @@
               
             </div>
             <div class="d-none d-lg-block  col-lg-6 ">
-                <img src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
+                <img data-src="imagenes/Portada/maquina.png" alt="Image" class="portada-home-imagen">
             </div> 
             
             
@@ -114,7 +114,7 @@
 
    
 
-     <div class="background_img background_img_fixed somos-background Padding-de-secciones" id="Servicios">
+     <div v-if="scrolled" class="background_img background_img_fixed somos-background Padding-de-secciones" id="Servicios">
       <div class="container  mb-4">
           <div class="col-lg-10">
            <h2 class="titulos-class color-text-white text-uppercase">Servicios de mantenimiento</h2>

@@ -34,7 +34,7 @@ template:'
 
   <div v-if="formato_bloque" class="col-6 col-md-6 col-lg-3">
     <a :href="producto.route" class="item">
-      <img :data-src="producto.url_img" :alt="producto.name" class="img-fluid">
+      <img :src="producto.url_img" :alt="producto.name" class="img-fluid">
       <div class="item-info">
         <h3>@{{producto.name_arreglado}}</h3>
         <span class="collection d-block text-bold">@{{producto.categoria_producto.name}}</span>

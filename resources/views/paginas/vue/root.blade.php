@@ -11,6 +11,7 @@ var app = new Vue({
       resolucion_pc: 990,
       scrolled:false,
       scrollY:0,
+      
 
 
       producto_vista_bloque:'bloque',
@@ -84,7 +85,7 @@ var app = new Vue({
             {
                
                vue.Categorias = data.categorias;   
-               
+
                
             }
             else
@@ -145,7 +146,7 @@ var app = new Vue({
           }
           else
           {
-           this.scrolled = false;
+           
           }  
 
           this.scrollY = window.scrollY;        
