@@ -34,6 +34,7 @@ var app = new Vue({
       });
 
       this.getMarcas();
+      this.getCategoriasActivas();
 
 
     },
@@ -43,7 +44,6 @@ var app = new Vue({
    
 
        var url = '/getMarcas';
-
        
        var vue = this; 
 
@@ -71,7 +71,39 @@ var app = new Vue({
               
              });
       },
+      getCategoriasActivas:function(){  
 
+       var url = '/getCategoriasActivas';
+       var vue = this;  
+
+       axios.get(url).then(function (response){  
+            var data = response.data;  
+            
+
+            if(data.Validacion == true)
+            {
+               
+               vue.Categorias = data.categorias;   
+
+               
+            }
+            else
+            {
+               
+              $.notify(response.data.Validacion_mensaje, "error");
+            }
+           
+           }).catch(function (error){
+
+             if(error.status != 200)
+             {
+                $.notify(error.status, "error");
+             }
+
+                     
+            
+           });
+      },
       valor_se_puede_mostrar:function(valor)
       {
         if(valor != 0 || valor != '' || valor != null)

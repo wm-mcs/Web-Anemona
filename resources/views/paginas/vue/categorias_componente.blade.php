@@ -17,61 +17,14 @@ data:function(){
 
 methods:{
 
-getCategoriasActivas:function(){
-   
-     if(this.categorias.length)
-     {
-       return '';
-     }
 
-     var url = '/getCategoriasActivas';
-
-       
-      var vue = this;  
-      this.cargando = true;         
-
-     axios.get(url).then(function (response){  
-            var data = response.data;  
-            
-
-            if(data.Validacion == true)
-            {
-               
-               app.Categorias = data.categorias;   
-
-               
-            }
-            else
-            {
-               
-              $.notify(response.data.Validacion_mensaje, "error");
-            }
-           
-           }).catch(function (error){
-
-             if(error.status != 200)
-             {
-                $.notify(error.status, "error");
-             }
-
-                     
-            
-           });
-}
 
          
 
 },
 mounted: function () {
 
-    if(this.categorias.length)
-    {
-
-    }
-    else
-    {
-     this.getCategoriasActivas();
-    }
+  
 
     
 
