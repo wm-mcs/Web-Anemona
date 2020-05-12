@@ -49,6 +49,8 @@ mounted:function (){
     this.$root.getMarcas();
    }
 
+},
+
 
 template:'
 
