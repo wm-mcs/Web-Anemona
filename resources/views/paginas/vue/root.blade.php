@@ -84,7 +84,7 @@ var app = new Vue({
             {
                
                vue.Categorias = data.categorias;   
-               $.notify('Categorías cargadas', "success");
+               
                
             }
             else
