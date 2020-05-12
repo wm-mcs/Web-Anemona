@@ -44,15 +44,10 @@ computed:{
 },
 mounted:function (){
   
-    if(!this.$root.Marcas.length && this.$root.scrolled)
-    {
-
-    }
-    else
-    {
-     this.$root.getMarcas();
-    }
-},
+   if(this.$root.Marcas.length == 0 && this.$root.scrolled)
+   {
+    this.$root.getMarcas();
+   }
 
 
 template:'

@@ -34,9 +34,8 @@ mounted: function () {
 
     }
     else
-    {
-      
-     this.$root.getMarcas();
+    {      
+      this.$root.getMarcas();
     }
 
     
