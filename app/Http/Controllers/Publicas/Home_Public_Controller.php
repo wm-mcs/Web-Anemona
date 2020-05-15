@@ -92,14 +92,11 @@ class Home_Public_Controller extends Controller
 
       public function getMarcas()
       {
-
         $Marcas = Cache::remember('getMarcas', 3000, function() {
                      return $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
         }); 
-
-
         return  ['Validacion'  => true,
-                  'Marcas'     => $Marcas]  ;
+                  'Marcas'     => $Marcas];
       }
 
 
