@@ -64,7 +64,7 @@
                                     
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 p-1">
+                    <div class="col-lg-12 p-1">
                       <a href="#catalogo" class="Boton-Primario-Relleno Boton-Fuente-Chica">Ver catálogo de {{ $Categoria->name_arreglado}} </a> 
                     </div>
                                       
