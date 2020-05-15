@@ -38,13 +38,13 @@ Route::get('/' , [
   Route::get('Categoría-{categoria_name}-{categoria_id}-de-Be-Fitness-uruguay' , [                    
     'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
     'as'   => 'get_pagina_de_categoria']
-  )->where(['categoria_id' => '/^[[:digit:]]+$/']);;
+  )->where(['categoria_id' => '[0-9]+']);;
 
   Route::get('{marca_name}/{categoria_name}/{marca_id}/{categoria_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@getProductosDeEstaCategoriaYEstaMarca',
     'as'   => 'getProductosDeEstaCategoriaYEstaMarca']
-  )->where(['categoria_id' => '/^[[:digit:]]+$/',
-            'marca_id' => '/^[[:digit:]]+$/']);;
+  )->where(['categoria_id' =>'[0-9]+',
+            'marca_id' =>'[0-9]+']);;
 
 
  
