@@ -21,7 +21,7 @@ $color-3hyperlight:$color-3-primary_hover;
 
 /* COLORES GENERALES */
 $color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
-$color-black:black; /*misma razón, pero para el negro */
+$color-black:lighten( black, 3% ); /*misma razón, pero para el negro */
 
 $color-grey00:darken($color-white, 3% );
 $color-grey0:darken($color-white, 10% ); /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
