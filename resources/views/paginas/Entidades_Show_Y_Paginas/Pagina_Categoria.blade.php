@@ -1,6 +1,6 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') {{$Marca->name}} @stop
+@section('titulo') {{$Categoria->name}} en {{ $Empresa->name}} @stop
 
 @section('descripcion')  @stop
 
@@ -19,7 +19,7 @@
 
 <meta property="og:url"                content="{{url()}}" />
 <meta property="og:type"               content="website" />
-<meta property="og:title"              content="{{$Marca->name}}" />
+<meta property="og:title"              content="{{$Categoria->name}}" />
 <meta property="og:description"        content="{{$Empresa->descripcion_empresa}}" />
 <meta property="og:image"              content="{{$Empresa->img_logo_cuadrado}}" />
 <meta property="og:image:secure_url"   content="{{$Empresa->img_logo_cuadrado}}" /> 
