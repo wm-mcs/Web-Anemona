@@ -40,7 +40,7 @@ Route::get('/' , [
     'as'   => 'get_pagina_de_categoria']
   );
 
-  Route::get('Marca/{marca_name}/{categoria_name}/{marca_id}-{categoria_id}' , [                    
+  Route::get('{marca_name}/{categoria_name}/{marca_id}-{categoria_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@getProductosDeEstaCategoriaYEstaMarca',
     'as'   => 'getProductosDeEstaCategoriaYEstaMarca']
   );
