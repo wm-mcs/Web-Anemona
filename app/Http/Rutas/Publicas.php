@@ -35,7 +35,7 @@ Route::get('/' , [
     'as'   => 'getMarcas']
   );
 
-  Route::get('Categoría-{categoria_name}-{categoria_id}-de-Be-Fitness-uruguay' , [                    
+  Route::get('Categoría/{categoria_name}/{categoria_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
     'as'   => 'get_pagina_de_categoria']
   )->where(['categoria_id' => '[0-9]+']);;
