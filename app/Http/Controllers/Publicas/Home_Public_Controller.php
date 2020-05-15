@@ -56,7 +56,7 @@ class Home_Public_Controller extends Controller
 
         
         $categorias = Cache::remember('CategoriasActivas', 300000, function() {
-                        return $this->CategoriaRepo->getCategoriasActivasConProductos('name','ASC');
+                        return $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
                       }); 
 
 
@@ -92,11 +92,14 @@ class Home_Public_Controller extends Controller
 
       public function getMarcas()
       {
+
         $Marcas = Cache::remember('getMarcas', 3000, function() {
                      return $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
         }); 
+
+
         return  ['Validacion'  => true,
-                  'Marcas'     => $Marcas];
+                  'Marcas'     => $Marcas]  ;
       }
 
 
