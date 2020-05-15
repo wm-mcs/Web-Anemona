@@ -11,6 +11,7 @@ var app = new Vue({
       resolucion_pc: 990,
       scrolled:false,
       scrollY:0,
+      cargando:false,
       
 
 
@@ -41,30 +42,29 @@ var app = new Vue({
     },
 
     methods:{
-      getMarcas:function(){
-   
+      getMarcas:function(){   
 
-       var url = '/getMarcas';
-       
+       var url = '/getMarcas';       
        var vue = this; 
+       this.cargando = true;
 
        axios.get(url).then(function (response){  
               var data = response.data;  
               
 
               if(data.Validacion == true)
-              {
+              {  vue.cargando = false;
                  vue.Marcas = data.Marcas; 
               }
               else
-              {
+              { vue.cargando = false;
                 $.notify(response.data.Validacion_mensaje, "error");
               }
              
              }).catch(function (error){
 
                if(error.status != 200)
-               {
+               {  vue.cargando = false;
                   $.notify(error.status, "error");
                }
 
@@ -73,31 +73,28 @@ var app = new Vue({
              });
       },
       getCategoriasActivas:function(){  
-
+       this.cargando = true;
        var url = '/getCategoriasActivas';
        var vue = this;  
 
        axios.get(url).then(function (response){  
-            var data = response.data;  
-            
+            var data = response.data;              
 
             if(data.Validacion == true)
             {
-               
-               vue.Categorias = data.categorias;   
-
-               
+               vue.cargando = false;
+               vue.Categorias = data.categorias;                
             }
             else
             {
-               
+              vue.cargando = false;
               $.notify(response.data.Validacion_mensaje, "error");
             }
            
            }).catch(function (error){
 
              if(error.status != 200)
-             {
+             {  vue.cargando = false;
                 $.notify(error.status, "error");
              }
 

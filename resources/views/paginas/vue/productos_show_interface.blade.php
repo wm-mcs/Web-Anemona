@@ -67,8 +67,11 @@ template:'
       
     </div>
     <div v-else class="contiene-spiner-box-grande">
-         <div class="cssload-container">
+         <div v-if="$root.cargando" class="cssload-container">
            <div class="cssload-tube-tunnel"></div>
+         </div>
+         <div v-else class="col-12 text-center p-5 color-text-gris sub-titulos-class">
+            No hay productos para mostrar <i class="far fa-meh-blank"></i>
          </div>
     </div>
    
