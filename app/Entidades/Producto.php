@@ -7,6 +7,7 @@ use App\Entidades\ImgHome;
 use App\Entidades\Categoria;
 use App\Entidades\ProductoImg;
 use Illuminate\Support\Facades\Cache;
+use App\Servicios\Helpers;
 
 
 
@@ -165,26 +166,10 @@ class Producto extends Model
 
     public function getNameSlugAttribute()
     {
-        return $this->helper_convertir_cadena_para_url($this->name);
+        return Helpers::helper_convertir_cadena_para_url($this->name);
     }
 
-    //funciones personalizadas para reciclar
-    public function helper_convertir_cadena_para_url($cadena)
-    {
-        $cadena = strtolower(trim($cadena));
-        //quito caracteres - 
-        $cadena = str_replace('-' ,' ', $cadena);
-        $cadena = str_replace('_' ,' ', $cadena);
-        $cadena = str_replace('/' ,' ', $cadena);
-        $cadena = str_replace('|' ,' ', $cadena);
-        $cadena = str_replace('"' ,' ', $cadena);
-        $cadena = str_replace('  ' ,' ', $cadena);
-        $cadena = str_replace('   ' ,' ', $cadena);
-        $cadena = str_replace(' ' ,'-', $cadena);
-        $cadena = str_replace('?' ,'', $cadena);
-        $cadena = str_replace('¿' ,'', $cadena);
-        return $cadena;
-    }
+   
 
     public function getPrecioProductoAttribute()
     {

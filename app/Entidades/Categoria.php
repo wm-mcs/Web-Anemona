@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Entidades\Marca_de_evento;
 use App\Entidades\Producto;
 use Illuminate\Support\Facades\Cache;
+use App\Servicios\Helpers;
 
 
 
@@ -78,7 +79,7 @@ class Categoria extends Model
 
     public function getRouteAttribute()
     {
-       return route('get_pagina_de_categoria',[$this->helper_convertir_cadena_para_url($this->name), $this->id]); 
+       return route('get_pagina_de_categoria',[Helpers::helper_convertir_cadena_para_url($this->name), $this->id]); 
     }
     
     
