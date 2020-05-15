@@ -78,7 +78,7 @@ class Categoria extends Model
 
     public function getRouteAttribute()
     {
-       return url(); /*return route('',[$this->helper_convertir_cadena_para_url($this->name), $this->id]);*/ 
+       return route('get_pagina_de_categoria',[$this->helper_convertir_cadena_para_url($this->name), $this->id]); 
     }
     
     

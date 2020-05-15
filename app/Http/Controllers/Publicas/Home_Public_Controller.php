@@ -107,15 +107,33 @@ class Home_Public_Controller extends Controller
       {
         $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
         $Marca     = $this->MarcaRepo->find($marca_id);
-        $Categoria = $this->CategoriaRepo->find($categoria_id);
+        $Categoria = Cache::remember('Categoria_'.$categoria_id, 60, function() use ($categoria_id) {
+                     return  $this->CategoriaRepo->find($categoria_id);
+                     });
 
-        $Productos = $this->ProductoRepo->getProductosDeCategoriaYMarca($marca_id,$categoria_id);
+        $Productos = Cache::remember('Productos_De_Categoria_Y_Marca_'.$categoria_id, 60, function() use ($marca_id,$categoria_id) {
+                     return  $this->ProductoRepo->getProductosDeCategoriaYMarca($marca_id,$categoria_id);
+                     });
+
 
         
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Marca','Categoria','Productos'));    
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Categoria','Productos'));    
               
         dd($marca_name,$categoria_name,$marca_id,$categoria_id);
+      }
+
+      public function get_pagina_de_categoria($categoria_name,$categoria_id)
+      {
+        $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+        $Categoria = Cache::remember('Categoria_'.$categoria_id, 60, function() use ($categoria_id) {
+                     return  $this->CategoriaRepo->find($categoria_id);
+                     });
+        $Productos = Cache::remember('Productos_De_Categoria_'.$categoria_id, 60, function() use ($categoria_id) {
+                     return $this->ProductoRepo->getProductosDeEstaCategoria($categoria_id,'created_at','desc');
+                     });
+
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Categoria', compact('Empresa','Categoria','Productos'));  
       }
 
 

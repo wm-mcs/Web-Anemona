@@ -51,7 +51,7 @@ class Producto extends Model
     }
         public function getCategoriaProductoAttribute()
         {
-            return Cache::remember('categoriaProducto'.$this->id, 60, function() {
+            return Cache::remember('Categoria_'.$this->id, 60, function() {
                                   return $this->categoria; 
                               }); 
         }
