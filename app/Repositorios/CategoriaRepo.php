@@ -18,6 +18,22 @@ class CategoriaRepo extends BaseRepo
   }
 
 
+
+  public function getCategoriasActivasConProductos($Orden_atributo,$Orden = 'asc')
+  {
+    
+    
+        $entidades = $this->entidad              
+                          ->active()
+                          ->where('cantidad_de_productos_activos','>',0)
+                          ->orderBy($Orden_atributo,$Orden)
+                          ->get();
+       
+
+    return $entidades;
+  }
+
+
  
 
 

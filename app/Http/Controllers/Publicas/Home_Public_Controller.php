@@ -56,7 +56,7 @@ class Home_Public_Controller extends Controller
 
         
         $categorias = Cache::remember('CategoriasActivas', 300000, function() {
-                        return $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
+                        return $this->CategoriaRepo->getCategoriasActivasConProductos('name','ASC');
                       }); 
 
 
