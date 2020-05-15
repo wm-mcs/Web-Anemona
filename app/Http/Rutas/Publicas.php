@@ -41,7 +41,7 @@ Route::get('/' , [
     'as'   => 'getProductosDeEstaCategoriaYEstaMarca']
   );
 
-    Route::get('Productos-de-categría-{categoria_name}-{categoria_id}-be-fitness-uruguay' , [                    
+    Route::get('Productos-de-categoría-{categoria_name}-{categoria_id}-be-fitness-uruguay' , [                    
     'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
     'as'   => 'get_pagina_de_categoria']
   );

@@ -54,13 +54,13 @@ template:'
     <ul v-if="categorias.length" class="dropdown">
       <li v-for="categoria in categorias"><a :href="categoria.route">@{{categoria.name_arreglado}}</a></li>
       
-      /*<li class="has-children">
+      <!-- <li class="has-children">
         <a href="#">Sub Menu</a>
         <ul class="dropdown">
           <li><a href="#">Sub categría</a></li>
           
         </ul>
-      </li>*/
+      </li> -->
     </ul>
   </li>
   

@@ -111,7 +111,7 @@ class Home_Public_Controller extends Controller
                      return  $this->CategoriaRepo->find($categoria_id);
                      });
 
-        $Productos = Cache::remember('Productos_De_Categoria_Y_Marca_'.$categoria_id, 60, function() use ($marca_id,$categoria_id) {
+        $Productos = Cache::remember('Productos_De_Categoria_Y_Marca_'.$categoria_id . '-'.$marca_id, 60, function() use ($marca_id,$categoria_id) {
                      return  $this->ProductoRepo->getProductosDeCategoriaYMarca($marca_id,$categoria_id);
                      });
 
