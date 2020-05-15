@@ -90,7 +90,9 @@
 
     
 
- <div class="p-4"></div>
+   <div  class="Padding-de-secciones container products-wrap mt-5 mb-3">
+   <h1 class="titulos-class text-uppercase text-color-black">{{ $Categoria->name_arreglado}}</h1>
+   </div>
   <producto-show-interface :empresa="Empresa" titulo="Productos de la categoría {{ $Categoria->name_arreglado}}"></producto-show-interface>
     
 
