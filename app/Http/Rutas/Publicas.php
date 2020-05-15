@@ -35,16 +35,17 @@ Route::get('/' , [
     'as'   => 'getMarcas']
   );
 
+  Route::get('Categoría/{categoria_name}/de-Be-Fitness-uruguay/{categoria_id}' , [                    
+    'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
+    'as'   => 'get_pagina_de_categoria']
+  );
 
   Route::get('{marca_name}-{categoria_name}-{marca_id}-{categoria_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@getProductosDeEstaCategoriaYEstaMarca',
     'as'   => 'getProductosDeEstaCategoriaYEstaMarca']
   );
 
-    Route::get('Categoría-{categoria_name}-de-Be-Fitness-uruguay/{categoria_id}' , [                    
-    'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
-    'as'   => 'get_pagina_de_categoria']
-  );
+
  
 
   
