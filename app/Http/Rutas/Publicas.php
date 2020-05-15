@@ -8,7 +8,7 @@ require __DIR__ . '/Formularios/Rutas_Formularios_Publicas.php';
 require __DIR__ . '/Noticias/Rutas_Noticias_Publicas.php'; 
 
 
-require __DIR__ . '/Productos/Rutas_Productos_publicas.php';
+
 
 //Ruta de Home
 Route::get('/' , [                    
@@ -41,7 +41,7 @@ Route::get('/' , [
     'as'   => 'getProductosDeEstaCategoriaYEstaMarca']
   );
 
-    Route::get('{categoria_name}-productos-Be-Fitness-uruguay/{categoria_id}' , [                    
+    Route::get('Categoría-{categoria_name}-de-Be-Fitness-uruguay/{categoria_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
     'as'   => 'get_pagina_de_categoria']
   );
