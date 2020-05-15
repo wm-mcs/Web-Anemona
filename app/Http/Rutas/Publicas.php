@@ -39,7 +39,7 @@ Route::get('/' , [
     'uses' => 'Publicas\Home_Public_Controller@get_pagina_de_categoria',
     'as'   => 'get_pagina_de_categoria']
   )->where(['categoria_id'  => '[0-9]+',
-            'categoria_name'=> '[a-zA-Z0-9_],-']);
+            'categoria_name'=> '[a-zA-Z0-9-]']);
 
   Route::get('{marca_name}/{categoria_name}/{marca_id}/{categoria_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@getProductosDeEstaCategoriaYEstaMarca',
