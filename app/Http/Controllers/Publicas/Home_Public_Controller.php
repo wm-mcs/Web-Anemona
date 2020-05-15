@@ -118,7 +118,7 @@ class Home_Public_Controller extends Controller
 
         
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Categoria','Productos'));    
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Categoria','Productos','Marca'));    
               
         dd($marca_name,$categoria_name,$marca_id,$categoria_id);
       }
