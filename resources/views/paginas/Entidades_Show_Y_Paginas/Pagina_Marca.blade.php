@@ -46,7 +46,7 @@
           <div class="row d-flex flex-row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
             <div class="col-12 col-lg-6 order-2 order-lg-1">
               <div class="">
-                <h1 class="mb-2 titulos-class text-uppercase text-color-black">Lo mejor de {{ $Marca->name_arreglado}}  {{ $Categoria->name_arreglado}} </h1>
+                <h1 class="mb-2 titulos-class text-uppercase text-color-black">Lo mejor de {{ $Marca->name_arreglado}}  </h1>
                 <h4 class="color-text-gris">
 
                  @if($Marca->tipo_de_representacion == 'distribuidor') 

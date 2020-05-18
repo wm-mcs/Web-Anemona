@@ -49,7 +49,7 @@ Route::get('/' , [
              'marca_name'     => '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$',
              'categoria_name' => '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$']);
 
-  Route::get('Lo-mejor-de-{marca_name}-en-Uruguay-{marca_id}-' , [                    
+  Route::get('Lo-mejor-de-{marca_name}-en-Uruguay-{marca_id}' , [                    
     'uses' => 'Publicas\Home_Public_Controller@getMarcaIndividual',
     'as'   => 'getMarcaIndividual']
   )->where([
