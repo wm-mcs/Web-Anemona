@@ -1,12 +1,12 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') Lo mejor de {{$Marca->name}} en Uruguay está en Be Fitness@stop
+@section('titulo') {{$Marca->name}} @stop
 
-@section('descripcion') @if($Marca->tipo_de_representacion == 'distribuidor') Representante oficial de {{$Marca->name}} @endif en Uruguay | {{$Marca->description}} @stop
+@section('descripcion') Los mejores productos {{ $Categoria->name_arreglado}} de  la marca {{$Marca->name}}. Venta en Uruguay.@stop
 
 @section('robot') index, follow @stop
 
-@section('palabras_claves') {{$Marca->name}} @stop
+@section('palabras_claves') @stop
 
 
 
@@ -19,7 +19,7 @@
 
 <meta property="og:url"                content="{{url()}}" />
 <meta property="og:type"               content="website" />
-<meta property="og:title"              content="Lo mejor de {{$Marca->name}} en Uruguay está en Be Fitness" />
+<meta property="og:title"              content="{{$Marca->name}}" />
 <meta property="og:description"        content="{{$Empresa->descripcion_empresa}}" />
 <meta property="og:image"              content="{{$Empresa->img_logo_cuadrado}}" />
 <meta property="og:image:secure_url"   content="{{$Empresa->img_logo_cuadrado}}" /> 
@@ -48,16 +48,10 @@
               <div class="">
                 <h1 class="mb-2 titulos-class text-uppercase text-color-black">Lo mejor de {{ $Marca->name_arreglado}}  {{ $Categoria->name_arreglado}} </h1>
                 <h4 class="color-text-gris">
-
-                 @if($Marca->tipo_de_representacion == 'distribuidor') 
                  Somos distribuidores oficiales en Uruguay
-                 @else
-
-                 @endif
                 </h4>
                 
                 <div class="contiene-listado-de-opciones-portada">
-
                   <div class="contiene-item">
                      Venta de equipamientos 
                   </div>
@@ -95,7 +89,7 @@
     
 
  
-  <producto-show-interface :empresa="Empresa" titulo="Productos de {{$Marca->name_arreglado}}"></producto-show-interface>
+  <producto-show-interface :empresa="Empresa" titulo="Productos de {{ $Marca->name_arreglado}} de la categoría {{ $Categoria->name_arreglado}}"></producto-show-interface>
     
 
 

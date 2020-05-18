@@ -85,10 +85,9 @@ class Marca extends Model
 
 
     public function getRouteAttribute()
-    {
-        return url(); 
+    {        
 
-        /*route('get_pagina_marca_individual',[$this->name, $this->id]);*/
+       return route('getMarcaIndividual',[Helpers::helper_convertir_cadena_para_url($this->name), $this->id]);
 
     }
 

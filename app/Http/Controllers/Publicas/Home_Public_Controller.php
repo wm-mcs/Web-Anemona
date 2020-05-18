@@ -106,7 +106,9 @@ class Home_Public_Controller extends Controller
       public function getProductosDeEstaCategoriaYEstaMarca($marca_name,$categoria_name,$marca_id,$categoria_id)
       {
         $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
-        $Marca     = $this->MarcaRepo->find($marca_id);
+        $Marca     = Cache::remember('Marca_'.$marca_id, 60, function() use ($marca_id) {
+                     return  $this->MarcaRepo->find($marca_id);
+                     });
         $Categoria = Cache::remember('Categoria_'.$categoria_id, 60, function() use ($categoria_id) {
                      return  $this->CategoriaRepo->find($categoria_id);
                      });
@@ -118,7 +120,7 @@ class Home_Public_Controller extends Controller
 
         
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Categoria','Productos','Marca'));    
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca_Catetegoria', compact('Empresa','Categoria','Productos','Marca'));    
               
         dd($marca_name,$categoria_name,$marca_id,$categoria_id);
       }
@@ -134,6 +136,24 @@ class Home_Public_Controller extends Controller
                      });
 
         return view('paginas.Entidades_Show_Y_Paginas.Pagina_Categoria', compact('Empresa','Categoria','Productos'));  
+      }
+
+
+      /**
+       * 
+       */
+      public function getMarcaIndividual($marca_name,$marca_id)
+      {
+        $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+        $Marca     = Cache::remember('Marca_'.$marca_id, 60, function() use ($marca_id) {
+                     return  $this->MarcaRepo->find($marca_id);
+                     });
+
+        $Productos = Cache::remember('Productos_De_Marca_'.$marca_id, 60, function() use ($marca_id) {
+                     return $this->ProductoRepo->getProductosDeEstaMarca($marca_id);
+                     });
+
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Marca', compact('Empresa','Marca','Productos'));
       }
 
 
