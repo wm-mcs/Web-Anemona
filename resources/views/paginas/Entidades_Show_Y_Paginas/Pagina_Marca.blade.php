@@ -1,8 +1,14 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') Lo mejor de {{$Marca->name}} en Uruguay está en Be Fitness@stop
+@section('titulo') Lo mejor de {{$Marca->name}} en Uruguay está en Be Fitness @stop
 
-@section('descripcion') @if($Marca->tipo_de_representacion == 'distribuidor') Representante oficial de {{$Marca->name}} @endif en Uruguay | {{$Marca->description}} @stop
+@section('descripcion') 
+
+@if($Marca->tipo_de_representacion == 'distribuidor') Representante oficial de {{$Marca->name}} 
+
+@endif en Uruguay | {{$Marca->description}} 
+
+@stop
 
 @section('robot') index, follow @stop
 
