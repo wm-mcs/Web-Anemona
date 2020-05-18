@@ -1,6 +1,6 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') {{$Categoria->name}} en {{ $Empresa->name}} Uruguay@stop
+@section('titulo') {{$Categoria->name}} en {{ $Empresa->name}} Uruguay @stop
 
 @section('descripcion') {{$Categoria->description}} - Venta y servicio técnico en Uruguay. @stop
 

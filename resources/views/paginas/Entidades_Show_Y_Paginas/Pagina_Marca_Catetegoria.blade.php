@@ -2,7 +2,7 @@
 
 @section('titulo') {{$Marca->name}} @stop
 
-@section('descripcion') Los mejores productos {{ $Categoria->name_arreglado}} de  la marca {{$Marca->name}}. Venta en Uruguay.@stop
+@section('descripcion') Los mejores productos {{ $Categoria->name_arreglado}} de  la marca {{$Marca->name}}. Venta en Uruguay. @stop
 
 @section('robot') index, follow @stop
 
