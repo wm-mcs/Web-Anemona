@@ -40,7 +40,7 @@
 
 
 @section('imagen-grande-cabecera')
-  {{-- <div class="site-blocks-cover background_img
+  <div class="site-blocks-cover background_img
 background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" data-aos="fade">
         <div class="container">
 
@@ -73,7 +73,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
           </div>
         </div>
         
-  </div> --}}
+  </div>
 @stop
 
 
