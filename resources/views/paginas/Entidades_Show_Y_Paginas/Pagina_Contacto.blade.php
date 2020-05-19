@@ -40,32 +40,24 @@
 
 
 @section('imagen-grande-cabecera')
-  {{-- <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" data-aos="fade">
+  {{-- <div class="site-blocks-cover background_img
+background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" data-aos="fade">
         <div class="container">
 
           <div class="row d-flex flex-column align-items-start p-4 mt-3 mt-lg-0 p-lg-0">
             <div class="col-12 col-lg-6 order-2 order-lg-1 ">
               <div class="">
-                <h1 class="mb-2 titulos-class text-uppercase text-color-black">{{ $Categoria->name_arreglado}} </h1>
-                <h4 class="color-text-gris">
-                 Los mejores productos de {{ $Categoria->name_arreglado}}
-                </h4>
+                <h1 class="mb-2 titulos-class text-uppercase text-white">Contactate ahora </h1>
+                <h2 class="sub-titulos-class text-white">
+                 Para pedir información de nuestro serviciós de mantenimiento para tu gimansio llenar el formulario de aquí abajo o usar cualquier otra vía de contacto están abajo.
+                </h2>
                 
-                <div class="contiene-listado-de-opciones-portada">
-                  <div class="contiene-item">
-                     Al mejor precio en Uruguay 
-                  </div>
-                   <div class="contiene-item">
-                     Todo con soporte técnico
-                  </div>
-                  <div class="contiene-item">
-                     Garantía oficial
-                  </div>
-                                    
-                </div>
+               
                 <div class="row">
                     <div class="col-lg-12 p-1">
-                      <a href="#catalogo" class="Boton-Primario-Relleno Boton-Fuente-Chica">Ver catálogo de {{ $Categoria->name_arreglado}} </a> 
+                      <a href="#catalogo" class="Boton-Primario-Relleno Boton-Fuente-Chica">
+                        Contactar ahora para pedir información <i class="fas fa-angle-double-right"></i>
+                      </a> 
                     </div>
                                       
                  </div> 
