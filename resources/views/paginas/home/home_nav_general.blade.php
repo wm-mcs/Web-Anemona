@@ -16,7 +16,7 @@
       <categorias :empresa="Empresa" :categorias="Categorias" ></categorias>   
 
       <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :marca="Marca" :key="Marca.id"></marcas-nav>    
-      <li><a href="contact.html">Contacto</a></li> 
+      <li><a href="{{route('getContacto')}}">Contacto</a></li> 
        <li class="has-children">
         <span class="arrow-collapse collapsed" data-toggle="collapse" data-target="#collapseItem1"></span>
         <a href="contact.html"><span class="icon-user"></span></a> 
@@ -57,7 +57,7 @@
                 <categorias :empresa="Empresa" :categorias="Categorias" ></categorias>
                 <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :marca="Marca" :key="Marca.id"></marcas-nav>    
 
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="{{route('getContacto')}}">Contacto</a></li>
                 <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
 

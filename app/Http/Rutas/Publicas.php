@@ -58,23 +58,23 @@ Route::get('/' , [
             ]);
 
 
- 
-
-  
-
-  
-
-
-
-
-
-
-
-//Contacto
+ //Contacto
 Route::get('/Contacto' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto',
-  'as'   => 'get_pagina_contacto']
+  'uses' => 'Publicas\Home_Public_Controller@getContacto',
+  'as'   => 'getContacto']
 );
+
+  
+
+  
+
+
+
+
+
+
+
+
 
 //Empresa
 Route::get('/Empresa' , [                    

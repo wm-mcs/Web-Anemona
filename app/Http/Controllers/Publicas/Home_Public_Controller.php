@@ -157,6 +157,15 @@ class Home_Public_Controller extends Controller
       }
 
 
+      public function getContacto()
+      {
+        $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+       
+
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Contacto', compact('Empresa'));
+      }
+
+
 
 
 
