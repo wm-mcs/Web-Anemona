@@ -2,7 +2,7 @@
 
 @section('titulo') Contáctate ahora con {{$Empresa->name}} Uruguay @stop
 
-@section('descripcion') Venta y servicio técnico en Uruguay de las principaes marcas de equipamientos y accesorios para gimnasios. @stop
+@section('descripcion') Venta y servicio técnico en Uruguay de las principales marcas de equipamientos y accesorios para gimnasios. @stop
 
 @section('robot') index, follow @stop
 
