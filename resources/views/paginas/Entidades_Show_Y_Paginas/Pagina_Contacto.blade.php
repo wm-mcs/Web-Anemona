@@ -47,13 +47,14 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
           <div class="row d-flex flex-column align-items-start p-4 mt-3 mt-lg-0 p-lg-0">
             <div class="col-12 col-lg-6 order-2 order-lg-1 ">
               <div class="">
-                <div class="col-10 mb-4">
-                  <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
-                </div>
+               
                 
                 <h1 class="mb-3 titulos-class text-uppercase text-white">Contactate ahora </h1>
+                 <div class="col-10 mb-4">
+                  <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
+                </div>
                 <h2 class="sub-titulos-class text-white mb-3">
-                 Para pedir información de nuestro serviciós de mantenimiento para tu gimansio llenar el formulario de aquí abajo o usar cualquier otra vía de contacto que están abajo.
+                 Para pedir información de nuestro serviciós de mantenimiento o coordinar una visita a tu gimnasio, llenar el formulario de aquí abajo o usar cualquier otra vía de contacto que están abajo.
                 </h2>
                 
                
