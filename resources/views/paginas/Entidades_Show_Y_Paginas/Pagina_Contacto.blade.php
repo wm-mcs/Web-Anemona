@@ -34,7 +34,7 @@
 
 
 @section('header-menu-iconos') 
- @include('paginas.home.home_nav_general')
+ 
 @stop
 
 
