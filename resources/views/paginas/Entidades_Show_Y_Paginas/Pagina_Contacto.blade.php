@@ -50,12 +50,12 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
                
                 
                 <h1 class="mb-3 titulos-class text-uppercase text-white">Contactate ahora </h1>
-                 <div class="col-10 mb-4">
+                 <div class="row col-10 mb-5">
                   <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
                 </div>
-                <h2 class="sub-titulos-class text-white mb-3">
+                <p class="parrafo-class text-white mb-5">
                  Para pedir información de nuestro serviciós de mantenimiento o coordinar una visita a tu gimnasio, llenar el formulario de aquí abajo o usar cualquier otra vía de contacto que están abajo.
-                </h2>
+                </p>
                 
                
                 <div class="row">
