@@ -110,7 +110,7 @@
 @section('vue')
 
 
-   @include('paginas.vue.productos_show_interface')
+   
    @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')
    @include('paginas.vue.marcas_home')
