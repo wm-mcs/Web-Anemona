@@ -32,43 +32,38 @@ class Envio_Formularios_Controller extends Controller
     public function post_contacto_form(Request $Request)
     {
       
-      $Nombre_de_empresa  = $this->EmpresaRepo->getEmpresaDatos()->name;;
-      $name               = $Request->get('nombre');
+     $Nombre_de_empresa  = $this->EmpresaRepo->getEmpresaDatos()->name;
+       //valores del request
+      $name               = $Request->get('name');
       $email              = $Request->get('email');
       $mensaje            = $Request->get('mensaje');
       $Email_al_que_envia = $this->EmpresaRepo->getEmpresaDatos()->email;
-      $Titulo_de_email    = $Request->get('titulo_email'); 
-
-      
-
+      $Titulo_de_email    = 'Solicitud de contacto por web de ' .$name ;
+      $manager            = new envio_contacto_manager( null, $Request->all());
 
 
-            $Validacion  = false;
 
-            
-
-            if(filter_var($email, FILTER_VALIDATE_EMAIL))
-            {
-                $Validacion  = true;
-            }
-            
-
-            
+            $Validacion   =  $manager->isValid();            
 
             if($Validacion == true)
             {
-                $this->EmailsRepo->EnvioEmailDeContacto($name, $email, $mensaje,$Email_al_que_envia, $Nombre_de_empresa,$Titulo_de_email);                
-            }
+                $this->EmailsRepo->EnvioEmailDeContacto($name, $email, $mensaje,$Email_al_que_envia, $Nombre_de_empresa,$Titulo_de_email,$Request);    
 
-            
-            $array = [ 
-                   'Validacion' => $Validacion,
-                   'name'       => $name, 
-                   'email'      => $email,  
-                   'mensaje'    => $mensaje                 
+                 return   [ 
+                   'Validacion'            => $Validacion,
+                   'Validacion_mensaje'    => 'Mensaje enviado correctamente. En breve te estarmos respondiendo a '.$email    
                      ];
 
-            return json_encode($array);
+                      
+            }
+            else
+            {
+              return [ 
+                   'Validacion'            => $Validacion,
+                   'Validacion_mensaje'    => 'Upssssss! algo está mal',
+                   'Errores'    => $manager->getErrors()    
+                     ];
+            }
 
 
 

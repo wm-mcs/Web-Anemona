@@ -49,19 +49,21 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
               <div class="">
                
                 
-                <h1 class="mb-3 titulos-class text-uppercase text-white">Contactate ahora </h1>
-                 <div class="row col-10 mb-5">
-                  <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
+                <h1 class="mb-5 titulos-class text-uppercase text-white">Contactate ahora </h1>
+                 <div class="row col-6 mb-5">
+                  <a href="{{url()}}">
+                    <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
+                  </a> 
                 </div>
                 <p class="parrafo-class text-white mb-5">
-                 Para pedir información de nuestro serviciós de mantenimiento o coordinar una visita a tu gimnasio, llenar el formulario de aquí abajo o usar cualquier otra vía de contacto que están abajo.
+                 Para coordinar una visita a tu gimnasio o pedir más información, rellenar el formulario de aquí abajo o usar cualquier otra vía de contacto disponibles a continuación.
                 </p>
                 
                
                 <div class="row">
                     <div class="col-lg-12 p-1">
-                      <a href="#catalogo" class="Boton-Primario-Relleno Boton-Fuente-Chica">
-                        Contactar ahora para pedir información <i class="fas fa-angle-double-right"></i>
+                      <a href="#formulario_contacto" class="Boton-Primario-Relleno Boton-Fuente-Chica">
+                        Coordiná una visita a tu gimnasio ahora mismo  <i class="fas fa-angle-double-right"></i>
                       </a> 
                     </div>
                                       
@@ -85,9 +87,44 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
 
 @section('contenido')
 
-    
+           <div class="container">
+             
+            <div class="row" >
+                
+            </div>
 
- 
+           </div>  
+
+     <div  class="site-section" id="formulario">
+      <div class="container">
+
+
+
+
+        <div class="row align-items-center justify-content-center">
+          
+          <div class="col-lg-6 order-2 order-lg-2">
+
+                
+              
+                
+
+               <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
+               
+                 @include('paginas.vue.Contacto.Contacto_comun')
+               
+               </contacto-component>
+
+
+            
+            
+            
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
     
 
 
@@ -107,7 +144,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
 @section('vue')
 
 
-   
+   @include('paginas.vue.contacto-component')
    @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')
    @include('paginas.vue.marcas_home')
