@@ -91,9 +91,9 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
              
             <div class="row mb-5" >
 
-                <div class="col-12 mb-5 mt-5 titulos-class text-center text-color-black">Contatanos ahora a través ...</div>
+                <div class="col-12 mb-5 mt-5 p-2 p-lg-5 titulos-class text-center text-color-black">Contatanos ahora a través ...</div>
                 <div class="col-6 col-lg-4 p-2 p-lg-4">
-                  <div class="text-center text-color-primary sub-titulos-class mb-4">
+                  <div class="titulos-class text-center text-color-primary sub-titulos-class mb-4">
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
                   
@@ -102,7 +102,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
                    </p>
                 </div>
                 <div class="col-6 col-lg-4 p-2 p-lg-4">
-                  <div class="text-center text-color-primary sub-titulos-class mb-4">
+                  <div class="titulos-class text-center text-color-primary sub-titulos-class mb-4">
                     <i class="fas fa-phone"></i>
                   </div>
                   <p class="parrafo-class color-text-gris text-center mb-2"> 
@@ -113,7 +113,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
                   </p>
                 </div>
                 <div class="col-6 col-lg-4 p-2 p-lg-4">
-                  <div class="text-center text-color-primary sub-titulos-class mb-4">
+                  <div class=" titulos-class text-center text-color-primary sub-titulos-class mb-4">
                     <i class="fas fa-envelope"></i>
                   </div>
                   
@@ -123,7 +123,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
 
 
             <div class="col-12 mt-5 mb-5 parrafo-class color-text-gris text-center">
-              También puedes usar el formulario de contacto ....
+              También puedes usar el formulario de contacto <i class="fas fa-hand-point-down"></i> 
             </div>
             </div>
 
