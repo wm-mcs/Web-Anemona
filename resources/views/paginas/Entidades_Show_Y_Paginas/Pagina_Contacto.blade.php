@@ -91,7 +91,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
              
             <div class="row mb-5" >
 
-                <div class="col-12 mb-5 titulos-class text-center text-color-black">Contatanos ahora a través ...</div>
+                <div class="col-12 mb-5 mt-5 titulos-class text-center text-color-black">Contatanos ahora a través ...</div>
                 <div class="col-6 col-lg-4 p-2 p-lg-4">
                   <div class="text-center text-color-primary sub-titulos-class mb-4">
                     <i class="fas fa-map-marker-alt"></i>
@@ -112,7 +112,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
                     Administración <strong>(598) 091692627</strong> 
                   </p>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-4 p-2 p-lg-4">
                   <div class="text-center text-color-primary sub-titulos-class mb-4">
                     <i class="fas fa-envelope"></i>
                   </div>
@@ -122,6 +122,9 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
                 </div>
 
 
+            <div class="col-12 mt-5 mb-5 parrafo-class color-text-gris text-center">
+              También puedes usar el formulario de contacto ....
+            </div>
             </div>
 
            </div>  
