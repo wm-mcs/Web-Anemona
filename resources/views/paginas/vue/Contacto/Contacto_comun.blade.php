@@ -48,10 +48,9 @@
 
 
          <div class="col-12 text-center parrafo-class p-3 mb-1 color-text-gris" >
-          {{$Empresa->texto_tiempo_respuesta_contacto}}
+          Responderemos rápido
          </div>
        
-         <img class="rounded-circle   imagen-contacto-chiac-al-lado-de-te-responderemos" src="{{url()}}/imagenes/Contacto/mauricio-costanzo-atención-comercial-por-desarrollo-páginas-web-software.jpg" alt="Image">
          
       </div>
       
