@@ -112,7 +112,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
                     Administración <strong>(598) 091692627</strong> 
                   </p>
                 </div>
-                <div class=" mt-3 p-2 p-lg-4">
+                <div class="col-12 mt-3 p-2 p-lg-4">
                   <div class=" titulos-class text-center text-color-primary mb-4">
                     <i class="fas fa-envelope"></i>
                   </div>
