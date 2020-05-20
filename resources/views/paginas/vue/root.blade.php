@@ -21,7 +21,11 @@ var app = new Vue({
       Nombres_secciones_marcas:{
                                   titulo_marcas_distribuimos:'Venta y servicio técnico de ...',
                                   titulo_marcas_service: 'Servicio técnico de ... '
-                               }
+                               },
+      variables:{
+                  input_color_primary:'input_color_primary',
+                  input_color_white:'input_color_white'
+                }
       
 
       
