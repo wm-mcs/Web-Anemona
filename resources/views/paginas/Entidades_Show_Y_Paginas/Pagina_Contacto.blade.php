@@ -90,7 +90,31 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
            <div class="container">
              
             <div class="row" >
-                
+
+                <div class="col-6 col-lg-3 p-2 p-lg-4">
+                  <div class="text-center text-color-primary sub-titulos-class mb-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  
+                  <p class="parrafo-class color-text-gris">Dirección: Caicobe 3363 - 4044 Montevideo - Uruguay </p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div>
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <p>Servicio Técnico (598) 092664263</p>
+                  <p> <p>Administración (598) 091692627</p></p>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div>
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <p>Email</p>
+                  <p> info@befitness.com.uy</p>
+                  <p> administracion@befitness.com.uy</p>
+                </div>
+
+
             </div>
 
            </div>  

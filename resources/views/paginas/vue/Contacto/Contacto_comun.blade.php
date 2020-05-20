@@ -1,7 +1,7 @@
 <div v-if="!se_envio" class="container">
   <div class="row" id="formulario_contacto">
     <div class="col-12 mb-5 position-relative">
-      <h2 class="section-title  mb-5" :class="classTextColor">Formulario de contacto</h2>
+      <h2 class="section-title text-center  mb-5" :class="classTextColor">Formulario de contacto</h2>
     </div>
   </div>
   <div action="#" class="form">
