@@ -49,7 +49,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
               <div class="">
                
                 
-                <h1 class="mb-5 titulos-class text-uppercase text-white">Somos BeFitness </h1>
+                <h1 class="mb-5 titulos-class text-uppercase text-white">Somos Be Fitness </h1>
                  <div class="row col-6 mb-5">
                   <a href="{{url()}}">
                     <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
@@ -108,7 +108,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
           
         
         <div class="col-12 p-4 border border-primary mb-3 ">
-          <p class=" parrafo-class mb-2">            
+          <p class="parrafo-class mb-2">            
             Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de los equipos y maquinas electrónicas de Fitness.  Be Fitness es reprensentante de la marca SportsArt para Uruguay es servicio técnico oficial de:        
           </p>
           
