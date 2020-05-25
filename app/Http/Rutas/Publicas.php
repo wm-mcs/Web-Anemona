@@ -58,11 +58,20 @@ Route::get('/' , [
             ]);
 
 
- //Contacto
+ // C o n t a c t o
 Route::get('/Contacto' , [                    
   'uses' => 'Publicas\Home_Public_Controller@getContacto',
   'as'   => 'getContacto']
 );
+
+// Q u i é n   e s 
+Route::get('/getQuienes' , [                    
+  'uses' => 'Publicas\Home_Public_Controller@getQuienes',
+  'as'   => 'getQuienes']
+);
+
+
+
 
   
 

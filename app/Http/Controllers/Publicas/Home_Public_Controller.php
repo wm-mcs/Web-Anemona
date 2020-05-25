@@ -165,6 +165,14 @@ class Home_Public_Controller extends Controller
         return view('paginas.Entidades_Show_Y_Paginas.Pagina_Contacto', compact('Empresa'));
       }
 
+       public function getQuienes()
+      {
+        $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+       
+
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa'));
+      }
+
 
 
 

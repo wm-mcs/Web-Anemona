@@ -1,6 +1,6 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') Contáctate ahora con {{$Empresa->name}} Uruguay @stop
+@section('titulo') Sobre  {{$Empresa->name}} Uruguay @stop
 
 @section('descripcion') Venta y servicio técnico en Uruguay de las principales marcas de equipamientos y accesorios para gimnasios. @stop
 
@@ -49,7 +49,7 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
               <div class="">
                
                 
-                <h1 class="mb-5 titulos-class text-uppercase text-white">Contáctate ahora </h1>
+                <h1 class="mb-5 titulos-class text-uppercase text-white">Somo BeFitness </h1>
                  <div class="row col-6 mb-5">
                   <a href="{{url()}}">
                     <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
