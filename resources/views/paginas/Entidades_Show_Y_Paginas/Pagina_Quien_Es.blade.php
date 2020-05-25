@@ -79,76 +79,41 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
 
 @section('contenido')
 
-           <div class="container">
+           
              
-            <div class="row mb-5" >
+  <div class="site-section background-gris-1">
+    <div class="container">
+      <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
+        HAS LLEGADO HASTA AQUÍ POR ALGO.
+      </h2>
+      <h3 class="sub-titulos-class text-center text-color-primary mb-4">
+        Necesitas tener los equipos de tu gimnasio en condiciones.
+      </h3>    
 
-                <div class="col-12 mb-5 mt-5 p-2 p-lg-5 titulos-class text-center text-color-black">Contatanos ahora a través ...</div>
-                <div class="col-6 col-lg-4 p-2 p-lg-4">
-                  <div class="titulos-class text-center text-color-primary  mb-4">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  
-                  <p class="parrafo-class color-text-gris text-center">Dirección: 
-                     <strong>Caicobe 3363 - 4044 Montevideo - Uruguay</strong>
-                   </p>
-                </div>
-                <div class="col-6 col-lg-4 p-2 p-lg-4">
-                  <div class="titulos-class text-center text-color-primary  mb-4">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <p class="parrafo-class color-text-gris text-center mb-2"> 
-                    Servicio Técnico <strong>(598) 092664263</strong> 
-                  </p>
-                  <p class="parrafo-class color-text-gris text-center">
-                    Administración <strong>(598) 091692627</strong> 
-                  </p>
-                </div>
-                <div class="col-6 col-lg-4 p-2 p-lg-4">
-                  <div class=" titulos-class text-center text-color-primary mb-4">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  
-                  <p class="parrafo-class color-text-gris text-center mb-2"> info@befitness.com.uy</p>
-                  <p class="parrafo-class color-text-gris text-center"> administracion@befitness.com.uy</p>
-                </div>
+      <p class="text-center text-color-primary m-0">        
+       Somo espertos en materia de equipamiento para gimasios. Venta y servicios de mantenimiento.
+      </p>   
+      
+    </div>
+  </div>
 
+            
 
-            <div class="col-12 mt-5 mb-5 parrafo-class color-text-gris text-center">
-              También puedes usar el formulario de contacto <i class="fas fa-hand-point-down"></i> 
-            </div>
-            </div>
+<div  class="site-section background-gris-0" id="">
+      <div class="container d-flex flex-column align-items-center">
 
-           </div>  
-
-     <div  class="site-section" id="formulario">
-      <div class="container">
-
-
-
-
-        <div class="row align-items-center justify-content-center">
+        <div class=" p-4 mb-4 col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+          <img class="rounded-circle img-fluid" data-src="{{$Empresa->img_logo_cuadrado}}">
+        </div>
           
-          <div class="col-lg-6 order-2 order-lg-2">
-
-                
-              
-                
-
-               <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
-               
-                 @include('paginas.vue.Contacto.Contacto_comun')
-               
-               </contacto-component>
-
-
-            
-            
-            
-          </div>
-          
+        
+        <div class="col-12 p-4 border border-primary mb-3 ">
+          <p class=" parrafo-class mb-2">            
+            Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de los equipos y maquinas electrónicas de Fitness.  Be Fitness es reprensentante de la marca SportsArt para Uruguay es servicio técnico oficial de:        
+          </p>
           
         </div>
+        
       </div>
     </div>
     
