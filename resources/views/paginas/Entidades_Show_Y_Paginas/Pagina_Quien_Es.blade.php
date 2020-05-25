@@ -41,7 +41,7 @@
 
 @section('imagen-grande-cabecera')
   <div class="background_img
-background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" data-aos="fade">
+background_img_fixed img_quien  flex-row-center flex-justifice-space-around" data-aos="fade">
         <div class="container">
 
           <div class="row d-flex flex-column align-items-start p-4 mt-3 mt-lg-0 p-lg-0">
@@ -49,25 +49,17 @@ background_img_fixed img_contacto  flex-row-center flex-justifice-space-around" 
               <div class="">
                
                 
-                <h1 class="mb-5 titulos-class text-uppercase text-white">Somo BeFitness </h1>
+                <h1 class="mb-5 titulos-class text-uppercase text-white">Somos BeFitness </h1>
                  <div class="row col-6 mb-5">
                   <a href="{{url()}}">
                     <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
                   </a> 
                 </div>
                 <p class="parrafo-class text-white text-bold mb-5">
-                 Para coordinar una visita a tu gimnasio o pedir más información, contáctate  usando cualquier vía de contacto que están aquí abajo. También puedes rellenar el formulario.
-                </p>
-                
+                 Lideres en equipar y mantener gimnasios.
+                </p>                
                
-                <div class="row">
-                    <div class="col-lg-12 p-1">
-                      <a href="#formulario_contacto" class="Boton-Primario-Relleno Boton-Fuente-Chica">
-                        Coordiná una visita a tu gimnasio ahora mismo  <i class="fas fa-angle-double-right"></i>
-                      </a> 
-                    </div>
-                                      
-                 </div> 
+                
                 
                                 
               </div> 
