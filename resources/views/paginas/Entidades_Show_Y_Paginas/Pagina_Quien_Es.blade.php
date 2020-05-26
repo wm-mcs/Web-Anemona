@@ -128,6 +128,9 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
 
           
         </div>
+
+        <a class="Boton-Fuente-Chica
+Boton-Primario-Sin-Relleno my-4" href="{{route('getServicios')}}"> Explorá los servicios de mantenimiento que tenemos para tu gimnasios <i class="fas fa-angle-double-right"></i></a>
         
       </div>
     </div>

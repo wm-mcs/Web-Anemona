@@ -65,9 +65,15 @@ Route::get('/Contacto' , [
 );
 
 // Q u i é n   e s 
-Route::get('/getQuienes' , [                    
+Route::get('/Sobre-Be-Fitness' , [                    
   'uses' => 'Publicas\Home_Public_Controller@getQuienes',
   'as'   => 'getQuienes']
+);
+
+// Q u i é n   e s 
+Route::get('/Servicios-de-Be-Fitness-Uruguay' , [                    
+  'uses' => 'Publicas\Home_Public_Controller@getServicios',
+  'as'   => 'getServicios']
 );
 
 
