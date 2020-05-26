@@ -91,7 +91,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
       </h3>    
 
       <p class="text-center text-color-primary m-0">        
-       Somo espertos en materia de equipamiento para gimasios. Venta. Servicios de mantenimiento.
+       Somo expertos en materia de equipamiento para gimasios. <strong>Venta</strong>. <strong>Servicios de mantenimiento</strong>.
       </p>   
       
     </div>
@@ -103,14 +103,29 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
       <div class="container d-flex flex-column align-items-center">
 
         <div class=" p-4 mb-4 col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
-          <img class="rounded-circle img-fluid" data-src="{{$Empresa->img_logo_cuadrado}}">
+          <img class="img-fluid" data-src="{{$Empresa->img_logo_cuadrado}}">
         </div>
           
         
         <div class="col-12 p-4 border border-primary mb-3 ">
           <p class="parrafo-class mb-2">            
-            Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de los equipos y maquinas electrónicas de Fitness.  Be Fitness es reprensentante de la marca SportsArt para Uruguay es servicio técnico oficial de:        
+            Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de maquinas de Fitness.  Es reprensentante de la marca SportsArt para Uruguay y es servicio técnico oficial de:        
           </p>
+          <p class="mb-2 pl-4">
+             <div class="contiene-item">Cybex y Movement en Uruguay</div>
+             <div class="contiene-item">Súper Hábil</div>
+             <div class="contiene-item">Los equipos de Cardio y Musculación de Embreex ( Alsi ltda )</div>
+             <div class="contiene-item">Los equipos de la marca BH representante ( Deceleste )</div>             
+          </p>
+
+          <p class="parrafo-class mb-2">            
+            Nuestros clientes abarcan un gran abanico que va desde <strong> hogares hasta clientes corporativos tales como Clubes, Gimnasios, Hoteles, Spa, Centro de Estéticas, Complejos Deportivos</strong>, entre otros.
+          </p>  
+          <p class="parrafo-class mb-2">
+            Integran nuestro staff técnicos altamente capacitados y con más de 10 años de experiencia en el área lo que nos permite, punto en el que ponemos especial esmero en dar, una <strong> respuesta rápida y una solución eficiente</strong>.
+          </p>
+          
+
           
         </div>
         
