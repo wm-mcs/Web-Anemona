@@ -91,7 +91,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
       </h3>    
 
       <p class="text-center text-color-primary m-0">        
-       Somo espertos en materia de equipamiento para gimasios. Venta y servicios de mantenimiento.
+       Somo espertos en materia de equipamiento para gimasios. Venta. Servicios de mantenimiento.
       </p>   
       
     </div>
