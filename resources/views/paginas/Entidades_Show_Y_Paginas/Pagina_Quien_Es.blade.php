@@ -91,7 +91,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
       </h3>    
 
       <p class="text-center text-color-primary m-0">        
-       Somo expertos en materia de equipamiento para gimasios. <span class="text-bold" >Venta</span>. <span class="text-bold" >Servicios de mantenimiento</span>.
+       Somos expertos en materia de equipamiento para gimnasios. <span class="text-bold" >Venta</span>. <span class="text-bold" >Servicios de mantenimiento</span>.
       </p>   
       
     </div>
