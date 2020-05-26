@@ -91,7 +91,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
       </h3>    
 
       <p class="text-center text-color-primary m-0">        
-       Somo expertos en materia de equipamiento para gimasios. <strong>Venta</strong>. <strong>Servicios de mantenimiento</strong>.
+       Somo expertos en materia de equipamiento para gimasios. <span class="text-bold" >Venta</span>. <span class="text-bold" >Servicios de mantenimiento</span>.
       </p>   
       
     </div>
@@ -119,10 +119,10 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
           </ul>
 
           <p class="parrafo-class mb-2">            
-            Nuestros clientes abarcan un gran abanico que va desde <strong> hogares hasta clientes corporativos tales como Clubes, Gimnasios, Hoteles, Spa, Centro de Estéticas, Complejos Deportivos</strong>, entre otros.
+            Nuestros clientes abarcan un gran abanico que va desde <span class="text-bold"> hogares hasta clientes corporativos tales como Clubes, Gimnasios, Hoteles, Spa, Centro de Estéticas, Complejos Deportivos</span>, entre otros.
           </p>  
           <p class="parrafo-class mb-2">
-            Integran nuestro staff técnicos altamente capacitados y con más de 10 años de experiencia en el área lo que nos permite, punto en el que ponemos especial esmero en dar, una <strong> respuesta rápida y una solución eficiente</strong>.
+            Integran nuestro staff técnicos altamente capacitados y con más de 10 años de experiencia en el área lo que nos permite, punto en el que ponemos especial esmero en dar, una <span class="text-bold"> respuesta rápida y una solución eficiente</span>.
           </p>
           
 
