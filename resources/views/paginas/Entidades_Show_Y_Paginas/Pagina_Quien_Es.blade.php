@@ -111,12 +111,12 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
           <p class="parrafo-class mb-2">            
             Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de maquinas de Fitness.  Es reprensentante de la marca SportsArt para Uruguay y es servicio técnico oficial de:        
           </p>
-          <p class="mb-2 pl-4">
+          <ul class="mb-2 pl-4">
              <div class="contiene-item">Cybex y Movement en Uruguay</div>
              <div class="contiene-item">Súper Hábil</div>
              <div class="contiene-item">Los equipos de Cardio y Musculación de Embreex ( Alsi ltda )</div>
              <div class="contiene-item">Los equipos de la marca BH representante ( Deceleste )</div>             
-          </p>
+          </ul>
 
           <p class="parrafo-class mb-2">            
             Nuestros clientes abarcan un gran abanico que va desde <strong> hogares hasta clientes corporativos tales como Clubes, Gimnasios, Hoteles, Spa, Centro de Estéticas, Complejos Deportivos</strong>, entre otros.
