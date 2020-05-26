@@ -107,7 +107,7 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
         </div>
           
         
-        <div class="col-12 p-2 border border-primary mb-3 ">
+        <div class="col-12 p-4 border border-primary mb-3 ">
           <p class="parrafo-class mb-4">            
             Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de maquinas de Fitness.  Es reprensentante de la marca SportsArt para Uruguay y es servicio técnico oficial de:        
           </p>
