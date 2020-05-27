@@ -103,34 +103,54 @@ background_img_fixed img_servicios  flex-row-center flex-justifice-space-around"
       <div class="container d-flex flex-column align-items-center">
 
         <div class=" p-4 mb-4 col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
-          <img class="img-fluid" data-src="{{$Empresa->img_logo_cuadrado}}">
+          <img class="img-fluid mb-2" data-src="{{$Empresa->img_logo_cuadrado}}">
+          <p class="text-center">Servicios</p>
         </div>
+
+        <div class="row align-items-center ">
+           <div class="col-lg-6 order-2 order-lg-2 flex-column p-4">          
+              
+            <h3 class="sub-titulos-class text-bold mb-3">Planes de mantenimiento</h3>
+            
+            <ul class="mb-4 pl-4">
+             <div class="contiene-item">
+              <p> 
+                <span class="text-bold">Mantenimiento Predictivo:</span>
+                De común acuerdo con el Cliente, se establecen visitas periódicas a las instalaciones con una frecuencia programada. Se resuelven las incidencias detectadas (mantenimiento correctivo) y se previenen las futuras anomalías (mantenimiento preventivo). 
+              </p>
+
+             </div>
+             <div class="contiene-item">
+              <p> 
+                <span class="text-bold">Mantenimiento Correctivo:</span>
+                Se opta a este servicio a partir del pago de un abono mensual con derecho a prestaciones pre establecidas para realizar solamente tareas de carácter correctivas.  
+              </p>
+             </div> 
+             <div class="contiene-item">
+              <p> 
+                <span class="text-bold">PLUS:</span>
+                Respuesta inmediata. Teniendo contratado nuestro servicio de urgencias PLUS tendrá a su alcance una respuesta al instante para solucionar CUALQUIER  inconveniente grave que se le presente durante las 24 horas del día los 365 días del año.
+                Recibirá asesoramiento telefónico en el momento en el que ocurra la incidencia, con asistencia al lugar por parte de operarios calificados en menos de 2 horas. 
+              </p>
+             </div>            
+           </ul>                
+            
+            
+           
+                
+             
+           </div>
+           <div class="col-lg-6 order-3 pl-lg-5 order-lg-1">
+            <img class="img-fluid mb-4" src="{{url()}}/imagenes/Home/laura_jodral_es.jpg" alt="Laura Jodral">
+           </div>
+          </div>
+            
           
         
-        <div class="col-12 p-4 border border-primary mb-3 ">
-          <p class="parrafo-class mb-4">            
-            Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de maquinas de Fitness.  Es reprensentante de la marca SportsArt para Uruguay y es servicio técnico oficial de:        
-          </p>
-          <ul class="mb-4 pl-4">
-             <div class="contiene-item">Cybex y Movement en Uruguay</div>
-             <div class="contiene-item">Súper Hábil</div>
-             <div class="contiene-item">Los equipos de Cardio y Musculación de Embreex ( Alsi ltda )</div>
-             <div class="contiene-item">Los equipos de la marca BH representante ( Deceleste )</div>             
-          </ul>
-
-          <p class="parrafo-class mb-4">            
-            Nuestros clientes abarcan un gran abanico que va desde <span class="text-bold"> hogares hasta clientes corporativos tales como Clubes, Gimnasios, Hoteles, Spa, Centro de Estéticas, Complejos Deportivos</span>, entre otros.
-          </p>  
-          <p class="parrafo-class mb-4">
-            Integran nuestro staff técnicos altamente capacitados y con más de 10 años de experiencia en el área lo que nos permite, punto en el que ponemos especial esmero en dar, una <span class="text-bold"> respuesta rápida y una solución eficiente</span>.
-          </p>
-          
-
-          
-        </div>
+        
 
         <a class="Boton-Fuente-Chica
-Boton-Primario-Sin-Relleno my-4" href="{{route('getServicios')}}"> Explorá los servicios de mantenimiento que tenemos para tu gimnasios <i class="fas fa-angle-double-right"></i></a>
+Boton-Primario-Sin-Relleno my-4" href="{{route('getContacto')}}"> Coordiná ahora mismo una visita gratuita a tu gimnasio  <i class="fas fa-angle-double-right"></i></a>
         
       </div>
     </div>
