@@ -130,7 +130,7 @@
                   </div>
             </div>
             <div class="mt-3 col-10 col-lg-6">
-              <a href="#" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Mas información</a>
+              <a href="{{route('getServicios')}}" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Explorar nuestros servicios <i class="fas fa-angle-double-right"></i></a>
             </div>
          </div>
         </div>
@@ -150,7 +150,7 @@
                   </div>
             </div>
             <div class="mt-3 col-10 col-lg-6">
-              <a href="#" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Coordinar una visita</a>
+              <a href="{{route('getContacto')}}" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Coordinar una visita gratuita <i class="fas fa-angle-double-right"></i></a>
             </div>
          </div>
        
