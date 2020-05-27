@@ -113,26 +113,25 @@ background_img_fixed img_servicios  flex-row-center flex-justifice-space-around"
             <h3 class="sub-titulos-class text-bold mb-3">Planes de mantenimiento</h3>
             
             <ul class="mb-4 pl-4">
-             <div class="contiene-item">
-              <p> 
-                <span class="text-bold">Mantenimiento Predictivo:</span>
-                De común acuerdo con el Cliente, se establecen visitas periódicas a las instalaciones con una frecuencia programada. Se resuelven las incidencias detectadas (mantenimiento correctivo) y se previenen las futuras anomalías (mantenimiento preventivo). 
-              </p>
-
-             </div>
-             <div class="contiene-item">
-              <p> 
+             
+              <p class="contiene-item"> 
                 <span class="text-bold">Mantenimiento Correctivo:</span>
                 Se opta a este servicio a partir del pago de un abono mensual con derecho a prestaciones pre establecidas para realizar solamente tareas de carácter correctivas.  
               </p>
-             </div> 
-             <div class="contiene-item">
-              <p> 
+              
+            
+              <p class="contiene-item"> 
+                <span class="text-bold">Mantenimiento Predictivo y Correctivo:</span>
+                De común acuerdo con el Cliente, se establecen visitas periódicas a las instalaciones con una frecuencia programada. Se resuelven las incidencias detectadas (mantenimiento correctivo) y se previenen las futuras anomalías (mantenimiento preventivo). 
+              </p>
+
+             
+              <p class="contiene-item"> 
                 <span class="text-bold">PLUS:</span>
                 Respuesta inmediata. Teniendo contratado nuestro servicio de urgencias PLUS tendrá a su alcance una respuesta al instante para solucionar CUALQUIER  inconveniente grave que se le presente durante las 24 horas del día los 365 días del año.
                 Recibirá asesoramiento telefónico en el momento en el que ocurra la incidencia, con asistencia al lugar por parte de operarios calificados en menos de 2 horas. 
               </p>
-             </div>            
+                        
            </ul>                
             
             
