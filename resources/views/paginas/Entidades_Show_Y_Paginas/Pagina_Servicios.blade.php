@@ -49,7 +49,7 @@ background_img_fixed img_servicios  flex-row-center flex-justifice-space-around"
               <div class="">
                
                 
-                <h1 class="mb-5 titulos-class text-uppercase text-white">Planes de mantenimiento de los equipos de tu gimnasio </h1>
+                <h1 class="mb-5 titulos-class text-uppercase text-white">Planes de mantenimiento para de tu gimnasio </h1>
                  <div class="row col-6 mb-5">
                   <a href="{{url()}}">
                     <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
@@ -81,17 +81,17 @@ background_img_fixed img_servicios  flex-row-center flex-justifice-space-around"
 
            
              
-  <div class="site-section background-gris-1">
+  <div class="site-section ">
     <div class="container">
       <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
-        HAS LLEGADO HASTA AQUÍ POR ALGO.
+        Si estás aquí es probable que estás necesitando ayuda con el mantenimeinto de las maquinas de tu gimnasio.
       </h2>
       <h3 class="sub-titulos-class text-center text-color-primary mb-4">
-        Necesitas tener los equipos de tu gimnasio en condiciones.
+        Dejá de perder tiempo y mirá ahora los planes que tenemos para tí  <i class="fas fa-hand-point-down"></i>
       </h3>    
 
       <p class="text-center text-color-primary m-0">        
-       Somos expertos en materia de equipamiento para gimnasios. <span class="text-bold" >Venta</span>. <span class="text-bold" >Servicios de mantenimiento</span>.
+       Somos expertos en <span class="text-bold" >mantener gimnasios</span>.
       </p>   
       
     </div>
