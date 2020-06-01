@@ -50,3 +50,4 @@
         </div>
       </div>
     </footer>
+    @include('paginas.home.footer_credits')
