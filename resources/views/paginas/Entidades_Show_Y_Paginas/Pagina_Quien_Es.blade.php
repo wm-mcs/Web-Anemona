@@ -40,8 +40,9 @@
 
 
 @section('imagen-grande-cabecera')
-  <div class="background_img
-background_img_fixed img_quien  flex-row-center flex-justifice-space-around" data-aos="fade">
+<div class="background_img
+background_img_fixed img_quien " data-aos="fade">
+<div class="background-layer-layoute-opasity  d-flex flex-row justify-content-center align-items-center">
         <div class="container">
 
           <div class="row d-flex flex-column align-items-start p-4 mt-3 mt-lg-0 p-lg-0">
@@ -71,8 +72,8 @@ background_img_fixed img_quien  flex-row-center flex-justifice-space-around" dat
             
           </div>
         </div>
-        
-  </div>
+</div>        
+</div>
 @stop
 
 
