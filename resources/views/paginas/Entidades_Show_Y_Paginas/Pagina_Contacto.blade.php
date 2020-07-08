@@ -144,7 +144,7 @@ background_img_fixed img_contacto " data-aos="fade">
               
                 
 
-               <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
+               <contacto-component :empresa="Empresa" :color="variables.input_color_primary" inline-template>
                
                  @include('paginas.vue.Contacto.Contacto_comun')
                
@@ -180,13 +180,6 @@ background_img_fixed img_contacto " data-aos="fade">
 
 
    @include('paginas.vue.contacto-component')
-   @include('paginas.vue.marcas_nav')
-   @include('paginas.vue.marca-lista')
-   @include('paginas.vue.marcas_home')
-   @include('paginas.vue.categorias_home_section_individual_componente')
-   @include('paginas.vue.categorias_home_section_componente')
-   @include('paginas.vue.novedades_componente')
-   @include('paginas.vue.categorias_componente')
-   @include('paginas.vue.producto_lista_component')
+   @include('paginas.vue.categorias_componente')   
    @include('paginas.vue.root')
 @stop
