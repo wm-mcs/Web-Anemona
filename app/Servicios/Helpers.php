@@ -21,6 +21,7 @@ class Helpers
         $cadena = str_replace('"' ,' ', $cadena);
         $cadena = str_replace('  ' ,' ', $cadena);
         $cadena = str_replace('   ' ,' ', $cadena);
+        $cadena = str_replace('    ' ,' ', $cadena);
         $cadena = str_replace(' ' ,'-', $cadena);
         $cadena = str_replace('?' ,'', $cadena);
         $cadena = str_replace('¿' ,'', $cadena);
