@@ -46,18 +46,21 @@
           <div class="row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
             <div class="col-12 col-lg-6">
               <div class="">
-                <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones para tu gimnasio</h1>
-                <h4 class="color-text-gris">Líderes en Uruguay desde 2007</h4>
+                <h1 class="mb-2 titulos-class text-uppercase text-color-black">Soluciones integrales en fitness</h1>
+                <h4 class="color-text-gris">Líderes en mantenimientos programados desde 2010</h4>
                 <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
-                      Asesoría
+                      Asesoría en armado de salas en 3D y renovaciones
                   </div>
                    <div class="contiene-item">
-                     Venta de equipamientos
+                     Venta de equipos comerciales, hogar e instalaciones
                   </div>
                   <div class="contiene-item">
-                      Servicio de mantenimiento
-                  </div>                  
+                      Servicio de mantenimiento y service
+                  </div>  
+                  <div class="contiene-item">
+                      Servicio de alquiler de equipos
+                  </div>                 
                 </div>
                 
                  <div class="row">
@@ -85,6 +88,9 @@
 
 
 @section('contenido')
+
+
+     @include('paginas.home.BeFitnessMarcaDestacada')
 
      <novededades :empresa="Empresa"></novededades>
      <categoria-home-section :empresa="Empresa" :categorias="Categorias"></categoria-home-section>
