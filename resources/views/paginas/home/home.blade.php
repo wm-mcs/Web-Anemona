@@ -100,20 +100,6 @@
        
      </marcas-home>
 
-  {{--   <div class="seccion-servicios-home servicios-background Padding-de-secciones" id="Servicios">
-
-        
-
-         
-
-         <div class="contenedor-logo-absolut ">
-           <div class="container flex-row-column-start">
-              <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
-           </div>
-         </div>
-         
-       
-    </div>  --}}
   
     
 
