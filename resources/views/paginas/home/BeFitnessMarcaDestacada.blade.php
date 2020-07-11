@@ -1,4 +1,4 @@
-<section class="background-gris-1">
+<section class="background-gris-1 py-4 py-lg-0">
 	<div class="container">
 		<div class="row align-items-center justify-content-center">
 			<div class="col-12 col-lg-3 p-lg-3 mb-5 mb-lg-0">
