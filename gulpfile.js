@@ -57,12 +57,8 @@ elixir(function(mix) {
       mix.scripts([
         
         'ecomerce_minimal/jquery-3.3.1.min.js',
-        'ecomerce_minimal/jquery-ui.js',
-        'ecomerce_minimal/popper.min.js',
-        'ecomerce_minimal/bootstrap.min.js',
-        'ecomerce_minimal/owl.carousel.min.js',
-        'ecomerce_minimal/jquery.magnific-popup.min.js',
-        'ecomerce_minimal/aos.js',
+        /*'ecomerce_minimal/jquery-ui.js',*/        
+        'ecomerce_minimal/bootstrap.min.js',       
         'ecomerce_minimal/main.js',
         'Plugins/Plug-Notify.js',
         'Plugins/Plug-lazyLoadXT.js',
