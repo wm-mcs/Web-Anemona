@@ -1,13 +1,13 @@
-<section class="Padding-de-secciones background-gris-1">
+<section class="background-gris-1">
 	<div class="container">
 		<div class="row align-items-center justify-content-center">
 			<div class="col-12 col-lg-3 p-lg-3 mb-5 mb-lg-0">
 				<img data-src="{{url()}}/imagenes/Marcas/Sportsart/logo.png" class="img-fluid">
 			</div>
-			<div class="col-12 col-lg-4 mb-4 mb-lg-0">
+			<div class="col-12 col-lg-5 mb-4 mb-lg-0">
 				<img data-src="{{url()}}/imagenes/Marcas/Sportsart/Natural-portada.jpg" class="img-fluid">
 			</div>	
-			<div class="col-12 col-lg-5 p-2 p-lg-3">
+			<div class="col-12 col-lg-4 p-2 p-lg-3">
 				
 				<p class="mb-2 color-text-gris">
 	                <small>
