@@ -1,5 +1,6 @@
-
-$color-3:#ff7000; /* institucional PRINCIPAL */
+$Color-del-cliente:#ff7000;
+$Color-propuesto:#c76a22;
+$color-3:$Color-propuesto; /* institucional PRINCIPAL */
 $color-3-primary_hover: lighten( $color-3, 5% );
 $color-2:darken( $color-3, 10% );
 
