@@ -3,7 +3,7 @@ $bg-gray: $color-grey0;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background: #f9f9f9;
+	background: darken($color-white, 2% );
 	position: relative;
 	overflow: hidden;
 	z-index: 9;

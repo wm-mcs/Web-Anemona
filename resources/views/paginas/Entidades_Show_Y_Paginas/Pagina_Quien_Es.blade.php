@@ -41,7 +41,7 @@
 
 @section('imagen-grande-cabecera')
 <div class="background_img
-background_img_fixed img_quien " data-aos="fade">
+background_img_fixed img_quien " >
 <div class="background-layer-layoute-opasity  d-flex flex-row justify-content-center align-items-center">
         <div class="container">
 
