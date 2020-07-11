@@ -14,7 +14,7 @@
 					<b>SportsArt</b> decide lanzar dos productos completamente renovados al mercado ¿Te imaginás combinar movimientos de elíptica, bicicleta y escalador, en un solo equipo?
 				    </small>
 			    </p>
-				<a href="" class="Boton-Fuente-Muy-Chica Boton-Primario-Sin-Relleno">Conocé la nueva linea de equipos cardio de SportsArt <i class="fas fa-angle-double-right"></i></a>
+				<a href="" class="Boton-Fuente-Muy-Chica Boton-Primario-Sin-Relleno">Conocé la nueva linea de equipos cardio de <b>SportsArt</b>  <i class="fas fa-angle-double-right"></i></a>
 
 				
 			</div>			
