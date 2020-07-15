@@ -19,8 +19,7 @@ class Paginas_Controller extends Controller
 
    
     protected $EmpresaRepo;
-    protected $MarcaRepo;   
-    
+    protected $MarcaRepo;      
     protected $ProductoRepo;
     protected $CategoriaRepo;
 
