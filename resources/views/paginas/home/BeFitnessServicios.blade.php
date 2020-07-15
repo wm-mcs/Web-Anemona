@@ -65,6 +65,11 @@
             <p class="parrafo-class color-text-gris">Nos distinguimos, por nuestra eficiencia, profesionalismo y <b>rapidez de respuesta</b>, como por nuestro amplio stock de repuestos originales.</p>
           </div>
 
+
+          <div class="mt-4 col-10 col-lg-10">
+              <a href="{{route('getServicios')}}" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Explorar nuestros planes de mantenimiento <i class="fas fa-angle-double-right"></i></a>
+          </div>
+
         </div>      
       </div>
     </div>
