@@ -103,61 +103,11 @@
   
     
 
-
+     @include('paginas.home.BeFitnessServicios')
    
 
-     <div v-if="scrolled" class="background_img background_img_fixed somos-background Padding-de-secciones" id="Servicios">
-      <div class="container  mb-4">
-          <div class="col-lg-10">
-           <h2 class="titulos-class color-text-white text-uppercase">Mantenimiento</h2>
-           <div class="contiene-listado-de-opciones-portada">
-                  <div class="contiene-item">
-                     <span class="text-bold">Mantenimiento predictivo</span>: se establecen visitas periódicas con una frecuencia programada 
-                  </div>
-                  <div class="contiene-item">
-                      <span class="text-bold">Mantenimiento correctivo</span>: se establecen una cantidad de visitas mensuales las cuales podrás usar según tu necesidad
-                  </div>
-                   <div class="contiene-item">
-                     <span class="text-bold">Atención a urgencias</span>: con respuesta telefónica inmediata y presencia en el sitio en un máximo de 2 horas
-                  </div>
-            </div>
-            <div class="mt-3 col-10 col-lg-6">
-              <a href="{{route('getServicios')}}" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Explorar nuestros servicios <i class="fas fa-angle-double-right"></i></a>
-            </div>
-         </div>
-        </div>
+    
 
-        <div class="container ">
-          <div class="col-lg-10">
-           <h2 class="titulos-class color-text-white text-uppercase">Somos lideres</h2>
-           <div class="contiene-listado-de-opciones-portada">
-                  <div class="contiene-item">
-                     <span class="text-bold">Servicio oficial de</span>: Cybex y Movement, Súper Hábil, Los equipos de Cardio y Musculación de Embreex (Alsi ltda), Los equipos de la marca BH representante (Deceleste)
-                  </div>
-                  <div class="contiene-item">
-                      <span class="text-bold">El 70% del mercado uruguayo trabaja con nosotros</span>
-                  </div>
-                   <div class="contiene-item">
-                     <span class="text-bold">Contamos con los mejores proveedores</span>: podremos conseguir cualquier respuesto para el service de tu equipamiento sea la marca que sea
-                  </div>
-            </div>
-            <div class="mt-3 col-10 col-lg-6">
-              <a href="{{route('getContacto')}}" class="Boton-Primario-Sin-Relleno Boton-Fuente-Chica">Coordinar una visita gratuita <i class="fas fa-angle-double-right"></i></a>
-            </div>
-         </div>
-       
-        </div>
-
-         
-
-        {{--  <div class="contenedor-logo-absolut ">
-           <div class="container flex-row-column-end">
-              <img class="logo-easy-socio-portada" :src="Empresa.img_logo_horizontal_blanco" alt="BeFitness Uruguay Logo en blanco.">
-           </div>
-         </div> --}}
-         
-       
-    </div> 
      
 @stop 
 
