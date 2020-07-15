@@ -42,7 +42,7 @@
        
     </div> 
     <div v-if="scrolled"  class="background-gris-1 py-5"> 
-      <div class="container">
+      <div class="container py-lg-4">
         <div class="row align-items-center justify-content-center">
         {{-- S e r v i c i o --}}        
           <div class="col-6 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
