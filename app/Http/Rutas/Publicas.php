@@ -91,17 +91,6 @@ Route::get('/Servicios-de-Be-Fitness-Uruguay' , [
 
 
 
-//Empresa
-Route::get('/Empresa' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_empresa',
-  'as'   => 'get_pagina_empresa']
-);
-
-//Servicios
-Route::get('/Servicios' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_servicios',
-  'as'   => 'get_pagina_servicios']
-);
 
 
 
