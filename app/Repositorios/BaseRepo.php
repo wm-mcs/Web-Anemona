@@ -86,8 +86,7 @@ abstract class BaseRepo
                   ->paginate($paginacion);
     }
 
-    /
-
+    
     public function getEntidadesAllPaginadasYOrdenadas($request,$OrdenadasSegunAtributo,$Orden,$paginacion)
     {
 
