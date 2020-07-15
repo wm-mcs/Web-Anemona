@@ -11,8 +11,8 @@ use App\Repositorios\ClienteRepo;
 use App\Repositorios\ImagenRepo;
 use App\Helpers\HelpersGenerales;
 use App\Managers\cliente_manager;
-use App\Controllers\Interfaces\entidadCrudControllerInterface;
-use App\Controllers\Traits\entidadesControllerComunesCrud;
+use App\Http\Controllers\Interfaces\entidadCrudControllerInterface;
+use App\Http\Controllers\Traits\entidadesControllerComunesCrud;
 
 
 
