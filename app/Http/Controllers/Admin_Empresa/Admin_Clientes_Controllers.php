@@ -92,7 +92,7 @@ class Admin_Clientes_Controllers extends Controller implements entidadCrudContro
 
   public function get_admin(Request $Request)
   { 
-    $Entidades           = $this->Entidad_principal->getEntidadActivas();
+    $Entidades           = $this->Entidad_principal->getEntidadActivasYOrdenadasSegunPaginadas( $Request, 'rank','desc',6);
     $Titulo              = $this->Nombre_entidad_plural;
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;

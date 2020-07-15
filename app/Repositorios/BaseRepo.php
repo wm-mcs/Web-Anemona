@@ -35,12 +35,7 @@ abstract class BaseRepo
       return $this->entidad->find($id);
     }
 
-     public function destroy_entidad($id)
-    {
-      $entidad_a_borrar = $this->find($id);
-      $entidad_a_borrar->delete();
-    }
-
+    
     //elimina esta entidad
     public function destruir_esta_entidad($Entidad)
     {
@@ -91,100 +86,36 @@ abstract class BaseRepo
                   ->paginate($paginacion);
     }
 
-    /**
-     * Entidades All ya paginadas Paginadas 
-     */
-    public function getEntidadesAllPaginadas($request,$paginacion)
-    {
-
-    return $this->entidad
-                ->name($request->get('name'))                
-                ->orderBy('id','desc')
-                ->paginate($paginacion);
-  
-    }
+    /
 
     public function getEntidadesAllPaginadasYOrdenadas($request,$OrdenadasSegunAtributo,$Orden,$paginacion)
     {
 
     return $this->entidad
+                ->where('borrado','no')                
                 ->name($request->get('name'))                
                 ->orderBy($OrdenadasSegunAtributo,$Orden)
                 ->paginate($paginacion);
   
     }
 
-    /**
-     * Devuelve una coleccion de una entidad segun un atributo variable y ordenada como queramos y Paginadas.
-     */
+    
     public function getEntidadActivasAll_Segun_Atributo_y_Ordenadas($atributo,$valor_atributo,$orden,$paginacion)
     {
       return $this->entidad
+                  ->active()
                   ->where($atributo,$valor_atributo)             
                   ->orderBy('id',$orden)
                   ->paginate($paginacion);
     }
 
 
-    /**
-     * Ultimas Entidades Activas
-     */
-    public function getUltimasEntidadesRegistradasRandomActive($request,$cantidad)
-    {
-
-      $cantidad_de_entidades =  $this->entidad->active()->get()->count();
-
-      if($cantidad_de_entidades >= $cantidad)
-      {
-        $entidades = $this->entidad
-                          ->name($request->get('name'))                
-                          ->active()
-                          ->orderBy('id','DESC')
-                          ->take($cantidad)
-                          ->get();
-      }
-      else
-      {
-        $entidades = $this->entidad
-                          ->name($request->get('name'))                
-                          ->active()
-                          ->orderBy('id','DESC')
-                          ->get();
-      }  
-
-    return $entidades;
-  
-    }
+    
 
 
-    public function getEntidadesActivasYOrdenadas($Cantidad,$Orden)
-    {
-      $cantidad_de_entidades =  $this->entidad->active()->get()->count();
-
-      if($cantidad_de_entidades >= $Cantidad)
-      {
-        $entidades = $this->entidad               
-                          ->active()
-                          ->orderBy('id',$Orden)
-                          ->take($Cantidad)
-                          ->get();
-      }
-      else
-      {
-        $entidades = $this->entidad              
-                          ->active()
-                          ->orderBy('id',$Orden)
-                          ->get();
-      }  
-
-    return $entidades;
-    }
-
+    
      
 
-    /**
-     * funcion que va a hacer creada el los repo que extiendan.
-     */
     abstract public function getEntidad();
 
 

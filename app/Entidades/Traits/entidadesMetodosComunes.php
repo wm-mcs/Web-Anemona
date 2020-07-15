@@ -5,11 +5,6 @@ namespace App\Entidades\Traits;
 use App\Helpers\HelpersGenerales;
 
 trait entidadesMetodosComunes{
-    
-
-  
-
-
 
      public function getRouteAdminAttribute()
      {
@@ -29,9 +24,6 @@ trait entidadesMetodosComunes{
      {
         return ucfirst(strtolower($this->name));
      }
-
-
-
 
     /* S c o p e s */
 
