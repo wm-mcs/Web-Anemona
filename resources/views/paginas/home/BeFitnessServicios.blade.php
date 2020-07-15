@@ -45,21 +45,21 @@
       <div class="container py-lg-4">
         <div class="row align-items-center justify-content-center">
         {{-- S e r v i c i o --}}        
-          <div class="col-6 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
+          <div class="col-10 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
             <div class="titulos-class mb-4 text-color-primary"><i class="fas fa-tools"></i></div>
             <h3 class="sub-titulos-class mb-2 text-uppercase "><b> Servicio técnico</b></h3>
             <p class="parrafo-class color-text-gris">Nuestra empresa cuenta con servicio técnico altamente especializado, tanto en la instalación como en la reparación de todos nuestro productos.</p>
           </div>
         
         {{-- C o b e r t u r a --}}        
-          <div class="col-6 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
+          <div class="col-10 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
             <div class="titulos-class mb-4 text-color-primary"><i class="fas fa-flag"></i></div>
             <h3 class="sub-titulos-class mb-2 text-uppercase "><b> Cobertura nacional</b></h3>
             <p class="parrafo-class color-text-gris">Contamos con cobertura a nivel nacional y respondiendo con gran rapidez frente a cualquier inquietud y/o necesidad que tengan nuestros clientes.</p>
           </div>
         
         {{-- S e r v i c i o --}}       
-          <div class="col-6 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
+          <div class="col-10 col-lg-4 text-center mb-3 mb-lg-0 p-4 p-lg-2">
             <div class="titulos-class mb-4 text-color-primary"><i class="far fa-check-square"></i></div>
             <h3 class="sub-titulos-class mb-2 text-uppercase"><b> Profesionalismo</b></h3>
             <p class="parrafo-class color-text-gris">Nos distinguimos, por nuestra eficiencia, profesionalismo y <b>rapidez de respuesta</b>, como por nuestro amplio stock de repuestos originales.</p>
