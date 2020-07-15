@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Publicas;
 
 use App\Http\Controllers\Controller;
-use App\Repositorios\ImgHomeRepo;
+
 use App\Repositorios\EmpresaRepo;
 use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
@@ -15,7 +15,7 @@ use App\Repositorios\MarcaRepo;
 
 class Home_Public_Controller extends Controller
 {
-    protected $ImgHomeRepo;
+    
     protected $EmpresaRepo;
     protected $ProductoRepo;
     protected $CategoriaRepo;
@@ -23,14 +23,14 @@ class Home_Public_Controller extends Controller
     protected $MarcaRepo;
   
 
-    public function __construct(ImgHomeRepo        $ImgHomeRepo,
+    public function __construct(
                                 EmpresaRepo        $EmpresaRepo,
                                 ProductoRepo       $ProductoRepo,
                                 CategoriaRepo      $CategoriaRepo, 
                                 ArregloDeEntidades $ArregloDeEntidades,
                                 MarcaRepo          $MarcaRepo   )
     {
-        $this->ImgHomeRepo         = $ImgHomeRepo;
+       
         $this->EmpresaRepo         = $EmpresaRepo;
         $this->ProductoRepo        = $ProductoRepo;
         $this->CategoriaRepo       = $CategoriaRepo;
