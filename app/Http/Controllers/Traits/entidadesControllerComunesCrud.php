@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Traits;
+namespace App\Http\Controllers\Traits;
 use App\Servicios\ServiciosDeEntidades;
 use App\Helpers\HelpersGenerales;
 use Illuminate\Http\Request;
