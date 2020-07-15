@@ -1,41 +1,13 @@
 <?php
 
-namespace App\Traits;
-use App\Servicios\ServiciosDeEntidades;
+namespace App\Entidades\Traits;
+
 use App\Helpers\HelpersGenerales;
 
 trait entidadesMetodosComunes{
     
 
-    public function getImagenesAttribute()
-    {
-        return ServiciosDeEntidades::getImagenes($this->img_key,$this->id);
-    }
-
-    public function getImagenPrincipalAttribute()
-    {
-        return ServiciosDeEntidades::getFotoPrincipal($this->img_key,$this->id);
-    }
-
-     public function getUrlImgFotoPrincipalAttribute()
-     {  
-        if($this->imagen_principal->count() > 0)
-        {
-         return $this->imagen_principal->first()->url_img;
-        }
-
-        return url().'/imagenes/Helpers/imagen-no-disponible.png';
-     }
-
-     public function getUrlImgFotoPrincipalChicaAttribute()
-     {
-        if($this->imagen_principal->count() > 0)
-        {
-            return $this->imagen_principal->first()->url_img_chica;
-        }
-        
-        return url().'/imagenes/Helpers/imagen-no-disponible.png';        
-     }
+  
 
 
 
@@ -51,9 +23,12 @@ trait entidadesMetodosComunes{
           return null;
         }
         
-     }
+     }    
 
-     
+     public function getNameArregladoAttribute()
+     {
+        return ucfirst(strtolower($this->name));
+     }
 
 
 
@@ -67,10 +42,13 @@ trait entidadesMetodosComunes{
            $query->where('name', "LIKE","%$name%"); 
         }        
     }
+   
 
     public function scopeActive($query)
     {                               
-        $query->where('estado', "si");                 
+       $query->where('estado', "si");
+       $query->where('borrado', "no");                 
     }
+
 
 }    

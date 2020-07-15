@@ -6,21 +6,20 @@
  <ul>
    @if(Auth::user()->role === 'adminMcos522')
    <div id="admin-col-superadmin">
-        <a href="{{route('get_datos_home_web')}}">
-            <li class="admin-columna-li mi-float-right"><i class="fas fa-igloo"></i> Admin Panel</li>
-        </a> 
+        
         <a href="{{route('get_admin_users')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-user"></i> Usuarios</li>
-        </a>
-       
-
-         <a href="{{route('get_admin_noticias')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fas fa-newspaper"></i> Noticias</li>
+          <li class="admin-columna-li mi-float-right"> Usuarios</li>
         </a>
 
         <a href="{{route('get_admin_marcas')}}">
-          <li class="admin-columna-li mi-float-right"><i class="fab fa-apple"></i> Marcas</li>
-        </a>  
+          <li class="admin-columna-li mi-float-right"> Marcas</li>
+        </a> 
+
+        <a href="{{route('get_admin_clientes')}}">
+          <li class="admin-columna-li mi-float-right"> Clientes</li>
+        </a>   
+
+        
 
         
 

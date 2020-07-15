@@ -8,4 +8,4 @@ require __DIR__ . '/Productos/Rutas_Productos.php';
 
 require __DIR__ . '/Categorias/Rutas_Categorias.php';
 
-
+require __DIR__ . '/Clientes/Ruta_clientes.php';

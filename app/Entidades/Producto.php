@@ -7,7 +7,8 @@ use App\Entidades\ImgHome;
 use App\Entidades\Categoria;
 use App\Entidades\ProductoImg;
 use Illuminate\Support\Facades\Cache;
-use App\Servicios\Helpers;
+use App\Helpers\HelpersGenerales;
+use App\Entidades\Traits\entidadesMetodosComunes;
 
 
 
@@ -16,13 +17,9 @@ use App\Servicios\Helpers;
 class Producto extends Model
 {
 
-    protected $table ='productos';
+    use entidadesMetodosComunes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $table    ='productos';
     protected $fillable = ['name', 'description'];
     protected $appends  = ['route',
                            'categoria_producto',
@@ -60,30 +57,7 @@ class Producto extends Model
 
   
 
-    
-    /**
-     * PAra busqueda por nombre
-     */
-    public function scopeName($query, $name)
-    {
-        //si el paramatre(campo busqueda) esta vacio ejecutamos el codigo
-        /// trim() se utiliza para eliminar los espacios.
-        ////Like se usa para busqueda incompletas
-        /////%% es para los espacios adelante y atras
-        if (trim($name) !="")
-        {                        
-           $query->where('name', "LIKE","%$name%"); 
-        }
-        
-    }
-
-    public function scopeActive($query)
-    {
-                               
-           $query->where('estado', "si"); 
-           $query->where('borrado', "no"); 
-                
-    }
+  
 
 
     public function getUrlImgMasterAttribute()
@@ -155,18 +129,13 @@ class Producto extends Model
     public function getRouteAdminAttribute()
     {
         return route('get_admin_productos_editar',$this->id);
-    }
-
-    public function getNameArregladoAttribute()
-    {
-        return  ucfirst( strtolower($this->name) );
-    }
+    }   
 
 
 
     public function getNameSlugAttribute()
     {
-        return Helpers::helper_convertir_cadena_para_url($this->name);
+        return HelpersGenerales::helper_convertir_cadena_para_url($this->name);
     }
 
    
