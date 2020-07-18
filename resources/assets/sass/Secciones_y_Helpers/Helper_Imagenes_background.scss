@@ -24,6 +24,36 @@
 
 }
 
+/* S e   u s a   p a r a   l a s  p o r t a d a s */
+.imagen-portada-altura-100vh{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* A j u s t a   l a   im a g e n   s u   a l t u r a   y   s u    w i d t h */
+.img-cover{
+  width: 100%;    
+  object-fit: cover;
+  display: block;   
+}
+
+/* S e   u s a   p a r a   i m a g e n e s   e n   m i n i a t u r a s   c o n 
+  i m g - c o v e r */
+
+$altura-imagen-miniaturas:150px; /* D e f i n o   l a   a l t u r a */
+
+.img-altura-chica{
+  height:$altura-imagen-miniaturas;
+}
+.img-altura-normal{
+  height:$altura-imagen-miniaturas*1.5;
+}
+.img-altura-grande{
+  height:$altura-imagen-miniaturas*2;
+}
+
 
 
 
