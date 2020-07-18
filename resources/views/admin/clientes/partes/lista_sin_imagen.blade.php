@@ -4,6 +4,7 @@
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>              
       <div class="p-3 mt-2">
+        @include('admin.partials.atributo_estado_lista')
         <h3 class="sub-titulos-class   mb-2">
           <a href="{{$Route}}" class="font-primary text-color-secondary">
            {{$Entidad->name}}

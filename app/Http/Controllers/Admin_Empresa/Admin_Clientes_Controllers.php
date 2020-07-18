@@ -63,7 +63,7 @@ class Admin_Clientes_Controllers extends Controller implements entidadCrudContro
 
   public function getPropiedades()
   {
-    return ['name','description','descripcion_breve','estado','rank'];
+    return ['name','descripcion_breve','estado','rank'];
   }
 
   public function getManager($Request)
