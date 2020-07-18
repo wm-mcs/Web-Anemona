@@ -2,7 +2,7 @@
 
 
 @section('miga-de-pan')
- <h1 class="titulos-class mb-3  text-color-secondary font-secondary">Editar</h1> 
+ <h1 class="titulos-class mb-3  text-color-primary font-secondary">Editar</h1> 
  <p class="parrafo-class color-text-gris mb-3"> 
   Link pública <i class="fas fa-hand-point-right"></i> 
   <a href="{{$Entidad->route}}"  target="_blank">{{$Entidad->name}}</a>
@@ -36,7 +36,7 @@
     </div>
    
   </div>   
-  <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Secondary-Relleno disparar-este-form">
+  <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Primary-Relleno disparar-este-form">
       Guardar cambios   <i class="fas fa-angle-double-right"></i>
   </div> 
   {!! Form::close() !!}

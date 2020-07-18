@@ -81,6 +81,17 @@
   color:$color-white;
 }
 
+.Boton-Primario-Sin-Relleno-Ni-Borde{
+  @include Boton-base;
+  color:$color-3;
+  background-color: transparent;
+  border-color:transparent;
+}
+.Boton-Primario-Sin-Relleno-Ni-Borde:hover{
+  background-color: $color-3;
+  color:$color-white;
+}
+
 .Boton-Blanco{
   @include Boton-base;
   color:$color-white;

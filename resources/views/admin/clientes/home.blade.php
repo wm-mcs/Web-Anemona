@@ -13,7 +13,7 @@
 
 
     <div class="col-6 col-lg-4"> 
-     <a class="col-12 Boton-Fuente-Chica Boton-Secondary-Relleno" href="{{route($Route_crear)}}"> 
+     <a class="col-12 Boton-Fuente-Chica Boton-Primary-Relleno" href="{{route($Route_crear)}}"> 
       Crear       
      </a>  
     </div>

@@ -26,12 +26,8 @@
             
          
                @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados')  
-               <div class="admin-contnedor-navegacion-miga">
-                {{-- home --}}
-                <a href="{{route('get_admin_home')}}"><i class="fas fa-home"></i></a>
-                {{-- separador --}}
-                <span class="spam-separador">|</span> 
-                {{-- lugar donde esta --}}
+               <div class="col-12  p-5">
+               
                 @yield('miga-de-pan')                
               </div>
               <div class="contenedor-admin-entidad">
