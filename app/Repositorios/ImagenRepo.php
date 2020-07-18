@@ -5,6 +5,7 @@ namespace App\Repositorios;
 use App\Entidades\Imagen;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\ImageManagerStatic as Image;
 
 /**
 * Repositorio de consultas a la base de datos User
@@ -39,6 +40,22 @@ class ImagenRepo extends BaseRepo
     $Entidad->valor_id_del_campo_key = $Valor_id;
     $Entidad->save();
     return $Entidad;
+ }
+
+ public function setImagenEnStorage($file,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo,$redimencionar_a = null)
+ {
+      $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
+      if($redimencionar_a != null)
+        {
+            $imagen_insert = Image::make(File::get($file))->resize($redimencionar_a, null, function ($constraint) {
+                                                                           $constraint->aspectRatio();
+                                                                       })->save('imagenes/'.$nombre,90);
+        }
+        else
+        {
+           $imagen_insert = Image::make(File::get($file)); 
+           $imagen_insert->save('imagenes/'.$nombre,70);   
+        }   
  }
 
 
