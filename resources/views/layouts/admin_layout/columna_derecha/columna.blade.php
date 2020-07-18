@@ -1,29 +1,25 @@
 <div class="admin-columna-contenedor">
 
  {{-- imagen logo --}}
- <a href="{{route('get_home')}}"><img class="admin-header-logo" src="{{$Empresa->img_logo_cuadrado}}"></a>
+ <a class="d-block mb-4 p-4" href="{{route('get_home')}}">
+  <img class="img-fluid" src="{{$Empresa->img_logo_cuadrado}}">
+ </a>
 
  <ul>
    @if(Auth::user()->role === 'adminMcos522')
-   <div id="admin-col-superadmin">
+   <div class="row p-2 mb-5 text-left">
         
-        <a href="{{route('get_admin_users')}}">
-          <li class="admin-columna-li mi-float-right"> Usuarios</li>
+        <a class="d-block" href="{{route('get_admin_users')}}">
+          <p class=""> Usuarios</p>
         </a>
 
-        <a href="{{route('get_admin_marcas')}}">
-          <li class="admin-columna-li mi-float-right"> Marcas</li>
+        <a class="d-block" href="{{route('get_admin_marcas')}}">
+          <p class=""> Marcas</p>
         </a> 
 
-        <a href="{{route('get_admin_clientes')}}">
-          <li class="admin-columna-li mi-float-right"> Clientes</li>
+        <a class="d-block" href="{{route('get_admin_clientes')}}">
+          <p class=""> Clientes</p>
         </a>   
-
-        
-
-        
-
-        
         
     </div>
    @endif

@@ -42,7 +42,7 @@
 
    </div>
    
-    <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Primary-Relleno disparar-este-form">
+    <div class="mt-5 mb-5 Boton-Fuente-Chica Boton-Primario-Relleno disparar-este-form">
      {{$Titulo}} <i class="fas fa-angle-double-right"></i>
     </div> 
 
