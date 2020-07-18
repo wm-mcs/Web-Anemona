@@ -21,14 +21,7 @@
 
   ]) !!}
 </div>
-<div class="formulario-label-fiel">
-  {!! Form::label('descripcion_breve', 'Descripción breve', array('class' => 'formulario-label ')) !!}
-  {!! Form::textarea('descripcion_breve', null ,['class' => 'formulario-field',
-                                                  'rows' => 4, 
-                                                  'cols' => 25
 
-  ]) !!}
-</div>
 
 <div class="formulario-label-fiel">
 {!! Form::label('rank', 'Calidad / Rank', array('class' => 'formulario-label ')) !!}
