@@ -71,4 +71,6 @@
          .boton-acciones-editar{
           @include Boton-Chico($color-3);
          }
-  
+         .boton-acciones-editar:hover{
+          background-color:$color-3light;
+         }

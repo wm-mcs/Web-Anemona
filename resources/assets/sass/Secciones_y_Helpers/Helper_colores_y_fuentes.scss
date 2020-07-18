@@ -5,16 +5,8 @@ $color-3-primary_hover: lighten( $color-3, 5% );
 $color-2:darken( $color-3, 10% );
 
 
-$color-2semilight:#eb6367;
-$color-2light:#ed767a; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
-$color-2superlight:#f07f83;
 
 
-$color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
-/*$color-3light:#e5d8bd;*/ /* para interacciones dinámicas del color-3 como [hover] o [active] */
-$color-3light:$color-3-primary_hover; /* probando uno mas oscurito */
-$color-3superlight:$color-3-primary_hover; /* para backgrounds de bloques de texto en instancia de hover) */
-$color-3hyperlight:$color-3-primary_hover;
 
 
 
@@ -22,9 +14,10 @@ $color-3hyperlight:$color-3-primary_hover;
 
 /* COLORES GENERALES */
 $color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
-$color-black:lighten( black, 3% ); /*misma razón, pero para el negro */
+$color-black:black; /*misma razón, pero para el negro */
 
-$color-grey00:darken($color-white, 3% );
+$color-grey-2:darken($color-white, 2% );
+$color-grey-1:darken($color-white, 5% );
 $color-grey0:darken($color-white, 10% ); /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
 $color-grey1:darken($color-white, 25% ); /*gris más claro (para párrafos y otras cosas)*/
 $color-grey2:darken($color-white, 50% ); /*gris medio (para títulos por ejemplo)*/
@@ -32,7 +25,7 @@ $color-grey3:darken($color-white, 75% ); /*gris más oscuro (para backgrounds po
 
 
 $color-gris-text:$color-grey2 ;
-$color-gris-background:$color-grey00;
+$color-gris-background:$color-grey-2;
 
 $color-gris-lineas: $color-grey1;
 
@@ -78,11 +71,3 @@ $font-secondary: 'Roboto', sans-serif;
 
 $Border-radius: 0;
 
-/* fuente sociales */
-
-@font-face {
-font-family: 'Social-Media-Circled'; /* Nombre que va a tener esa font*/
-font-style: normal;
-font-weight: normal;
-src: local('../fonts/Social-Media-Circled'), url('../fonts/Social-Media-Circled.otf') format('truetype');
-}
