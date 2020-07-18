@@ -75,7 +75,7 @@ class Admin_Clientes_Controllers extends Controller implements entidadCrudContro
 
   public function getImagenMiniaturaSize()
   {
-    return 1000;
+    return 350;
   }
 
   /**
