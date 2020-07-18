@@ -9,9 +9,6 @@
  {{-- titulo --}}
  <div class="container">
   <div class="row  p-3 justify-content-between ">
-   
-
-
     <div class="col-6 col-lg-4"> 
      <a class="col-12 Boton-Fuente-Chica Boton-Primario-Relleno" href="{{route($Route_crear)}}"> 
       Crear       
@@ -22,8 +19,7 @@
  </div>
  <div class="container p-4">
    <div class="row col-12">
-     @foreach($Entidades as $Entidad)
-          
+     @foreach($Entidades as $Entidad)          
           {{--*/ $Mostrar_admin  = true /*--}}
           {{--*/ $Entidad        = $Entidad /*--}}
           {{--*/ $Route          = $Entidad->route_admin /*--}}
@@ -34,5 +30,4 @@
      {!! $Entidades->appends(Request::all())->render() !!}
    </div>
  </div>
-  
 @stop

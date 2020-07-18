@@ -39,7 +39,7 @@ class Home_Public_Controller extends Controller
         $this->CategoriaRepo       = $CategoriaRepo;
         $this->ArregloDeEntidades  = $ArregloDeEntidades;
         $this->MarcaRepo           = $MarcaRepo;
-        $thi->ClienteRepo          = $ClienteRepo;
+        $this->ClienteRepo          = $ClienteRepo;
         
     }
 
