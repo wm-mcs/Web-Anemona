@@ -53,6 +53,33 @@ abstract class BaseRepo
                   ->get();
     }
 
+     /** 
+     * Trae las entidades ordenadas según el atributo y se puede elegir la canitdad. 
+     * Si no se indica cantidad traerá todas las que haya.
+     * 
+     * @return array con entidades
+     */
+    public function getEntidadesActivasOrdendasSegunYCantidad($OrdenadasSegunAtributo = 'id',$Orden = 'desc', $Cantidad = null)
+    {
+      $Entidades =  $this->entidad
+                         ->where('borrado','no')
+                         ->active()               
+                         ->orderBy($OrdenadasSegunAtributo,$Orden)
+                         ->get();
+
+       if($Cantidad === null)
+       {
+         return   $Entidades; 
+       }                 
+
+       if($Entidades->count() >= $Cantidad )   
+       {
+        return $Entidades->take($Cantidad);
+       }  
+
+       return   $Entidades;  
+    }
+
     public function getEntidadActivasOrdenadasSegun($Order_by,$Asc_desc)
     {
       return $this->entidad                  

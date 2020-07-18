@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Cache;
 use App\Repositorios\CategoriaRepo;
 use App\Servicios\ArregloDeEntidades;
 use App\Repositorios\MarcaRepo;
+use App\Repositorios\ClienteRepo;
 
 
 
@@ -21,6 +22,7 @@ class Home_Public_Controller extends Controller
     protected $CategoriaRepo;
     protected $ArregloDeEntidades;
     protected $MarcaRepo;
+    protected $ClienteRepo;
   
 
     public function __construct(
@@ -28,7 +30,8 @@ class Home_Public_Controller extends Controller
                                 ProductoRepo       $ProductoRepo,
                                 CategoriaRepo      $CategoriaRepo, 
                                 ArregloDeEntidades $ArregloDeEntidades,
-                                MarcaRepo          $MarcaRepo   )
+                                MarcaRepo          $MarcaRepo,
+                                ClienteRepo        $ClienteRepo    )
     {
        
         $this->EmpresaRepo         = $EmpresaRepo;
@@ -36,6 +39,7 @@ class Home_Public_Controller extends Controller
         $this->CategoriaRepo       = $CategoriaRepo;
         $this->ArregloDeEntidades  = $ArregloDeEntidades;
         $this->MarcaRepo           = $MarcaRepo;
+        $thi->ClienteRepo          = $ClienteRepo;
         
     }
 
@@ -44,11 +48,16 @@ class Home_Public_Controller extends Controller
            
         $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
 
-        //se ajustan los productos de las categorias
+        // S e  a j u s t a n   l o s   p r o d u c t o s   d e   l a s   c a t e g o r i a s
+
+        $Clientes = Cache::remember('ClientesHome', 300000, function() {
+                        return  $this->ClienteRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', 5 );
+                      });
+
         $this->ArregloDeEntidades->AjustoCantidadDeProductosActivosDeCategorias();
 
 
-        return view('paginas.home.home', compact('Empresa'));
+        return view('paginas.home.home', compact('Empresa','Clientes'));
     }
 
       public function getCategoriasActivas()
@@ -56,7 +65,7 @@ class Home_Public_Controller extends Controller
 
         
         $categorias = Cache::remember('CategoriasActivas', 300000, function() {
-                        return $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name','ASC');
+                        return $this->CategoriaRepo->getEntidadesActivasOrdendasSegunYCantidad( 'name', 'asc', null );
                       }); 
 
 
