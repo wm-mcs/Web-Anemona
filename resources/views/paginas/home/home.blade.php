@@ -8,13 +8,6 @@
 
 @section('palabras_claves') {{$Empresa->palabras_claves_empresa}} @stop
 
-
-
-
-
-    
-
-
 @section('og-propiedades') 
 
 <meta property="og:url"                content="{{url()}}" />
@@ -89,7 +82,6 @@
 
 @section('contenido')
 
-
      @include('paginas.home.BeFitnessMarcaDestacada')
 
      <novededades :empresa="Empresa"></novededades>
@@ -98,23 +90,17 @@
                   :titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
                   :marcas="Marcas">
        
-     </marcas-home>
-
-  
-    
+     </marcas-home>    
 
      @include('paginas.home.BeFitnessServicios')
-   
-
-    
-
+     @include('paginas.home.BeFitnessClientes')
      
 @stop 
 
 
-  @section('footer')
-   @include('paginas.home.home_footer')
-  @stop
+@section('footer')
+ @include('paginas.home.home_footer')
+@stop
 @section('vue')
    @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')
