@@ -5,7 +5,7 @@
   <img class="img-fluid" src="{{$Empresa->img_logo_cuadrado}}">
  </a>
 
- <div class="w-100 p-4">
+ <div class="w-100 p-5">
    @if(Auth::user()->role === 'adminMcos522')
    <div class="row  mb-5 text-left">        
         <a class="d-block col-12  mb-1" href="{{route('get_admin_users')}}">
