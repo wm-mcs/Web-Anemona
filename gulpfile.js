@@ -15,7 +15,7 @@ elixir(function(mix) {
     
 
      mix.sass('mixer.scss','public/css');
-     mix.sass('creative_template_mixer.scss','public/css'); 
+    
      mix.sass('admin.scss','public/css'); 
 
      mix.sass('ecomerce_minimal_scss/style.scss','public/css/ecomerce_minimal.css');
@@ -67,7 +67,7 @@ elixir(function(mix) {
 
 
     elixir(function(mix) {
-            mix.version(['css/mixer.css','css/creative_template_mixer.css','css/admin.css','css/ecomerce_minimal.css' ,'js/all.js','js/admin.js','js/ecomerceApp.js']); 
+            mix.version(['css/admin.css','css/ecomerce_minimal.css' ,'js/all.js','js/admin.js','js/ecomerceApp.js']); 
     });
 
     

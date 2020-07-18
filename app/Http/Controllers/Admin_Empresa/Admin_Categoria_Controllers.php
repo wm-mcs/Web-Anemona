@@ -28,12 +28,10 @@ class Admin_Categoria_Controllers extends Controller
     return  ['name','description','estado'];
   }
 
-  //home admin User
+  
   public function get_admin_categorias(Request $Request)
   { 
-    $Categorias = $this->CategoriaRepo->getEntidadesAllPaginadas($Request,20);
-
-    //mostrar marcas de la a a la z (orden)
+    $Categorias = $this->CategoriaRepo->getEntidadActivasYOrdenadasSegunPaginadas( $Request,'id', 'desc',  20);    
 
     return view('admin.categorias.categorias_home', compact('Categorias'));
   }
