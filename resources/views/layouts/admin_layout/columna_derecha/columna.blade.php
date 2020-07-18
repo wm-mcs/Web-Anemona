@@ -1,24 +1,24 @@
 <div class="admin-columna-contenedor">
 
  {{-- imagen logo --}}
- <a class="d-block my-5 p-5" href="{{route('get_home')}}">
+ <a class="d-block my-5 p-4" href="{{route('get_home')}}">
   <img class="img-fluid" src="{{$Empresa->img_logo_cuadrado}}">
  </a>
 
- <div class="w-100 p-3">
+ <div class="w-100 p-4">
    @if(Auth::user()->role === 'adminMcos522')
    <div class="row p-2 mb-5 text-left">
         
-        <a class="d-block col-12  mb-2" href="{{route('get_admin_users')}}">
-          <p class=""> Usuarios</p>
+        <a class="d-block col-12  mb-1" href="{{route('get_admin_users')}}">
+          <p class="m-0"> Usuarios</p>
         </a>
 
-        <a class="d-block col-12  mb-2" href="{{route('get_admin_marcas')}}">
-          <p class=""> Marcas</p>
+        <a class="d-block col-12  mb-1" href="{{route('get_admin_marcas')}}">
+          <p class="m-0"> Marcas</p>
         </a> 
 
-        <a class="d-block col-12  mb-2" href="{{route('get_admin_clientes')}}">
-          <p class=""> Clientes</p>
+        <a class="d-block col-12  mb-1" href="{{route('get_admin_clientes')}}">
+          <p class="m-0"> Clientes</p>
         </a>   
         
     </div>
