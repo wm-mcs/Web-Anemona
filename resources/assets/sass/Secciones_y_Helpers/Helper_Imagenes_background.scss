@@ -55,6 +55,28 @@ $altura-imagen-miniaturas:150px; /* D e f i n o   l a   a l t u r a */
 }
 
 
+/* L a s   u s o   p a r a   l a s   e n t i d a d e s   t i p o   l o g o s */
+.img-cover-con-formato-cuadrado{
+  width:150px;    
+  height: 150px;
+  object-fit: cover;
+  display: block;   
+}
+  @media (min-width: $BrackPoint-Secundario){
+    .img-cover-con-formato-cuadrado{
+      width:200px;    
+      height:200px;       
+    }
+  } 
+
+  @media (min-width: $BrackPoint-Tercer){
+    .img-cover-con-formato-cuadrado{
+      width:250px;    
+      height: 250px;       
+    }
+  }
+
+
 
 
 
