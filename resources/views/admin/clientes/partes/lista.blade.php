@@ -25,18 +25,17 @@
 @else 
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
 <div class="col-md-6 col-lg-4 mb-4">
-    <div class="servicio_lista service">
+    <div class="w-100 Cliente-contenedor">
       <div class="d-flex flex-column align-items-center">
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="img-cover-con-formato-cuadrado rounded-circle">
       </div>              
-      <div class="p-3 mt-2">
-        @include('admin.partials.atributo_estado_lista')
+      <div class="p-3 mt-2">        
         <h3 class="sub-titulos-class   mb-2">
-          <p  class="font-primary color-text-gris">
+          <p  class="font-primary color-text-gris text-center">
            {{$Entidad->name}}
           </p>                
         </h3>
-        <p class="color-text-gris mb-0 ">
+        <p class="color-text-gris mb-0 text-center">
          {{$Entidad->descripcion_breve}}
         </p>
                         

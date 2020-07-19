@@ -2,7 +2,6 @@
 namespace App\Http\Controllers\Publicas;
 
 use App\Http\Controllers\Controller;
-
 use App\Repositorios\EmpresaRepo;
 use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
@@ -39,7 +38,7 @@ class Home_Public_Controller extends Controller
         $this->CategoriaRepo       = $CategoriaRepo;
         $this->ArregloDeEntidades  = $ArregloDeEntidades;
         $this->MarcaRepo           = $MarcaRepo;
-        $this->ClienteRepo          = $ClienteRepo;
+        $this->ClienteRepo         = $ClienteRepo;
         
     }
 

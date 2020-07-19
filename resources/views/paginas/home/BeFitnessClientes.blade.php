@@ -1,8 +1,8 @@
-<section class="background-gris--2 py-4 py-lg-0">
+<section class="background-gris-0 py-5">
 	<div class="container">
 		<div class="row ">
-			<div class="col-12 text-center mb-5">
-				Clientes
+			<div class="col-12 text-center mb-5 titulos-class text-color-black">
+				Confian en nosotros ...
 			</div>
 			@foreach($Clientes as $Entidad )	
 				  {{--*/ $Mostrar_admin  = false /*--}}
