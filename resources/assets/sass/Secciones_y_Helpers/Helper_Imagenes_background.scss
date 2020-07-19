@@ -64,15 +64,15 @@ $altura-imagen-miniaturas:150px; /* D e f i n o   l a   a l t u r a */
 }
   @media (min-width: $BrackPoint-Secundario){
     .img-cover-con-formato-cuadrado{
-      width:200px;    
-      height:200px;       
+      width:180px;    
+      height:180px;       
     }
   } 
 
   @media (min-width: $BrackPoint-Tercer){
     .img-cover-con-formato-cuadrado{
-      width:250px;    
-      height: 250px;       
+      width:200px;    
+      height: 200px;       
     }
   }
 
