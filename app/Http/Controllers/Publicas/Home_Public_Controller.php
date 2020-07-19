@@ -176,17 +176,23 @@ class Home_Public_Controller extends Controller
       public function getQuienes()
       {
         $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+
+        $Clientes  = Cache::remember('ClientesTodos', 300000, function() {
+                        return  $this->ClienteRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
+                      });
        
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa'));
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa','Clientes'));
       }
 
       public function getServicios()
       {
         $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
        
-
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Servicios', compact('Empresa'));
+        $Clientes  = Cache::remember('ClientesTodos', 300000, function() {
+                        return  $this->ClienteRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
+                      });
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Servicios', compact('Empresa','Clientes'));
       }
 
 

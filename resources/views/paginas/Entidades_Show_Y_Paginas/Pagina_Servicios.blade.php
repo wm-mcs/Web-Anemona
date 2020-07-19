@@ -162,7 +162,7 @@ Boton-Primario-Sin-Relleno my-4" href="{{route('getContacto')}}"> Coordiná ahor
 
 
    
-
+@include('paginas.home.BeFitnessClientes')
     
          
        

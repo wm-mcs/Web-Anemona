@@ -139,7 +139,7 @@ Boton-Primario-Sin-Relleno my-4" href="{{route('getServicios')}}"> Explorá los 
 
 
    
-
+@include('paginas.home.BeFitnessClientes')
     
          
        

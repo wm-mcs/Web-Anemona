@@ -86,7 +86,7 @@ class Admin_Clientes_Controllers extends Controller implements entidadCrudContro
   public function olvidarCachesAsociadoAEstaEntidad()
   {
     HelpersGenerales::helper_olvidar_este_cache('ClientesHome'); 
-          
+    HelpersGenerales::helper_olvidar_este_cache('ClientesTodos'); 
   }
 
 
