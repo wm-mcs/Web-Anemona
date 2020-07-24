@@ -83,7 +83,7 @@
               
             </div>
             <div class="col-lg-6 mb-2 mb-lg-0my-1 order-1 order-lg-2 d-flex flex-row align-items-center justify-content-start justify-content-lg-center">
-                <img src="{{ $Marca->url_img_foto_principal}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="">
+                <img class="img-fluid p-3 p-lg-4" src="{{ $Marca->url_img_foto_principal}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="">
             </div>
              
             
@@ -101,7 +101,7 @@
     
   <section class="site-section background-gris-1">
     <div class="container">
-      <h2 class="parrafo-class color-text-gris">
+      <h2 class="parrafo-class color-text-gris text-center">
        <b>{{$Marca->name_arreglado}} </b> es una marca de origen {{$Marca->origen}}: {{$Marca->description}} 
       </h2>
     </div>
@@ -110,9 +110,9 @@
   <producto-show-interface :empresa="Empresa" titulo="Productos de {{$Marca->name_arreglado}}"></producto-show-interface>
     
   @if(!is_null($Marca->url_oficial_marca) && !empty($Marca->url_oficial_marca) ) 
-   <section class="site-section background-gris-2">
+   <section class="site-section background-gris-0">
     <div class="container">
-      <p>
+      <p class="text-center">
        <b>Página oficial de  {{$Marca->name_arreglado}}</b>: <a href=" {{$Marca->url_oficial_marca}} "> {{$Marca->url_oficial_marca}} </a>. 
       </p>
     </div>
