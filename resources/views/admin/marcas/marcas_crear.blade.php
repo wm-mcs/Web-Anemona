@@ -22,7 +22,7 @@
   {!! Form::open(['route' => 'set_admin_marcas_crear',
                             'method'=> 'post',
                             'files' =>  true,
-                            'id'    => 'form-admin-empresa-datos'
+                            'id'    => 'form-de-entidad'
                           ])               !!}
    <div class="formulario-contenedor">
 
@@ -46,9 +46,8 @@
 
       
    </div>
-   <div class="admin-boton-editar">
-     Crear
-   </div> 
+
+   <button class="Boton-Primario-Sin-Relleno mt-3" type="submit" form="form-de-entidad" value="Submit">Crear</button>
 
   {!! Form::close() !!}
 

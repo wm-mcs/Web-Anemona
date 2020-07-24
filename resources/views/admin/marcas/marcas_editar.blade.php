@@ -19,12 +19,12 @@
   {!! Form::model($marca,   ['route' => ['set_admin_marcas_editar',$marca->id],
                             'method'=> 'patch',
                             'files' =>  true,
-                            'id'    => 'form-admin-empresa-datos'
+                            'id'    => 'form-de-entidad'
                           ])               !!}
-   <div class="formulario-contenedor">
+   <div class="row ">
 
       {{-- datos corporativos --}}
-      <div class="contenedor-grupo-datos">
+      <div class="col-lg-6 contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"> Datos</div>
         <div class="contenedor-formulario-label-fiel">                       
          @include('admin.marcas.formularios_partes.datos_basicos')
@@ -32,7 +32,7 @@
       </div>
 
       {{-- imagenes corporativos --}}
-      <div class="contenedor-grupo-datos">
+      <div class="col-lg-6  contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo">Imagen</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.marcas.formularios_partes.datos_imagenes')
@@ -43,9 +43,8 @@
 
       
    </div>
-   <div class="admin-boton-editar">
-     Guardar
-   </div> 
+   
+   <button class="Boton-Primario-Sin-Relleno mt-3" type="submit" form="form-de-entidad" value="Submit">Guardar</button>
 
   {!! Form::close() !!}
   
