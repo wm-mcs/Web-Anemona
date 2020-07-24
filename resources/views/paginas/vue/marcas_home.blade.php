@@ -50,12 +50,12 @@ template:'
 
 
 
-     <div v-if="marcas.length" class="Padding-de-secciones container products-wrap border-top-0">
+     <div v-if="marcas.length" class="Padding-de-secciones container border-top-0">
       
        <h2 class="Titulos-de-secciones">@{{titulo}}</h2>
       
       
-        <div class="row no-gutters products">
+        <div class="row ">
           <marca-lista v-for="Marca in marcas" 
                            :marca="Marca" 
                            :key="Marca.id"></marca-lista>
