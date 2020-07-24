@@ -11,7 +11,7 @@
 
 
   {{-- formulario --}}
-  {!! Form::model($marca,   ['route' => ['set_admin_marcas_editar',$marca->id],
+  {!! Form::model($Entidad,   ['route' => ['set_admin_marcas_editar',$Entidad->id],
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-de-entidad'
