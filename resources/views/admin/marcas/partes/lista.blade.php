@@ -4,7 +4,7 @@
 <div class="col-md-6 col-lg-4 mb-4">
     <div class="servicio_lista service">
       <a href="{{$Route}}" class="d-flex flex-column align-items-center">
-        <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="img-cover-con-formato-rectangular border-gris">
+        <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="img-cover-con-formato-rectangular border-gris mt-3">
       </a>              
       <div class="p-3 mt-2">
         @include('admin.partials.atributo_estado_lista')
@@ -28,12 +28,8 @@
     <div class="w-100 Cliente-contenedor">
       <div class="d-flex flex-column align-items-center">
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="img-cover-con-formato-rectangular border-gris">
-      </div>              
-      <div class="p-3 mt-2">        
-        <h3 class="sub-titulos-class  color-text-gris text-center mb-0">          
-           {{$Entidad->name}}                        
-        </h3> 
-      </div>
+      </div>             
+      
     </div>
 </div>
 @endif
