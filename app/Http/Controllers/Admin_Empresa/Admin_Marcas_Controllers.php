@@ -12,6 +12,7 @@ use App\Managers\marca_manager;
 use App\Http\Controllers\Interfaces\entidadCrudControllerInterface;
 use App\Http\Controllers\Traits\entidadesControllerComunesCrud;
 use App\Repositorios\ImagenRepo;
+use App\Helpers\HelpersGenerales;
 
 
 
