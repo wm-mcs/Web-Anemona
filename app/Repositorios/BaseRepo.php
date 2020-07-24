@@ -135,36 +135,26 @@ abstract class BaseRepo
                   ->paginate($paginacion);
     }
 
-
-    
-
-
-    
-     
-
     abstract public function getEntidad();
 
-
-
-    //setters
+    // setters
     public function setEntidadDato($Entidad,$request,$Propiedades)
     {
-        foreach ($Propiedades as $Propiedad) 
+      foreach ($Propiedades as $Propiedad) 
+      {
+        if($request->input($Propiedad) != null)
+        {            
+         $Entidad->$Propiedad = $request->input($Propiedad);
+        }
+        elseif($request->input($Propiedad) == '')
         {
-          if($request->input($Propiedad) != null)
-          {            
-           $Entidad->$Propiedad = $request->input($Propiedad);
-          }
-          elseif($request->input($Propiedad) == '')
-          {
-            $Entidad->$Propiedad = $request->input($Propiedad);
-          }
-         
-        } 
+          $Entidad->$Propiedad = $request->input($Propiedad);
+        }         
+      } 
 
-        $Entidad->save();     
+      $Entidad->save();     
 
-        return $Entidad;
+      return $Entidad;
     }
 
 
