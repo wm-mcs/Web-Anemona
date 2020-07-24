@@ -12,39 +12,29 @@
     <META name="robots" content="NOINDEX,NOFOLLOW">
   </head>
 
-  <body>
-  
-  
-  <div class="admin-content-background-color"></div>
-  
+  <body>  
+   <div class="admin-content-background-color"></div>
    <div class="admin-contiene-columna-y-content">
       @include('layouts.admin_layout.columna_derecha.columna')
       <div class="get_width_20"></div>
       <div class="admin-contiene-content">
-        
-          <div class="admin-contiene-content-wraper"> 
-            
-         
-               @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados')  
-               <div class="row col-12  p-5">
-               
-                @yield('miga-de-pan')                
-              </div>
-              <div class="contenedor-admin-entidad">
-                <div class="p-2"> 
-               @yield('content')
-                </div>
-              </div>
+        <div class="admin-contiene-content-wraper"> 
+           @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados')  
+           <div class="row col-12  p-4">               
+             @yield('miga-de-pan')                
            </div>
+          <div class="contenedor-admin-entidad">
+           <div class="p-2"> 
+             @yield('content')
+           </div>
+          </div>
+       </div>
       </div>      
-   </div>
+   </div>  
 
-   
-  
-
-      <!-- Scripts -->
-      <script src="{{url()}}{{ elixir('js/admin.js')}} " ></script>  
-      <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>    
+   <!-- Scripts -->
+   <script src="{{url()}}{{ elixir('js/admin.js')}} " ></script>  
+        
   </body>
 
 </html>
