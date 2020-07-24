@@ -114,7 +114,7 @@ abstract class BaseRepo
     }
 
     
-    public function getEntidadesAllPaginadasYOrdenadas$request,$OrdenadasSegunAtributo = 'id',$Orden = 'asc',$paginacion = 30)
+    public function getEntidadesAllPaginadasYOrdenadas($request,$OrdenadasSegunAtributo = 'id',$Orden = 'asc',$paginacion = 30)
     {
 
     return $this->entidad
