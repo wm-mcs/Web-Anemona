@@ -26,12 +26,12 @@
             
          
                @include('alerts.Alertas_Todos_Agrupados.alertas_agrupados')  
-               <div class="col-12  p-5">
+               <div class="row col-12  p-5">
                
                 @yield('miga-de-pan')                
               </div>
               <div class="contenedor-admin-entidad">
-                <div class="get_width_100 Helper-OrdenarHijos-columna"> 
+                <div class="p-2"> 
                @yield('content')
                 </div>
               </div>
