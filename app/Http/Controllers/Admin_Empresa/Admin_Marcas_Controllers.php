@@ -81,9 +81,9 @@ class Admin_Marcas_Controllers extends Controller
   //get edit admin marca
   public function get_admin_marcas_editar($id)
   {
-    $marca = $this->MarcaRepo->find($id);
+    $Entidad = $this->MarcaRepo->find($id);
 
-    return view('admin.marcas.marcas_editar',compact('marca'));
+    return view('admin.marcas.marcas_editar',compact('Entidad'));
   }
 
   //set edit admin marca
