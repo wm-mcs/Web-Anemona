@@ -104,7 +104,7 @@ abstract class BaseRepo
     /**
      * Entidades Activas Paginadas y ordenadas
      */
-    public function getEntidadActivasYOrdenadasSegunPaginadas($request,$OrdenadasSegunAtributo,$Orden,$paginacion)
+    public function getEntidadActivasYOrdenadasSegunPaginadas($request,$OrdenadasSegunAtributo = 'id',$Orden = 'asc',$paginacion = 30)
     {
       return $this->entidad
                   ->name($request->get('name')) 

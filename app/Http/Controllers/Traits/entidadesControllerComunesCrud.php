@@ -19,7 +19,7 @@ trait entidadesControllerComunesCrud{
 
   public function get_admin(Request $Request)
   { 
-    $Entidades           = $this->Entidad_principal->getEntidadesAllPaginadas( $Request,10);
+    $Entidades           = $this->Entidad_principal->getEntidadesAllPaginadasYOrdenadas( $Request );
     $Titulo              = $this->Nombre_entidad_plural;
     $Route_crear         = $this->Route_crear;
     $Route_busqueda      = $this->Route_index;
