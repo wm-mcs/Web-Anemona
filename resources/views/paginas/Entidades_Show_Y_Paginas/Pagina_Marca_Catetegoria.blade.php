@@ -71,7 +71,7 @@
               
             </div>
             <div class="col-lg-6 mb-2 mb-lg-0my-1 order-1 order-lg-2 d-flex flex-row align-items-center justify-content-start justify-content-lg-center">
-                <img src="{{ $Marca->url_img}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="">
+                <img src="{{ $Marca->url_img_foto_principal}}" alt="{{ $Marca->name_arreglado}} en Uruguay. Representación oficial por  {{ $Empresa->name}} " class="">
             </div>
              
             

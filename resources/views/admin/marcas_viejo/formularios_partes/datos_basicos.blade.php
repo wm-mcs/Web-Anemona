@@ -48,4 +48,3 @@
                              'no' => 'Inactivo'] , null,['class' => 'formulario-field'] )          !!}
 </div>
 
-

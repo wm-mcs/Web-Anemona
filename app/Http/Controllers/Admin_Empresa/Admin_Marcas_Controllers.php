@@ -9,113 +9,87 @@ use App\Http\Controllers\Controller;
 use App\Repositorios\MarcaRepo;
 use Illuminate\Http\Request;
 use App\Managers\marca_manager;
+use App\Http\Controllers\Interfaces\entidadCrudControllerInterface;
+use App\Http\Controllers\Traits\entidadesControllerComunesCrud;
+use App\Repositorios\ImagenRepo;
 
 
 
-class Admin_Marcas_Controllers extends Controller
+
+
+class Admin_Marcas_Controllers extends Controller  implements entidadCrudControllerInterface
 {
 
-  protected $MarcaRepo;
 
-  public function __construct(MarcaRepo $MarcaRepo)
+ use entidadesControllerComunesCrud;
+
+  protected $Entidad_principal;
+  protected $Nombre_entidad_plural      ;
+  protected $Nombre_entidad_singular    ;
+  protected $Carpeta_view_admin         ; 
+  protected $Path_view_get_admin_index  ;
+  protected $Path_view_get_admin_crear  ;
+  protected $Path_view_get_admin_editar ;
+  protected $Route_index ;               
+  protected $Route_crear  ;             
+  protected $Route_crear_post ;          
+  protected $Route_editar_post ;         
+  protected $Route_luego_de_crear;       
+  protected $Path_carpeta_imagenes;      
+  protected $Nombre_del_campo_imagen;    
+
+  
+
+  public function __construct(MarcaRepo   $MarcaRepo,
+                              ImagenRepo  $ImagenRepo )
   {
-    $this->MarcaRepo = $MarcaRepo;
+    $this->Entidad_principal          = $MarcaRepo;
+    $this->ImagenRepo                 = $ImagenRepo;
+    $this->Nombre_entidad_plural      = 'Marcas';
+    $this->Nombre_entidad_singular    = 'Marca';
+    $this->Carpeta_view_admin         = strtolower(str_replace(' ','_', $this->Nombre_entidad_plural));
+    $this->Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
+    $this->Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
+    $this->Path_view_get_admin_editar = 'admin.' . $this->Carpeta_view_admin . '.editar';
+    $this->Route_index                = 'get_admin_'. $this->Carpeta_view_admin .'';
+    $this->Route_crear                = 'get_admin_'. $this->Carpeta_view_admin .'_crear';
+    $this->Route_crear_post           = 'set_admin_'. $this->Carpeta_view_admin .'_crear';
+    $this->Route_editar_post          = 'set_admin_'. $this->Carpeta_view_admin .'_editar';
+    $this->Route_luego_de_crear       = $this->Route_index;
+    $this->Path_carpeta_imagenes      = $this->Carpeta_view_admin .'/'; //donde se gurarda la imagen. Debe existir
+    $this->Nombre_del_campo_imagen    = strtolower($this->Nombre_entidad_singular) . '_id';
+    
   }
 
   public function getPropiedades()
   {
-    return ['name','description','estado','rank','tipo_de_representacion'];
+    return ['name','description','estado','rank','tipo_de_representacion','origen','url_oficial_marca'];
   }
 
-  //home admin User
-  public function get_admin_marcas(Request $Request)
-  { 
-    $marcas = $this->MarcaRepo->getMarcasParaAdminOrdenadasAlfabeticamente($Request,30);
-
-    //mostrar marcas de la a a la z (orden)
-
-    return view('admin.marcas.marcas_home', compact('marcas'));
-  }
-
-  //get Crear admin User
-  public function get_admin_marcas_crear()
-  {  
-    return view('admin.marcas.marcas_crear');
-  }
-
-  //set Crear admin User
-  public function set_admin_marcas_crear(Request $Request)
-  {     
-
-
-      $manager = new marca_manager(null,$Request->all());
-
-      if(!$manager->isValid())
-      {
-        return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
-      }
-
-      //propiedades para crear
-      $Propiedades = $this->getPropiedades() ;
-
-      //traigo la entidad
-      $marca = $this->MarcaRepo->getEntidad();
-      $marca->borrado = 'no';
-
-      //grabo todo las propiedades
-      $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);     
-
-      //para la imagen
-      $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/',$this->MarcaRepo->helper_convertir_cadena_para_url($marca->name) ,'.png'); 
-
-      //para dar nombre a la imagen
-      $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
-
-      //actualizo cache de marcas
-      $this->MarcaRepo->actualizarCache('getMarcas');
-
-     return redirect()->route('get_admin_marcas')->with('alert', 'Marca creada correctamente');
-    
-  }
-
-  //get edit admin marca
-  public function get_admin_marcas_editar($id)
+  public function getManager($Request)
   {
-    $Entidad = $this->MarcaRepo->find($id);
+    $manager = new marca_manager(null, $Request->all());
 
-    return view('admin.marcas.marcas_editar',compact('Entidad'));
+    return $manager;
   }
 
-  //set edit admin marca
-  public function set_admin_marcas_editar($id,Request $Request)
+  public function getImagenMiniaturaSize()
   {
-    $manager = new marca_manager(null,$Request->all());
-
-    if(!$manager->isValid())
-    {
-      return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
-    }
-
-    $marca = $this->MarcaRepo->find($id);    
-
-    //propiedades para crear
-    $Propiedades =  $this->getPropiedades();    
-
-    //grabo todo las propiedades
-    $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
-
-    $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/',$this->MarcaRepo->helper_convertir_cadena_para_url($marca->name) ,'.png'); 
-    //si tiene imagen cambio el nombre de la misma
-    if($Request->hasFile('img'))
-    {
-      $this->MarcaRepo->setAtributoEspecifico($marca,'name_img', strtolower($marca->name));
-    }
-
-    //actualizo cache de marcas
-    $this->MarcaRepo->actualizarCache('getMarcas');
-
-    return redirect()->route('get_admin_marcas')->with('alert', 'Marca Editado Correctamente');  
+    return 400;
   }
+
+  /**
+   * olvida los cache que ponga aquí
+   *
+   * @return void
+   */
+  public function olvidarCachesAsociadoAEstaEntidad()
+  {
+    HelpersGenerales::helper_olvidar_este_cache('ClientesHome'); 
+    HelpersGenerales::helper_olvidar_este_cache('ClientesTodos'); 
+  }
+
+  
 
   
 }
