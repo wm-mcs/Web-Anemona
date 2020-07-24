@@ -10,7 +10,12 @@
 
 /* C a r g a d o r*/
 .lazy-hidden {
-    background: $color-3 url('loading.gif') no-repeat 50% 50%;
+  background: $color-3 url('loading.gif') no-repeat 50% 50%;
+}
+
+/* B o r d e r s */
+.border-gris{
+  border:solid 1px $color-grey1;
 }
 
 
