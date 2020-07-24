@@ -24,7 +24,7 @@
              @yield('miga-de-pan')                
            </div>
           <div class="contenedor-admin-entidad">
-           <div class="p-2"> 
+           <div class="w-100 p-2"> 
              @yield('content')
            </div>
           </div>
