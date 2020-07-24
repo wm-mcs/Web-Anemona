@@ -16,21 +16,22 @@
 </div>
   {!! Form::label('tipo_de_representacion', 'Tipo de representación', array('class' => 'formulario-label ')) !!}
   {!! Form::select('tipo_de_representacion',  ['distribuidor' => 'Distribuidor',
-                                               'service'      => 'Service'] , ['class' => 'formulario-field'] )          !!}
+                                               'service'      => 'Service'] , null,['class' => 'formulario-field'] )          !!}
 </div>
 
 <div class="contiene-aclaracion-label">
   <div class="formulario-label-aclaracion">
   Aquí se indica que tanto queremos destacar a esta marca. 
 </div>
+</div>
   {!! Form::label('rank', 'Calidad / Prestigio', array('class' => 'formulario-label ')) !!}
   {!! Form::select('rank',  [1 => '1 - Normal',
                              2 => '2 - Alta ',
-                             3 => '3 - Elite'] , ['class' => 'formulario-field'] )          !!}
+                             3 => '3 - Elite'] , null,['class' => 'formulario-field'] )          !!}
 </div>
 <div class="formulario-label-fiel">
   {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
   {!! Form::select('estado',['si' => 'Activo',
-                             'no' => 'Inactivo'] , ['class' => 'formulario-field'] )          !!}
+                             'no' => 'Inactivo'] , null,['class' => 'formulario-field'] )          !!}
 </div>
 
