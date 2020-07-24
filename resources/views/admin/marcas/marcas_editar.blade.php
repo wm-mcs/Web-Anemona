@@ -2,7 +2,9 @@
 
 @section('miga-de-pan') 
  <h1 class="titulos-class mb-3  text-color-primary font-secondary">Editar</h1> 
- <p class="parrafo-class color-text-gris mb-3"> Link pública <i class="fas fa-hand-point-right"></i> <a href="{{$Entidad->route}}"  target="_blank">{{$Entidad->name}}</a></p>
+ <p class="parrafo-class color-text-gris mb-3"> 
+  Link pública <i class="fas fa-hand-point-right"></i> <a href="{{$Entidad->route}}"  target="_blank">{{$Entidad->name}}</a>
+ </p>
  <p class="parrafo-class color-text-gris"> Para guardar los cambios deben apretar el botón que está abajo del todo</p>
 @stop
 
@@ -16,7 +18,7 @@
                             'files' =>  true,
                             'id'    => 'form-de-entidad'
                           ])               !!}
-   <div class="row ">
+   <div class="row p-2 p-lg-4">
 
       {{-- datos corporativos --}}
       <div class="col-lg-6 contenedor-grupo-datos">
