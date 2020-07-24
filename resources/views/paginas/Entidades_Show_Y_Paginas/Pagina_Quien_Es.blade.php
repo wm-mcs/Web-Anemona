@@ -100,7 +100,7 @@ background_img_fixed img_quien " >
 
             
 
-<div  class="site-section background-gris-0" id="">
+<div  class="site-section background-gris-00" id="">
       <div class="container d-flex flex-column align-items-center">
 
         <div class=" p-4 mb-4 col-6 col-md-4 col-lg-3 d-flex flex-column align-items-center">
@@ -114,11 +114,11 @@ background_img_fixed img_quien " >
           </p>
 
           <p class="parrafo-class mb-4"> 
-            En Be Fitness brindamos soluciones en implementación y mantenimiento de máquinas de gimnasio. Somos distribuidores exclusivos en Uruguay de SportsArt, marca lider en equipos de alto desempeño en entrenamiento físico y deportivo. Estamos preparados a las exigencias de nuestros clientes.    
+            Nuestro plus ...   
           </p>
           <ul class="mb-4 pl-4">
              <div class="contiene-item"> 
-               <b>Mantenimiento preventivo y correctivo</b>: nuestros paquetes de mantenimiento aseguran que puedes sacar la mejor rentabilidad de cada máquina por el mayor tiempo posible. 
+               <b>Mantenimiento preventivo y correctivo</b>: nuestros paquetes de mantenimiento aseguran que puedas sacar la mejor rentabilidad de cada máquina por el mayor tiempo posible. 
              </div>
              <div class="contiene-item">
               <b>Asesoría personalizada</b>: si tienes un espacio que quieres implementar y no sabes por dónde empezar, te asesoramos en el paso a paso, desde qué máquinas adquirir, hasta como acondicionar cada ambiente.
