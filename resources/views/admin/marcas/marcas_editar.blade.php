@@ -1,14 +1,9 @@
 @extends('layouts.admin_layout.admin_layout')
 
 @section('miga-de-pan') 
-  {{-- lugar atras --}}
-  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
-
-  {{-- separador --}}
-  <span class="spam-separador">|</span> 
-
-  {{-- lugar donde esta --}}
-  <span>Editar Marca</span>
+ <h1 class="titulos-class mb-3  text-color-primary font-secondary">Editar</h1> 
+ <p class="parrafo-class color-text-gris mb-3"> Link pública <i class="fas fa-hand-point-right"></i> <a href="{{$Entidad->route}}"  target="_blank">{{$Entidad->name}}</a></p>
+ <p class="parrafo-class color-text-gris"> Para guardar los cambios deben apretar el botón que está abajo del todo</p>
 @stop
 
 @section('content')
