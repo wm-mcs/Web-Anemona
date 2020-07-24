@@ -87,6 +87,8 @@ class Admin_Marcas_Controllers extends Controller  implements entidadCrudControl
   public function olvidarCachesAsociadoAEstaEntidad()
   {
     HelpersGenerales::helper_olvidar_este_cache('getMarcas'); 
+    HelpersGenerales::helper_olvidar_este_cache('todasLasMarcas'); 
+    
   }
 
   

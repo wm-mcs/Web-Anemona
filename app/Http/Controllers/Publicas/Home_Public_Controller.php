@@ -181,8 +181,11 @@ class Home_Public_Controller extends Controller
                         return  $this->ClienteRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
                       });
        
+        $Marcas    = Cache::remember('todasLasMarcas', 300000, function() {
+                        return  $this->MarcaRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
+                      });
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa','Clientes'));
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa','Clientes','Marcas'));
       }
 
       public function getServicios()
@@ -192,7 +195,11 @@ class Home_Public_Controller extends Controller
         $Clientes  = Cache::remember('ClientesTodos', 300000, function() {
                         return  $this->ClienteRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
                       });
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Servicios', compact('Empresa','Clientes'));
+        $Marcas    = Cache::remember('todasLasMarcas', 300000, function() {
+                        return  $this->MarcaRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
+                      });
+        
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Servicios', compact('Empresa','Clientes','Marcas'));
       }
 
 
