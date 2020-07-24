@@ -109,14 +109,24 @@ background_img_fixed img_quien " >
           
         
         <div class="col-12 p-4 border border-primary mb-3 ">
-          <p class="parrafo-class mb-4">            
-            Be Fitness es una empresa Uruguaya dedicada al mantenimiento y venta de maquinas de Fitness.  Es reprensentante de la marca SportsArt para Uruguay y es servicio técnico oficial de:        
+          <p class="parrafo-class mb-4"> 
+            En Be Fitness brindamos soluciones en implementación y mantenimiento de máquinas de gimnasio. Somos distribuidores exclusivos en Uruguay de SportsArt, marca lider en equipos de alto desempeño en entrenamiento físico y deportivo. Estamos preparados a las exigencias de nuestros clientes.    
+          </p>
+
+          <p class="parrafo-class mb-4"> 
+            En Be Fitness brindamos soluciones en implementación y mantenimiento de máquinas de gimnasio. Somos distribuidores exclusivos en Uruguay de SportsArt, marca lider en equipos de alto desempeño en entrenamiento físico y deportivo. Estamos preparados a las exigencias de nuestros clientes.    
           </p>
           <ul class="mb-4 pl-4">
-             <div class="contiene-item">Cybex y Movement en Uruguay</div>
-             <div class="contiene-item">Súper Hábil</div>
-             <div class="contiene-item">Los equipos de Cardio y Musculación de Embreex ( Alsi ltda )</div>
-             <div class="contiene-item">Los equipos de la marca BH representante ( Deceleste )</div>             
+             <div class="contiene-item"> 
+               <b>Mantenimiento preventivo y correctivo</b>: nuestros paquetes de mantenimiento aseguran que puedes sacar la mejor rentabilidad de cada máquina por el mayor tiempo posible. 
+             </div>
+             <div class="contiene-item">
+              <b>Asesoría personalizada</b>: si tienes un espacio que quieres implementar y no sabes por dónde empezar, te asesoramos en el paso a paso, desde qué máquinas adquirir, hasta como acondicionar cada ambiente.
+             </div>
+             <div class="contiene-item">
+              <b>Implementación de equipos</b>: el equipo que buscas, lo tenemos. Las mejores marcas con acabados premium, funcionalidades de calidad y prestigio internacional. 
+             </div>
+             <div class="contiene-item"><b>Post-Venta</b>: poseemos un servicio técnico propio y nuestros técnicos se especializan permanentemente con nuestros proveedores oficiales. Mantenemos stock de repuestos originales, que permite dar soluciones oportunas, con tiempos de respuesta menores a 48 horas y con cobertura en todo el territorio nacional.</div>             
           </ul>
 
           <p class="parrafo-class mb-4">            
