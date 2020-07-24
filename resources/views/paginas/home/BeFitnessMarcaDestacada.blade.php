@@ -2,10 +2,10 @@
 	<div class="container">
 		<div class="row align-items-center justify-content-center">
 			<div class="col-12 col-lg-3 p-lg-3 mb-5 mb-lg-0">
-				<img data-src="{{url()}}/imagenes/marcas/Sportsart/logo.png" class="img-fluid">
+				<img data-src="{{url()}}/imagenes/marca_complementos/Sportsart/logo.png" class="img-fluid">
 			</div>
 			<div class="col-12 col-lg-5 mb-4 mb-lg-0">
-				<img data-src="{{url()}}/imagenes/marcas/Sportsart/Natural-portada.jpg" class="img-fluid">
+				<img data-src="{{url()}}/imagenes/marca_complementos/Sportsart/Natural-portada.jpg" class="img-fluid">
 			</div>	
 			<div class="col-12 col-lg-4 p-2 p-lg-3">
 				
