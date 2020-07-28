@@ -51,7 +51,7 @@ class Admin_Producto_Controllers extends Controller implements entidadCrudContro
 
   public function __construct(ProductoRepo  $ProductoRepo,
                               ImagenRepo    $ImagenRepo, 
-                              MarcaRepo     $MarcaRepo.
+                              MarcaRepo     $MarcaRepo,
                               CategoriaRepo $CategoriaRepo )
   {
     $this->Entidad_principal          = $ProductoRepo;
