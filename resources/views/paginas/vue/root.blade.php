@@ -166,6 +166,9 @@ computed:{
     {
      return false;
     }
+  },
+  marcas_elite:function(){
+    return this.Marcas.filter(marca => marca.rank > 2);
   }
 },
 watch: {
