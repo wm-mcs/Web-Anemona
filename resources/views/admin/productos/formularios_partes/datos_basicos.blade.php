@@ -2,7 +2,7 @@
   
 {!! Form::label('categoria_id', 'Categoria', ['class' => 'control-label']) !!}
 
-<select style="margin: 15px 0;" value="{{ Input::old('categoria_id') }}" name="categoria_id">
+<select class="formulario-field;" value="{{ Input::old('categoria_id') }}" name="categoria_id">
                    
        <OPTION 
                       VALUE="0"
@@ -24,7 +24,7 @@
   
 {!! Form::label('marca_id', 'Marca', ['class' => 'control-label']) !!}
 
-<select style="margin: 15px 0;" value="{{ Input::old('marca_id') }}" name="marca_id">
+<select class="formulario-field" value="{{ Input::old('marca_id') }}" name="marca_id">
                    
        <OPTION 
                       VALUE="0"
@@ -68,7 +68,7 @@
 {{-- moneda --}}
 <div class="formulario-label-fiel">
             {!! Form::label('moneda', 'Moneda', array('class' => 'formulario-label ')) !!}
-            {!! Form::select('moneda',config('options.Moneda') , null )          !!}
+            {!! Form::select('moneda',config('options.Moneda') ,  null,['class' => 'formulario-field']  )          !!}
 </div>
 
 {{-- precio --}}
@@ -88,13 +88,13 @@
  <div class="formulario-label-fiel">
             {!! Form::label('nuevo_usado', '¿Nuevo o usado?', array('class' => 'formulario-label ')) !!}
             {!! Form::select('nuevo_usado',['nuevo' => 'Nuevo',
-                                            'usado' => 'Usado'] , null )          !!}
+                                            'usado' => 'Usado'] ,  null,['class' => 'formulario-field']  )          !!}
  </div>
 
  <div class="formulario-label-fiel">
             {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
             {!! Form::select('estado',['si' => 'Activo',
-                                       'no' => 'Inactivo'] , null )          !!}
+                                       'no' => 'Inactivo'] ,  null,['class' => 'formulario-field']  )          !!}
  </div>
 
 
