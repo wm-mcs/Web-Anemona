@@ -2,7 +2,7 @@
   
 {!! Form::label('categoria_id', 'Categoria', ['class' => 'control-label']) !!}
 
-<select class="formulario-field;" value="{{ Input::old('categoria_id') }}" name="categoria_id">
+<select class="formulario-field" value="{{ Input::old('categoria_id') }}" name="categoria_id">
                    
        <OPTION 
                       VALUE="0"
@@ -44,10 +44,11 @@
 
 
 <div class="formulario-label-fiel">
-  <div class="formulario-label-aclaracion">
+  
+  {!! Form::label('codigo_fabricante', 'Modelo / Código fabricante', array('class' => 'formulario-label ')) !!}
+  <div class="contiene-aclaracion-label">
    Este es el modelo del producto o código según el fabricante (Marca).
   </div>
-  {!! Form::label('codigo_fabricante', 'Modelo / Código fabricante', array('class' => 'formulario-label ')) !!}
   {!! Form::text('codigo_fabricante', null ,['class' => 'formulario-field']) !!}
 </div>
 
