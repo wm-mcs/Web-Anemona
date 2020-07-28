@@ -1,6 +1,6 @@
 <div class="formulario-label-fiel">
   
-{!! Form::label('categoria_id', 'Categoria', ['class' => 'control-label']) !!}
+{!! Form::label('categoria_id', 'Categoria', ['class' => 'formulario-label']) !!}
 
 <select class="formulario-field" value="{{ Input::old('categoria_id') }}" name="categoria_id">
                    
@@ -22,7 +22,7 @@
 
 <div class="formulario-label-fiel">
   
-{!! Form::label('marca_id', 'Marca', ['class' => 'control-label']) !!}
+{!! Form::label('marca_id', 'Marca', ['class' => 'formulario-label']) !!}
 
 <select class="formulario-field" value="{{ Input::old('marca_id') }}" name="marca_id">
                    
