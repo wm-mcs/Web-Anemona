@@ -14,6 +14,11 @@ data:function(){
 }, 
 computed:{
 
+ marcas_ordenadas:function(){
+    return this.marcas.sort(function (a, b){
+       return (b.rank - a.rank)
+    });
+ }
 
   
 },
@@ -56,7 +61,7 @@ template:'
       
       
         <div class="row ">
-          <marca-lista v-for="Marca in marcas" 
+          <marca-lista v-for="Marca in marcas_ordenadas" 
                            :marca="Marca" 
                            :key="Marca.id"></marca-lista>
           
