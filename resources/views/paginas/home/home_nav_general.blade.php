@@ -15,7 +15,7 @@
       
       <categorias :empresa="Empresa" :categorias="Categorias" ></categorias>   
 
-      <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :marca="Marca" :key="Marca.id"></marcas-nav>    
+      <marcas-nav v-if="Marcas.length" v-for="Marca in marcas_elite" :marca="Marca" :key="Marca.id"></marcas-nav>    
       <li><a href="{{route('getContacto')}}">Contacto</a></li> 
       <li><a href="{{route('getQuienes')}}">Sobre Be Fitness</a></li> 
       
@@ -57,7 +57,7 @@
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 
                 <categorias :empresa="Empresa" :categorias="Categorias" ></categorias>
-                <marcas-nav v-if="Marcas.length" v-for="Marca in Marcas" :marca="Marca" :key="Marca.id"></marcas-nav>    
+                <marcas-nav v-if="Marcas.length" v-for="Marca in marcas_elite" :marca="Marca" :key="Marca.id"></marcas-nav>    
 
                 <li><a href="{{route('getContacto')}}">Contacto</a></li>
                  <li><a href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>
