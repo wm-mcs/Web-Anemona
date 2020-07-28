@@ -60,8 +60,9 @@
                 <marcas-nav v-if="Marcas.length" v-for="Marca in marcas_elite" :marca="Marca" :key="Marca.id"></marcas-nav>    
 
                 <li><a href="{{route('getContacto')}}">Contacto</a></li>
-                 <li><a href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>
-                <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
+                <li><a href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>
+                <li><a href="{{route('getServicios')}}">Servicios</a></li>
+                {{-- <li class="has-children"><a href="contact.html"><span class="icon-user"></span></a>
                   <ul class="dropdown">
 
                   @if(Auth::guest())  
@@ -74,7 +75,7 @@
                   
                 
                  </ul>
-                </li>
+                </li> --}}
               </ul>
             </nav>
           </div>

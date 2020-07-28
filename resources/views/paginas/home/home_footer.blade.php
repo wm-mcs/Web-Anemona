@@ -16,8 +16,9 @@
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="#">Servicios</a></li>
-                 
+                  <li><a href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>
+                  <li><a href="{{route('getServicios')}}">Servicios</a></li>
+                  <li><a href="{{route('getContacto')}}">Contacto</a></li>
                 </ul>
               </div>
              
