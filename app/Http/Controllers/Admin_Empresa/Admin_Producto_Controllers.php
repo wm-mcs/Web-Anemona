@@ -8,7 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
-
+use App\Repositorios\ImagenRepo;
 use App\Managers\Producto\crear_producto_admin_manager;
 use App\Repositorios\MarcaRepo;
 use DB;
