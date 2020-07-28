@@ -92,11 +92,36 @@ class Admin_Producto_Controllers extends Controller implements entidadCrudContro
    */
   public function olvidarCachesAsociadoAEstaEntidad()
   {
-    HelpersGenerales::helper_olvidar_este_cache('getProductosNovedadesParaHome'); 
-    HelpersGenerales::helper_olvidar_este_cache('ClientesTodos'); 
+    HelpersGenerales::helper_olvidar_este_cache('getProductosNovedadesParaHome');     
   }
 
 
+
+  public function get_admin_crear()
+  { 
+
+    $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Titulo              = 'Crear ' . strtolower($this->Nombre_entidad_singular);
+    $Carpeta_view_admin  = $this->Carpeta_view_admin;
+
+    return view($this->Path_view_get_admin_crear,compact('Route_crear_post','Titulo','Carpeta_view_admin', 'Categorias','Marcas'));
+  }  
+
+  public function get_admin_editar($id)
+  {
+    $Entidad             = $this->Entidad_principal->find($id);
+    $Titulo              = 'Editar'; 
+    $Route_editar_post   = $this->Route_editar_post;
+    $Carpeta_view_admin  = $this->Carpeta_view_admin;
+    $Categorias          = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+    $Marcas              = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
+
+
+    return view($this->Path_view_get_admin_editar,compact('Entidad','Titulo','Route_editar_post','Carpeta_view_admin','Categorias','Marcas'));
+  }
+
+  
 
   
 
