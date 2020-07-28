@@ -18,7 +18,7 @@ class marca_manager extends ManagerBase
       'description' => 'required', 
       'rank'        => 'required', 
       'estado'      => 'required', 
-      'img'         => 'mimes:png'
+      'img'         => 'required'
              ];
 
     return $rules;
