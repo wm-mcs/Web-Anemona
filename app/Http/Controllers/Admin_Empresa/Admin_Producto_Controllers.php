@@ -43,12 +43,16 @@ class Admin_Producto_Controllers extends Controller implements entidadCrudContro
   protected $Route_editar_post ;         
   protected $Route_luego_de_crear;       
   protected $Path_carpeta_imagenes;      
-  protected $Nombre_del_campo_imagen;    
+  protected $Nombre_del_campo_imagen;   
+  protected $MarcaRepo;
+  protected $CategoriaRepo; 
 
   
 
   public function __construct(ProductoRepo  $ProductoRepo,
-                              ImagenRepo    $ImagenRepo )
+                              ImagenRepo    $ImagenRepo, 
+                              MarcaRepo     $MarcaRepo.
+                              CategoriaRepo $CategoriaRepo )
   {
     $this->Entidad_principal          = $ProductoRepo;
     $this->ImagenRepo                 = $ImagenRepo;
@@ -65,6 +69,8 @@ class Admin_Producto_Controllers extends Controller implements entidadCrudContro
     $this->Route_luego_de_crear       = $this->Route_index;
     $this->Path_carpeta_imagenes      = $this->Carpeta_view_admin .'/'; //donde se gurarda la imagen. Debe existir
     $this->Nombre_del_campo_imagen    = strtolower($this->Nombre_entidad_singular) . '_id';
+    $this->MarcaRepo                  = $MarcaRepo;
+    $this->CategoriaRepo              = $CategoriaRepo;
     
   }
 
