@@ -8,233 +8,110 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\ProductoRepo;
-use App\Repositorios\ProductoImgRepo;
+
 use App\Managers\Producto\crear_producto_admin_manager;
 use App\Repositorios\MarcaRepo;
 use DB;
 use App\Repositorios\CategoriaRepo;
+use App\Http\Controllers\Interfaces\entidadCrudControllerInterface;
+use App\Http\Controllers\Traits\entidadesControllerComunesCrud;
 
 
 
 
 
-class Admin_Producto_Controllers extends Controller
+class Admin_Producto_Controllers extends Controller implements entidadCrudControllerInterface
 {
 
-  protected $EntidadDelControladorRepo;
-  protected $ImgEntidadRepo;
-  protected $MarcaRepo;
-  protected $CategoriaRepo;
+
+  use entidadesControllerComunesCrud;
 
 
 
-  public function __construct(ProductoRepo            $ProductoRepo, 
-                              ProductoImgRepo         $ProductoImgRepo, 
-                              MarcaRepo               $MarcaRepo, 
-                              CategoriaRepo           $CategoriaRepo)
 
+
+  protected $Entidad_principal;
+  protected $Nombre_entidad_plural      ;
+  protected $Nombre_entidad_singular    ;
+  protected $Carpeta_view_admin         ; 
+  protected $Path_view_get_admin_index  ;
+  protected $Path_view_get_admin_crear  ;
+  protected $Path_view_get_admin_editar ;
+  protected $Route_index ;               
+  protected $Route_crear  ;             
+  protected $Route_crear_post ;          
+  protected $Route_editar_post ;         
+  protected $Route_luego_de_crear;       
+  protected $Path_carpeta_imagenes;      
+  protected $Nombre_del_campo_imagen;    
+
+  
+
+  public function __construct(ProductoRepo  $ProductoRepo,
+                              ImagenRepo    $ImagenRepo )
   {
-    $this->EntidadDelControladorRepo            =  $ProductoRepo;
-    $this->ImgEntidadRepo                       =  $ProductoImgRepo;
-    $this->MarcaRepo                            =  $MarcaRepo;
-    $this->CategoriaRepo                        =  $CategoriaRepo;
+    $this->Entidad_principal          = $ProductoRepo;
+    $this->ImagenRepo                 = $ImagenRepo;
+    $this->Nombre_entidad_plural      = 'Productos';
+    $this->Nombre_entidad_singular    = 'Producto';
+    $this->Carpeta_view_admin         = strtolower(str_replace(' ','_', $this->Nombre_entidad_plural));
+    $this->Path_view_get_admin_index  = 'admin.' . $this->Carpeta_view_admin . '.home';
+    $this->Path_view_get_admin_crear  = 'admin.' . $this->Carpeta_view_admin . '.crear';
+    $this->Path_view_get_admin_editar = 'admin.' . $this->Carpeta_view_admin . '.editar';
+    $this->Route_index                = 'get_admin_'. $this->Carpeta_view_admin .'';
+    $this->Route_crear                = 'get_admin_'. $this->Carpeta_view_admin .'_crear';
+    $this->Route_crear_post           = 'set_admin_'. $this->Carpeta_view_admin .'_crear';
+    $this->Route_editar_post          = 'set_admin_'. $this->Carpeta_view_admin .'_editar';
+    $this->Route_luego_de_crear       = $this->Route_index;
+    $this->Path_carpeta_imagenes      = $this->Carpeta_view_admin .'/'; //donde se gurarda la imagen. Debe existir
+    $this->Nombre_del_campo_imagen    = strtolower($this->Nombre_entidad_singular) . '_id';
     
   }
-
-
 
   public function getPropiedades()
   {
     return  ['name','categoria_id','marca_id','moneda','precio','stock','estado','nuevo_usado','codigo_fabricante','description'];
   }
 
-  public function get_admin_productos(Request $Request)
+  public function getManager($Request)
   {
+    $manager = new crear_producto_admin_manager(null, $Request->all());
 
-    $Entidades = $this->EntidadDelControladorRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
-
-    return view('admin.productos.productos_home', compact('Entidades'));
+    return $manager;
   }
 
-
-
-  //get Crear 
-  public function get_admin_productos_crear()
-  { 
-
-    $Categorias = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
-    $Marcas     = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
-    
-    return view('admin.productos.productos_crear',compact('Categorias','Marcas'));
-  }
-
-
-
-  //set 
-  public function set_admin_productos(Request $Request)
-  {     
-      
-      $Entidad         = $this->EntidadDelControladorRepo->getEntidad();
-
-      $Entidad->estado = 'si';      
-
-      $Propiedades     = $this->getPropiedades();  
-      
-      $manager         = new crear_producto_admin_manager(null, $Request->all());
-
-      //imagenes
-      $files = $Request->file('img');
-        
-        //valido la data
-        if ($manager->isValid())
-        {
-           $Entidad = $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);
-
-           //actualizo_cache_novedades_home 
-           $this->EntidadDelControladorRepo->actualizarCache('getProductosNovedadesParaHome');
-            
-            //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
-            if($files[0] != null )
-            {   
-              foreach($files as $file) 
-              { 
-                $Img              = $this->ImgEntidadRepo->getEntidad();
-                $Img->producto_id = $Entidad->id;
-                $Img->img         = $Entidad->name_slug;
-                $Img->estado      = 'si';
-                $Img->save();
-
-                $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id         ,'.jpg' , 1000,$file);
-                $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg' , 250  ,$file);
-              }
-              
-            }
-            
-           
-           if($Request->get('tipo_de_boton') == 'guardar')
-           {
-             return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Entidad creado correctamente');  
-           }
-           else
-           {
-             return redirect()->route('get_admin_productos')->with('alert', 'Entidad creado correctamente');  
-           }
-                
-        } 
-      
-      
-      return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
-    
-  }
-
-
-  //get edit admin 
-  public function get_admin_productos_editar($id)
+  public function getImagenMiniaturaSize()
   {
-    $Entidad     = $this->EntidadDelControladorRepo->find($id);
-    $Categorias  = $this->CategoriaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
-    $Marcas      = $this->MarcaRepo->getEntidadActivasOrdenadasSegun('name', 'asc');
-
-    return view('admin.productos.productos_editar',compact('Entidad','Categorias','Marcas'));
+    return 600;
   }
 
-  //set edit admin 
-  public function set_admin_productos_editar($id,Request $Request)
+  /**
+   * olvida los cache que ponga aquí
+   *
+   * @return void
+   */
+  public function olvidarCachesAsociadoAEstaEntidad()
   {
-      $Entidad         = $this->EntidadDelControladorRepo->find($id);
-      $Propiedades     = $this->getPropiedades();
-      $this->EntidadDelControladorRepo->setEntidadDato($Entidad,$Request,$Propiedades);   
-      
+    HelpersGenerales::helper_olvidar_este_cache('getProductosNovedadesParaHome'); 
+    HelpersGenerales::helper_olvidar_este_cache('ClientesTodos'); 
+  }
 
-      //imagenes
-      $files = $Request->file('img');
-      //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
-      if($files[0] != null )
-      {  
-        foreach($files as $file) 
-        { 
-          $Img              = $this->ImgEntidadRepo->getEntidad();
-          $Img->producto_id = $Entidad->id;
-          $Img->img         = $Entidad->name_slug;
-          $Img->estado      = 'si';
-          $Img->save();
 
-          $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id         ,'.jpg' , 1000,$file);
-          $this->ImgEntidadRepo->setImagen($Img,$Request,'img','Productos/',$Entidad->name_slug.'-'.$Img->id.'-chica','.jpg' , 250  ,$file);
-        }
-        
-      }
 
-     
-      
   
-     
-     
-     if($Request->get('tipo_de_boton') == 'guardar')
-     {
-       return redirect()->route('get_admin_productos_editar',$Entidad->id)->with('alert', 'Producto editado correctamente');  
-     }
-     else
-     {
-       return redirect()->route('get_admin_productos')->with('alert', 'Entidad editado correctamente');  
-     }
-    
-  }
 
-  //subo img adicional
-  public function set_admin_productos_img($id,Request $Request)
-  {   
-      //archivos imagenes
-      $files = $Request->file('img');
-
-      if(!empty($files))
-      {
-        foreach($files as $file)
-        {           
-
-          $this->ImgEntidadRepo->set_datos_de_img($file,$this->ImgEntidadRepo->getEntidad(),'producto_id',$id,$Request,'EventosImagenes/' );
-                    
-        }
-        
-      }
-
-      return redirect()->back()->with('alert', 'Imagen Subida Correctamente');
-      
-  }
+  
 
 
-  //elimino img adicional
-  public function delete_admin_productos_img($id_img)
-  {
-      $imagen = $this->ImgEntidadRepo->find($id_img); 
 
-      $Entidad = $this->EntidadDelControladorRepo->find($imagen->producto_id);
+  
 
-      //me fijo si hay mas imagenes
-      if($Entidad->imagenes->count() > 1)
-      {
-        $this->ImgEntidadRepo->destroy_entidad($id_img); 
+ 
 
-        unlink($imagen->path_img);
-        unlink($imagen->path_img_chica);
 
-        return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
-      }
-      else
-      {
-        return redirect()->back()->with('alert-rojo', 'No puedes elminiar porque es la única');
-      }  
 
-      
-  }
 
-  //fijo como imagen principal 
-  public function establecer_como_imagen_principal_producto($id_img)
-  {
-      $this->ImgEntidadRepo->cambio_a_imagen_principal($id_img);
 
-      return redirect()->back()->with('alert', 'Imagen principal cambiada');
-  }
 
 
 

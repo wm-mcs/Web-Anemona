@@ -9,6 +9,7 @@ use App\Entidades\ProductoImg;
 use Illuminate\Support\Facades\Cache;
 use App\Helpers\HelpersGenerales;
 use App\Entidades\Traits\entidadesMetodosComunes;
+use App\Entidades\Traits\entidadImagen;
 
 
 
@@ -18,29 +19,21 @@ class Producto extends Model
 {
 
     use entidadesMetodosComunes;
+    use entidadImagen;
 
     protected $table    ='productos';
     protected $fillable = ['name', 'description'];
     protected $appends  = ['route',
                            'categoria_producto',
-                           'url_img',
+                           'url_img_foto_principal',
+                           'url_img_foto_principal_chica',
                            'precio_producto',
                            'name_arreglado'
                           ];
+    protected $img_key            = 'producto_id';
+    protected $route_admin_name   = 'get_admin_productos_editar';                      
 
 
-
-    public function imagenes()
-    {
-      return $this->hasMany(ProductoImg::class,'producto_id','id')->where('estado','si');
-    }
-
-        public function getImagenesProductoAttribute()
-        {
-            return Cache::remember('ImagenesProducto'.$this->id, 60, function() {
-                                  return $this->imagenes; 
-                              }); 
-        }
 
 
     public function categoria()
@@ -60,49 +53,6 @@ class Producto extends Model
   
 
 
-    public function getUrlImgMasterAttribute()
-    {
-        //imagenes asoiadas al proyecto
-        $imagenes = $this->imagenes;
-
-        //veo si hay alguna que tenga el atributo
-        $cantidad_imagenes = $imagenes->where('foto_principal','si')->count();
-        
-
-        if($cantidad_imagenes === 1)
-        {
-            $imagen_principal = $imagenes->where('foto_principal','si')->first();
-            
-
-            return $imagen_principal->url_img;
-        }
-        elseif($cantidad_imagenes === 0)
-        {
-            $imagen = $imagenes->first();
-            if($imagen == null)
-            {
-               return 'null';
-            }
-            
-            $imagen->foto_principal = 'si';
-            $imagen->save();
-
-            return $imagen->url_img;
-        }   
-        else
-        {
-            return url().'/imagenes/'.$this->img;
-        }    
-        
-        
-    }
-
-    public function getUrlImgAttribute()
-    {
-        return Cache::remember('ImagenProducto'.$this->id, 15, function() {
-                              return $this->url_img_master; 
-                          }); 
-    }
 
 
     public function getRouteAttribute()

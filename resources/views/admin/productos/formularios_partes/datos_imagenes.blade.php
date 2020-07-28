@@ -1,16 +1,57 @@
 
 <div class="formulario-label-fiel">
-<div class="formulario-label-aclaracion">
-	Las imágenes deben ser en formato <strong>jpg</strong> y en <strong>formato cuadrado</strong>.  Al menos de <strong>1000px x 1000px</strong>. Para que la web se vea linda la primera imagen de cada producto <strong>debe ser en fondo blanco</strong>.
+{!! Form::label('img', 'Imágenes', array('class' => 'formulario-label ')) !!}
+<div class="contiene-aclaracion-label">
+  Cargar imágenes en formato jpg (Cuadrado) con fondo blanco. Mínimo 1000px x 1000px.  
 </div>
-{!! Form::label('img', 'Imagen', array('class' => 'control-label')) !!}
-{!! Form::file('img[]',['class'            => 'file',
-                       'id'                => 'imagenes-field',
+{!! Form::file('img[]',['class'            => 'formulario-field',                       
                        'multiple'          => true,
-                       'data-show-upload'  =>'false',
-                       'data-show-caption' => 'true' 
                           ]) !!}   
 </div>
+
+
+
+@if(isset($Entidad))
+
+<p class="p-2 mt-4 mb-3 text-center color-text-gris parrafo-class">
+ Administrar imágenes que yá están cargadas <i class="fas fa-hand-point-down"></i> o subir más <i class="fas fa-hand-point-up"></i>.
+</p>
+
+	@if($Entidad->imagenes->count() > 0)
+	<div class="row  p-3 mt-4" >
+
+		@foreach($Entidad->imagenes as $Imagen)
+		<div class="col-6">
+			
+		
+		 <div class="mt-3 position-relative img-border-grosor  @if($Imagen->es_imagen_principal) img-principal  @endif ">
+      <img class="img-fluid img-cover img-altura-chica" data-src="{{$Imagen->url_img}}">   
+
+        @if($Imagen->es_imagen_principal)
+        <span class="img-element-bottom-left text-color-primary">
+          <i class="fas fa-star"></i>
+        </span>
+        @else
+        <a class="img-element-bottom-left" href="{{$Imagen->cambiar_a_pricnipal_route}}">
+          <i class="far fa-star"></i>
+        </a>
+        <a href="{{$Imagen->eliminar_route}}" class="img-element-bottom-right">
+        <i class="fas fa-trash"></i>
+        </a>
+        @endif
+     </div>
+		</div>
+		@endforeach
+
+			
+	
+	</div>
+	@else
+	<p class="p-2 mt-4 mb-3 col-12 text-center color-text-gris parrafo-class">
+			No hay ninguna imagen.
+	</p>
+	@endif
+@endif
 
 
 
