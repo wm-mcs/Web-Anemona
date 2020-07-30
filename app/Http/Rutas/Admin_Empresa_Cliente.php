@@ -13,3 +13,5 @@ require __DIR__ . '/Marcas/Rutas_Marcas.php';
 require __DIR__ . '/Imagenes/Rutas_imagenes.php';
 
 require __DIR__ . '/Clientes/Ruta_clientes.php';
+
+require __DIR__ . '/PortadaDePagina/Ruta_portada_de_paginas.php';

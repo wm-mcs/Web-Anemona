@@ -18,7 +18,13 @@
 
         <a class="d-block col-12  mb-1" href="{{route('get_admin_clientes')}}">
           <p class="m-0"> Clientes</p>
-        </a>   
+        </a>  
+
+        <a class="d-block col-12  mb-1" href="{{route('get_admin_portadas_de_paginas')}}">
+          <p class="m-0"> Portadas</p>
+        </a>    
+
+        
         
     </div>
    @endif
