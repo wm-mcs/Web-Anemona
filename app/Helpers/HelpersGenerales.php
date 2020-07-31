@@ -27,8 +27,23 @@ class HelpersGenerales
         $cadena = str_replace(' ' ,'-', $cadena);
         $cadena = str_replace('?' ,'', $cadena);
         $cadena = str_replace('¿' ,'', $cadena);
-        return $cadena;
-    
+        return $cadena;    
+    }
+
+    public static function helper_convertir_cadena_solo_letras_y_numeros($cadena)
+    {
+        $cadena = trim($cadena);
+        //quito caracteres - 
+        $cadena = str_replace('-' ,'', $cadena);
+        $cadena = str_replace('_' ,'', $cadena);
+        $cadena = str_replace('/' ,'', $cadena);
+        $cadena = str_replace('|' ,'', $cadena);
+        $cadena = str_replace('"' ,'', $cadena);        
+        $cadena = str_replace('?' ,'', $cadena);
+        $cadena = str_replace('¿' ,'', $cadena);
+        $cadena = str_replace('!' ,'', $cadena);
+        $cadena = str_replace('¡' ,'', $cadena);
+        return $cadena;    
     }
 
     public static function helper_olvidar_este_cache($nombre_de_cache)
