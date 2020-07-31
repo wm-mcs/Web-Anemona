@@ -140,3 +140,9 @@ background_img_fixed img_contacto " >
    @include('paginas.vue.categorias_componente')   
    @include('paginas.vue.root')
 @stop
+
+@section('vue-componenetes-cdn')
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> 
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-select/2.6.2/vue-select.js"></script> --}}
+  <script  src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+@stop
