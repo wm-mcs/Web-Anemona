@@ -11,8 +11,7 @@
 		          {{--*/ $Entidad        = $Entidad /*--}}
 		          @include('admin.clientes.partes.lista')
 			   @endforeach
-				</div>
-			
+				</div>		
 			
 			</div>
 		</div>
