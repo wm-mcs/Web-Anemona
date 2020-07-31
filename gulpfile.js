@@ -55,13 +55,8 @@ elixir(function(mix) {
 
       mix.scripts([
         
-        'ecomerce_minimal/jquery-3.3.1.min.js',
-        /*'ecomerce_minimal/jquery-ui.js',*/        
-        'ecomerce_minimal/bootstrap.min.js',       
-        'ecomerce_minimal/main.js',
-        'Plugins/Plug-Notify.js',
-        'Plugins/Plug-lazyLoadXT.js',
-        'Plugins/Vue-Lazyload.js',  
+       
+        'Plugins/Vue-Lazyload.js'
        
 
        ],'public/js/ecomerceApp.js');
