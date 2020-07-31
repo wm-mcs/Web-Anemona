@@ -5,13 +5,15 @@
 				Confian en nosotros ...
 			</div>
 			<div class="col-12">
-				
-			
-			@foreach($Clientes as $Entidad )	
-				  {{--*/ $Mostrar_admin  = false /*--}}
+				<div class="row">
+					@foreach($Clientes as $Entidad )	
+				      {{--*/ $Mostrar_admin  = false /*--}}
 		          {{--*/ $Entidad        = $Entidad /*--}}
 		          @include('admin.clientes.partes.lista')
-			@endforeach
+			   @endforeach
+				</div>
+			
+			
 			</div>
 		</div>
 	</div>
