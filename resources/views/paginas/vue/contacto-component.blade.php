@@ -45,13 +45,12 @@ enviarMensaje:function(){
             {  
                gtag('event', 'contacto');
                vue.se_envio = true; 
-               vue.mensaje_se_envio = data.Validacion_mensaje; 
-              
+               vue.mensaje_se_envio = data.Validacion_mensaje;               
                vue.cargando = false;
             }
             else
             {
-              $.notify(response.data.Validacion_mensaje, "error");
+             
               vue.cargando = false;
               vue.errores = data.Errores;
             }
