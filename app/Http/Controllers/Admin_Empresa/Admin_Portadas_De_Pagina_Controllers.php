@@ -11,8 +11,8 @@ use App\Repositorios\PortadaDePaginaRepo;
 use App\Repositorios\ImagenRepo;
 use App\Helpers\HelpersGenerales;
 use App\Managers\portada_de_pagina_manager;
-use App\Interfaces\entidadCrudControllerInterface;
-use App\Controllers\Traits\entidadesControllerComunesCrud;
+use App\Http\Controllers\Interfaces\entidadCrudControllerInterface;
+use App\Http\Controllers\Traits\entidadesControllerComunesCrud;
 
 
 
