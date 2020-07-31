@@ -26,7 +26,7 @@
 
    <div class="row">
 
-      <div class="col-md-6" v-if="errores" >
+      <div class="col-12 p-3 background-gris-00" v-if="errores" >
         <div :class="classTextColor" v-for="error in errores">@{{error}}</div>
       </div>
 
