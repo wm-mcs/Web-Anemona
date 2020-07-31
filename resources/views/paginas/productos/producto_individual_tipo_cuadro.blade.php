@@ -4,7 +4,7 @@
 <a href="{{$Entidad->route}}" >
 <div class="producto-cuadro-contiene-img">
   
-    <img src="{{$Entidad->url_img}}" class="producto-cuadro-img">
+    <img data-src="{{$Entidad->url_img}}" class="producto-cuadro-img">
   
 </div>
 </a>

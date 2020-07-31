@@ -66,7 +66,7 @@ mounted: function () {
 
 template:' 
 
-   <div  v-lazy-container="{ selector: 'img' }" v-if="productos_novedades.length" class="Padding-de-secciones container products-wrap border-top-0">
+   <div  v-if="productos_novedades.length" class="Padding-de-secciones container products-wrap border-top-0">
       
        <h2 class="Titulos-de-secciones">Novedades en equipamiento para gimnasios</h2>
       
