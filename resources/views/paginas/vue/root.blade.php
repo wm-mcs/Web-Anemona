@@ -10,6 +10,7 @@ var app = new Vue({
       resolucion_tablet: 640,
       resolucion_pc: 990,
       scrolled:false,
+      scroll:false,
       scrollY:0,
       cargando:false,
       
@@ -143,6 +144,7 @@ var app = new Vue({
           if(window.scrollY > 0)
           {
            this.scrolled = true;
+           this.scroll   = true;
 
           }
           else
