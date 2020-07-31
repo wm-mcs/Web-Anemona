@@ -43,6 +43,25 @@ abstract class BaseRepo
     }
 
     /**
+     * Me trae la primera entidad que exista según ese atributo. Si no existe devuelve string vacio
+     *
+     * @return objet or string "" sino existe
+     */
+    public function getFirstEntidadSegunAtributo($atributo,$valor)
+    {
+      $Entidades =  $this->getEntidad()
+                         ->where($atributo,$valor)
+                         ->get();
+
+      if($Entidades->count() > 0)
+      {
+        return $Entidades[0];
+      }     
+
+      return '';  
+    }   
+
+    /**
      * Entidades Activas 
      */
     public function getEntidadActivas()
