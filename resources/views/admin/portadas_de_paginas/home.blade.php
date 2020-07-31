@@ -32,7 +32,7 @@
           {{--*/ $Mostrar_admin  = true /*--}}
           {{--*/ $Entidad        = $Entidad /*--}}
           {{--*/ $Route          = $Entidad->route_admin /*--}}
-          @include('admin.'. $Carpeta_view_admin . '.partes.')
+          @include('admin.'. $Carpeta_view_admin . '.partes.lista')
      @endforeach
    </div>
    <div>
