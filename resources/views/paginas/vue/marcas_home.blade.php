@@ -60,7 +60,7 @@ template:'
        <h2 class="Titulos-de-secciones">@{{titulo}}</h2>
       
       
-        <div class="row ">
+        <div class="row justify-content-center">
           <marca-lista v-for="Marca in marcas_ordenadas" 
                            :marca="Marca" 
                            :key="Marca.id"></marca-lista>

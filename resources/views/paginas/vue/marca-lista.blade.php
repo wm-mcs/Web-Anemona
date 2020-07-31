@@ -22,7 +22,7 @@ computed:{
 template:'
  
 
-  <div class="col-6 col-lg-3 mb-4">
+  <div class="col-10 col-lg-3 mb-4">
   	<a :href="marca.route" class="item">
 	    <div class="w-100 ">
 	      <div class="d-flex flex-column align-items-center">
