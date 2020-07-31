@@ -4,7 +4,7 @@
         <div class="container-fluid ">
           <div class="row align-items-center justify-content-between ">
             
-            <div class="col-5 col-lg-3 ">
+            <div class="col-6 col-lg-3 ">
                <a href="{{route('get_home')}}" class="d-block">
                  @yield('logo-imagenes')                  
                </a>
@@ -13,7 +13,7 @@
           
 
             
-              <nav v-if="mostrar_opciones_del_menu" class="col-lg-8 d-flex flex-column align-items-end" role="navigation" :class="getClassMostrarMenuMovil">
+              <nav v-if="mostrar_opciones_del_menu" class="col-lg-9 d-flex flex-column align-items-end" role="navigation" :class="getClassMostrarMenuMovil">
                 <ul :class="getClassNavUlEnMovil" class="d-flex flex-column align-items-start flex-lg-row align-items-lg-center m-0 px-lg-3">     
                   <div v-if="$root.mostrar_para_celuar"  v-on:click="set_mostrar_menu_movil" class="p-2 w-100 text-right titulos-class"><i class="fas fa-times"></i>
                   </div>
