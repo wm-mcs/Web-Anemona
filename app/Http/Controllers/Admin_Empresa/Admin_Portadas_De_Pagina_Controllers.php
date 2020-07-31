@@ -75,18 +75,16 @@ class Admin_Portadas_De_Pagina_Controllers extends Controller implements entidad
 
   public function getImagenMiniaturaSize()
   {
-    return 1200;
+    return 1000;
   }
 
   public function olvidarCachesAsociadoAEstaEntidad()
   {
       HelpersGenerales::helper_olvidar_este_cache('PortadaHome'); 
-      HelpersGenerales::helper_olvidar_este_cache('PortadaPaginasWebPymes'); 
-      HelpersGenerales::helper_olvidar_este_cache('PortadaPaginasWebParaProfesionales'); 
-      HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaGimnasio'); 
-      HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaAcademiasDeBaile'); 
-      HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaGoogleSEM'); 
-      HelpersGenerales::helper_olvidar_este_cache('PortadaBlogs'); 
+      HelpersGenerales::helper_olvidar_este_cache('PortadaServicios'); 
+      HelpersGenerales::helper_olvidar_este_cache('PortadaQuienes'); 
+      HelpersGenerales::helper_olvidar_este_cache('PortadaContacto'); 
+    
 
 
 
