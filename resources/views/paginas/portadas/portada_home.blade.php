@@ -1,10 +1,10 @@
 {{--*/  $Portada   =  $Portada /*--}}
 {{--*/  $Route     = '' /*--}}
 {{--*/ $EsPortada  = true /*--}}
-<div v-lazy-container="{ selector: 'img' }" @if(!isset($EsPortada)) v-if="scrolled" @endif class="site-blocks-cover overlay bg-light" >
+<div v-lazy-container="{ selector: 'img' }" @if(!isset($EsPortada)) v-if="scrolled" @endif class="site-blocks-cover " >
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
+      <div class="col-md-12 my-3 my-lg-5 text-left align-self-center text-intro">
         <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
           <div class="col-8 col-lg-4 " >
             @if(isset($EsPortada) && $EsPortada == true) 

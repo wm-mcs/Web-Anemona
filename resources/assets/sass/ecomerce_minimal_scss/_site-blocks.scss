@@ -1,107 +1,37 @@
 $bg-gray: $color-grey0;
+
 .site-blocks-cover {
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: top;
 	background-position: center center;
-	background: darken($color-white, 2% );
-	position: relative;
 	overflow: hidden;
-	z-index: 9;
-	&.wave {
-		position: relative;
-		&:after {
-			display: none;
-			background-image: url('../images/wave.svg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: top;
-			content: "";
-			position: absolute;
-			height: 100px;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
+	position: relative;
+	.lead, p {
+		font-size: 1.3rem;
+		color: $white;
 	}
-	&.half-bg {
+	&.overlay {
 		position: relative;
-		&:before {
-			display: none;
-			width: 50%;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background: #a2a8d3;
-			content: "";
-			z-index: -1;
-			position: absolute;
-		}
+		
 	}
+	
 	&, & > .container > .row {
-		
+		min-height: 600px;
+		height: calc(100vh);
 	}
-	&.inner-page {
-		&, .row {
+	&.inner-page-cover {
+		&, & > .container > .row {
 			min-height: 400px;
-			height: 700px;
+			height: calc(20vh);		
 		}
 	}
-	h2 {
-		font-size: 14px;
-		font-weight: normal;
-		color: $black;
-		letter-spacing: .2em;
-		text-transform: uppercase;
-	}
-	.featured-hero-product {
-		@include media-breakpoint-down(md) {
-			margin-top: 10%;
-			position: absolute;
-		}
-	}
-	h1 {
-		font-size: 40px;
-		font-weight: 900;
-		color: $black;
-		margin-bottom: 30px;
-		text-transform: uppercase;	
-		@include media-breakpoint-up(md) {
-			font-size: 70px;	
-		}
-	}
-	p {
-		color: lighten($black, 20%);
-		font-size: 20px;
-		line-height: 35px;
-	}
-	.intro-text {
-		font-size: 16px;
-		line-height: 1.5;
+	.text-intro {
+		position: relative;
+		z-index: 2;
 	}
 
-	&.inner-page {
-		.site-block-cover-content {
-			margin-top: 20%;
-			text-align: center;
-			@include media-breakpoint-up(md) {
-				margin-top: 30%;	
-			}
-		}
-		
-	}
-
-	.img-1 {
-		// max-width: 650px;
-		@include media-breakpoint-down(md) {
-			max-width: 400px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-	.btn {
-		padding: 12px 30px;
-	}
-
+	
 }
 
 .products-wrap {
