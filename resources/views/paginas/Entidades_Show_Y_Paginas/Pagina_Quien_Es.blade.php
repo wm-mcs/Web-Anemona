@@ -1,8 +1,8 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') Sobre  {{$Empresa->name}} Uruguay @stop
+@section('titulo') {{$Portada->titulo_de_la_pagina}} @stop
 
-@section('descripcion') Venta y servicio técnico en Uruguay de las principales marcas de equipamientos y accesorios para gimnasios. @stop
+@section('descripcion') {{$Portada->description_de_la_pagina}} @stop
 
 @section('robot') index, follow @stop
 

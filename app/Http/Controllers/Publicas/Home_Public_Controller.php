@@ -176,9 +176,13 @@ class Home_Public_Controller extends Controller
       public function getContacto()
       {
         $Empresa   = $this->EmpresaRepo->getEmpresaDatos();
+
+        $Portada  = Cache::remember('PortadaContacto', 2000, function(){
+                      return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','contacto');
+                      }); 
        
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Contacto', compact('Empresa'));
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Contacto', compact('Empresa','Portada'));
       }
 
       public function getQuienes()
@@ -192,8 +196,11 @@ class Home_Public_Controller extends Controller
         $Marcas    = Cache::remember('todasLasMarcas', 300000, function() {
                         return  $this->MarcaRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
                       });
+        $Portada   = Cache::remember('PortadaQuienes', 2000, function(){
+                      return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','quienes');
+                      }); 
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa','Clientes','Marcas'));
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Quien_Es', compact('Empresa','Clientes','Marcas','Portada'));
       }
 
       public function getServicios()
@@ -206,8 +213,11 @@ class Home_Public_Controller extends Controller
         $Marcas    = Cache::remember('todasLasMarcas', 300000, function() {
                         return  $this->MarcaRepo->getEntidadesActivasOrdendasSegunYCantidad( 'rank', 'desc', null );
                       });
+        $Portada   = Cache::remember('PortadaServicios', 2000, function(){
+                      return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','servicios');
+                      }); 
         
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Servicios', compact('Empresa','Clientes','Marcas'));
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Servicios', compact('Empresa','Clientes','Marcas','Portada'));
       }
 
 

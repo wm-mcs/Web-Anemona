@@ -1,8 +1,8 @@
 @extends('layouts.ecomerce_minimal.layout')
 
-@section('titulo') Servicio de {{$Empresa->name}} Uruguay @stop
+@section('titulo') {{$Portada->titulo_de_la_pagina}} @stop
 
-@section('descripcion') Servicios de mantenimiento mensulaes para gimnasios en Uruguay. @stop
+@section('descripcion') {{$Portada->description_de_la_pagina}} @stop
 
 @section('robot') index, follow @stop
 
