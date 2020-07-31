@@ -45,40 +45,10 @@
 
 
 @section('imagen-grande-cabecera')
-<div class="background_img
-background_img_fixed img_quien " >
-<div class="background-layer-layoute-opasity  d-flex flex-row justify-content-center align-items-center">
-        <div class="container">
-
-          <div class="row d-flex flex-column align-items-start p-4 mt-3 mt-lg-0 p-lg-0">
-            <div class="col-12 col-lg-6 order-2 order-lg-1 ">
-              <div class="">
-               
-                
-                <h1 class="mb-5 titulos-class text-uppercase text-white">Somos Be Fitness </h1>
-                 <div class="row col-6 mb-5">
-                  <a href="{{url()}}">
-                    <img src="{{$Empresa->img_logo_cuadrado}}" class="img-fluid">
-                  </a> 
-                </div>
-                <p class="parrafo-class text-white text-bold mb-5">
-                 Lideres en equipar y mantener gimnasios.
-                </p>                
-               
-                
-                
-                                
-              </div> 
-              
-            </div>
-            
-             
-            
-            
-          </div>
-        </div>
-</div>        
-</div>
+  {{--*/  $Portada   =  $Portada /*--}}
+  {{--*/  $Route     = '' /*--}}
+  {{--*/ $EsPortada  = true /*--}}
+  @include('paginas.portadas.partials.portada_molde')
 @stop
 
 
