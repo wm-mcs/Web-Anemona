@@ -61,6 +61,7 @@ elixir(function(mix) {
         'ecomerce_minimal/main.js',
         'Plugins/Plug-Notify.js',
         'Plugins/Plug-lazyLoadXT.js',
+        'Plugins/Vue-Lazyload.js',  
        
 
        ],'public/js/ecomerceApp.js');

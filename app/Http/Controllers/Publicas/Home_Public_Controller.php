@@ -10,6 +10,7 @@ use App\Repositorios\CategoriaRepo;
 use App\Servicios\ArregloDeEntidades;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\ClienteRepo;
+use App\Repositorios\PortadaDePaginaRepo;
 
 
 
@@ -22,15 +23,17 @@ class Home_Public_Controller extends Controller
     protected $ArregloDeEntidades;
     protected $MarcaRepo;
     protected $ClienteRepo;
+    protected $PortadaDePaginaRepo;
   
 
     public function __construct(
-                                EmpresaRepo        $EmpresaRepo,
-                                ProductoRepo       $ProductoRepo,
-                                CategoriaRepo      $CategoriaRepo, 
-                                ArregloDeEntidades $ArregloDeEntidades,
-                                MarcaRepo          $MarcaRepo,
-                                ClienteRepo        $ClienteRepo    )
+                                EmpresaRepo          $EmpresaRepo,
+                                ProductoRepo         $ProductoRepo,
+                                CategoriaRepo        $CategoriaRepo, 
+                                ArregloDeEntidades   $ArregloDeEntidades,
+                                MarcaRepo            $MarcaRepo,
+                                ClienteRepo          $ClienteRepo,
+                                PortadaDePaginaRepo  $PortadaDePaginaRepo   )
     {
        
         $this->EmpresaRepo         = $EmpresaRepo;
@@ -39,6 +42,7 @@ class Home_Public_Controller extends Controller
         $this->ArregloDeEntidades  = $ArregloDeEntidades;
         $this->MarcaRepo           = $MarcaRepo;
         $this->ClienteRepo         = $ClienteRepo;
+        $this->PortadaDePaginaRepo = $PortadaDePaginaRepo;
         
     }
 
@@ -55,8 +59,12 @@ class Home_Public_Controller extends Controller
 
         $this->ArregloDeEntidades->AjustoCantidadDeProductosActivosDeCategorias();
 
+        $Portada  = Cache::remember('PortadaHome', 2000, function(){
+                      return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
+                      }); 
 
-        return view('paginas.home.home', compact('Empresa','Clientes'));
+
+        return view('paginas.home.home', compact('Empresa','Clientes','Portada'));
     }
 
       public function getCategoriasActivas()
