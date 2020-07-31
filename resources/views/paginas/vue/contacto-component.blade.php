@@ -46,7 +46,7 @@ enviarMensaje:function(){
                gtag('event', 'contacto');
                vue.se_envio = true; 
                vue.mensaje_se_envio = data.Validacion_mensaje; 
-               $.notify(response.data.Validacion_mensaje, "success");
+              
                vue.cargando = false;
             }
             else
@@ -58,7 +58,7 @@ enviarMensaje:function(){
            
            }).catch(function (error){
 
-                $.notify(error, "error");  
+                
                 vue.cargando = false;   
             
            });
