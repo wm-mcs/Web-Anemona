@@ -1,13 +1,13 @@
 <header-nav :scroll="true" color_tipo="simple" inline-template>
-  <header class="py-4 " :class="getClassHeader" role="banner">
+  <header class="py-2 " :class="getClassHeader" role="banner">
 
         <div class="container-fluid ">
           <div class="row align-items-center justify-content-between ">
             
-            <div class="col-5 col-lg-3 p-lg-2">
+            <div class="col-5 col-lg-3 ">
                <a href="{{route('get_home')}}" class="d-block">
-                  <img v-show="$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid " >
-                  <img v-show="!$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid ">
+                  <img v-show="$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid p-3" >
+                  <img v-show="!$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid p-3">
                </a>
             </div> 
 
