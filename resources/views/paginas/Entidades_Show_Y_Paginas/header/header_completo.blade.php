@@ -25,9 +25,8 @@
 
                     <categorias :empresa="Empresa" :categorias="Categorias" ></categorias>
                     {{-- <marcas-nav v-if="Marcas.length" v-for="Marca in marcas_elite" :marca="Marca" :key="Marca.id"></marcas-nav>  --}}
-
-                    ClassItemsNav" href="#about-section" class="nav-link">Sobre Mauricio Costanzo</a></li>
-                  <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="#services-section" class="nav-link">Servicios</a></li>       --}}     
+                   
+                  <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="#services-section" class="nav-link">Servicios</a></li>          
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getServicios')}}">Servicios</a></li>
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getContacto')}}" >Contacto</a>
