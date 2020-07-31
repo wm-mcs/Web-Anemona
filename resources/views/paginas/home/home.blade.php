@@ -12,6 +12,13 @@
 
 @section('palabras_claves') {{$Empresa->palabras_claves_empresa}} @stop
 
+@section('logo-imagenes')
+
+<img v-show="$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid p-3" >
+<img v-show="!$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid p-3">
+
+@stop
+
 @section('og-propiedades') 
 
 <meta property="og:url"                content="{{url()}}" />

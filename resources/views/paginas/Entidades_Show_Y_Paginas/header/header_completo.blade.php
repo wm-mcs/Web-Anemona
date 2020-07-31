@@ -6,8 +6,7 @@
             
             <div class="col-5 col-lg-3 ">
                <a href="{{route('get_home')}}" class="d-block">
-                  <img v-show="$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid p-3" >
-                  <img v-show="!$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid p-3">
+                 @yield('logo-imagenes')                  
                </a>
             </div> 
 
