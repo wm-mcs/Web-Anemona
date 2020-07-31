@@ -24,7 +24,7 @@
 </div>
 @else 
 {{--  E s t a   e s   p a r a   e l   p ú b l i c o  --}}
-<div class="col-6 col-lg-3 mb-4">
+<div class="col-10 col-lg-3 mb-4">
     <div class="w-100 ">
      <a href="{{$Route}}" >
       <div class="d-flex flex-column align-items-center">
