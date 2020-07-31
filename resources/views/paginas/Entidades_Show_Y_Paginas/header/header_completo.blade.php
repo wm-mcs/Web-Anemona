@@ -36,7 +36,7 @@
                       </span>
 
                      {{-- M a r c a s   e l i t e  --}}
-                       <menu-primer-triada  v-for="Marca in marcas_elite" v-if="$root.Marcas.length" :name_padre="Marca.name_arreglado" :url_padre="Marca.route" >
+                       <menu-primer-triada  v-for="Marca in $root.marcas_elite" v-if="$root.Marcas.length" :name_padre="Marca.name_arreglado" :url_padre="Marca.route" >
                       
                       <template slot="opciones" >
                         <li v-for="marca in Marca.categorias_de_marca" class="header-li-primer-tria">
