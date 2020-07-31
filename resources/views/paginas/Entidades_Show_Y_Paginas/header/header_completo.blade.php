@@ -39,8 +39,8 @@
                        <menu-primer-triada  v-for="Marca in $root.marcas_elite" v-if="$root.Marcas.length" :name_padre="Marca.name_arreglado" :url_padre="Marca.route" >
                       
                       <template slot="opciones" >
-                        <li v-for="marca in Marca.categorias_de_marca" class="header-li-primer-tria">
-                           <a :href="marca.route">@{{marca.name_arreglado}}</a>
+                        <li v-for="categoria in Marca.categorias_de_marca" class="header-li-primer-tria">
+                           <a :href="categoria.route_marca_producto">@{{categoria.name_arreglado}}</a>
                         </li>
                       </template> 
                      </menu-primer-triada> 
