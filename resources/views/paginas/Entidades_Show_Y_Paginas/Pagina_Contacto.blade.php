@@ -135,7 +135,7 @@ background_img_fixed img_contacto " >
   @stop
 @section('vue')
 
-
+   
    @include('paginas.vue.contacto-component')
    @include('paginas.vue.categorias_componente')   
    @include('paginas.vue.root')

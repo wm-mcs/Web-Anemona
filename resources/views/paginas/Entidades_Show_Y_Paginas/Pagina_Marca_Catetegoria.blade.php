@@ -105,7 +105,7 @@
   @stop
 @section('vue')
 
-
+   @include('paginas.vue.header-component')
    @include('paginas.vue.productos_show_interface')
    @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')

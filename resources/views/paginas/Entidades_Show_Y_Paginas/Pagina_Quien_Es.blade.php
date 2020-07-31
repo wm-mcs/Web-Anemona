@@ -34,7 +34,7 @@
 
 
 @section('header-menu-iconos') 
- 
+ @include('paginas.Entidades_Show_Y_Paginas.header.header_completo')
 @stop
 
 
@@ -163,7 +163,7 @@ Boton-Primario-Sin-Relleno my-4" href="{{route('getServicios')}}"> Explorá los 
   @stop
 @section('vue')
 
-
+  @include('paginas.vue.header-component')
    @include('paginas.vue.contacto-component')
    @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')
