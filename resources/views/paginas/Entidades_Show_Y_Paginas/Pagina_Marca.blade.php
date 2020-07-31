@@ -80,7 +80,7 @@
                 
                  <div class="row">
                     <div class="col-lg-6 p-1">
-                      <a href="#catalogo" class="Boton-Primario-Relleno Boton-Fuente-Chica">Ver catálogo</a> 
+                      <a href="#intro" class="Boton-Primario-Relleno Boton-Fuente-Chica">Ver catálogo</a> 
                     </div>
                                       
                  </div>                 
@@ -103,7 +103,7 @@
 
 @section('contenido')
 
-    
+  <span id="intro"></span>    
   <section class="site-section background-gris-1">
     <div class="container">
       <h2 class="parrafo-class color-text-gris text-center">
