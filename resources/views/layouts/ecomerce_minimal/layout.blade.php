@@ -60,7 +60,7 @@
 
   @yield('vue-componenetes-cdn')
 
-  <script type="text/javascript">
+  <script async type="text/javascript">
     @yield('vue-componenetes-cdn')
     @include('paginas.vue.VueLazyload')
     @yield('vue')  
