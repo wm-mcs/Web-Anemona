@@ -1,9 +1,9 @@
 {{-- Se necesita asignar la variable $Portada y $Route. Si $Route no se quiere definir se le dará valor "" (string vacio) y toamara el link que viene del objeto portada y se usara scrool_to en el llamado a la acción --}}
 
-<div v-lazy-container="{ selector: 'img' }" @if(!isset($EsPortada)) v-if="scrolled" @endif class="site-blocks-cover overlay bg-light" >
+<div  @if(!isset($EsPortada)) v-if="scrolled" @endif class="site-blocks-cover overlay bg-light" >
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
+      <div class="col-md-12 mt-lg-7 text-left align-self-center text-intro">
         <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
           <div class="col-8 col-lg-4 " >
             @if(isset($EsPortada) && $EsPortada == true) 
