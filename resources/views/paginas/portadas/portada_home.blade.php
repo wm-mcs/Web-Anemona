@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
       <div class="col-md-12 my-3 my-lg-5 text-left align-self-center text-intro">
         <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
-          <div class="col-8 col-lg-4 " >
+          <div class="col-10 col-lg-7 " >
             @if(isset($EsPortada) && $EsPortada == true) 
               <h1  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo}}</h1>
               @if($Portada->sub_titulo != '')
@@ -29,16 +29,16 @@
               @endif 
             @endif     
             <div class="contiene-listado-de-opciones-portada">
-                  <div class="contiene-item">
+                  <div class="contiene-item text-white">
                       Asesoría en armado de salas en 3D y renovaciones
                   </div>
-                   <div class="contiene-item">
+                   <div class="contiene-item text-white">
                      Venta de equipos comerciales, hogar e instalaciones
                   </div>
-                  <div class="contiene-item">
+                  <div class="contiene-item text-white">
                       Servicio de mantenimiento y service
                   </div>  
-                  <div class="contiene-item">
+                  <div class="contiene-item text-white">
                       Servicio de alquiler de equipos
                   </div>                 
             </div>      
