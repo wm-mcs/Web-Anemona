@@ -46,6 +46,7 @@
 
 @section('contenido')
 
+     <span id="intro"></span>
      @include('paginas.home.BeFitnessMarcaDestacada')
 
      <novededades :empresa="Empresa"></novededades>
