@@ -79,14 +79,14 @@ $altura-imagen-miniaturas:150px; /* D e f i n o   l a   a l t u r a */
 
   /* L a s   u s o   p a r a   l a s   m a r c a s  */
   .img-cover-con-formato-rectangular{
-    width:250px;    
+    width:100%;     
     height:125px;
     object-fit: cover;
     display: block;   
   }
     @media (min-width: $BrackPoint-Secundario){
       .img-cover-con-formato-rectangular{
-             
+         width:250px;     
       }
     } 
     @media (min-width: $BrackPoint-Tercer){

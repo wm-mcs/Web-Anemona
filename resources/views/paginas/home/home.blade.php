@@ -56,9 +56,9 @@
      <span id="intro"></span>
      @include('paginas.home.BeFitnessMarcaDestacada')
 
-     <novededades :empresa="Empresa"></novededades>
-     <categoria-home-section :empresa="Empresa" :categorias="Categorias"></categoria-home-section>
-     <marcas-home 
+     <novededades  v-lazy-container="{ selector: 'img' }" :empresa="Empresa"></novededades>
+     <categoria-home-section  v-lazy-container="{ selector: 'img' }":empresa="Empresa" :categorias="Categorias"></categoria-home-section>
+     <marcas-home  v-lazy-container="{ selector: 'img' }"
                   :titulo="Nombres_secciones_marcas.titulo_marcas_distribuimos"
                   :marcas="Marcas">
        
