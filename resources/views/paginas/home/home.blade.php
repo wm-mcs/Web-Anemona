@@ -31,7 +31,7 @@
 
 
 @section('header-menu-iconos') 
- @include('paginas.home.home_nav_general')
+ @include('paginas.Entidades_Show_Y_Paginas.header.header_completo')
 @stop
 
 
@@ -66,6 +66,7 @@
  @include('paginas.home.home_footer')
 @stop
 @section('vue')
+   @include('paginas.vue.header-component')
    @include('paginas.vue.marcas_nav')
    @include('paginas.vue.marca-lista')
    @include('paginas.vue.marcas_home')

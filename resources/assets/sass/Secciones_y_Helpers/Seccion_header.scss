@@ -1,0 +1,149 @@
+.header-nav-clase-base{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;	
+	z-index: 100;
+}
+
+.header-nav__on_action{
+  width:100%;
+  height: 100vh;
+  background-color: rgba($color-black,.5);  
+  @include flexbox;       
+  @include flex-direction(column);
+  @include align-items(flex-start); 
+  position:absolute;
+  top: 0;  
+  padding: 3px;
+  overflow-y: scroll;
+}
+ .header-nav-ul__on_action{  
+  width: 65%;
+  padding: 10px;  
+ }
+
+.header-nav-ul-li{
+	list-style: none;
+	font-size: 16px;
+	text-transform:uppercase;
+  position: relative;
+  padding: .5rem 1rem;
+}
+.header-nav-ul-li__celular{
+  list-style: none;
+  font-size: 16px;
+  text-transform:uppercase;  
+  line-height: 3;
+}
+
+  .header-nav-ul-li__en_movil{
+    color:$color-3;
+    font-weight: normal;
+
+  }
+  .header-nav-ul-li__en_movil:hover{
+    color:$color-2;
+  }
+
+
+   /*  C o l o r e s   d e   t e x t o s  */
+  .text-color-items__blanco{
+    color: darken($color-white, 10% );
+  }
+    .text-color-items__blanco:hover{
+     color: $color-white;
+    }
+
+  .text-color-items__negro{
+    color: lighten($color-black,30%);
+  } 
+    .text-color-items__negro:hover{
+      color: $color-3;
+    }
+
+  .header-nav-ul-general{  	
+  	font-weight: normal;
+  }   
+
+
+
+  /*  S u b   m e n ú   e l   U l   q u e   l o   c o n t i e n e  */
+  .header-ul-primer-tria{
+    border-top:5px solid $color-3;
+    position: absolute;
+    top:40px;
+    width: 250px;
+    max-width: 250px;    
+    padding: 0;
+    z-index:1200;   
+  }
+
+  .header-ul-primer-tria__celular{
+    padding: 4px 4px 4px 4px;    
+    width: 100%;   
+    background-color: $color-grey-1;
+  }
+   /*  E l   L i   d e   e s e   m e n ú  */ 
+   .header-li-primer-tria{
+    padding: 8px 12px;    
+    width: 100%;
+    text-align: left;    
+    font-size: 14px;
+    list-style: none;    
+    line-height: 3;
+   }
+   
+
+   @media (min-width: $BrackPoint-Secundario){
+     .header-li-primer-tria{
+      padding: 8px 10px; 
+      border-bottom:1px solid $color-grey1;
+      background-color: $color-grey0;
+      position: relative;
+     }
+     .header-li-primer-tria:hover{
+      background-color: $color-grey-2;    
+     }
+   } 
+
+
+
+  /*  S u b   m e n ú   e l   U l   q u e   l o   c o n t i e n e  */
+  .header-ul-segunda-tria{
+    border-top:5px solid $color-3;
+    position: absolute;
+    top:-5px;
+    left: 100%;
+    width: 100%;
+    max-width: 150px;   
+    padding: 0;       
+  }
+  .header-ul-segunda-tria__celular{
+    background-color: $color-grey0;
+    width: 100%;   
+    padding: 0px 0px 0px 20px; 
+  }
+     /*  E l   L i   d e   e s e   m e n ú  */ 
+     .header-li-segunda-tria{
+      padding: 8px 8px;    
+      width: 100%;
+      text-align: left;      
+      font-size: 14px;
+      list-style: none;
+      }     
+
+      @media (min-width: $BrackPoint-Secundario){
+       .header-li-segunda-tria{
+        padding: 8px 8px;          
+        background-color: $color-grey0;
+        
+        }
+       .header-li-segunda-tria:hover{
+        background-color: $color-grey-2;
+        }
+     } 
+ 
+
+
+  
