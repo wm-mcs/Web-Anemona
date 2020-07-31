@@ -24,7 +24,7 @@
   </head>
   <body>
   
-  <div id="app" class="site-wrap">
+  <div id="app"  v-lazy-container="{ selector: 'img' }" class="site-wrap">
     
 
    
