@@ -99,7 +99,7 @@ var app = new Vue({
 
              if(error.status != 200)
              {  vue.cargando = false;
-                $
+                
              }
 
                      
@@ -116,25 +116,13 @@ var app = new Vue({
         {
           return false;
         }
-      }
-      ,
-      handleScroll:function() {
-          
-
-          if(window.scrollY > 0)
-          {
-           this.scrolled = true;
-           this.scroll   = true;
-
-          }
-          else
-          {
-           
-          }  
-
-          this.scrollY = window.scrollY;        
-
       },
+      handleScroll:function(){
+       this.scrolled = window.scrollY > 0;
+
+      }         
+
+      
 
 },
 computed:{
