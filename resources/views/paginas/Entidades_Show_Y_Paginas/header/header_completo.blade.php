@@ -20,10 +20,10 @@
                   
                     <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('get_home')}}" >Inicio</a></li>
 
-                     <menu-primer-triada  v-if="$root.categorias.length" name_padre="Categorías" url_padre="{{route('get_home')}}" >
+                     <menu-primer-triada  v-if="$root.Categorias.length" name_padre="Categorías" url_padre="{{route('get_home')}}" >
                       /* O p c i o n e s   d e l   m e n ú   */
                       <template slot="opciones" >
-                        <li v-for="categoria in $root.categorias" class="header-li-primer-tria">
+                        <li v-for="categoria in $root.Categorias" class="header-li-primer-tria">
                            <a :href="categoria.route">@{{categoria.name_arreglado}}</a>
                         </li>
                       </template> 
