@@ -5,7 +5,7 @@
 				Nuestras marcas ...
 			</div>
 			@foreach($Marcas as $Entidad )	
-				  {{--*/ $Mostrar_admin  = false /*--}}
+				      {{--*/ $Mostrar_admin  = false /*--}}
 		          {{--*/ $Entidad        = $Entidad /*--}}
 		          {{--*/ $Route          = $Entidad->route /*--}}
 		          @include('admin.marcas.partes.lista')
