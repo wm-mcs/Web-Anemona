@@ -9,8 +9,7 @@ var app = new Vue({
       resolucion_celular: 320,
       resolucion_tablet: 640,
       resolucion_pc: 990,
-      scrolled:false,
-      scroll:false,
+      scrolled:false,      
       scrollY:0,
       cargando:false,
       
@@ -63,14 +62,14 @@ var app = new Vue({
               }
               else
               { vue.cargando = false;
-                $.notify(response.data.Validacion_mensaje, "error");
+                
               }
              
              }).catch(function (error){
 
                if(error.status != 200)
                {  vue.cargando = false;
-                  $.notify(error.status, "error");
+                  
                }
 
                        
@@ -93,14 +92,14 @@ var app = new Vue({
             else
             {
               vue.cargando = false;
-              $.notify(response.data.Validacion_mensaje, "error");
+              
             }
            
            }).catch(function (error){
 
              if(error.status != 200)
              {  vue.cargando = false;
-                $.notify(error.status, "error");
+                $
              }
 
                      
@@ -117,27 +116,8 @@ var app = new Vue({
         {
           return false;
         }
-      },
-      mostrar_para_grande:function(){
-        if(this.windowWidth > this.resolucion_pc)
-        {
-          return true;
-        }  
-        else
-        {
-         return false;
-        }
-      },
-      mostrar_para_celuar:function(){
-       if(this.windowWidth <= this.resolucion_pc)
-        {
-          return true;
-        }  
-        else
-        {
-         return false;
-        }
-      },
+      }
+      ,
       handleScroll:function() {
           
 
@@ -171,6 +151,26 @@ computed:{
   },
   marcas_elite:function(){
     return this.Marcas.filter(marca => marca.rank > 2);
+  },
+  mostrar_para_grande:function(){
+        if(this.windowWidth > this.resolucion_pc)
+        {
+          return true;
+        }  
+        else
+        {
+         return false;
+        }
+  },
+  mostrar_para_celuar:function(){
+       if(this.windowWidth <= this.resolucion_pc)
+        {
+          return true;
+        }  
+        else
+        {
+         return false;
+        }
   }
 },
 watch: {
