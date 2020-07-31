@@ -50,6 +50,8 @@
 
 @section('contenido')
 
+
+           <span id="intro"></span>
            <div class="container">
             <div class="row mb-5" >
 

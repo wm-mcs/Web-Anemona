@@ -55,7 +55,7 @@
 @section('contenido')
 
            
-             
+  <span id="intro"></span>          
   <div class="site-section ">
     <div class="container">
       <h2 class="mb-4 sub-titulos-class text-center text-color-primary text-bold">
