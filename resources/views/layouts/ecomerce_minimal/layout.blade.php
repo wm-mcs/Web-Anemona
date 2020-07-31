@@ -54,7 +54,9 @@
        <script  src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script> 
       @endif
   @endif
-  
+
+  {{-- A x i o s --}}
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> 
 
   @yield('vue-componenetes-cdn')
 
