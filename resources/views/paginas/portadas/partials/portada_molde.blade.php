@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       <div class="col-md-12 mt-lg-7 text-left align-self-center text-intro">
         <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
-          <div class="col-8 col-lg-4 " >
+          <div class="col-10 col-lg-6 " >
             @if(isset($EsPortada) && $EsPortada == true) 
               <h1  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo}}</h1>
               @if($Portada->sub_titulo != '')
