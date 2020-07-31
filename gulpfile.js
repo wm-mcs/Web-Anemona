@@ -17,27 +17,10 @@ elixir(function(mix) {
    
     
      mix.sass('admin.scss','public/css'); 
-
      mix.sass('ecomerce_minimal_scss/style.scss','public/css/ecomerce_minimal.css');
 
      
-    mix.scripts([
-        
-        'Template_creative/jquery.js',
-        'Template_creative/bootstrap.bundle.js',
-        'Template_creative/jquery.easing.js',        
-        'Template_creative/scrollreveal.js',
-        'Template_creative/jquery.magnific-popup.js',
-        'Template_creative/creative.js',
-        'Template_creative/jquery.easing.compatibility.js',
-        'Plugins/Flickity.js',
-        'Plugins/Plug-lazyLoadXT.js',
-        'Customs/sliders.js',
-        'Customs/team.js',
-        'Customs/noticias_blog.js'
 
-
-       ]);
 
     mix.scripts([
         
@@ -63,7 +46,7 @@ elixir(function(mix) {
 
 
     elixir(function(mix) {
-            mix.version(['css/admin.css','css/ecomerce_minimal.css' ,'js/all.js','js/admin.js','js/ecomerceApp.js']); 
+            mix.version(['css/admin.css','css/ecomerce_minimal.css' ,'js/admin.js','js/ecomerceApp.js']); 
     });
 
     
