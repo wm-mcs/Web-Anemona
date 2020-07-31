@@ -23,7 +23,7 @@
                     <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('get_home')}}" >Inicio</a></li>
 
 
-                    <categorias :empresa="Empresa" :categorias="Categorias" ></categorias>
+                    <categorias :empresa="$root.Empresa" :categorias="$root.Categorias" ></categorias>
                     {{-- <marcas-nav v-if="Marcas.length" v-for="Marca in marcas_elite" :marca="Marca" :key="Marca.id"></marcas-nav>  --}}
                    
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="#services-section" class="nav-link">Servicios</a></li>          
