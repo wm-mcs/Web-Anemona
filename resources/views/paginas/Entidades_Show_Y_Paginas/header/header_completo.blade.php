@@ -20,8 +20,9 @@
                   
                     <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('get_home')}}" >Inicio</a></li>
 
+                     {{-- C a t e g o r í a s --}}
                      <menu-primer-triada  v-if="$root.Categorias.length" name_padre="Categorías" url_padre="{{route('get_home')}}" >
-                      /* O p c i o n e s   d e l   m e n ú   */
+                      
                       <template slot="opciones" >
                         <li v-for="categoria in $root.Categorias" class="header-li-primer-tria">
                            <a :href="categoria.route">@{{categoria.name_arreglado}}</a>
@@ -33,8 +34,23 @@
                           <div class="cssload-speeding-wheel"></div>
                         </div>
                       </span>
+
+                     {{-- M a r c a s   e l i t e  --}}
+                       <menu-primer-triada  v-for="Marca in marcas_elite" v-if="$root.Marcas.length" :name_padre="Marca.name_arreglado" :url_padre="Marca.route" >
+                      
+                      <template slot="opciones" >
+                        <li v-for="marca in Marca.categorias_de_marca" class="header-li-primer-tria">
+                           <a :href="marca.route">@{{marca.name_arreglado}}</a>
+                        </li>
+                      </template> 
+                     </menu-primer-triada> 
+                      <span v-else class="contiene-el-spiner">
+                        <div class="cssload-container">
+                          <div class="cssload-speeding-wheel"></div>
+                        </div>
+                      </span>
                    
-                    {{-- <marcas-nav v-if="Marcas.length" v-for="Marca in marcas_elite" :marca="Marca" :key="Marca.id"></marcas-nav>  --}}
+                   
                    
                         
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>

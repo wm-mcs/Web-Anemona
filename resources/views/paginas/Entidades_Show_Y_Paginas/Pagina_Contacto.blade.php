@@ -114,7 +114,7 @@
 
    
    @include('paginas.vue.contacto-component')
-   @include('paginas.vue.categorias_componente')   
+    
    @include('paginas.vue.root')
 @stop
 

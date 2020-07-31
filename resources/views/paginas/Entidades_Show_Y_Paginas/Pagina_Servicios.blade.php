@@ -146,11 +146,6 @@ Boton-Primario-Sin-Relleno my-4" href="{{route('getContacto')}}"> Coordiná ahor
   @stop
 @section('vue')
 
-   @include('paginas.vue.header-component')
-  
-   @include('paginas.vue.marcas_nav')
-   @include('paginas.vue.marca-lista')
-   @include('paginas.vue.marcas_home') 
-   @include('paginas.vue.categorias_componente')
+   @include('paginas.vue.header-component') 
    @include('paginas.vue.root')
 @stop

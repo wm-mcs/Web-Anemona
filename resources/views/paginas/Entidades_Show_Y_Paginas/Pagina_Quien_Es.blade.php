@@ -138,15 +138,6 @@ Boton-Primario-Sin-Relleno my-4" href="{{route('getServicios')}}"> Explorá los 
   @stop
 @section('vue')
 
-  @include('paginas.vue.header-component')
-   @include('paginas.vue.contacto-component')
-   @include('paginas.vue.marcas_nav')
-   @include('paginas.vue.marca-lista')
-   @include('paginas.vue.marcas_home')
-   @include('paginas.vue.categorias_home_section_individual_componente')
-   @include('paginas.vue.categorias_home_section_componente')
-   @include('paginas.vue.novedades_componente')
-   @include('paginas.vue.categorias_componente')
-   @include('paginas.vue.producto_lista_component')
+   @include('paginas.vue.header-component')   
    @include('paginas.vue.root')
 @stop
