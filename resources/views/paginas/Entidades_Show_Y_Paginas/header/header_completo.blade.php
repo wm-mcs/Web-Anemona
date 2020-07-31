@@ -6,8 +6,8 @@
             
             <div class="col-5 col-lg-3 p-lg-2">
                <a href="{{route('get_home')}}" class="d-block">
-                  <img v-if="$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid " key="img-logo-1">
-                  <img v-else :data-src="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid " key="img-logo-2">
+                  <img v-if="$root.scrolled" :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid " :key="img-logo-1">
+                  <img v-else :data-src="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid " :key="img-logo-2">
                </a>
             </div> 
 
