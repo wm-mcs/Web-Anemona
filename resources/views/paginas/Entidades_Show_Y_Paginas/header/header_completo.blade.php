@@ -1,14 +1,13 @@
 <header-nav :scroll="true" color_tipo="simple" inline-template>
-  <header class="py-4 " :class="getClassHeader" role="banner">
+  <header v-lazy-container="{ selector: 'img' }" class="py-4 " :class="getClassHeader" role="banner">
 
         <div class="container-fluid ">
           <div class="row align-items-center justify-content-between ">
             
-            <div class="col-6 col-lg-2">
-             <a href="{{route('get_home')}}" class="text-left titulos-class" :class="getClassColorElement">
-              <i class="fas fa-code"></i>
-               
-
+            <div class="col-6 col-lg-4">
+             <a href="{{route('get_home')}}" class="d-block">
+                <img v-if="scrolled" :data-src="Empresa.img_logo_horizontal" class="img-fluid ">
+                <img v-else :data-src="Empresa.img_logo_horizontal_blanco"  class="img-fluid ">
              </a>
             </div> 
 
@@ -31,6 +30,7 @@
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getServicios')}}">Servicios</a></li>
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getContacto')}}" >Contacto</a>
                   </li>
+                  <img  data-src="{{url()}}/imagenes/Pais/bandera-de-uruguay.jpg" class="icono-de-uruguay">
                   
                 </ul>
               </nav> 
