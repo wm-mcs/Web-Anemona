@@ -1,3 +1,15 @@
+  <div class="p-5 background-gris-2">
+    <div class="container">
+      <div class="row justify-content-center">
+        <a class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno my-4" :href="Empresa.link_whatsapp_send">
+  
+  <i class="fab fa-whatsapp"></i> Comenzar chat por Whatsapp para coordinar visita o por más información sobre nuestros productos y servicios <i class="fas fa-angle-double-right"></i>
+</a>
+      </div>
+    </div>
+
+  </div>  
+
  <footer class="site-footer custom-border-top">
       <div class="container">
         <div class="row">
