@@ -18,7 +18,7 @@ class Empresa extends Model
      * @var array
      */
     protected $fillable = ['name', 'description'];
-    protected $appends  = ['img_logo_horizontal','img_logo_horizontal_blanco'];
+    protected $appends  = ['img_logo_horizontal','img_logo_horizontal_blanco','link_whatsapp_send'];
  
     /**
      * para verificar si no es null o no es cadena vacia
@@ -145,7 +145,7 @@ class Empresa extends Model
     public function getLinkWhatsappSendAttribute()
     {
 
-        $numero  = '598'. substr(trim($this->whatsapp_empresa),1);
+        $numero  = '598'. substr(trim($this->numero_whatsapp_ya_arreglado),1);
         $mensaje = 'Hola';
         $url = 'https://api.whatsapp.com/send?phone='. $numero .'&text='. $mensaje;
 

@@ -62,7 +62,7 @@
                   </div>
                   
                   <p class="parrafo-class color-text-gris text-center">Dirección: 
-                     <strong>Caicobe 3363 - 4044 Montevideo - Uruguay</strong>
+                     <strong>@{{Empresa.direccion}}</strong>
                    </p>
                 </div>
                 <div class="col-6 col-lg-4 p-2 p-lg-4">
@@ -83,6 +83,15 @@
                   
                   <p class="parrafo-class color-text-gris text-center mb-2"> info@befitness.com.uy</p>
                   <p class="parrafo-class color-text-gris text-center"> administracion@befitness.com.uy</p>
+                </div>
+                <div class="col-6 col-lg-4 p-2 p-lg-4">
+                  <a :href="Empresa.link_whatsapp_send">
+                  <div class=" titulos-class text-center text-color-primary mb-4">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  </a>
+                  
+                  <p class="parrafo-class color-text-gris text-center mb-2"> Tocar icono para comenzar chat por Whatsapp <i class="fas fa-hand-point-up"></i></p>                  
                 </div>
 
 

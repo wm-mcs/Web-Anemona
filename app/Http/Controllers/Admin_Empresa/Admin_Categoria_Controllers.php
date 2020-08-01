@@ -58,8 +58,7 @@ class Admin_Categoria_Controllers extends Controller
       //actualizo Cache
       $this->CategoriaRepo->actualizarCache('CategoriasActivas');  
 
-      //para la imagen
-      $this->CategoriaRepo->setImagen($Categoria,$Request,'img','Categoria/', $Categoria->name,'.png'); 
+     
 
      return redirect()->route('get_admin_categorias')->with('alert', 'Creado Correctamente');
     
@@ -84,7 +83,7 @@ class Admin_Categoria_Controllers extends Controller
     //grabo todo las propiedades
     $this->CategoriaRepo->setEntidadDato($Categoria,$Request,$Propiedades);
 
-    $this->CategoriaRepo->setImagen($Categoria,$Request,'img','Categoria/', $Categoria->name,'.png');
+   
 
     return redirect()->route('get_admin_categorias')->with('alert', 'Editado Correctamente');  
   }

@@ -19,6 +19,12 @@
                   <li><a href="{{route('getQuienes')}}">Sobre Be Fitness</a></li>
                   <li><a href="{{route('getServicios')}}">Servicios</a></li>
                   <li><a href="{{route('getContacto')}}">Contacto</a></li>
+                   @if(Auth::guest())
+                    <li><a href="{{route('auth_login_get')}}">Iniciar sesión</a></li>                   
+                   @else
+                    <li><a href="{{route('get_datos_corporativos')}}">Administrar</a></li>   
+                    <li><a href="{{route('logout')}}">Salir</a></li>                    
+                   @endif
                 </ul>
               </div>
              
