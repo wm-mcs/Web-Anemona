@@ -3,7 +3,7 @@
       <div class="row justify-content-center">
         <a class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno my-4" :href="Empresa.link_whatsapp_send">
   
-  <i class="fab fa-whatsapp"></i> Comenzar chat por Whatsapp para coordinar visita o por más información sobre nuestros productos y servicios <i class="fas fa-angle-double-right"></i>
+  <i class="fab fa-whatsapp"></i> Comenzar chat por Whatsapp para coordinar visita gratis a tus instalaciones o por más información sobre nuestros productos y servicios <i class="fas fa-angle-double-right"></i>
 </a>
       </div>
     </div>
