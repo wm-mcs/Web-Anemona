@@ -24,11 +24,6 @@
           <p class="m-0"> Portadas</p>
         </a>    
 
-        
-        
-    </div>
-   @endif
-   <div class="row  mb-5 text-left">        
         <a class="d-block col-12  mb-1" href="{{route('get_datos_corporativos')}}">
           <p class="m-0">  La Empresa</p>
         </a>
@@ -36,6 +31,19 @@
         <a class="d-block col-12  mb-1" href="{{route('get_admin_categorias')}}">
           <p class="m-0"> Categorías</p>
         </a> 
+
+        
+        
+    </div>
+   @endif
+   <div class="row  mb-5 text-left">        
+        <a class="d-block col-12  mb-1" href="{{route('get_admin_marcas')}}">
+          <p class="m-0"> Marcas</p>
+        </a> 
+
+        <a class="d-block col-12  mb-1" href="{{route('get_admin_clientes')}}">
+          <p class="m-0"> Clientes</p>
+        </a>
 
         <a class="d-block col-12  mb-1" href="{{route('get_admin_productos')}}">
           <p class="m-0"> Productos</p>

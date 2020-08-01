@@ -55,7 +55,7 @@
            <div class="container">
             <div class="row mb-5" >
 
-                <div class="col-12 mb-5 mt-5 p-2 p-lg-5 titulos-class text-center text-color-black">Contatanos ahora a través ...</div>
+                <div class="col-12 mb-5 mt-5 p-2 p-lg-5 titulos-class text-center text-color-black">Contactanos ahora a través ...</div>
                 <div class="col-6 col-lg-4 p-2 p-lg-4">
                   <div class="titulos-class text-center text-color-primary  mb-4">
                     <i class="fas fa-map-marker-alt"></i>
