@@ -145,7 +145,7 @@ class Empresa extends Model
     public function getLinkWhatsappSendAttribute()
     {
 
-        $numero  = '598'. substr(trim($this->numero_whatsapp_ya_arreglado),1);
+        $numero  = substr(trim($this->numero_whatsapp_ya_arreglado),1);
         $mensaje = 'Hola';
         $url = 'https://api.whatsapp.com/send?phone='. $numero .'&text='. $mensaje;
 
