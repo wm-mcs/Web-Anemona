@@ -14,8 +14,8 @@
 
 @section('logo-imagenes')
 
-<img v-if="$root.scrolled" v-lazy="$root.Empresa.img_logo_horizontal" class="img-fluid p-3" >
-<img v-else v-lazy="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid p-3">
+<img v-if="$root.scrolled" v-lazy="$root.Empresa.img_logo_horizontal" class="img-fluid p-lg-4" >
+<img v-else v-lazy="$root.Empresa.img_logo_horizontal_blanco"  class="img-fluid p-lg-4">
 
 @stop
 
