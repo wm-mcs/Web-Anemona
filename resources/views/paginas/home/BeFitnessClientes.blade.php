@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row ">
 			<div class="col-12 text-center mb-5 titulos-class text-color-black">
-				Confian en nosotros ...
+				Confían en nosotros ...
 			</div>
 			<div class="col-12">
 				<div class="row">

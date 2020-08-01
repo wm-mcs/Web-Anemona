@@ -1,7 +1,7 @@
  <div v-if="scrolled" class="background_img background_img_fixed somos-background Padding-de-secciones" id="Servicios">
       <div class="container  mb-4">
           <div class="col-lg-6">
-           <h2 class="titulos-class color-text-white text-uppercase">Mantenimiento</h2>
+           <h2 class="titulos-class color-text-white text-uppercase">Servicio profesional</h2>
            <div class="contiene-listado-de-opciones-portada">
                   <div class="contiene-item">
                      <span class="text-bold">Mantenimiento predictivo</span>: se establecen visitas periódicas con una frecuencia programada 
@@ -23,9 +23,9 @@
           <div class="col-lg-6">
            <h2 class="titulos-class color-text-white text-uppercase">Somos lideres</h2>
            <div class="contiene-listado-de-opciones-portada">
-                  <div class="contiene-item">
+                  {{-- <div class="contiene-item">
                      <span class="text-bold">Servicio oficial de</span>: Cybex y Movement, Súper Hábil, Los equipos de Cardio y Musculación de Embreex (Alsi ltda), Los equipos de la marca BH representante (Deceleste)
-                  </div>
+                  </div> --}}
                   <div class="contiene-item">
                       <span class="text-bold">El 70% del mercado uruguayo trabaja con nosotros</span>
                   </div>
