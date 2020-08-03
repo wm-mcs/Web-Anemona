@@ -1,4 +1,4 @@
-<section class="background-gris-1 py-5">
+<section v-lazy-container="{ selector: 'img' }" class="background-gris-1 py-5">
 	<div class="container">
 		<div class="row ">
 			<div class="col-12 text-center mb-5 titulos-class text-color-black">
