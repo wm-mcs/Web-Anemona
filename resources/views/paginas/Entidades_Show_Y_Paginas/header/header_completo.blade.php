@@ -14,7 +14,7 @@
 
             
               <nav  v-if="mostrar_opciones_del_menu" class="col-lg-9 d-flex flex-column align-items-end" role="navigation" :class="getClassMostrarMenuMovil">
-                <ul :class="getClassNavUlEnMovil" class="d-flex flex-column align-items-start flex-lg-row align-items-lg-center m-0 px-lg-3">     
+                <ul v-lazy-container="{ selector: 'img' }" :class="getClassNavUlEnMovil" class="d-flex flex-column align-items-start flex-lg-row align-items-lg-center m-0 px-lg-3">     
                   <div v-if="$root.mostrar_para_celuar"  v-on:click="set_mostrar_menu_movil" class="p-2 w-100 text-right titulos-class"><i class="fas fa-times"></i>
                   </div>
                   
@@ -57,7 +57,7 @@
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getServicios')}}">Servicios</a></li>
                   <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('getContacto')}}" >Contacto</a>
                   </li>
-                  <img  v-lazy="{{url()}}/imagenes/Pais/bandera-de-uruguay.jpg" class="icono-de-uruguay">
+                  <img  data-src="{{url()}}/imagenes/Pais/bandera-de-uruguay.jpg" class="icono-de-uruguay">
                   
                 </ul>
               </nav> 
