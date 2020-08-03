@@ -32,7 +32,7 @@ computed:{
 
 template:'
 
-  <div  v-if="formato_bloque" class="col-6 col-md-6 col-lg-3">
+  <div   class="col-6 col-md-6 col-lg-3">
     <a :href="producto.route" class="item">
       <img v-lazy="producto.url_img_foto_principal_chica" :alt="producto.name" class="img-fluid">
       <div class="item-info">
