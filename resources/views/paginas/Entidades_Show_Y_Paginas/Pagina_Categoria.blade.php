@@ -100,8 +100,8 @@
    
     
       <div class="row ">
-        <h2 class="col-12  mb-5 sub-titulos-class text-color-black">
-          Lo mejor de {{ $Categoria->name_arreglado}} con el respaldo de ...
+        <h2 class="col-12  mb-2 sub-titulos-class text-color-black">
+          Lo mejor de {{ $Categoria->name_arreglado}} está en BeFitness con el respaldo de las mejores marcas ...
         </h2>
         <div class="col-12">
         <div class="row">
@@ -118,7 +118,7 @@
   
      
    </div>
-   </div>
+   
   <producto-show-interface :empresa="Empresa" titulo="Productos de la categoría {{ $Categoria->name_arreglado}}"></producto-show-interface>
     
 
