@@ -14,6 +14,7 @@ use App\Repositorios\PortadaDePaginaRepo;
 
 
 
+
 class Home_Public_Controller extends Controller
 {
     
@@ -150,8 +151,9 @@ class Home_Public_Controller extends Controller
         $Productos = Cache::remember('Productos_De_Categoria_'.$categoria_id, 60, function() use ($categoria_id) {
                      return $this->ProductoRepo->getProductosDeEstaCategoria($categoria_id,'created_at','desc');
                      });
+        $Marcas    = $this->ArregloDeEntidades->getMarcasDeEstaCategoria($categoria_id);
 
-        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Categoria', compact('Empresa','Categoria','Productos'));  
+        return view('paginas.Entidades_Show_Y_Paginas.Pagina_Categoria', compact('Empresa','Categoria','Productos','Marcas'));  
       }
 
 

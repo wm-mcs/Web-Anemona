@@ -96,7 +96,28 @@
     
 
    <div  class="Padding-de-secciones container products-wrap pt-3 mt-5 mb-2">
-   <h1 class="titulos-class text-uppercase text-color-black mt-5">{{ $Categoria->name_arreglado}}</h1>
+   <h1 class="titulos-class text-uppercase text-color-black mt-5 mb-3">{{ $Categoria->name_arreglado}}</h1>
+   <section v-lazy-container="{ selector: 'img' }" class="background-gris-1 py-5">
+    <div class="container">
+      <div class="row ">
+        <h2 class="col-12  mb-5 sub-titulos-class text-color-black">
+          Lo mejor de {{ $Categoria->name_arreglado}} con el respaldo de ...
+        </h2>
+        <div class="col-12">
+        <div class="row justify-content-center">
+          @foreach($Marcas as $Entidad )  
+            {{--*/ $Mostrar_admin  = false /*--}}
+            {{--*/ $Entidad        = $Entidad /*--}}
+            {{--*/ $Route          = $Entidad->route /*--}}
+            @include('admin.marcas.partes.lista')
+          @endforeach
+        </div>
+      </div>
+    </div>
+  </section>
+   <div>
+     
+   </div>
    </div>
   <producto-show-interface :empresa="Empresa" titulo="Productos de la categoría {{ $Categoria->name_arreglado}}"></producto-show-interface>
     

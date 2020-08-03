@@ -99,6 +99,33 @@ abstract class BaseRepo
        return   $Entidades;  
     }
 
+    /**
+     * No trae las entidades según estos ids. Se puede filtrar por activas o no.
+     * Se puede ordenar según key 
+     *
+     * @return array
+     */
+    public function getEntidadesConArrays($array_ids,$activas = true,$Order_by = 'id',$Asc_desc = 'desc')
+    {
+      if($activas === true)
+      {
+        return $this->entidad                  
+                    ->where('estado','si')  
+                    ->where('borrado','no')   
+                    ->whereIn('id',$array_ids)         
+                    ->orderBy($Order_by,$Asc_desc)
+                    ->get();
+      }
+      else
+      {
+        return $this->entidad
+                    ->where('borrado','no')   
+                    ->whereIn('id',$array_ids)         
+                    ->orderBy($Order_by,$Asc_desc)
+                    ->get();
+      }
+    }
+
     public function getEntidadActivasOrdenadasSegun($Order_by,$Asc_desc)
     {
       return $this->entidad                  
@@ -192,33 +219,7 @@ abstract class BaseRepo
 
 
 
-
-
-
-
-
-
-
-
-    // H e l p e r s 
-    //funciones personalizadas para reciclar
-    public function helper_convertir_cadena_para_url($cadena)
-    {
-        $cadena = strtolower(trim($cadena));
-        //quito caracteres - 
-        $cadena = str_replace('-' ,' ', $cadena);
-        $cadena = str_replace('_' ,' ', $cadena);
-        $cadena = str_replace('/' ,' ', $cadena);
-        $cadena = str_replace('|' ,' ', $cadena);
-        $cadena = str_replace('"' ,' ', $cadena);
-        $cadena = str_replace('  ' ,' ', $cadena);
-        $cadena = str_replace('   ' ,' ', $cadena);
-        $cadena = str_replace(' ' ,'-', $cadena);
-        $cadena = str_replace('?' ,'', $cadena);
-        $cadena = str_replace('¿' ,'', $cadena);
-
-        return $cadena;
-    }
+   
 
 
     public function actualizarCache($nombreDelCache, $nuevoValorDelCache = null, $tiempo_expiracion = null)
@@ -235,9 +236,7 @@ abstract class BaseRepo
          Cache::remember($nombreDelCache, $tiempo_expiracion, function() use ($nuevoValorDelCache){
           return  $nuevoValorDelCache ;
          }); 
-      }
-      
-
+      }   
      
     }
     

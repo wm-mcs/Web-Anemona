@@ -73,7 +73,18 @@ class ArregloDeEntidades
         $ProductoRepo  = new ProductoRepo();
         $Productos     = $ProductoRepo->getProductosDeEstaCategoria($Categoria_id);
 
-        foreach($Productos)
+        $array_de_marcas_ids = [];
+
+        foreach($Productos as $Producto)
+        {
+          array_push($array_de_marcas_ids,$Producto->marca_id);
+        }
+
+        array_unique($array_de_marcas_ids);
+
+        $MarcaRepo     = new MarcaRepo();
+
+        return $MarcaRepo->getEntidadesConArrays($array_de_marcas_ids,true, 'rank','desc');
 
       });  
     }
