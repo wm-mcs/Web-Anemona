@@ -19,7 +19,7 @@
 
 @section('logo-imagenes')
 
-<img :data-src="$root.Empresa.img_logo_horizontal" class="img-fluid p-3" >
+<img v-lazy="$root.Empresa.img_logo_horizontal" class="img-fluid p-3" >
 
 
 @stop
