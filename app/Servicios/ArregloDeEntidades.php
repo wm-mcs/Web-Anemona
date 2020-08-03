@@ -71,7 +71,7 @@ class ArregloDeEntidades
       return  Cache::remember('MarcasDeCategoria_'.$Categoria_id, 4000, function() use($Categoria_id) {
 
         $ProductoRepo  = new ProductoRepo();
-        $Productos     = $ProductoRepo->getProductosDeEstaCategoria($Categoria_id);
+        $Productos     = $ProductoRepo->getProductosDeEstaCategoria($Categoria_id,'id','desc');
 
         $array_de_marcas_ids = [];
 
