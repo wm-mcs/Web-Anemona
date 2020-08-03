@@ -100,7 +100,7 @@
    
     
       <div class="row ">
-        <h2 class="col-12  mb-2 sub-titulos-class text-color-black">
+        <h2 class="col-12  mb-4 sub-titulos-class text-color-black">
           Lo mejor de {{ $Categoria->name_arreglado}} está en BeFitness con el respaldo de las mejores marcas ...
         </h2>
         <div class="col-12">
