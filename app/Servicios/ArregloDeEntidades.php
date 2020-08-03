@@ -57,7 +57,24 @@ class ArregloDeEntidades
 
            return $collection_categorias->unique('id');
            
-        });
-        
+        });        
+    }
+
+
+    /**
+     * Me devuelve las marcas de los prductos activos de está categoría
+     *
+     * @return array
+     */
+    public function getMarcasDeEstaCategoria($Categoria_id)
+    {
+      return  Cache::remember('MarcasDeCategoria_'.$Categoria_id, 4000, function() use($Categoria_id) {
+
+        $ProductoRepo  = new ProductoRepo();
+        $Productos     = $ProductoRepo->getProductosDeEstaCategoria($Categoria_id);
+
+        foreach($Productos)
+
+      });  
     }
 }

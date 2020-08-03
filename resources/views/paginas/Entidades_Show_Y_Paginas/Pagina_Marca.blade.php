@@ -49,7 +49,7 @@
 @stop
 
 
-
+ 
 @section('imagen-grande-cabecera')
   <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" >
         <div class="container">

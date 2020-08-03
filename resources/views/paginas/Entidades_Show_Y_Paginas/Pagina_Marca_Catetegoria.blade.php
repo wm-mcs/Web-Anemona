@@ -44,7 +44,7 @@
 
 
 @section('imagen-grande-cabecera')
-  <div class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" >
+  <div v-lazy-container="{ selector: 'img' }" class="site-blocks-cover portada-contiene-portada-general flex-row-center flex-justifice-space-around" >
         <div class="container">
 
           <div class="row d-flex flex-row align-items-center p-4 mt-3 mt-lg-0 p-lg-0">
